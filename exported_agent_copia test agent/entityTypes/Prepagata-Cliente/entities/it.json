@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "prepagata-cliente",
+    "synonyms": [ "carta con iban", "carta conto", "carta ricaricabile", "carta tipo conto", "enjoy", "flash", "like", "on card", "oncard", "prepagata", "prepagata nominativa", "prepaid", "ricaricabile", "superflash", "super flash" ],
+    "languageCode": "it"
+  } ]
+}

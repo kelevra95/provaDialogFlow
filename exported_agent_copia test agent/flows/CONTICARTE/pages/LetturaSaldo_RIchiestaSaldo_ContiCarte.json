@@ -1,0 +1,235 @@
+{
+  "name": "4fd0a583-029c-42b6-afd7-552d2785e873",
+  "displayName": "LetturaSaldo_RIchiestaSaldo_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Comunicazioni",
+    "tag": "getBalance"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "d40ee359-0d7b-422b-8a2d-694a9c454f77"
+  }, {
+    "condition": "$session.params.fulfillment-error = false AND $session.params.data-ricerca.month = 12 AND $session.params.data-ricerca.day = 31 AND $session.params.cliente-tipo = \"PF\"",
+    "triggerFulfillment": {
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.tipo-rapporto = \"carte\"",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Per le carte prepagate è disponibile solo il saldo odierno. In data $sessio.params.data-saldo il saldo contabile ammonta a $session.params.saldo-contabile e il saldo disponibile ammonta a $session.params.saldo.disponibile." ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "additionalCases": {
+              "cases": [ {
+                "condition": "$session.params.tipo-saldo = \"contabile\"",
+                "caseContent": [ {
+                  "additionalCases": {
+                    "cases": [ {
+                      "condition": "$session.params.data-saldo = $session.params.data-sistema-text",
+                      "caseContent": [ {
+                        "message": {
+                          "text": {
+                            "text": [ "Ad oggi il saldo contabile ammonta a $session.params.saldo-contabile e il saldo disponibile ammonta a $session.params.saldo.disponibile." ]
+                          },
+                          "languageCode": "it"
+                        }
+                      } ]
+                    }, {
+                      "caseContent": [ {
+                        "message": {
+                          "text": {
+                            "text": [ "Alla data del $session.params.data-saldo il saldo contabile ammontava a $session.params.saldo-contabile." ]
+                          },
+                          "languageCode": "it"
+                        }
+                      } ]
+                    } ]
+                  }
+                } ]
+              }, {
+                "caseContent": [ {
+                  "additionalCases": {
+                    "cases": [ {
+                      "condition": "$session.params.tipo-saldo = \"disponibile\"",
+                      "caseContent": [ {
+                        "additionalCases": {
+                          "cases": [ {
+                            "condition": "$session.params.data-saldo = $session.params.data-sistema-text",
+                            "caseContent": [ {
+                              "message": {
+                                "text": {
+                                  "text": [ "Ad oggi il saldo disponibile ammonta a $session.params.saldo-disponibile." ]
+                                },
+                                "languageCode": "it"
+                              }
+                            } ]
+                          }, {
+                            "caseContent": [ {
+                              "message": {
+                                "text": {
+                                  "text": [ "Non riesco a fornirti il saldo disponibile alla data $session.params.data-saldo. Il saldo contabile nella stessa data ammontava a $session.params.saldo-contabile." ]
+                                },
+                                "languageCode": "it"
+                              }
+                            } ]
+                          } ]
+                        }
+                      } ]
+                    }, {
+                      "caseContent": [ {
+                        "additionalCases": {
+                          "cases": [ {
+                            "condition": "$session.params.data-saldo = $session.params.data-sistema-text",
+                            "caseContent": [ {
+                              "message": {
+                                "text": {
+                                  "text": [ "Ad oggi il saldo contabile ammonta a $session.params.saldo-contabile e il saldo disponibile ammonta a $session.params.saldo-disponibile." ]
+                                },
+                                "languageCode": "it"
+                              }
+                            } ]
+                          }, {
+                            "caseContent": [ {
+                              "message": {
+                                "text": {
+                                  "text": [ "Alla data del $session.params.data-saldo il saldo contabile ammontava a $session.params.saldo-contabile." ]
+                                },
+                                "languageCode": "it"
+                              }
+                            } ]
+                          } ]
+                        }
+                      } ]
+                    } ]
+                  }
+                } ]
+              } ]
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "SaldoAl31Dicembre_RichiestaSaldo_ContiCarte",
+    "name": "e8c339f2-ca97-4d3c-84d9-4c99627b4e86"
+  }, {
+    "condition": "$session.params.fulfillment-error = false",
+    "triggerFulfillment": {
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.tipo-rapporto = \"carte\"",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Per le carte prepagate è disponibile solo il saldo odierno. In data $sessio.params.data-saldo il saldo contabile ammonta a $session.params.saldo-contabile e il saldo disponibile ammonta a $session.params.saldo.disponibile." ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "additionalCases": {
+              "cases": [ {
+                "condition": "$session.params.tipo-saldo = \"contabile\"",
+                "caseContent": [ {
+                  "additionalCases": {
+                    "cases": [ {
+                      "condition": "$session.params.data-saldo = $session.params.data-sistema-text",
+                      "caseContent": [ {
+                        "message": {
+                          "text": {
+                            "text": [ "Ad oggi il saldo contabile ammonta a $session.params.saldo-contabile e il saldo disponibile ammonta a $session.params.saldo.disponibile." ]
+                          },
+                          "languageCode": "it"
+                        }
+                      } ]
+                    }, {
+                      "caseContent": [ {
+                        "message": {
+                          "text": {
+                            "text": [ "Alla data del $session.params.data-saldo il saldo contabile ammontava a $session.params.saldo-contabile." ]
+                          },
+                          "languageCode": "it"
+                        }
+                      } ]
+                    } ]
+                  }
+                } ]
+              }, {
+                "caseContent": [ {
+                  "additionalCases": {
+                    "cases": [ {
+                      "condition": "$session.params.tipo-saldo = \"disponibile\"",
+                      "caseContent": [ {
+                        "additionalCases": {
+                          "cases": [ {
+                            "condition": "$session.params.data-saldo = $session.params.data-sistema-text",
+                            "caseContent": [ {
+                              "message": {
+                                "text": {
+                                  "text": [ "Ad oggi il saldo disponibile ammonta a $session.params.saldo-disponibile." ]
+                                },
+                                "languageCode": "it"
+                              }
+                            } ]
+                          }, {
+                            "caseContent": [ {
+                              "message": {
+                                "text": {
+                                  "text": [ "Non riesco a fornirti il saldo disponibile alla data $session.params.data-saldo. Il saldo contabile nella stessa data ammontava a $session.params.saldo-contabile." ]
+                                },
+                                "languageCode": "it"
+                              }
+                            } ]
+                          } ]
+                        }
+                      } ]
+                    }, {
+                      "caseContent": [ {
+                        "additionalCases": {
+                          "cases": [ {
+                            "condition": "$session.params.data-saldo = $session.params.data-sistema-text",
+                            "caseContent": [ {
+                              "message": {
+                                "text": {
+                                  "text": [ "Ad oggi il saldo contabile ammonta a $session.params.saldo-contabile e il saldo disponibile ammonta a $session.params.saldo-disponibile." ]
+                                },
+                                "languageCode": "it"
+                              }
+                            } ]
+                          }, {
+                            "caseContent": [ {
+                              "message": {
+                                "text": {
+                                  "text": [ "Alla data del $session.params.data-saldo il saldo contabile ammontava a $session.params.saldo-contabile." ]
+                                },
+                                "languageCode": "it"
+                              }
+                            } ]
+                          } ]
+                        }
+                      } ]
+                    } ]
+                  }
+                } ]
+              } ]
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "SalutiFinali_RichiestaSaldo_ContiCarte",
+    "name": "de23a00c-d3d3-417f-be22-9b444a7f651b"
+  } ]
+}

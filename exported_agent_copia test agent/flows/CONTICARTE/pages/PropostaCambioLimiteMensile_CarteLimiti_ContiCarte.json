@@ -1,0 +1,44 @@
+{
+  "name": "48d01ae3-5f52-49f7-b526-c60e51a643f6",
+  "displayName": "PropostaCambioLimiteMensile_CarteLimiti_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Vuoi selezionare un importo diverso per il limite?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "RichiestaAltroLimite_CarteLimiti_ContiCarte",
+    "name": "54cfb330-6a85-429b-9b36-8cd0f911591f"
+  }, {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "limite-mensile-nuovo",
+        "value": null
+      } ]
+    },
+    "targetPage": "SceltaLimiteMensile_CarteLimiti_ContiCarte",
+    "name": "4cf44b47-bf5e-4aa0-8d36-73a61d5e80ca"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "7a440cab-371b-44c8-bd6b-43e5ef5bae37",
+  "displayName": "posizione.fiscale",
+  "priority": 500000,
+  "description": "Recepisce richieste sulla posizione fiscale (minusvalenza/plusvalenza)"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "4abdc5bb-560b-4f38-9c59-d0195160d845",
+  "displayName": "PIN.carte.richiesta",
+  "parameters": [ {
+    "id": "Numero-Finale-Carta",
+    "entityType": "@Numero-Finale-Carta"
+  }, {
+    "id": "Tipo-Carta",
+    "entityType": "@Tipo-Carta"
+  } ],
+  "priority": 500000,
+  "description": "Gestisce E2E la richiesta PIN carta. Per la modifica / personalizzazione Ellis aggancia l'intento carte.modifica.PIN."
+}

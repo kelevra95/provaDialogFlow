@@ -1,0 +1,47 @@
+{
+  "name": "1a48c9ae-513a-4396-b59c-11424c726476",
+  "displayName": "TipoStrumentoAzione_QuotazioniTitoli_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.quotazioni-nome != null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi confermi che hai scelto l'azione con nome: $session.params.quotazioni-nome ?" ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "ConfermaStrumentoAzioni_QuotazioniTitoli_Investimenti",
+    "name": "ee42f7a1-f054-424e-98d6-6db8faa57a6b"
+  }, {
+    "condition": "$session.params.quotazioni-isin != null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi confermi che hai scelto l'azione con codice ISIN: $session.params.quotazioni-isin ?" ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "ConfermaStrumentoAzioni_QuotazioniTitoli_Investimenti",
+    "name": "848639ed-fca6-4379-8bd4-4e5104009513"
+  }, {
+    "condition": "$session.params.quotazioni-radiocor != null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi confermi che hai scelto l'azione con codice radiocor: $session.params.quotazioni-radiocor ?" ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "ConfermaStrumentoAzioni_QuotazioniTitoli_Investimenti",
+    "name": "c48ef239-8a30-425e-af0a-8fab691467a7"
+  } ]
+}

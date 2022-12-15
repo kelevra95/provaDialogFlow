@@ -1,0 +1,45 @@
+{
+  "name": "c0453084-8880-46dc-a778-fd0b1aac3f6e",
+  "displayName": "VerificaPrimoAccesso_RicercaDocumentiFiscali_Archivio",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Riferimenti-contatto-cliente",
+    "tag": "getFirstAccess"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "c73b8c75-5064-4702-a5ee-945df2633786"
+  }, {
+    "condition": "$session.params.primo-accesso = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Da una verifica che ho effettuato, mi risulta che non utilizzi i canali digitali della banca. Per poter procedere con la richiesta dei documenti, è necessario effettuare un primo accesso all'app mo-baill." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Manca il primo accesso ai canali digitali"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "47480ec2-0b0d-4b1a-943a-f02b2fcadf36"
+  }, {
+    "condition": "$session.params.primo-accesso = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "anno-precedente",
+        "value": "$sys.func.ADD($session.params.data-ora-sistema.year,-1)"
+      } ]
+    },
+    "targetPage": "DettagliDocumento_RicercaDocumentiFiscali_Archivio",
+    "name": "7c5d9dee-3daf-4ca5-9735-c576bc15f5c8"
+  } ]
+}

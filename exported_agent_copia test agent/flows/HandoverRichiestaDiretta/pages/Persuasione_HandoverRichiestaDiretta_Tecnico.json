@@ -1,0 +1,49 @@
+{
+  "name": "65dacffd-984b-45c4-b3d7-112e9ce7eb6a",
+  "displayName": "Persuasione_HandoverRichiestaDiretta_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Perché non mi metti alla prova? Al momento mi occupo di archivio, carte, pagamenti e assistenza. Dimmi come posso aiutarti." ]
+      },
+      "languageCode": "it"
+    } ],
+    "setParameterActions": [ {
+      "parameter": "contatore-operatore",
+      "value": 1
+    }, {
+      "parameter": "motivo-contatto",
+      "value": null
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "operatore",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Come de-sideri." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "VerificaFlussoProvenienza_HandoverRichiestaDiretta_Tecnico",
+    "name": "0d0f6006-7541-47d5-8107-8aa9ffb8d2a0"
+  }, {
+    "intent": "uscita",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaFlussoProvenienza_HandoverRichiestaDiretta_Tecnico",
+    "name": "5dedf73a-21c9-4fcc-a55e-e45acd03250e"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Default Start Flow",
+    "name": "e2873c17-5cb7-411b-a972-5eae5d1555dc"
+  } ]
+}

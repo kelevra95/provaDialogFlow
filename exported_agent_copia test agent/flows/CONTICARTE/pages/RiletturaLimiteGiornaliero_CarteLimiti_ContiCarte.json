@@ -1,0 +1,50 @@
+{
+  "name": "f03cb5e8-7fd1-43d5-a2e6-0d4e6d17e929",
+  "displayName": "RiletturaLimiteGiornaliero_CarteLimiti_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Mi confermi che il nuovo limite giornaliero di $session.params.operazione scelto è $session.params.limite-giornaliero-nuovo € ?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ValidazioneLimiteGiornaliero_CarteLimiti_ContiCarte",
+    "name": "388b26af-b2d7-4fdb-9ad0-14ac0a135286"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": "$sys.func.ADD($session.params.contatore, 1)"
+      }, {
+        "parameter": "limite-mensile-nuovo",
+        "value": null
+      }, {
+        "parameter": "limite-giornaliero-nuovo",
+        "value": null
+      } ]
+    },
+    "targetPage": "SceltaLimiteGiornaliero_CarteLimiti_ContiCarte",
+    "name": "c67aeb6d-32dc-44d6-aa83-cfbfa1db792c"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

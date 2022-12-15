@@ -1,0 +1,6 @@
+{
+  "name": "94792239-3caa-484c-acd0-c802aa5a8d01",
+  "displayName": "verifica.dispositivo",
+  "priority": 500000,
+  "description": "Recepisce le richieste di controllo del dispositivo (ATM- Filiale-Verifica in self)"
+}

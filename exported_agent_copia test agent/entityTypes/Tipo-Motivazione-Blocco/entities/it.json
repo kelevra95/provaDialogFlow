@@ -1,0 +1,15 @@
+{
+  "entities": [ {
+    "value": "@Furto",
+    "synonyms": [ "@Furto" ],
+    "languageCode": "it"
+  }, {
+    "value": "@Smarrimento",
+    "synonyms": [ "@Smarrimento" ],
+    "languageCode": "it"
+  }, {
+    "value": "@Clonazione",
+    "synonyms": [ "@Clonazione" ],
+    "languageCode": "it"
+  } ]
+}

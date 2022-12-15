@@ -1,0 +1,115 @@
+{
+  "name": "82c277d0-893a-453e-bfb7-4fa99d75e011",
+  "displayName": "RichiestaRapportoPF_AbilitazioniSceltaRapporto_Tecnico",
+  "form": {
+    "parameters": [ {
+      "displayName": "numero-rapporto",
+      "required": true,
+      "entityType": "@Numero-Rapporto",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "conditionalCases": [ {
+            "cases": [ {
+              "condition": "$session.params.tipologia-rapporto-PF = \"IBAN\"",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "Sai dirmi il numero di conto o le ultime 4 cifre della carta prepagata su cui de-sideri operare?" ]
+                  },
+                  "languageCode": "it"
+                }
+              } ]
+            }, {
+              "caseContent": [ {
+                "additionalCases": {
+                  "cases": [ {
+                    "condition": "$session.params.tipologia-rapporto-PF = \"carte\"",
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "Sai dirmi le ultime 4 cifre della carta su cui de-sideri operare?" ]
+                        },
+                        "languageCode": "it"
+                      }
+                    } ]
+                  }, {
+                    "caseContent": [ {
+                      "message": {
+                        "text": {
+                          "text": [ "Sai dirmi il numero di deposito amministrato su cui de-sideri operare?" ]
+                        },
+                        "languageCode": "it"
+                      }
+                    } ]
+                  } ]
+                }
+              } ]
+            } ]
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "targetPage": "SceltaRapportoPF_AbilitazioniSceltaRapporto_Tecnico",
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "numero-rapporto",
+              "value": null
+            } ]
+          },
+          "name": "dab69df8-8846-4ac4-bf5d-ba6de3f7a251"
+        }, {
+          "targetPage": "SceltaRapportoPF_AbilitazioniSceltaRapporto_Tecnico",
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "numero-rapporto",
+              "value": null
+            } ]
+          },
+          "name": "5ac814d8-86d7-49b8-9c98-77389d1e53f2"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 8,
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "contatore",
+      "value": 0
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "indice",
+        "value": 0
+      } ]
+    },
+    "targetPage": "PropostaListaRapportiPF_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "6fe334d8-065a-4a68-bdef-4974e1eea06a"
+  }, {
+    "intent": "si",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "SceltaRapportoPF_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "6bdcd2b3-5453-4fbf-896b-b1e6181611e1"
+  }, {
+    "condition": "$session.params.numero-rapporto != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "SceltaRapportoPF_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "bccaa7cc-950d-4ccf-839e-64502c1c7bf2"
+  } ],
+  "speakerIdSettings": {
+  
+  }
+}

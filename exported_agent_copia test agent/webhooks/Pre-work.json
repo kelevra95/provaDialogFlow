@@ -1,0 +1,13 @@
+{
+  "name": "3a2ac3f6-90dc-4f70-89de-ca920b779a02",
+  "displayName": "Pre-work",
+  "timeout": {
+    "seconds": 30
+  },
+  "serviceDirectory": {
+    "service": "projects/prj-isp-tlc00-spk-test-001/locations/europe-west3/namespaces/dialogflow/services/webhook-ivr-ew3",
+    "genericWebService": {
+      "uri": "https://df-bot.syssede.systest.sanpaoloimi.com/fullfillment/savePreWorkData"
+    }
+  }
+}

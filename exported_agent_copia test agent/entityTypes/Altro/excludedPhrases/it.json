@@ -1,0 +1,21 @@
+{
+  "excludedPhrases": [ {
+    "value": "parlare con un operatore",
+    "languageCode": "it"
+  }, {
+    "value": "operatore",
+    "languageCode": "it"
+  }, {
+    "value": "call center",
+    "languageCode": "it"
+  }, {
+    "value": "numero verde",
+    "languageCode": "it"
+  }, {
+    "value": "mettimi in contatto",
+    "languageCode": "it"
+  }, {
+    "value": "filiale digitale",
+    "languageCode": "it"
+  } ]
+}

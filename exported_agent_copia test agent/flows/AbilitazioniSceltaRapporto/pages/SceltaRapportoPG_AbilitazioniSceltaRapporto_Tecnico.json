@@ -1,0 +1,84 @@
+{
+  "name": "ad489411-a1aa-4e65-a5cf-5c01621eec71",
+  "displayName": "SceltaRapportoPG_AbilitazioniSceltaRapporto_Tecnico",
+  "form": {
+    "parameters": [ {
+      "displayName": "numero-rapporto",
+      "required": true,
+      "entityType": "@Numero-Rapporto",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Dimmi o digita il numero." ]
+            },
+            "languageCode": "it"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "targetPage": "PropostaListaRapportiPG_AbilitazioniSceltaRapporto_Tecnico",
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "indice",
+              "value": 0
+            } ]
+          },
+          "name": "c4a42e86-0cda-4049-8cc2-64d2f52735b2"
+        }, {
+          "targetPage": "PropostaListaRapportiPG_AbilitazioniSceltaRapporto_Tecnico",
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "indice",
+              "value": 0
+            } ]
+          },
+          "name": "99ebf3f9-b544-46f2-8353-b26fe5c77208"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 8,
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.numero-rapporto != null AND $page.params.status = FINAL AND $session.params.contatore \u003c 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "numero-rapporto-PG",
+        "value": "$sys.func.SUBSTITUTE($session.params.numero-rapporto,\" \",\"\")"
+      } ]
+    },
+    "targetPage": "RiletturaRapportoPG_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "b213d2ee-228f-4932-953e-190a9ae829f5"
+  }, {
+    "condition": "$session.params.contatore \u003e 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "indice",
+        "value": 0
+      } ]
+    },
+    "targetPage": "PropostaListaRapportiPG_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "fdebbe66-b5b8-4351-9e5d-47e99585500e"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 11,
+      "noSpeechTimeout": {
+        "seconds": 10
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

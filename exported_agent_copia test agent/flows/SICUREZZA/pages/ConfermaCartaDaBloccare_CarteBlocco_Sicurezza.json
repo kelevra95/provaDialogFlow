@@ -1,0 +1,108 @@
+{
+  "name": "1a08f851-cdf9-4402-be6a-62fae89b5a38",
+  "displayName": "ConfermaCartaDaBloccare_CarteBlocco_Sicurezza",
+  "form": {
+    "parameters": [ {
+      "displayName": "tipo-blocco",
+      "required": true,
+      "entityType": "@Tipo-Blocco",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Se ti hanno rubato la carta o ti è stata clonata, ti consiglio l’inserimento di un blocco definitivo. \nPer tutte le altre casistiche o per le situazioni di solo sospetto, ti propongo il blocco provvisorio. Con quale blocco vuoi procedere?" ]
+            },
+            "languageCode": "it"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ti ho sentito bene. Vuoi inserire un blocco definitivo o provvisorio?" ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "325d9c86-38b6-4489-aa5e-c437f0dcd4ea"
+        }, {
+          "targetPage": "ConfermaBloccoProvvisorio_CarteBlocco_Sicurezza",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non sentire. Procedo con un blocco provvisorio." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "82713598-cdde-41be-b121-106270f5f129"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho capito bene. Vuoi inserire un blocco definitivo o provvisorio?" ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "5de9b521-a65c-4161-b183-2aac39cf8285"
+        }, {
+          "targetPage": "ConfermaBloccoProvvisorio_CarteBlocco_Sicurezza",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non capire. Procedo con un blocco provvisorio." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "e8607c65-0365-471b-ba6b-e4606f115afa"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.tipo-blocco = \"definitivo\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "In questo caso, è sempre buona norma sporgere denuncia presso le autorità competenti entro 48 ore. La denuncia è inoltre necessaria per disconoscere eventuali operazioni fraudolente." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": 0
+      } ]
+    },
+    "targetPage": "AccettazioneBloccoDefinitivo_CarteBlocco_Sicurezza",
+    "name": "1dc112f8-23ac-4a94-abbd-c9ce9e581fe1"
+  }, {
+    "condition": "$session.params.tipo-blocco = \"cautelativo\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Il blocco provvisorio o cautelativo ha carattere temporaneo. Puoi decidere se renderlo definitivo o se riattivare la carta, chiamando la Filiale Digitale o recandoti presso la tua agenzia." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "AccettazioneBloccoProvvisorio_CarteBlocco_Sicurezza",
+    "name": "38b8b7a3-8048-420e-a8c6-a703df7d2af3"
+  } ],
+  "speakerIdSettings": {
+  
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "a956199b-c577-4507-8e1c-1836bc64405d",
+  "displayName": "SalutiFinali_ModificaPINAccesso_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.chiamata-survey = \"on\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Survey_ModificaPINAccesso_Sicurezza",
+    "name": "ea253ecc-0a12-4f50-8108-c0cc2d371413"
+  }, {
+    "condition": "$session.params.chiamata-survey = \"off\" OR $session.params.chiamata-survey = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "È stato un piacere parlare con te. A presto!" ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "edf256b2-f2e7-4d10-aa62-40a3eaf48aa6"
+  } ]
+}

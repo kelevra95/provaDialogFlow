@@ -1,0 +1,199 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "devo avvisare ",
+      "auto": true
+    }, {
+      "text": "io",
+      "auto": true
+    }, {
+      "text": " la ",
+      "auto": true
+    }, {
+      "text": "mia",
+      "auto": true
+    }, {
+      "text": " vecchia banca riguardo ",
+      "auto": true
+    }, {
+      "text": "alla",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "surroga",
+      "auto": true
+    }, {
+      "text": " o ",
+      "auto": true
+    }, {
+      "text": "ci",
+      "auto": true
+    }, {
+      "text": " pensate voi?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "le ",
+      "auto": true
+    }, {
+      "text": "spese",
+      "auto": true
+    }, {
+      "text": " per ",
+      "auto": true
+    }, {
+      "text": "l'",
+      "auto": true
+    }, {
+      "text": "accensione di ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "mutuo",
+      "auto": true
+    }, {
+      "text": " di ",
+      "auto": true
+    }, {
+      "text": "surroga",
+      "auto": true
+    }, {
+      "text": " sono in carico ",
+      "auto": true
+    }, {
+      "text": "a me",
+      "auto": true
+    }, {
+      "text": " o ",
+      "auto": true
+    }, {
+      "text": "alla",
+      "auto": true
+    }, {
+      "text": " banca?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho già richiesto ",
+      "auto": true
+    }, {
+      "text": "una",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "surroga",
+      "auto": true
+    }, {
+      "text": " in precedenza, posso chiederne ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": "'altra?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quali sono le tempistiche della ",
+      "auto": true
+    }, {
+      "text": "surroga",
+      "auto": true
+    }, {
+      "text": " del ",
+      "auto": true
+    }, {
+      "text": "mutuo",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei parlare con qualcuno per richiedere una surroga",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve assistenza riguarda alla surroga del mutuo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quali documenti mi servono per richiedere ",
+      "auto": true
+    }, {
+      "text": "una",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "surroga",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "volevo sapere se sarebbe possibile fare una seconda surroga del mutuo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei richiedere la surroga del mutuo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quanto mi costerebbe ",
+      "auto": true
+    }, {
+      "text": "surrogare",
+      "auto": true
+    }, {
+      "text": " il ",
+      "auto": true
+    }, {
+      "text": "mutuo",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

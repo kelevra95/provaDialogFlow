@@ -1,0 +1,62 @@
+{
+  "name": "5489d967-f7c7-499b-8d64-f592967ea370",
+  "displayName": "ConfermaFiliale_PresaAppuntamento_Assistenza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "La tua filiale è quella in $session.params.indirizzo-filiale a $session.params.citta-filiale?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaPreventiva_PresaAppuntamento_Assistenza",
+    "name": "16b1f4d3-0101-4b35-9acd-34745212a91f"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi spiace ma non posso fissare in autonomia l’appuntamento su una filiale diversa da quella che ti ho proposto." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Il cliente non conferma la filiale proposta per la presa appuntamento"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "2e0cd9c7-7d6c-4679-9e14-c44d2935b381"
+  }, {
+    "intent": "non.so",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Se non hai certezza della filiale, puoi verificarla nella sezione parla con noi su sito o app della banca. Da lì potrai anche fissare l'appuntamento in autonomia." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "617e55d2-52e9-4cae-b640-d10c75433e20"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

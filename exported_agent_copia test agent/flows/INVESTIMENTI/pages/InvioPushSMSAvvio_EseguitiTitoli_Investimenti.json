@@ -1,0 +1,30 @@
+{
+  "name": "3e1f82f0-f0d0-424b-8d6a-af0b9d9b13e6",
+  "displayName": "InvioPushSMSAvvio_EseguitiTitoli_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "sendExecutedOrdersBeginMessage" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "12bde20d-597c-4674-a39c-cc05f07d8e6f"
+  }, {
+    "condition": "$session.params.fulfillment-error = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaAbilitazioneRapporto_EseguitiTitoli_Investimenti",
+    "name": "c431e46f-8be3-4096-95bb-3dfc920e3667"
+  } ]
+}

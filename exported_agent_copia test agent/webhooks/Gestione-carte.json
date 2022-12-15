@@ -1,0 +1,13 @@
+{
+  "name": "69462c23-e1ea-45c2-94a2-f88fadb5e422",
+  "displayName": "Gestione-carte",
+  "timeout": {
+    "seconds": 30
+  },
+  "serviceDirectory": {
+    "service": "projects/prj-isp-tlc00-spk-test-001/locations/europe-west3/namespaces/dialogflow/services/webhook-ivr-ew3",
+    "genericWebService": {
+      "uri": "https://df-bot.syssede.systest.sanpaoloimi.com/fullfillment/cards"
+    }
+  }
+}

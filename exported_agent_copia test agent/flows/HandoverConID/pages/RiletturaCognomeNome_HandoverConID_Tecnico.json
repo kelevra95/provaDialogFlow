@@ -1,0 +1,72 @@
+{
+  "name": "d16ff9c7-7caa-40ea-b932-92cebf4c329d",
+  "displayName": "RiletturaCognomeNome_HandoverConID_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Mi confermi che ti chiami $session.params.cliente-cognome $session.params.cliente-nome?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": 0
+      } ]
+    },
+    "targetPage": "IdentificazioneLuogo_HandoverConID_Tecnico",
+    "name": "1020dbd8-b630-4ec0-b613-9d7fa1611ef9"
+  }, {
+    "intent": "no",
+    "condition": "$session.params.contatore \u003e 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace, con questi dati non sono riuscito a verificare la tua identità." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "GestioneRamo_HandoverConID_Tecnico",
+    "name": "394ee0b8-c2d0-410d-8c8f-8a14094f23d2"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Nessun problema. Riproviamo." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "cliente-cognome",
+        "value": null
+      }, {
+        "parameter": " cliente-nome",
+        "value": null
+      }, {
+        "parameter": "contatore",
+        "value": "$sys.func.ADD($session.params.contatore, 1)"
+      } ]
+    },
+    "targetPage": "IdentificazioneCognome_HandoverConID_Tecnico",
+    "name": "8fcd80c5-6cb7-45f3-b8ef-fa69333ab64a"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

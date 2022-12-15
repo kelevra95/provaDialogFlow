@@ -1,0 +1,6 @@
+{
+  "name": "8142e8b0-2d44-489a-836b-261ed4a715b6",
+  "displayName": "blocchi.disponibilita",
+  "priority": 500000,
+  "description": "Blocchi disponibilità in conto a fronte di operazioni non contabilizzate o future"
+}

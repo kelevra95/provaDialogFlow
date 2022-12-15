@@ -1,0 +1,30 @@
+{
+  "name": "29fa3884-a065-4214-8914-e283fe89664d",
+  "displayName": "NuovaQuotazioneSiNo_QuotazioniTitoliLight_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Vuoi cercare la quotazione di un altro titolo?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "RichiestaRadiocor_QuotazioniTitoliLight_Investimenti",
+    "name": "c4fd5060-840d-4239-a2d9-6d2266a9dd2f"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "SalutiFinali_QuotazioniTitoli_Investimenti",
+    "name": "133eb94b-6b98-4b7e-8449-82e05863d347"
+  } ]
+}

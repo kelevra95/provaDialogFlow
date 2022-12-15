@@ -1,0 +1,35 @@
+{
+  "name": "d31bcd61-5bdc-4cbe-a2bf-40c68c7741d8",
+  "displayName": "RecuperoDatiPartitaIva_IdentificazioneStrong_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Riferimenti-contatto-cliente",
+    "tag": "getPgInfoFromPiva"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Con i dati che mi hai fornito non trovo alcuna partita iva collegata." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Il cliente ha scelto di operare come PG ma non ha alcuna partita iva collegata"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "ee40826e-0827-4d1a-9466-78c43d280a9b"
+  }, {
+    "condition": "$session.params.fulfillment-error = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "RichiestaSegmentoCliente_IdentificazioneStrong_Tecnico",
+    "name": "92a2ea88-edcf-4698-8257-aef2c27c4a89"
+  } ]
+}

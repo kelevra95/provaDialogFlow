@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "si",
+    "synonyms": [ "affermativo", "bene", "c", "certo", "chiaro", "confermo", "esatto", "evidente", "fatto", "giusto", "iea", "ok", "ovvio", "pacifico", "si", "sì", "sicuro", "ui", "yes" ],
+    "languageCode": "it"
+  }, {
+    "value": "no",
+    "synonyms": [ "col cavolo", "errato", "figurati", "lascia stare", "mai", "meglio evitare", "nain", "nein", "niente", "niet", "nix", "no", "non", "nulla", "sbagliato", "sei fuori", "nada" ],
+    "languageCode": "it"
+  } ]
+}

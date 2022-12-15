@@ -1,0 +1,152 @@
+{
+  "name": "aa2358d6-ea73-41e6-96ab-6fb3a763deca",
+  "displayName": "RichiestaPANCartaTerzi_CarteBlocco_Sicurezza",
+  "form": {
+    "parameters": [ {
+      "displayName": "PAN-carta",
+      "required": true,
+      "entityType": "@PAN-Carta",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Digita le 16 cifre del numero della carta che vuoi bloccare." ]
+            },
+            "languageCode": "it"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho sentito. Per favore riprova digitando con il tastierino." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "fddabaf6-4ec4-4b10-820f-3abb756520eb"
+        }, {
+          "targetFlow": "HandoverNonPrevistoProposta",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Purtroppo continuo a non sentire." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "motivo-handover",
+              "value": "Il chiamante non specifica il PAN della carta"
+            } ]
+          },
+          "name": "d2772607-0478-4868-8a34-e8639d8b94b6"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non sono sicuro di aver capito bene le 16 cifre. Per favore riprova digitando con il tastierino." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "ce9d582f-9fef-4f54-966b-cf84127d8827"
+        }, {
+          "targetFlow": "HandoverNonPrevistoProposta",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Purtroppo continuo a non capire." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "motivo-handover",
+              "value": "Il chiamante non specifica il PAN della carta"
+            } ]
+          },
+          "name": "291f80f1-ff2e-46f5-880d-0a4badcca032"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 16,
+          "useSystemEntityRule": false,
+          "endpointingTimeoutDuration": {
+            "seconds": 10
+          }
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "non.so",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "In tal caso, non posso procedere. Se la carta che vuoi bloccare è di un tuo conoscente, fammi richiamare dall'interessato. " ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Il chiamante non specifica il PAN della carta"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "0b9d8fe9-1a21-46f7-a98e-16b32c3b1976"
+  }, {
+    "intent": "specifica.PAN.carta",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Le 16 cifre, solitamente sono indicate sul fronte della carta, anche se, in alcuni casi potresti dover guardare sul retro. In tal caso fai attenzione a non confonderti con il codice utente." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "9b8d93fc-ab72-41f0-8f2e-ad606d77c969"
+  }, {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "PAN-carta",
+        "value": "$sys.func.TO_TEXT($session.params.PAN-carta)"
+      }, {
+        "parameter": "PAN-carta",
+        "value": "$sys.func.SUBSTITUTE($session.params.PAN-carta,\" \",\"\")"
+      } ]
+    },
+    "targetPage": "ConfermaPANCartaTerzi_CarteBlocco_Sicurezza",
+    "name": "a1fb11b9-a961-4541-94f0-20b0da8ed516"
+  }, {
+    "condition": "$session.params.contatore \u003e 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Il chiamante non conferma il PAN della carta"
+      } ]
+    },
+    "targetFlow": "HandoverNonPrevistoProposta",
+    "name": "236a6282-03a6-4680-8247-478c057008a7"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 11,
+      "noSpeechTimeout": {
+        "seconds": 10
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

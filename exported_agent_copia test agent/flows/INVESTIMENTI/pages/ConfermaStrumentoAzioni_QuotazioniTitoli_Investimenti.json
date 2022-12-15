@@ -1,0 +1,48 @@
+{
+  "name": "4cde1fbe-38d8-434d-9b07-d8fccf4139cc",
+  "displayName": "ConfermaStrumentoAzioni_QuotazioniTitoli_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Nessun problema. Ripetimi per cortesia il nome, o il codice ISIN o il Radicor dell'azione." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "quotazioni-isin",
+        "value": null
+      }, {
+        "parameter": "quotazioni-radiocor",
+        "value": null
+      }, {
+        "parameter": "quotazioni-nome",
+        "value": null
+      } ]
+    },
+    "targetPage": "SceltaTipoAzione_QuotazioniTitoli_Investimenti",
+    "name": "189d64fb-c4a9-47d8-9ee7-57fc7863763e"
+  }, {
+    "intent": "si",
+    "condition": "$session.params.quotazioni-nome != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaNomeAzione_QuotazioniTitoli_Investimenti",
+    "name": "19727a48-26e7-4374-a357-85bedf7fbfae"
+  }, {
+    "intent": "si",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "IdentificazioneTitoloFinale_QuotazioniTitoli_Investimenti",
+    "name": "926b6e71-9d58-4384-9558-a398f5796e40"
+  } ]
+}

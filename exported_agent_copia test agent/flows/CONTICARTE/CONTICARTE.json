@@ -1,0 +1,511 @@
+{
+  "name": "ed403160-20f7-43db-891c-413f66d85c3d",
+  "displayName": "CONTICARTE",
+  "description": "Attivazione carta, movimenti, saldo, richiesta pin, limiti, duplicato carta, riemissione (no blocco) carta, iban, trasferimento saldo, sblocco pin carta, geocontrol, blocchi disponibilità , situazione i miei figli",
+  "transitionRoutes": [ {
+    "intent": "uscita",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Il cliente non vuole proseguire con Ellis"
+      }, {
+        "parameter": "intento",
+        "value": "uscita"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "cbc16011-562b-410c-80e8-fef9942f50b9"
+  }, {
+    "intent": "operatore",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Richiesta operatore"
+      }, {
+        "parameter": "intento",
+        "value": "operatore"
+      } ]
+    },
+    "targetFlow": "HandoverRichiestaDiretta",
+    "name": "a6e403c0-2b2e-42f6-aab6-78fccd803dc9"
+  }, {
+    "intent": "aiuto.OTS",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "L'OTS è il codice di sei numeri che ti ho inviato con SMS gratuito al tuo numero di cellulare certificato. Fai attenzione a non utilizzare l'altro codice che contiene anche delle lettere. Se non hai ancora ricevuto l'OTS, attendi ancora qualche istante, eventualmente chiedimi di parlare con un Gestore." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "db692d40-f1d2-44cb-ad17-53c24965721b"
+  }, {
+    "intent": "chi.sei",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sono Ellis, l'assistente digitale di Intesa Sanpaolo, e sono qui per fornirti assistenza telefonica." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "aba8ce0c-e567-410b-b27f-ffd85f0ceb17"
+  }, {
+    "intent": "Default Welcome Intent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ciao, sono Ellis, l'assistente digitale di Intesa Sanpaolo, e sono qui per aiutarti." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "29c9ff5b-e634-421e-a64b-53658f77bf47"
+  }, {
+    "intent": "ripeti",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ok, ripeto." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "4a9e8c0e-d4f0-4084-a76a-36b0b541e69a"
+  }, {
+    "intent": "ricomincia",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Default Start Flow",
+    "name": "1e78de72-3c2b-4c54-9201-4a227f30662e"
+  }, {
+    "intent": "offese",
+    "condition": "$session.params.indice-offese = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ti ricordo che sono qui per aiutarti. Se lo de-sideri prova a riformulare la tua richiesta. " ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "indice-offese",
+        "value": 1
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "81d6144c-8fe9-4436-a05e-31050935bf86"
+  }, {
+    "intent": "offese",
+    "condition": "$session.params.indice-offese = 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "indice-offese",
+        "value": null
+      }, {
+        "parameter": "intento",
+        "value": "offese"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Ripetute offese da parte del cliente"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "9623d88e-965d-4691-87d7-3ece898fe47f"
+  }, {
+    "condition": "$session.params.ivrMotivoChiamata = \"ELLIS\\.ATCA\" OR $session.params.motivo-contatto = \"ELLIS\\.ATCA\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": 0
+      }, {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.ATCA"
+      }, {
+        "parameter": "flusso-precedente",
+        "value": "$session.params.flusso-corrente"
+      }, {
+        "parameter": "flusso-corrente",
+        "value": "CONTICARTE"
+      }, {
+        "parameter": "ticket-id",
+        "value": "EllisAttivazioneCarta"
+      }, {
+        "parameter": "routing-macroarea",
+        "value": "CTY_CC_OPZ"
+      }, {
+        "parameter": "routing-microarea",
+        "value": "CTY_CC_ellisattcarte"
+      }, {
+        "parameter": "knowledge-url",
+        "value": "https://knowledgefol.intesasanpaolo.com/sites/FOL/operativita/Lists/Gestione%20Clienti/DispForm.aspx?ID=102"
+      }, {
+        "parameter": "knowledge-titolo",
+        "value": "Approfondimenti"
+      }, {
+        "parameter": "data-ora-sistema",
+        "value": "$sys.func.NOW()"
+      }, {
+        "parameter": "chiamata-survey",
+        "value": "off"
+      }, {
+        "parameter": "tipo-attivita",
+        "value": "D"
+      }, {
+        "parameter": "sottoflusso-precedente",
+        "value": "$session.params.sottoflusso-corrente"
+      }, {
+        "parameter": "sottoflusso-corrente",
+        "value": "Carte Attivazione"
+      } ]
+    },
+    "targetPage": "PrimaPagina_CarteAttivazione_ContiCarte",
+    "name": "ecbd5b31-928e-47ce-9efc-d9aaf7d44fbc"
+  }, {
+    "condition": "$session.params.ivrMotivoChiamata = \"ELLIS\\.RPCA\" OR $session.params.motivo-contatto = \"ELLIS\\.RPCA\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": 0
+      }, {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.RPCA"
+      }, {
+        "parameter": "flusso-precedente",
+        "value": "$session.params.flusso-corrente"
+      }, {
+        "parameter": "flusso-corrente",
+        "value": "CONTICARTE"
+      }, {
+        "parameter": "ticket-id",
+        "value": "EllisRichiestaPINCarta"
+      }, {
+        "parameter": "routing-macroarea",
+        "value": "CTY_CC_OPZ"
+      }, {
+        "parameter": "routing-microarea",
+        "value": "CTY_CC_carte"
+      }, {
+        "parameter": "knowledge-url",
+        "value": "https://knowledgefol.intesasanpaolo.com/sites/FOL/sito/Lists/La%20Tua%20Banca%20Online/DispForm.aspx?ID=53\u0026k=pin%20carta\u0026InitialTabID=Ribbon.Read"
+      }, {
+        "parameter": "knowledge-titolo",
+        "value": "Approfondimenti"
+      }, {
+        "parameter": "data-ora-sistema",
+        "value": "$sys.func.NOW()"
+      }, {
+        "parameter": "chiamata-survey",
+        "value": "off"
+      }, {
+        "parameter": "tipo-attivita",
+        "value": "D"
+      }, {
+        "parameter": "sottoflusso-precedente",
+        "value": "$session.params.sottoflusso-corrente"
+      }, {
+        "parameter": "sottoflusso-corrente",
+        "value": "Carte Richiesta PIN"
+      }, {
+        "parameter": "identificazione-necessaria",
+        "value": "Strong"
+      } ]
+    },
+    "targetPage": "PrimaPagina_CarteRichiestaPIN_ContiCarte",
+    "name": "f3d7295f-7a54-486f-8e07-56871a6e8432"
+  }, {
+    "condition": "$session.params.ivrMotivoChiamata = \"ELLIS\\.RIMO\" OR $session.params.motivo-contatto = \"ELLIS\\.RIMO\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": 0
+      }, {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.RIMO"
+      }, {
+        "parameter": "flusso-precedente",
+        "value": "$session.params.flusso-corrente"
+      }, {
+        "parameter": "flusso-corrente",
+        "value": "CONTICARTE"
+      }, {
+        "parameter": "ticket-id",
+        "value": "EllisRicercaMovimenti"
+      }, {
+        "parameter": "routing-macroarea",
+        "value": "CTY_CC_ASSINFO"
+      }, {
+        "parameter": "routing-microarea",
+        "value": "CTY_CC_infoprod"
+      }, {
+        "parameter": "knowledge-url",
+        "value": "https://knowledgefol.intesasanpaolo.com/sites/FOL/app/Lists/Intesa%20Sanpaolo%20Mobile/DispForm.aspx?ID=114\u0026k=movimenti\u0026InitialTabID=Ribbon.Read"
+      }, {
+        "parameter": "knowledge-titolo",
+        "value": "Approfondimenti"
+      }, {
+        "parameter": "data-ora-sistema",
+        "value": "$sys.func.NOW()"
+      }, {
+        "parameter": "chiamata-survey",
+        "value": "off"
+      }, {
+        "parameter": "tipo-attivita",
+        "value": "D"
+      }, {
+        "parameter": "sottoflusso-precedente",
+        "value": "$session.params.sottoflusso-corrente"
+      }, {
+        "parameter": "sottoflusso-corrente",
+        "value": "Ricerca Movimenti"
+      }, {
+        "parameter": "livello-abilitazione",
+        "value": "CONSULTA"
+      }, {
+        "parameter": "tipologia-rapporto-PG",
+        "value": "IBAN"
+      }, {
+        "parameter": "tipologia-rapporto-PF",
+        "value": "IBAN"
+      } ]
+    },
+    "targetPage": "PrimaPagina_RicercaMovimenti_ContiCarte",
+    "name": "57bc64cf-f31a-481e-9bcf-638d27c5d60d"
+  }, {
+    "condition": "$session.params.ivrMotivoChiamata = \"ELLIS\\.RISA\" OR $session.params.motivo-contatto = \"ELLIS\\.RISA\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": 0
+      }, {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.RISA"
+      }, {
+        "parameter": "flusso-precedente",
+        "value": "$session.params.flusso-corrente"
+      }, {
+        "parameter": "flusso-corrente",
+        "value": "CONTICARTE"
+      }, {
+        "parameter": "ticket-id",
+        "value": "EllisRichiestaSaldo"
+      }, {
+        "parameter": "routing-macroarea",
+        "value": "CTY_CC_ASSINFO"
+      }, {
+        "parameter": "routing-microarea",
+        "value": "CTY_CC_infoprod"
+      }, {
+        "parameter": "knowledge-url",
+        "value": "https://knowledgefol.intesasanpaolo.com/sites/FOL/operativita/Lists/Conti/Tutti%20gli%20elementi.aspx?RootFolder=%2fsites%2fFOL%2foperativita%2fLists%2fConti%2fSaldo\u0026FolderCTID=0x012000375AF9F05ACFB74BA1CDF8C436F367FF006554ABBD70D0464B84BF5F14934A71F8"
+      }, {
+        "parameter": "knowledge-titolo",
+        "value": "Approfondimenti"
+      }, {
+        "parameter": "data-ora-sistema",
+        "value": "$sys.func.NOW()"
+      }, {
+        "parameter": "chiamata-survey",
+        "value": "off"
+      }, {
+        "parameter": "tipo-attivita",
+        "value": "D"
+      }, {
+        "parameter": "sottoflusso-precedente",
+        "value": "$session.params.sottoflusso-corrente"
+      }, {
+        "parameter": "sottoflusso-corrente",
+        "value": "Richiesta Saldo"
+      }, {
+        "parameter": "livello-abilitazione",
+        "value": "CONSULTA"
+      }, {
+        "parameter": "tipologia-rapporto-PF",
+        "value": "IBAN"
+      }, {
+        "parameter": "tipologia-rapporto-PG",
+        "value": "IBAN"
+      } ]
+    },
+    "targetPage": "PrimaPagina_RichiestaSaldo_Conticarte",
+    "name": "3cd438b8-2b42-4a20-8ff7-c6e275482e8a"
+  }, {
+    "condition": "$session.params.ivrMotivoChiamata = \"ELLIS\\.MLCA\" OR $session.params.motivo-contatto = \"ELLIS\\.MLCA\" OR $session.params.test-limiti = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": 0
+      }, {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.MLCA"
+      }, {
+        "parameter": "flusso-precedente",
+        "value": "$session.params.flusso-corrente"
+      }, {
+        "parameter": "flusso-corrente",
+        "value": "CONTICARTE"
+      }, {
+        "parameter": "ticket-id",
+        "value": "EllisVariazioneLimitiCarta"
+      }, {
+        "parameter": "routing-macroarea",
+        "value": "CTY_CC_OPZ"
+      }, {
+        "parameter": "routing-microarea",
+        "value": "CTY_CC_carte"
+      }, {
+        "parameter": "knowledge-url",
+        "value": "https://knowledgefol.intesasanpaolo.com/sites/FOL/operativita/Lists/Gestione%20Clienti/DispForm.aspx?ID=85\u0026k=modifica%20limiti%20carte\u0026InitialTabID=Ribbon.Read"
+      }, {
+        "parameter": "knowledge-titolo",
+        "value": "Approfondimenti"
+      }, {
+        "parameter": "data-ora-sistema",
+        "value": "$sys.func.NOW()"
+      }, {
+        "parameter": "chiamata-survey",
+        "value": "off"
+      }, {
+        "parameter": "tipo-attivita",
+        "value": "D"
+      }, {
+        "parameter": "sottoflusso-precedente",
+        "value": "$session.params.sottoflusso-corrente"
+      }, {
+        "parameter": "sottoflusso-corrente",
+        "value": "Carte Variazione Limiti"
+      } ]
+    },
+    "targetPage": "PrimaPagina_CarteLimiti_ContiCarte",
+    "name": "3af5196b-4201-4012-80ae-4a29a9ca0c21"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non ho capito bene." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "32404f4e-4133-408d-a513-8188e6c3bfd1"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non ti ho sentito." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "de0c77ae-4515-4959-bf0e-593e3611f2f4"
+  }, {
+    "targetFlow": "HandoverCore",
+    "event": "webhook.error",
+    "triggerFulfillment": {
+    
+    },
+    "name": "0e5b94de-5634-4632-afe3-480dde6b223a"
+  }, {
+    "targetFlow": "HandoverCore",
+    "event": "webhook.error.timeout",
+    "triggerFulfillment": {
+    
+    },
+    "name": "8f06e4da-0171-452a-af19-a3e27ac38a7a"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non sono sicuro di aver sentito. Prova a ripetere." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "af65af10-dfa2-4994-9a5d-800175189546"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Continuo a non sentire. Prova a ripetere." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "f9bbb31d-2f12-4e47-b939-985f7afc1606"
+  }, {
+    "targetFlow": "HandoverNonPrevistoProposta",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace, continuo a non sentire." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Ellis non riesce a sentire la risposta del cliente"
+      } ]
+    },
+    "name": "c4eff10d-7372-4476-a447-2c07bd1daacf"
+  }, {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non sono sicuro di aver capito. Prova a ripetere." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "851ecf73-36f5-457d-b49b-13ac488f39f0"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Continuo a non capire. Prova a ripetere." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "d76220bf-f056-4424-99cb-71b440d30757"
+  }, {
+    "targetFlow": "HandoverNonPrevistoProposta",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace, continuo a non capire." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Ellis non riesce a capire la risposta del cliente"
+      } ]
+    },
+    "name": "b681aa39-2aef-44d9-be11-826fcf4642c0"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.60000002,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "multiIntentSettings": {
+    
+    }
+  },
+  "advancedSettings": {
+    "enabled": true
+  }
+}

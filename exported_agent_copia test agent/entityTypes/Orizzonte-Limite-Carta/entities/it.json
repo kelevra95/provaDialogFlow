@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "giornaliero",
+    "synonyms": [ "giornaliero" ],
+    "languageCode": "it"
+  }, {
+    "value": "mensile",
+    "synonyms": [ "mensile" ],
+    "languageCode": "it"
+  } ]
+}

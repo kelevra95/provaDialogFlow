@@ -1,0 +1,128 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "voglio accendere "
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " nuovo rid in "
+    }, {
+      "text": "conto",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei attivare una domiciliazione in "
+    }, {
+      "text": "conto",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "nel mio "
+    }, {
+      "text": "conto",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    }, {
+      "text": " vorrei agganciare una nuova domiciliazione"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "necessito di supporto per attivare un nuovo rid in "
+    }, {
+      "text": "conto",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso sapere come attivare un sdd in "
+    }, {
+      "text": "conto",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei attivare un addebito rid in "
+    }, {
+      "text": "conto",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    }, {
+      "text": " corrente"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non so come agganciare la bolletta telefonica al mio "
+    }, {
+      "text": "conto",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi dici come fare per agganciare l'utenza in "
+    }, {
+      "text": "conto",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei supporto per agganciare la bolletta in "
+    }, {
+      "text": "conto",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio a domiciliare l'utenza in "
+    }, {
+      "text": "conto",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    }, {
+      "text": " corrente?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei inserire una nuova domiciliazione in "
+    }, {
+      "text": "conto",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    }, {
+      "text": " corrente"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo inserire una domiciliazione in "
+    }, {
+      "text": "conto",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

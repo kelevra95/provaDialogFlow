@@ -1,0 +1,172 @@
+{
+  "name": "5dfc6139-fde4-44a3-adc8-1d268883d13f",
+  "displayName": "HandoverNonPrevistoProposta",
+  "transitionRoutes": [ {
+    "intent": "chi.sei",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sono Ellis, l'assistente digitale di Intesa Sanpaolo, e sono qui per fornirti assistenza telefonica." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "b0f2d592-f66c-4411-8e79-be44241d4e33"
+  }, {
+    "intent": "Default Welcome Intent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ciao, sono Ellis, l'assistente digitale di Intesa Sanpaolo, e sono qui per aiutarti." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "e973af03-cf75-48b1-aede-f80bb5eb126d"
+  }, {
+    "intent": "ricomincia",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Default Start Flow",
+    "name": "5f5c1e55-cfaf-4d1f-8315-22ca1b310d4f"
+  }, {
+    "intent": "offese",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "intento",
+        "value": "offese"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Ripetute offese da parte del cliente"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "d2e02c9a-e7fc-4d39-b762-c5caa6bcd59c"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaFlussoProvenienza_HandoverNonPrevistoProposta_Tecnico",
+    "name": "2c654a63-2484-4383-af73-c519551dafb1"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non ho capito bene." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "b009bc4d-345f-4a04-ab93-aeb33ee4fb93"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non ti ho sentito." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "f180f3ab-48cb-4e50-9895-a3dc01bc5cb3"
+  }, {
+    "targetFlow": "HandoverCore",
+    "event": "webhook.error",
+    "triggerFulfillment": {
+    
+    },
+    "name": "3dd25512-ed78-4fab-9c66-fb9f6398764d"
+  }, {
+    "targetFlow": "HandoverCore",
+    "event": "webhook.error.timeout",
+    "triggerFulfillment": {
+    
+    },
+    "name": "77fbb1a9-f295-462a-8345-015855422f42"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non sono sicuro di aver sentito. Prova a ripetere." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "a6c167c3-556d-44a7-bb5e-0356e583fe2a"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Continuo a non sentire. Prova a ripetere." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "19913baa-cbaa-433a-863d-2c9975fcd475"
+  }, {
+    "targetFlow": "HandoverOK",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace, continuo a non sentire." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "d4dbc82f-3ecd-4d96-a1ea-736d4117fc9e"
+  }, {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non sono sicuro di aver capito. Prova a ripetere." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "855a5b66-af34-418c-84a7-be812839aad0"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Continuo a non capire. Prova a ripetere." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "e6e5b217-beb2-4c69-b532-e614b3283eda"
+  }, {
+    "targetFlow": "HandoverOK",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace, continuo a non capire." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "7093b453-5cc4-44fd-ae94-390ad78d339f"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.60000002,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "multiIntentSettings": {
+    
+    }
+  },
+  "advancedSettings": {
+    "enabled": true
+  }
+}

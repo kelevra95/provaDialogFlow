@@ -1,0 +1,30 @@
+{
+  "name": "c93234ff-ee7c-45b0-8b0d-adef03fec8c4",
+  "displayName": "ChiamataOTS_ModificaPINAccesso_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "Execute_Request": {
+          "Data": {
+            "Params": {
+            
+            }
+          },
+          "Event_Name": "newAccesPin_event"
+        }
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "eventHandlers": [ {
+    "targetPage": "VerificaOTS_ModificaPINAccesso_Sicurezza",
+    "event": "newAccesPin_event",
+    "triggerFulfillment": {
+    
+    },
+    "name": "2e1b8ed1-5cd8-42df-9bc7-a639319f0e3f"
+  } ]
+}

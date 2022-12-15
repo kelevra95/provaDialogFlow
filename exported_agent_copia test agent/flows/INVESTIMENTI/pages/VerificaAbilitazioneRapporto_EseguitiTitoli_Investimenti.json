@@ -1,0 +1,28 @@
+{
+  "name": "9697eb77-22e9-4d27-8f8d-3fdab97d040d",
+  "displayName": "VerificaAbilitazioneRapporto_EseguitiTitoli_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "livello-abilitazione-esito",
+      "value": false
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.tipo-rapporto = \"DA\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "AbilitazioniSceltaRapporto",
+    "name": "639bd429-eff0-4669-9cbf-262fa21399b2"
+  }, {
+    "condition": "$session.params.livello-abilitazione-esito = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DettagliData_EseguitiTitoli_Investimenti",
+    "name": "4dc76bf5-eee4-46b4-acb5-9659fa3b126a"
+  } ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "c7fc5abc-e747-46ef-adaf-6145f38ca253",
+  "displayName": "PIN.accesso.dimenticato",
+  "priority": 500000,
+  "description": "Recepisce le sole richieste di reset pin (per pin dimenticato) per le quali Ellis non può proporre al cliente di sbloccare il contratto poichè non sappiamo se il cliente lo ha bloccato; Ellis non può nemmeno suggerire al cliente di insistere con il pin sbagliato per bloccare il contratto. "
+}

@@ -1,0 +1,6 @@
+{
+  "name": "a890594b-400b-4821-af5a-088d085560b4",
+  "displayName": "notifiche.gestione.cruscotto",
+  "priority": 500000,
+  "description": "Recepisce le richieste di gestione delle notifiche e la loro mancata ricezione a fronte dei pagamenti (no notifiche autorizzative)"
+}

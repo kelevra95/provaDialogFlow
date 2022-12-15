@@ -1,0 +1,6 @@
+{
+  "name": "6e63c19e-7825-4760-b2b2-26137de5315b",
+  "displayName": "operazioni.derivati",
+  "priority": 500000,
+  "description": "Recepisce richieste di operazioni per derivati"
+}

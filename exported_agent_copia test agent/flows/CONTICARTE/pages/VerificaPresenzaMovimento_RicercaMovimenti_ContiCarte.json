@@ -1,0 +1,47 @@
+{
+  "name": "b9f5cd90-8850-446f-8988-f355e56b0e20",
+  "displayName": "VerificaPresenzaMovimento_RicercaMovimenti_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.movimento-trovato = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace, ma non ho trovato alcun movimento.  " ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "PropostaNuovaRicerca_RicercaMovimenti_ContiCarte",
+    "name": "ffe8bb97-6f45-428e-b2a4-343ad55cfd7e"
+  }, {
+    "condition": "$session.params.movimento-trovato = true AND $session.params.fine-lettura = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$session.params.elenco-movimenti." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "ProseguiLetturaSiNo_RicercaMovimenti_ContiCarte",
+    "name": "96ae0906-9b6d-42ad-938d-78d98d5b5d67"
+  }, {
+    "condition": "$session.params.movimento-trovato = true AND $session.params.fine-lettura = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$session.params.elenco-movimenti. Ho terminato la lettura dei movimenti. " ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "PropostaNuovaRicerca_RicercaMovimenti_ContiCarte",
+    "name": "3cd703e3-770d-419b-8ded-f05c174a8f2a"
+  } ]
+}

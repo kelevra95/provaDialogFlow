@@ -1,0 +1,92 @@
+{
+  "name": "0eac4912-9d64-44af-9bc6-fc5db3a420c2",
+  "displayName": "AcquisizioneAnnoRicerca_RichiestaGiacenzaMedia_Archivio",
+  "form": {
+    "parameters": [ {
+      "displayName": "periodo-ricerca",
+      "required": true,
+      "entityType": "@sys.date-period",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Indicami, per favore,  l'anno di riferimento per la ricerca della documentazione. " ]
+            },
+            "languageCode": "it"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho sentito. Dimmi l'anno di ricerca della giacenza media." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "ec49e9c4-c530-4eec-aad4-2d46bc0c4587"
+        }, {
+          "targetPage": "VerificaPresenzaDocumentoInvioNotifica_RichiestaGiacenzaMedia_Archivio",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non sentire. Come previsto da legge ti fornisco il documento dell'anno $session.params.anno-consigliato." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "anno-ricerca",
+              "value": "$sys.func.ADD($session.params.data-ora-sistema.year, -2)"
+            } ]
+          },
+          "name": "c2407248-77f5-4d60-a74a-4cb00984eff8"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho capito. Dimmi l'anno di ricerca della giacenza media." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "cb7b7e68-eeca-4dfe-8623-3a58be702e84"
+        }, {
+          "targetPage": "VerificaPresenzaDocumentoInvioNotifica_RichiestaGiacenzaMedia_Archivio",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non capire. Come previsto da legge ti fornisco il documento dell'anno $session.params.anno-consigliato." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "anno-ricerca",
+              "value": "$sys.func.ADD($session.params.data-ora-sistema.year, -2)"
+            } ]
+          },
+          "name": "a064ba73-f393-4161-9a23-1614ebad1bc2"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DettagliDocumento_RichiestaGiacenzaMedia_Archivio",
+    "name": "58dd1f20-2786-4e99-bf4d-243fcf8d4391"
+  } ]
+}

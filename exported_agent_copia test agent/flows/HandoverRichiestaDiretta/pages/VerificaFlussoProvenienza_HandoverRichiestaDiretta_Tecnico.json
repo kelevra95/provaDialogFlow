@@ -1,0 +1,31 @@
+{
+  "name": "2822315f-8fde-48ad-b184-278fe56d35fa",
+  "displayName": "VerificaFlussoProvenienza_HandoverRichiestaDiretta_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.sottoflusso-precedente = \"Carte Blocco - blocco terzi\" OR $session.params.sottoflusso-corrente = \"Carte Blocco - blocco terzi\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "esito-handover",
+        "value": "si"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Il cliente chiede di parlare con un gestore"
+      } ]
+    },
+    "targetFlow": "HandoverOK",
+    "name": "a30b4dcf-072a-4f4a-b871-3d9f403244c8"
+  }, {
+    "condition": "$session.params.sottoflusso-precedente != \"Carte Blocco - blocco terzi\" AND $session.params.sottoflusso-corrente != \"Carte Blocco - blocco terzi\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": " OrariFOL_HandoverRichiestaDiretta_Tecnico",
+    "name": "45157673-ab9c-4dfe-abe8-d01418bad1e7"
+  } ]
+}

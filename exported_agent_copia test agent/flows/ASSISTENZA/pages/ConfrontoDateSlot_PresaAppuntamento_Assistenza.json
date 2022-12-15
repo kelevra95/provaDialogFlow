@@ -1,0 +1,273 @@
+{
+  "name": "8fe38a31-c41a-4cf8-b9a9-4adf37a3cf8f",
+  "displayName": "ConfrontoDateSlot_PresaAppuntamento_Assistenza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$sys.func.LOWER($intent.params.data-ora-conferma.original) = $sys.func.LOWER($sys.func.FORMAT_DATE($session.params.data-ora-slot1, EEEE, \"it\")) AND $sys.func.LOWER($intent.params.data-ora-conferma.original) = $sys.func.LOWER($sys.func.FORMAT_DATE($session.params.data-ora-slot2, EEEE, \"it\")) AND $session.params.tipo-gestore = \"remoto\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Per favore sii più specifico.\n\nIl tuo gestore è disponibile $sys.func.FORMAT_DATE($session.params.data-ora-slot1, EEEE dd MMMM, \"it\")" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "data-ora-conferma",
+        "value": null
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.data-ora-slot1.hours = 12",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "a $sys.func.FORMAT_DATE($session.params.data-ora-slot1, HH:mm, \"it\") o" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "alle $sys.func.FORMAT_DATE($session.params.data-ora-slot1, HH:mm, \"it\") o" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        } ]
+      }, {
+        "cases": [ {
+          "condition": "$session.params.data-ora-slot2.hours = 12",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "$sys.func.FORMAT_DATE($session.params.data-ora-slot2, EEEE dd MMMM, \"it\") a $sys.func.FORMAT_DATE($session.params.data-ora-slot2, HH:mm, \"it\"). Quale alternativa preferisci? La prima o la seconda?" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "$sys.func.FORMAT_DATE($session.params.data-ora-slot2, EEEE dd MMMM, \"it\") alle $sys.func.FORMAT_DATE($session.params.data-ora-slot2, HH:mm, \"it\"). Quale alternativa preferisci? La prima o la seconda?" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "SceltaSlotAgendaGR_PresaAppuntamento_Assistenza",
+    "name": "b957e2fb-898f-410b-b00b-6798b21cb438"
+  }, {
+    "condition": "$sys.func.LOWER($intent.params.data-ora-conferma.original) = $sys.func.LOWER($sys.func.FORMAT_DATE($session.params.data-ora-slot1, EEEE, \"it\")) AND $sys.func.LOWER($intent.params.data-ora-conferma.original) = $sys.func.LOWER($sys.func.FORMAT_DATE($session.params.data-ora-slot2, EEEE, \"it\")) AND $session.params.tipo-gestore = \"filiale\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Per favore sii più specifico.\n\nIl tuo gestore è disponibile $sys.func.FORMAT_DATE($session.params.data-ora-slot1, EEEE dd MMMM, \"it\")" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "data-ora-conferma",
+        "value": null
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.data-ora-slot1.hours = 12",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "a $sys.func.FORMAT_DATE($session.params.data-ora-slot1, HH:mm, \"it\") o" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "alle $sys.func.FORMAT_DATE($session.params.data-ora-slot1, HH:mm, \"it\") o" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        } ]
+      }, {
+        "cases": [ {
+          "condition": "$session.params.data-ora-slot2.hours = 12",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "$sys.func.FORMAT_DATE($session.params.data-ora-slot2, EEEE dd MMMM, \"it\") a $sys.func.FORMAT_DATE($session.params.data-ora-slot2, HH:mm, \"it\"). Quale alternativa preferisci? La prima o la seconda?" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "$sys.func.FORMAT_DATE($session.params.data-ora-slot2, EEEE dd MMMM, \"it\") alle $sys.func.FORMAT_DATE($session.params.data-ora-slot2, HH:mm, \"it\"). Quale alternativa preferisci? La prima o la seconda?" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "SceltaSlotAgendaGF_PresaAppuntamento_Assistenza",
+    "name": "e28fb1d9-212a-461a-99d8-3c763d29dead"
+  }, {
+    "condition": "$session.params.tipo-gestore = \"remoto\" AND NOT ($session.params.data-ora-slot1 = $session.params.data-ora-conferma OR ($session.params.data-ora-slot1.year = $session.params.data-ora-conferma.year AND $session.params.data-ora-slot1.month = $session.params.data-ora-conferma.month AND $session.params.data-ora-slot1.day = $session.params.data-ora-conferma.day AND ($session.params.data-ora-slot1.hours = $session.params.data-ora-conferma.hours OR $session.params.data-ora-conferma.hours = null) AND ($session.params.data-ora-slot1.minutes = $session.params.data-ora-conferma.minutes OR $session.params.data-ora-conferma.minutes = null) AND ($session.params.data-ora-slot1.seconds = $session.params.data-ora-conferma.seconds OR $session.params.data-ora-conferma.seconds = null) AND ($session.params.data-ora-slot1.nanos = $session.params.data-ora-conferma.nanos OR $session.params.data-ora-conferma.nanos = null)) OR $sys.func.LOWER($intent.params.data-ora-conferma.original) = $sys.func.LOWER($sys.func.FORMAT_DATE($session.params.data-ora-slot1, EEEE, \"it\"))) AND NOT ($session.params.data-ora-slot2 = $session.params.data-ora-conferma OR ($session.params.data-ora-slot2.year = $session.params.data-ora-conferma.year AND $session.params.data-ora-slot2.month = $session.params.data-ora-conferma.month AND $session.params.data-ora-slot2.day = $session.params.data-ora-conferma.day AND ($session.params.data-ora-slot2.hours = $session.params.data-ora-conferma.hours OR $session.params.data-ora-conferma.hours = null) AND ($session.params.data-ora-slot2.minutes = $session.params.data-ora-conferma.minutes OR $session.params.data-ora-conferma.minutes = null) AND ($session.params.data-ora-slot2.seconds = $session.params.data-ora-conferma.seconds OR $session.params.data-ora-conferma.seconds = null) AND ($session.params.data-ora-slot2.nanos = $session.params.data-ora-conferma.nanos OR $session.params.data-ora-conferma.nanos = null)) OR $sys.func.LOWER($intent.params.data-ora-conferma.original) = $sys.func.LOWER($sys.func.FORMAT_DATE($session.params.data-ora-slot2, EEEE, \"it\")))",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Lo slot indicato non corrisponde a quelli proposti.\n\nIl tuo gestore è disponibile $sys.func.FORMAT_DATE($session.params.data-ora-slot1, EEEE dd MMMM, \"it\")" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "data-ora-conferma",
+        "value": null
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.data-ora-slot1.hours = 12",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "a $sys.func.FORMAT_DATE($session.params.data-ora-slot1, HH:mm, \"it\") o" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "alle $sys.func.FORMAT_DATE($session.params.data-ora-slot1, HH:mm, \"it\") o" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        } ]
+      }, {
+        "cases": [ {
+          "condition": "$session.params.data-ora-slot2.hours = 12",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "$sys.func.FORMAT_DATE($session.params.data-ora-slot2, EEEE dd MMMM, \"it\") a $sys.func.FORMAT_DATE($session.params.data-ora-slot2, HH:mm, \"it\"). Quale alternativa preferisci? La prima o la seconda?" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "$sys.func.FORMAT_DATE($session.params.data-ora-slot2, EEEE dd MMMM, \"it\") alle $sys.func.FORMAT_DATE($session.params.data-ora-slot2, HH:mm, \"it\"). Quale alternativa preferisci? La prima o la seconda?" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "SceltaSlotAgendaGR_PresaAppuntamento_Assistenza",
+    "name": "b5d6e6c8-2acc-4aca-82a7-1d2be64fef33"
+  }, {
+    "condition": "$session.params.tipo-gestore = \"filiale\" AND NOT ($session.params.data-ora-slot1 = $session.params.data-ora-conferma OR ($session.params.data-ora-slot1.year = $session.params.data-ora-conferma.year AND $session.params.data-ora-slot1.month = $session.params.data-ora-conferma.month AND $session.params.data-ora-slot1.day = $session.params.data-ora-conferma.day AND ($session.params.data-ora-slot1.hours = $session.params.data-ora-conferma.hours OR $session.params.data-ora-conferma.hours = null) AND ($session.params.data-ora-slot1.minutes = $session.params.data-ora-conferma.minutes OR $session.params.data-ora-conferma.minutes = null) AND ($session.params.data-ora-slot1.seconds = $session.params.data-ora-conferma.seconds OR $session.params.data-ora-conferma.seconds = null) AND ($session.params.data-ora-slot1.nanos = $session.params.data-ora-conferma.nanos OR $session.params.data-ora-conferma.nanos = null)) OR $sys.func.LOWER($intent.params.data-ora-conferma.original) = $sys.func.LOWER($sys.func.FORMAT_DATE($session.params.data-ora-slot1, EEEE, \"it\"))) AND NOT ($session.params.data-ora-slot2 = $session.params.data-ora-conferma OR ($session.params.data-ora-slot2.year = $session.params.data-ora-conferma.year AND $session.params.data-ora-slot2.month = $session.params.data-ora-conferma.month AND $session.params.data-ora-slot2.day = $session.params.data-ora-conferma.day AND ($session.params.data-ora-slot2.hours = $session.params.data-ora-conferma.hours OR $session.params.data-ora-conferma.hours = null) AND ($session.params.data-ora-slot2.minutes = $session.params.data-ora-conferma.minutes OR $session.params.data-ora-conferma.minutes = null) AND ($session.params.data-ora-slot2.seconds = $session.params.data-ora-conferma.seconds OR $session.params.data-ora-conferma.seconds = null) AND ($session.params.data-ora-slot2.nanos = $session.params.data-ora-conferma.nanos OR $session.params.data-ora-conferma.nanos = null)) OR $sys.func.LOWER($intent.params.data-ora-conferma.original) = $sys.func.LOWER($sys.func.FORMAT_DATE($session.params.data-ora-slot2, EEEE, \"it\")))",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ " Lo slot indicato non corrisponde a quelli proposti.\n\nIl tuo gestore è disponibile $sys.func.FORMAT_DATE($session.params.data-ora-slot1, EEEE dd MMMM, \"it\")" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "data-ora-conferma",
+        "value": null
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.data-ora-slot1.hours = 12",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "a $sys.func.FORMAT_DATE($session.params.data-ora-slot1, HH:mm, \"it\") o" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "alle $sys.func.FORMAT_DATE($session.params.data-ora-slot1, HH:mm, \"it\") o" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        } ]
+      }, {
+        "cases": [ {
+          "condition": "$session.params.data-ora-slot2.hours = 12",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "$sys.func.FORMAT_DATE($session.params.data-ora-slot2, EEEE dd MMMM, \"it\") a $sys.func.FORMAT_DATE($session.params.data-ora-slot2, HH:mm, \"it\"). Quale alternativa preferisci? La prima o la seconda?" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "$sys.func.FORMAT_DATE($session.params.data-ora-slot2, EEEE dd MMMM, \"it\") alle $sys.func.FORMAT_DATE($session.params.data-ora-slot2, HH:mm, \"it\"). Quale alternativa preferisci? La prima o la seconda?" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "SceltaSlotAgendaGF_PresaAppuntamento_Assistenza",
+    "name": "4aac36d4-1db7-4501-9187-ac73a4cdb5e7"
+  }, {
+    "condition": "$session.params.data-ora-slot1 = $session.params.data-ora-conferma OR ($session.params.data-ora-slot1.year = $session.params.data-ora-conferma.year AND $session.params.data-ora-slot1.month = $session.params.data-ora-conferma.month AND $session.params.data-ora-slot1.day = $session.params.data-ora-conferma.day AND ($session.params.data-ora-slot1.hours = $session.params.data-ora-conferma.hours OR $session.params.data-ora-conferma.hours = null) AND ($session.params.data-ora-slot1.minutes = $session.params.data-ora-conferma.minutes OR $session.params.data-ora-conferma.minutes = null) AND ($session.params.data-ora-slot1.seconds = $session.params.data-ora-conferma.seconds OR $session.params.data-ora-conferma.seconds = null) AND ($session.params.data-ora-slot1.nanos = $session.params.data-ora-conferma.nanos OR $session.params.data-ora-conferma.nanos = null)) OR $sys.func.LOWER($intent.params.data-ora-conferma.original) = $sys.func.LOWER($sys.func.FORMAT_DATE($session.params.data-ora-slot1, EEEE, \"it\"))",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "scelta-slot",
+        "value": "primaAlternativa"
+      }, {
+        "parameter": "data-ora-scelta",
+        "value": "$sys.func.FORMAT_DATE($session.params.data-ora-slot1, dd/MM/yyyy HH:mm:ss)"
+      } ]
+    },
+    "targetPage": "InserimentoAppuntamento_PresaAppuntamento_Assistenza",
+    "name": "a82bd230-5aca-4afc-8ab5-019434377eeb"
+  }, {
+    "condition": "$session.params.data-ora-slot2 = $session.params.data-ora-conferma OR ($session.params.data-ora-slot2.year = $session.params.data-ora-conferma.year AND $session.params.data-ora-slot2.month = $session.params.data-ora-conferma.month AND $session.params.data-ora-slot2.day = $session.params.data-ora-conferma.day AND ($session.params.data-ora-slot2.hours = $session.params.data-ora-conferma.hours OR $session.params.data-ora-conferma.hours = null) AND ($session.params.data-ora-slot2.minutes = $session.params.data-ora-conferma.minutes OR $session.params.data-ora-conferma.minutes = null) AND ($session.params.data-ora-slot2.seconds = $session.params.data-ora-conferma.seconds OR $session.params.data-ora-conferma.seconds = null) AND ($session.params.data-ora-slot2.nanos = $session.params.data-ora-conferma.nanos OR $session.params.data-ora-conferma.nanos = null)) OR $sys.func.LOWER($intent.params.data-ora-conferma.original) = $sys.func.LOWER($sys.func.FORMAT_DATE($session.params.data-ora-slot2, EEEE, \"it\"))",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "scelta-slot",
+        "value": "secondaAlternativa"
+      }, {
+        "parameter": "data-ora-scelta",
+        "value": "$sys.func.FORMAT_DATE($session.params.data-ora-slot2, dd/MM/yyyy HH:mm:ss)"
+      } ]
+    },
+    "targetPage": "InserimentoAppuntamento_PresaAppuntamento_Assistenza",
+    "name": "3fde2b31-8834-4fd7-8120-1a3e00fd3c49"
+  } ]
+}

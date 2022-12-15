@@ -1,0 +1,51 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "nessuna",
+      "parameterId": "scelta"
+    }, {
+      "text": " delle due"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "seconda",
+      "parameterId": "scelta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "prima",
+      "parameterId": "scelta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "nessuna",
+      "parameterId": "scelta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "la "
+    }, {
+      "text": "seconda",
+      "parameterId": "scelta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "la "
+    }, {
+      "text": "prima",
+      "parameterId": "scelta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

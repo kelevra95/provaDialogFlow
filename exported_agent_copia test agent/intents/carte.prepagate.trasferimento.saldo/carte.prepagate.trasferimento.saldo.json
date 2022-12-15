@@ -1,0 +1,6 @@
+{
+  "name": "10ac4237-e3c7-4236-be1c-cb66eb50dec3",
+  "displayName": "carte.prepagate.trasferimento.saldo",
+  "priority": 500000,
+  "description": "Recepisce le richieste di trasferimento saldo da carta prepagata a conto"
+}

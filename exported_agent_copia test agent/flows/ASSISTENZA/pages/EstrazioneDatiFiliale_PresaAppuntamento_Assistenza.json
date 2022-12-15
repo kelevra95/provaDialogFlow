@@ -1,0 +1,36 @@
+{
+  "name": "0ba04d5f-9a2c-4587-b643-1f8c2619c283",
+  "displayName": "EstrazioneDatiFiliale_PresaAppuntamento_Assistenza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Riferimenti-filiale",
+    "tag": "getBranchData",
+    "setParameterActions": [ {
+      "parameter": "tipo-gestore",
+      "value": "filiale"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "ec281ef5-262c-43a4-99c3-45a4e5691366"
+  }, {
+    "condition": "$session.params.fulfillment-error = false",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "indirizzo-filiale",
+        "value": "$sys.func.SUBSTITUTE($session.params.indirizzo-filiale,\"/\",\"-\")"
+      }, {
+        "parameter": "citta-filiale",
+        "value": "$sys.func.LOWER($session.params.citta-filiale)"
+      } ]
+    },
+    "targetPage": "ConfermaFiliale_PresaAppuntamento_Assistenza",
+    "name": "1d589eb9-96d9-4996-9151-a1849c147197"
+  } ]
+}

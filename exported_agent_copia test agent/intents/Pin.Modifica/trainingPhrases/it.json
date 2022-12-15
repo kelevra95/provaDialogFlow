@@ -1,0 +1,431 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "devo assolutamente variare il pin",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "c'è la possibilità di modificare la mia ",
+      "auto": true
+    }, {
+      "text": "carta",
+      "parameterId": "tipo-carta-conto",
+      "auto": true
+    }, {
+      "text": " di debito?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "la password attuale di sicuro me la dimentico, è possibile modificarla?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "puoi darmi informazioni su come cambiare il codice segreto della per me "
+    }, {
+      "text": "card",
+      "parameterId": "tipo-carta-conto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho appena ricevuto la mia nuova per me ",
+      "auto": true
+    }, {
+      "text": "card",
+      "parameterId": "tipo-carta-conto",
+      "auto": true
+    }, {
+      "text": " plus e vorrei mettere lo stesso pin della vecchia ",
+      "auto": true
+    }, {
+      "text": "carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Voglio cambiare il codice per entrare",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "per la mia nuova "
+    }, {
+      "text": "carta",
+      "parameterId": "tipo-carta-conto"
+    }, {
+      "text": " vorrei utilizzare il vecchio pin, si può?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " mio collega mi ha detto che ha cambiato il pin della ",
+      "auto": true
+    }, {
+      "text": "carta",
+      "parameterId": "tipo-carta-conto",
+      "auto": true
+    }, {
+      "text": " direttamente all'ATM, è vero che si può fare?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso cambiare il pin della "
+    }, {
+      "text": "carta",
+      "parameterId": "tipo-carta-conto"
+    }, {
+      "text": " di credito? Se non lo scelgo io non riesco a ricordarmelo"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "puoi aiutarmi a modificare il codice di accesso al mio account della "
+    }, {
+      "text": "banca",
+      "parameterId": "tipo-carta-conto"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "si può cambiare il pin del ",
+      "auto": true
+    }, {
+      "text": "sito",
+      "parameterId": "tipo-carta-conto",
+      "auto": true
+    }, {
+      "text": "? io sti numeri a caso mica me li posso ricordare",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non mi piace il pin di "
+    }, {
+      "text": "accesso",
+      "parameterId": "tipo-carta-conto"
+    }, {
+      "text": " che mi avete dato, posso cambiarlo?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non me la ricorderò mai la password che mi avete dato, si può cambiare?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Vorrei modificare il pin segreto di "
+    }, {
+      "text": "accesso",
+      "parameterId": "tipo-carta-conto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei cambiare il pin di "
+    }, {
+      "text": "accesso",
+      "parameterId": "tipo-carta-conto"
+    }, {
+      "text": " all'app mi puoi aiutare?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come si fa a cambiare pin del "
+    }, {
+      "text": "conto",
+      "parameterId": "tipo-carta-conto"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei reimpostare il codice pin di accesso all'app della "
+    }, {
+      "text": "banca",
+      "parameterId": "tipo-carta-conto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei modificare le mie credenziali d'",
+      "auto": true
+    }, {
+      "text": "accesso",
+      "parameterId": "tipo-carta-conto",
+      "auto": true
+    }, {
+      "text": " a sito e app della banca",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non trovo come variare il codice segreto del mio "
+    }, {
+      "text": "conto",
+      "parameterId": "tipo-carta-conto"
+    }, {
+      "text": " corrente bancario"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei cambiare il pin del "
+    }, {
+      "text": "conto",
+      "parameterId": "tipo-carta-conto"
+    } ],
+    "repeatCount": 3,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "puoi assistermi con la modifica del pin del "
+    }, {
+      "text": "conto",
+      "parameterId": "tipo-carta-conto"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come cambiare pin dell'"
+    }, {
+      "text": "okey",
+      "parameterId": "tipo-carta-conto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio a cambiare il pin di "
+    }, {
+      "text": "accesso",
+      "parameterId": "tipo-carta-conto"
+    }, {
+      "text": " all'"
+    }, {
+      "text": "app"
+    }, {
+      "text": " e "
+    }, {
+      "text": "ib"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "è una vita che ho lo stesso codice di accesso per il mio "
+    }, {
+      "text": "account",
+      "parameterId": "tipo-carta-conto"
+    }, {
+      "text": ", per sicurezza lo vorrei cambiare"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dovrei aggiornare il pin di "
+    }, {
+      "text": "accesso",
+      "parameterId": "tipo-carta-conto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Voglio cambiare la chiave d'"
+    }, {
+      "text": "accesso",
+      "parameterId": "tipo-carta-conto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sarebbe possibile modificare il pin della "
+    }, {
+      "text": "visa",
+      "parameterId": "tipo-carta-conto"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " chi ",
+      "auto": true
+    }, {
+      "text": "mi",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "devo",
+      "auto": true
+    }, {
+      "text": " rivolgere per ",
+      "auto": true
+    }, {
+      "text": "modificare",
+      "auto": true
+    }, {
+      "text": " il codice pin ",
+      "auto": true
+    }, {
+      "text": "della",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "mia",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "mastercard",
+      "parameterId": "tipo-carta-conto",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cosa devo fare per modificare il codice segreto del "
+    }, {
+      "text": "bancocard",
+      "parameterId": "tipo-carta-conto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho appena ricevuto la nuova "
+    }, {
+      "text": "carta",
+      "parameterId": "tipo-carta-conto"
+    }, {
+      "text": " di credito e vorrei cambiare il PIN"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "è possibile sostituire il pin del "
+    }, {
+      "text": "bancomat",
+      "parameterId": "tipo-carta-conto"
+    }, {
+      "text": " con uno nuovo?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei modificare il PIN della mia "
+    }, {
+      "text": "carta",
+      "parameterId": "tipo-carta-conto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei cambiare il codice segreto del mio "
+    }, {
+      "text": "bancomat",
+      "parameterId": "tipo-carta-conto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi piacerebbe modificare il codice segreto del mio "
+    }, {
+      "text": "bancocard",
+      "parameterId": "tipo-carta-conto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei modificare il pin per sicurezza",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei cambiare il codice pin",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cambio pin",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ciao Ellis devo modificare il pin",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

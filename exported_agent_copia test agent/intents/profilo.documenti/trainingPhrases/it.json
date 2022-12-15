@@ -1,0 +1,151 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "mi aiutate ",
+      "auto": true
+    }, {
+      "text": "ad",
+      "auto": true
+    }, {
+      "text": " aggiungere la ",
+      "auto": true
+    }, {
+      "text": "carta",
+      "auto": true
+    }, {
+      "text": " d'identità nei ",
+      "auto": true
+    }, {
+      "text": "vostri",
+      "auto": true
+    }, {
+      "text": " sistemi?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come posso fare per allegare documenti al ",
+      "auto": true
+    }, {
+      "text": "mio",
+      "auto": true
+    }, {
+      "text": " profilo ",
+      "auto": true
+    }, {
+      "text": "personale",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei inserire la carta d'identità elettronica nel profilo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho rinnovato la ",
+      "auto": true
+    }, {
+      "text": "mia",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "carta",
+      "auto": true
+    }, {
+      "text": " d'identità, devo aggiornarla nel ",
+      "auto": true
+    }, {
+      "text": "mio",
+      "auto": true
+    }, {
+      "text": " profilo?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come ",
+      "auto": true
+    }, {
+      "text": "si",
+      "auto": true
+    }, {
+      "text": " fa ",
+      "auto": true
+    }, {
+      "text": "ad",
+      "auto": true
+    }, {
+      "text": " allegare la ",
+      "auto": true
+    }, {
+      "text": "carta",
+      "auto": true
+    }, {
+      "text": " d'identità?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non riesco a modificare la carta d'identità nel mio profilo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non riesco ad aggiornare i miei documenti",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho bisogno di inserire la carta d'identità nei vostri sistemi",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho una nuova ",
+      "auto": true
+    }, {
+      "text": "carta",
+      "auto": true
+    }, {
+      "text": " d'identità, come faccio ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " comunicarvela?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei aggiornare la carta d'identità",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

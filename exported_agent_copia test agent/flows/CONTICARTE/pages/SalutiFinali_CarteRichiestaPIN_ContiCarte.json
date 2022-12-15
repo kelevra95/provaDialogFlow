@@ -1,0 +1,30 @@
+{
+  "name": "91c4be18-43a7-470c-bb51-ff43004855b1",
+  "displayName": "SalutiFinali_CarteRichiestaPIN_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.chiamata-survey = \"on\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Survey_CarteRichiestaPIN_ContiCarte",
+    "name": "6634cb7c-d761-4027-8142-0147e24576a9"
+  }, {
+    "condition": "$session.params.chiamata-survey = \"off\" OR $session.params.chiamata-survey = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "È stato un piacere parlare con te. A presto!" ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "6196a6d6-3f36-4a00-81d9-27928a11362c"
+  } ]
+}

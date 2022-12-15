@@ -1,0 +1,105 @@
+{
+  "name": "2066414f-5e57-495e-9816-78b63816bdf6",
+  "displayName": "ModalitaColloquioGF_PresaAppuntamento_Assistenza",
+  "form": {
+    "parameters": [ {
+      "displayName": "tipo-colloquio-GF",
+      "required": true,
+      "entityType": "@Tipo-Colloquio-GF",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Per l'appuntamento con il tuo gestore vuoi recarti in filiale o preferisci un colloquio telefonico?" ]
+            },
+            "languageCode": "it"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho capito. Preferisci in filiale o al telefono?" ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "d12dbfd1-196a-46bd-ab20-ea74545c1437"
+        }, {
+          "targetPage": "AcquisizioneDataOra_PresaAppuntamento_Assistenza",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non sono sicuro di aver capito, quindi procedo con l'appuntamento in filiale." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "174c3aba-4ffb-470b-b6a6-f126d0fc8295"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non sono riuscito a capire. Preferisci in filiale o al telefono?" ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "e45fa9c4-8d57-4b99-ab90-556be36fe776"
+        }, {
+          "targetPage": "AcquisizioneDataOra_PresaAppuntamento_Assistenza",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non sono sicuro di aver capito, quindi procedo con l'appuntamento in filiale." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "c066658c-cbe5-4144-b543-df32276816d7"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.tipo-colloquio-GF = \"telefonico\" AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "note-appuntamento",
+        "value": "Il cliente vuole un appuntamento telefonico"
+      } ]
+    },
+    "targetPage": "AcquisizioneDataOra_PresaAppuntamento_Assistenza",
+    "name": "bb448c41-2a11-4e2f-add7-e4eb9b6b5898"
+  }, {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "AcquisizioneDataOra_PresaAppuntamento_Assistenza",
+    "name": "bb4decc5-9bb7-4ac5-9d4e-fdd54b8b899e"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 40,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

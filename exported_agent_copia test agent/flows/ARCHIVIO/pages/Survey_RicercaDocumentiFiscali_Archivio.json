@@ -1,0 +1,46 @@
+{
+  "name": "9e2b6b3e-f298-493b-90b0-35499db71182",
+  "displayName": "Survey_RicercaDocumentiFiscali_Archivio",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Bene. Sono contento. È stato un piacere parlare con te. A presto!" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "esito-survey",
+        "value": "si"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "23248425-cd5f-470d-afec-d06633368e84"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace. Cercherò di migliorare per il futuro." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "esito-survey",
+        "value": "no"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Il cliente non è soddisfatto dell'aiuto di Ellis"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "22b6c5ec-cc98-4b88-8aef-acae4baeecea"
+  } ]
+}

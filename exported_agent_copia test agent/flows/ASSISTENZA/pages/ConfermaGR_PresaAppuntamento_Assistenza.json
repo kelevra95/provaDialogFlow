@@ -1,0 +1,130 @@
+{
+  "name": "8c6d5877-af6a-43fb-b29d-22efe3f98481",
+  "displayName": "ConfermaGR_PresaAppuntamento_Assistenza",
+  "form": {
+    "parameters": [ {
+      "displayName": "tipo-gestore",
+      "required": true,
+      "entityType": "@Tipo-Gestore",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho sentito. Vuoi procedere con il tuo gestore remoto?" ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "576f4315-f73e-4f22-afc7-0bba4cf2f580"
+        }, {
+          "event": "sys.no-match-default",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho capito bene. Vuoi procedere con il tuo gestore remoto?" ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "f804abcf-f691-49fd-8dcb-81332eb77cf0"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Per fissare un appuntamento, hai a disposizione due opzioni: il gestore digitale remoto o il gestore di filiale. Vuoi procedere con il tuo gestore digitale remoto?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Va bene. Verificherò la disponibilità dell'agenda del tuo gestore digitale remoto." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "tipo-gestore",
+        "value": "remoto"
+      } ]
+    },
+    "targetPage": "SceltaMotivo_PresaAppuntamento_Assistenza",
+    "name": "95f1859b-a15b-41b1-8425-863bd95b1136"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Come de-sideri. Verificherò la disponibilità dell'agenda del tuo gestore di filiale." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "tipo-gestore",
+        "value": "filiale"
+      } ]
+    },
+    "targetPage": "EstrazioneDatiFiliale_PresaAppuntamento_Assistenza",
+    "name": "15209fbb-e2cf-4696-865a-8c79f1b8bd5b"
+  }, {
+    "intent": "non.so",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Il gestore digitale remoto, è il consulente che ti assiste a distanza nella gestione dei servizi e prodotti bancari, senza dover andare in filiale. Procediamo?" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "tipo-gestore",
+        "value": null
+      } ]
+    },
+    "name": "9948eeaa-5bef-423a-b003-5954ad83acd3"
+  }, {
+    "condition": "$session.params.tipo-gestore = \"remoto\" AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Il gestore digitale remoto, è il consulente che ti assiste a distanza nella gestione dei servizi e prodotti bancari, senza dover andare in filiale. Procediamo?" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "tipo-gestore",
+        "value": null
+      } ]
+    },
+    "name": "7c7209b7-2a3f-44e6-b5d5-6d4c6be189cd"
+  }, {
+    "condition": "$session.params.tipo-gestore = \"filiale\" AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Come de-sideri. Verificherò la disponibilità dell'agenda del tuo gestore di filiale." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "EstrazioneDatiFiliale_PresaAppuntamento_Assistenza",
+    "name": "4896625e-84b0-463c-be3d-4764ec793e5d"
+  } ],
+  "speakerIdSettings": {
+  
+  }
+}

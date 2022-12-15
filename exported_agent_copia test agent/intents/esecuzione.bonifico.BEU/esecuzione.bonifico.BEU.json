@@ -1,0 +1,6 @@
+{
+  "name": "2e0ea863-8400-4cb5-bb70-7dd07bd6eded",
+  "displayName": "esecuzione.bonifico.BEU",
+  "priority": 500000,
+  "description": "Effettuare Bonifico conto terzi, multiplo, sepa, giroconto, Italia (no estero, no fiscale)"
+}

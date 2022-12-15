@@ -1,0 +1,56 @@
+{
+  "name": "f53dcb25-72c6-4ba1-bb68-af712f0ff230",
+  "displayName": "DisambiguazioneModificaPIN",
+  "form": {
+    "parameters": [ {
+      "displayName": "tipo-carta-conto",
+      "required": true,
+      "entityType": "@tipo-carta-conto",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "della carta o del conto?" ]
+            },
+            "languageCode": "it"
+          } ]
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.tipo-carta-conto = conto AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.MOPA"
+      } ]
+    },
+    "targetFlow": "SICUREZZA",
+    "name": "2d179146-9412-41f0-aee4-cbd4b472ddb5"
+  }, {
+    "condition": "$session.params.tipo-carta-conto != conto AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non si può cambiare il PIN della carta" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "tipo-carta-conto",
+        "value": null
+      } ]
+    },
+    "targetPage": "Start Page",
+    "name": "491db5bd-37da-4c6c-8b56-78d7670caf31"
+  } ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "bc13ef4f-8552-4288-a380-ffcc2a4efd6b",
+  "displayName": "ControlloBTTerzi_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.codice-titolare = null AND ($session.params.ivrBt != \"00000000\" AND $session.params.ivrBt != \"\" AND $session.params.ivrBt != null AND $session.params.livello-identificazione = null)",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "codice-titolare",
+        "value": "$sys.func.MID($session.params.ivrBt, 1, 8)"
+      } ]
+    },
+    "targetPage": "InserimentoBloccoCarteTerzi_CarteBlocco_Sicurezza",
+    "name": "191b6747-7d20-4dac-8a87-45f44dfa2e54"
+  }, {
+    "condition": "$session.params.codice-titolare != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "InserimentoBloccoCarteTerzi_CarteBlocco_Sicurezza",
+    "name": "d65ff15c-3886-48c0-95a8-f6f527448bc9"
+  }, {
+    "condition": "$session.params.codice-titolare = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "InserimentoBloccoCarteTerzi_CarteBlocco_Sicurezza",
+    "name": "56c68083-76a6-40b0-b15c-f47db21e74e0"
+  } ]
+}

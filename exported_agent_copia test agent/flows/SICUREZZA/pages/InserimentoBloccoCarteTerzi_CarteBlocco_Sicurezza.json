@@ -1,0 +1,40 @@
+{
+  "name": "989a386e-a038-4c4e-ad4b-bbc2587ecbb4",
+  "displayName": "InserimentoBloccoCarteTerzi_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Gestione-carte",
+    "tag": "blockOthersCard",
+    "setParameterActions": [ {
+      "parameter": "ticket-id",
+      "value": "EllisBloccoCartaTerzi"
+    }, {
+      "parameter": "sottoflusso-corrente",
+      "value": "blocco-terzi"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "94a45381-18c7-4fa2-809c-cf9a6ab0ba1f"
+  }, {
+    "condition": "$session.params.fulfillment-error = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ti confermo che la carta è stata bloccata." ]
+        },
+        "languageCode": "it"
+      } ],
+      "webhook": "Comunicazioni",
+      "tag": "sendOthersCardBlockNotification"
+    },
+    "targetPage": "UlterioreBloccoTerzi_CarteBlocco_Sicurezza",
+    "name": "5bff028a-bcf9-4f62-b8b6-037270d303d8"
+  } ]
+}

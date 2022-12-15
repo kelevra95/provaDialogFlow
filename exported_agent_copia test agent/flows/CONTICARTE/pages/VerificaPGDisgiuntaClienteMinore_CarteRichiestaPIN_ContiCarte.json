@@ -1,0 +1,41 @@
+{
+  "name": "df411261-3344-4358-b278-57bf0f7f5e0c",
+  "displayName": "VerificaPGDisgiuntaClienteMinore_CarteRichiestaPIN_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.cliente-tipo = \"PG\" AND $session.params.codice-titolare-PG != $session.params.codice-titolare-PF",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "GestioneRepeatPresenzaPG_CarteRichiestaPIN_ContiCarte",
+    "name": "972a5442-70ae-4513-bbee-ac7dd2b5f7c3"
+  }, {
+    "condition": "$session.params.cliente-minore = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Al momento non gestisco richieste per le carte intestate ai minori. Se sei il titolare della carta e hai accesso al sito e all'app della banca, puoi recuperare il pin nella sezione \"Carte\". Altrimenti, la stessa sezione è disponibile nel sito o nell’app del genitore o tutore.", "." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "msg-consegnato",
+        "value": true
+      } ]
+    },
+    "targetPage": "SalutiFinali_CarteRichiestaPIN_ContiCarte",
+    "name": "69a0e2ea-9e86-4a01-b492-bdac358c2ebb"
+  }, {
+    "condition": "$session.params.cliente-minore = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaCorrispondenzaCelcertNumeroSRE_CarteRichiestaPIN_ContiCarte",
+    "name": "308ced35-4fbe-4a8e-8f2a-93cb305b40d8"
+  } ]
+}

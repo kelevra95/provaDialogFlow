@@ -1,0 +1,46 @@
+{
+  "name": "028054d6-2a9b-4e91-be40-840a6c341c91",
+  "displayName": "VerificaBT_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.codice-titolare = null AND ($session.params.ivrBt = \"00000000\" OR $session.params.ivrBt = \"\" OR $session.params.ivrBt = null) AND ($session.params.ivrCf != null AND $session.params.ivrCf != \"\")",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "IntestatarioSiNo_CarteBlocco_Sicurezza",
+    "name": "7c9c3b1b-073f-424c-a723-344f6ad13307"
+  }, {
+    "condition": "$session.params.codice-titolare = null AND ($session.params.ivrBt = \"00000000\" OR $session.params.ivrBt = \"\" OR $session.params.ivrBt = null)",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneLight",
+    "name": "58d89d46-f711-4cf2-a73e-56a48106e50b"
+  }, {
+    "condition": "$session.params.ivrBt != \"00000000\" AND $session.params.ivrBt != \"\" AND $session.params.ivrBt != null AND $session.params.livello-identificazione = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "IntestatarioSiNo_CarteBlocco_Sicurezza",
+    "name": "e217f1c8-3600-4c86-99a0-5580cf140afa"
+  }, {
+    "condition": "$session.params.codice-titolare != null AND ($session.params.livello-identificazione != \"SRE\" AND $session.params.livello-identificazione != \"light\" AND $session.params.livello-identificazione != \"Strong\")",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneLight",
+    "name": "7992099b-b634-4b09-994a-7e28a267198c"
+  }, {
+    "condition": "$session.params.codice-titolare != null AND ($session.params.livello-identificazione = \"SRE\" OR $session.params.livello-identificazione = \"light\" OR $session.params.livello-identificazione = \"Strong\")",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaTipoCartaCliente_CarteBlocco_Sicurezza",
+    "name": "d51087f5-c957-443c-9ff4-41380961f16e"
+  } ]
+}

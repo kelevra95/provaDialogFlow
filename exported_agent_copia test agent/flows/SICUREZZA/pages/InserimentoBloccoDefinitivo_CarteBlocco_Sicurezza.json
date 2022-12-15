@@ -1,0 +1,115 @@
+{
+  "name": "675f7f0b-1020-4407-bc80-fb73ce4854f0",
+  "displayName": "InserimentoBloccoDefinitivo_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Gestione-carte",
+    "tag": "blockCard",
+    "setParameterActions": [ {
+      "parameter": "descrizione-ticket",
+      "value": "$sys.func.CONCATENATE(\"Ellis - Blocco Carte per \", $session.params.motivazione-blocco)"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "bd5bff25-7a72-49e3-a040-fba7b09703be"
+  }, {
+    "condition": "$session.params.fulfillment-error = false",
+    "triggerFulfillment": {
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.riemissione-carta = FALSE AND $session.params.motivazione-blocco = \"smarrimento\"",
+          "caseContent": [ {
+            "additionalCases": {
+              "cases": [ {
+                "condition": "$session.params.tipo-carta = \"Tutte\"",
+                "caseContent": [ {
+                  "message": {
+                    "text": {
+                      "text": [ "Ti confermo che la tua carta è stata bloccata per smarrimento. Se de-sideri riattivarla o bloccarla definitivamente, contatta la filiale digitale o la tua agenzia." ]
+                    },
+                    "languageCode": "it"
+                  }
+                } ]
+              }, {
+                "caseContent": [ {
+                  "additionalCases": {
+                    "cases": [ {
+                      "condition": "$session.params.tipo-carta = \"Prepagata\"",
+                      "caseContent": [ {
+                        "message": {
+                          "text": {
+                            "text": [ "Ti confermo che la tua carta prepagata è stata bloccata per smarrimento. Se de-sideri riattivarla o bloccarla definitivamente, contatta la filiale digitale o la tua agenzia." ]
+                          },
+                          "languageCode": "it"
+                        }
+                      } ]
+                    }, {
+                      "caseContent": [ {
+                        "message": {
+                          "text": {
+                            "text": [ "Ti confermo che la tua carta di $session.params.tipo-carta è stata bloccata per smarrimento. Se de-sideri riattivarla o bloccarla definitivamente, contatta la filiale digitale o la tua agenzia." ]
+                          },
+                          "languageCode": "it"
+                        }
+                      } ]
+                    } ]
+                  }
+                } ]
+              } ]
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "additionalCases": {
+              "cases": [ {
+                "condition": "$session.params.tipo-carta = \"Tutte\"",
+                "caseContent": [ {
+                  "message": {
+                    "text": {
+                      "text": [ "Ti confermo che la tua carta è stata definitivamente bloccata. Se de-sideri una nuova carta, contatta la filiale digitale o il tuo gestore di filiale." ]
+                    },
+                    "languageCode": "it"
+                  }
+                } ]
+              }, {
+                "caseContent": [ {
+                  "additionalCases": {
+                    "cases": [ {
+                      "condition": "$session.params.tipo-carta = \"Prepagata\"",
+                      "caseContent": [ {
+                        "message": {
+                          "text": {
+                            "text": [ "Ti confermo che la tua carta prepagata è stata definitivamente bloccata. Se de-sideri una nuova carta, contatta la filiale digitale o il tuo gestore di filiale." ]
+                          },
+                          "languageCode": "it"
+                        }
+                      } ]
+                    }, {
+                      "caseContent": [ {
+                        "message": {
+                          "text": {
+                            "text": [ "Ti confermo che la tua carta di $session.params.tipo-carta è stata definitivamente bloccata. Se de-sideri una nuova carta, contatta la filiale digitale o il tuo gestore di filiale." ]
+                          },
+                          "languageCode": "it"
+                        }
+                      } ]
+                    } ]
+                  }
+                } ]
+              } ]
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "RecuperoEmailFiliale_CarteBlocco_Sicurezza",
+    "name": "49be272a-09e9-4051-bd7f-20df8c1665da"
+  } ]
+}

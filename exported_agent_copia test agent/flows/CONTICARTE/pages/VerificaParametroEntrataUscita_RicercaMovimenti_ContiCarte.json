@@ -1,0 +1,25 @@
+{
+  "name": "af81ec04-6187-4b65-8a5c-87872fe67b36",
+  "displayName": "VerificaParametroEntrataUscita_RicercaMovimenti_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.entrata-uscita != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "GestioneParametroEntrataUscita_RicercaMovimenti_ContiCarte",
+    "name": "d8752bb1-dd82-470d-b257-489075bda6dc"
+  }, {
+    "condition": "$session.params.entrata-uscita = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DisambiguazioneContoCarta_RicercaMovimenti_ContiCarte",
+    "name": "d0dfbb8c-51c8-4996-8062-18eef529ddb6"
+  } ]
+}

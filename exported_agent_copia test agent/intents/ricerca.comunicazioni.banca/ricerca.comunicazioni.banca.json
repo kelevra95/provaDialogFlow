@@ -1,0 +1,6 @@
+{
+  "name": "89e59892-c0c8-4c47-a827-5bb5a4725d7e",
+  "displayName": "ricerca.comunicazioni.banca",
+  "priority": 500000,
+  "description": "Recepisce le richieste di ricerca delle comunicazioni della banca (no comunicazione IBAN)"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "02579e1e-80ff-4157-b964-e9213ab4a1f7",
+  "displayName": "PresenzaPortafoglioPreferiti_QuotazioniTitoli_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "7bc98fca-0404-414a-b547-b44e22c3994d"
+  }, {
+    "condition": "$session.params.watchlist-trovata = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "SceltaTipoStrumento_QuotazioniTitoli_Investimenti",
+    "name": "7e09a916-26dc-4df7-a04e-bd64f7533dc0"
+  } ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "0eea5bc0-0acd-447f-a440-214de64e8111",
+  "displayName": "richiesta.giacenza.media.ISEE",
+  "parameters": [ {
+    "id": "periodo-ricerca",
+    "entityType": "@sys.date-period"
+  } ],
+  "priority": 500000,
+  "description": "Gestisce E2E la richiesta del documento di Giacenza Media mediante l'invio di una notifica in archivio (se il cliente chiede direttamente la certificazione interessi mutuo, Ellis aggancia intento ricerca.documenti.fiscali.mutuo)"
+}

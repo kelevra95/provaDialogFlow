@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "carta-debito-cliente",
+    "synonyms": [ "bancocard", "bancocard basic", "bancocard plus", "bancomat", "carta di debito", "debit ", "libramat", "next card ", "per me card", "tessera bancomat", "xme card", "ics me card" ],
+    "languageCode": "it"
+  } ]
+}

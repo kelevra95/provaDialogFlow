@@ -1,0 +1,25 @@
+{
+  "name": "83ad2f11-e71a-441c-a573-e2585b8b6458",
+  "displayName": "ConfermaEliminazione_QuotazioniTitoliLight_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "EliminazionePortafoglioPostLettura_QuotazioniTitoliLight_Investimenti",
+    "name": "e229aa31-e700-4cbe-9457-39e1bc0b69be"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "NuovaQuotazioneSiNo_QuotazioniTitoliLight_Investimenti",
+    "name": "865205f5-2168-4989-97b7-ef51b536214d"
+  } ]
+}

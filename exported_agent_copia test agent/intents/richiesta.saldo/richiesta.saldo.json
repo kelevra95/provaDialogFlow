@@ -1,0 +1,18 @@
+{
+  "name": "65bfc41d-aef5-4f21-bbd1-3a0fbdb11a68",
+  "displayName": "richiesta.saldo",
+  "parameters": [ {
+    "id": "data-ricerca",
+    "entityType": "@sys.date"
+  }, {
+    "id": "tipo-rapporto",
+    "entityType": "@Tipo-Rapporto"
+  }, {
+    "id": "tipo-saldo",
+    "entityType": "@Tipo-Saldo"
+  }, {
+    "id": "numero-rapporto",
+    "entityType": "@Numero-Rapporto"
+  } ],
+  "priority": 500000
+}

@@ -1,0 +1,26 @@
+{
+  "name": "1f72bbf1-dd2e-40ce-a990-1fe6d48568e3",
+  "displayName": "RicercaEseguiti_EseguitiTitoli_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Comunicazioni",
+    "tag": "getExecutedOrders"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "51b6cced-f7b2-488e-9d4d-d441b2833fbc"
+  }, {
+    "condition": "$session.params.fulfillment-error = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaPresenzaEseguitiTitoli_EseguitiTitoli_Investimenti",
+    "name": "7bdca6ce-b66e-43de-8be7-b678d1ac582d"
+  } ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "9e6cb263-c4a5-4fb1-a5c7-aaa01196139a",
+  "displayName": "contactless",
+  "priority": 500000,
+  "description": "Restituisce informazioni generiche sulle caratteristiche del pagamento contactless"
+}

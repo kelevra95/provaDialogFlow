@@ -1,0 +1,55 @@
+{
+  "name": "dd4688e8-fba6-476d-bdc4-8e290cb3ae49",
+  "displayName": "ConfermaUscita_HandoverProposta_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Vuoi uscire dalla conversazione?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Come de-sideri. È stato un piacere parlare con te. A presto!" ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "ae8e6a3c-a483-482c-ba3d-ddae26ef1e0f"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ok. Riprendiamo da dove eravamo rimasti." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "intento",
+        "value": null
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "02e4eee9-d1b1-4559-9219-3d11560e8b2b"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

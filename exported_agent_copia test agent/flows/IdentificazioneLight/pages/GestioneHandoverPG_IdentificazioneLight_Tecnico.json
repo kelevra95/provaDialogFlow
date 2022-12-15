@@ -1,0 +1,29 @@
+{
+  "name": "347ab6be-c21a-4cf2-ae86-4395a70d7561",
+  "displayName": "GestioneHandoverPG_IdentificazioneLight_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Al momento non mi occupo delle richieste per le persone giuridiche." ]
+      },
+      "languageCode": "it"
+    } ],
+    "webhook": "Riferimenti-contatto-cliente",
+    "tag": "getSREData",
+    "setParameterActions": [ {
+      "parameter": "motivo-handover",
+      "value": "Ellis al momento non si occupa di PG"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "ef5f244a-0b19-417c-b257-c2e7e7d84bde"
+  } ]
+}

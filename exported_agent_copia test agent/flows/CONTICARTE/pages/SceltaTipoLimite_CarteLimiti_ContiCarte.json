@@ -1,0 +1,108 @@
+{
+  "name": "7511a2d3-5474-453a-ac9c-9e8d493ed789",
+  "displayName": "SceltaTipoLimite_CarteLimiti_ContiCarte",
+  "form": {
+    "parameters": [ {
+      "displayName": "operazione-limite-operativo",
+      "required": true,
+      "entityType": "@Operazione-Limite-Carta",
+      "isList": true,
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Voi modificare i limiti di prelievo, pagamento o entrambi?" ]
+            },
+            "languageCode": "it"
+          } ]
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "entrambi",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "operazione-limite-operativo",
+        "value": [ "prelievo", "pagamento" ]
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$sys.func.GET($session.params.operazione-limite-operativo, 0) = prelievo",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Il limite di prelievo giornaliero deve essere compreso tra $session.params.limite-prelievo-giornaliero-minimo e $session.params.limite-prelievo-giornaliero-massimo euro" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "condition": "$sys.func.GET($session.params.operazione-limite-operativo, 0) = pagamento",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Il limite di pagamento giornaliero deve essere compreso tra $session.params.limite-pagamento-giornaliero-minimo e $session.params.limite-pagamento-giornaliero-massimo euro" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "name": "0ffbf777-156a-4342-a766-8427f7a96e35"
+  }, {
+    "condition": "$page.params.status = FINAL AND $session.params.operazione-limite-operativo = \"bonifico\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Per modificare i limiti di bonifici e giroconti da ATM puoi procedere in autonomia da app o sito." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operazione-limite-operativo",
+        "value": null
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "249b0c34-80ed-4c21-97cb-0a00cab11e12"
+  }, {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$sys.func.GET($session.params.operazione-limite-operativo, 0) = prelievo",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Il limite di prelievo giornaliero deve essere compreso tra $session.params.limite-prelievo-giornaliero-minimo e $session.params.limite-prelievo-giornaliero-massimo euro" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "condition": "$sys.func.GET($session.params.operazione-limite-operativo, 0) = pagamento",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Il limite di pagamento giornaliero deve essere compreso tra $session.params.limite-pagamento-giornaliero-minimo e $session.params.limite-pagamento-giornaliero-massimo euro" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "SceltaLimiteGiornaliero_CarteLimiti_ContiCarte",
+    "name": "7c4d295c-fd49-447e-98a4-710520f1bb13"
+  } ]
+}

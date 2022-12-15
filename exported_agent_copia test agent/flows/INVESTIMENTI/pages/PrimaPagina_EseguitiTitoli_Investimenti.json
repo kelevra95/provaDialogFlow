@@ -1,0 +1,66 @@
+{
+  "name": "03cf6631-75ac-461a-84ad-d810aa7870de",
+  "displayName": "PrimaPagina_EseguitiTitoli_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "anno-corrente",
+      "value": "$sys.func.ADD($session.params.data-ora-sistema.year,+0)"
+    }, {
+      "parameter": "anno-successivo",
+      "value": "$sys.func.ADD($session.params.data-ora-sistema.year,+1)"
+    }, {
+      "parameter": "anno-precedente",
+      "value": "$sys.func.ADD($session.params.data-ora-sistema.year,-1)"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.codice-titolare = null AND ($session.params.ivrBt = \"00000000\" OR $session.params.ivrBt = \"\" OR $session.params.ivrBt = null)",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneStrong",
+    "name": "97f8b4b9-3300-4127-ba48-c99c003af590"
+  }, {
+    "condition": "$session.params.codice-titolare != null AND $session.params.livello-identificazione != \"Strong\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneStrong",
+    "name": "d9f0b7d1-1440-4faa-a674-5e1c7f0194f0"
+  }, {
+    "condition": "$session.params.ivrBt != \"00000000\" AND $session.params.ivrBt != \"\" AND $session.params.ivrBt != null AND $session.params.livello-identificazione = null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "codice-titolare",
+        "value": "$sys.func.MID($session.params.ivrBt, 1, 8)"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "Strong"
+      } ]
+    },
+    "targetFlow": "IdentificazioneStrong",
+    "name": "635c2b82-501c-4f51-a683-39daf3f3bea5"
+  }, {
+    "condition": "$session.params.codice-titolare != null AND $session.params.livello-identificazione = \"Strong\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "tipo-rapporto",
+        "value": "DA"
+      }, {
+        "parameter": "anno-corrente-text",
+        "value": "$sys.func.TO_TEXT($session.params.anno-corrente)"
+      }, {
+        "parameter": "anno-successivo-text",
+        "value": "$sys.func.TO_TEXT($session.params.anno-successivo)"
+      }, {
+        "parameter": "anno-precedente-text",
+        "value": "$sys.func.TO_TEXT($session.params.anno-precedente)"
+      } ]
+    },
+    "targetPage": "VerificaCorrispondenzaCelcertNumeroSRE_EseguitiTitoli_Investimenti",
+    "name": "065ac542-a10d-4d0b-8548-b25baf4ce015"
+  } ]
+}

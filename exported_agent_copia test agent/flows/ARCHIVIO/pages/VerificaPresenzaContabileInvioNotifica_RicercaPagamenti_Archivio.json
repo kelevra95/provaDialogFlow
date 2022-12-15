@@ -1,0 +1,43 @@
+{
+  "name": "e86f89ea-3bf4-4d12-aeff-0cf094a84d86",
+  "displayName": "VerificaPresenzaContabileInvioNotifica_RicercaPagamenti_Archivio",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Comunicazioni",
+    "tag": "sendPaymentsArchiveSearch"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "a05b9caa-2f15-4391-a116-7e8be54820c2"
+  }, {
+    "condition": "$session.params.documento-trovato = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Dalla ricerca che ho effettuato non ho trovato le ricevute $session.params.tipo-pagamento che mi hai richiesto" ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "PropostaNuovaRicerca_RicercaPagamenti_Archivio",
+    "name": "6ef46f01-71a6-4735-b6fc-3fe7ccd1deb7"
+  }, {
+    "condition": "$session.params.documento-trovato = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ho inviato l'esito della ricerca nella sezione Avvisi dell'App e del sito della Banca. Se non visualizzi tutti i documenti desiderati, richiamami e chiedi l'aiuto di un gestore, oppure dialoga con lui in chat, da sito o da app." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "SalutiFinali_RicercaPagamenti_Archivio",
+    "name": "336b4bfb-0d2f-4a50-a86d-bc5aad7d54c3"
+  } ]
+}

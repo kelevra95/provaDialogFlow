@@ -1,0 +1,49 @@
+{
+  "name": "c7b0f227-50f9-4465-bc29-4bfad6a34d62",
+  "displayName": "InterrogazioneCF_IdentificazioneSRE_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Riferimenti-contatto-cliente",
+    "tag": "searchCustomerInfoFromCF"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "a9165509-71cf-45af-86e5-cdefad77217c"
+  }, {
+    "condition": "$session.params.codice-titolare-PG != null AND $session.params.codice-titolare-PF != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "SceltaPFPG_IdentificazioneSRE_Tecnico",
+    "name": "a351df73-61c9-4126-9a67-721c999d6ab2"
+  }, {
+    "condition": "$session.params.codice-titolare-PF = null AND $session.params.codice-titolare-PG != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "livello-identificazione",
+        "value": "SRE"
+      }, {
+        "parameter": "cliente-tipo",
+        "value": "PG"
+      }, {
+        "parameter": "codice-titolare",
+        "value": "$session.params.codice-titolare-PG"
+      } ]
+    },
+    "targetPage": "NumeroPartitaIva_IdentificazioneSRE_Tecnico",
+    "name": "42951ccb-30ff-4646-baf8-a2f682ee1904"
+  }, {
+    "condition": "$session.params.codice-titolare-PG = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaPresenzaBT_IdentificazioneSRE_Tecnico",
+    "name": "f8585c91-a694-4a46-a55e-8fcc7c59b76c"
+  } ]
+}

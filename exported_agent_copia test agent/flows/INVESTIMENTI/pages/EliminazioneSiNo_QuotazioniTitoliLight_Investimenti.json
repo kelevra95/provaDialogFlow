@@ -1,0 +1,30 @@
+{
+  "name": "94336958-dbf0-4a00-b643-94652747588a",
+  "displayName": "EliminazioneSiNo_QuotazioniTitoliLight_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Vuoi eliminare l'intera lista dei preferiti?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "EliminazionePortafoglioPreferiti_QuotazioniTitoliLight_Investimenti",
+    "name": "e580d68e-40a6-42d3-bbae-36ca6d7e218b"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaRichiestaOperazione_QuotazioniTitoliLight_Investimenti",
+    "name": "6d1db1be-8987-4749-932b-c5340cd348c3"
+  } ]
+}

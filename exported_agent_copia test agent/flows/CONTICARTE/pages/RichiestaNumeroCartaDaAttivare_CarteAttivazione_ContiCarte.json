@@ -1,0 +1,126 @@
+{
+  "name": "f87e7245-0ce7-4380-90bc-7ae247777130",
+  "displayName": "RichiestaNumeroCartaDaAttivare_CarteAttivazione_ContiCarte",
+  "form": {
+    "parameters": [ {
+      "displayName": "numero-finale-carta",
+      "required": true,
+      "entityType": "@Numero-Finale-Carta",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Dimmi o digita, le ultime 4 cifre della carta che de-sideri attivare. " ]
+            },
+            "languageCode": "it"
+          } ],
+          "advancedSettings": {
+            "playbackInterruptionSettings": {
+            
+            }
+          }
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho sentito. Dimmi o digita le ultime 4 cifre della carta da attivare. Se i numeri che ti sto richiedendo sono riportati sul retro della tessera, fai attenzione a non confonderti con il codice utente." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "0b706e24-dc2f-4dc0-a192-b15abcd69f39"
+        }, {
+          "targetFlow": "HandoverNonPrevistoProposta",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non sentire." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "motivo-handover",
+              "value": "Numero finale carta non specificato dal cliente"
+            } ]
+          },
+          "name": "e94c56b7-3816-45f1-871e-f271f5c8059e"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Scusa ma non ho capito. Dimmi o digita le ultime 4 cifre della carta da attivare. Se i numeri che ti sto richiedendo sono riportati sul retro della tessera, fai attenzione a non confonderti con il codice utente." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "ec6b264f-a146-49f7-948d-2e9f910894d7"
+        }, {
+          "targetFlow": "HandoverNonPrevistoProposta",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non capire." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "motivo-handover",
+              "value": "Numero carta specificato dal cliente non corretto"
+            } ]
+          },
+          "name": "aa416d9b-d7c3-4eff-8583-4bc526ab1695"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 4,
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "numero-finale-carta",
+        "value": "$sys.func.TO_TEXT($session.params.numero-finale-carta)"
+      }, {
+        "parameter": "numero-finale-carta",
+        "value": "$sys.func.SUBSTITUTE($session.params.numero-finale-carta,\" \",\"\")"
+      } ]
+    },
+    "targetPage": "RiletturaCartaDaAttivare_CarteAttivazione_ContiCarte",
+    "name": "fb01684c-817b-406a-a643-71fadb9da91c"
+  }, {
+    "condition": "$session.params.contatore \u003e 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Il cliente non conferma il numero della carta da attivare"
+      } ]
+    },
+    "targetFlow": "HandoverNonPrevistoProposta",
+    "name": "15312023-558f-462e-93b6-425daee58c83"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 11,
+      "noSpeechTimeout": {
+        "seconds": 10
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

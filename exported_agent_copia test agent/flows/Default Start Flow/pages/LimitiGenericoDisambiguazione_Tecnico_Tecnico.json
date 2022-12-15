@@ -1,0 +1,195 @@
+{
+  "name": "ee0a8c44-3be6-49df-82b5-f3451b2708c6",
+  "displayName": "LimitiGenericoDisambiguazione_Tecnico_Tecnico",
+  "form": {
+    "parameters": [ {
+      "displayName": "Tipo-prodotto-PIN-limiti-domiciliazioni",
+      "required": true,
+      "entityType": "@Tipo-prodotto-PIN-limiti-domiciliazioni",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Ti riferisci ai limiti del conto o di una carta?" ]
+            },
+            "languageCode": "it"
+          } ]
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.Tipo-prodotto-PIN-limiti-domiciliazioni = \"carta\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Al momento non mi occupo della gestione dei limiti delle carte, ma puoi sempre modificarli dal sito o dall'app della banca." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Flusso attualmente non gestito da Ellis"
+      }, {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.MLCA"
+      }, {
+        "parameter": "routing-macroarea",
+        "value": "CTY_CC_OPZ"
+      }, {
+        "parameter": "routing-microarea",
+        "value": "CTY_CC_operaz"
+      }, {
+        "parameter": "knowledge-url",
+        "value": "https://knowledgefol.intesasanpaolo.com/sites/FOL/operativita/Lists/Gestione%20Clienti/DispForm.aspx?ID=85\u0026k=limiti%20carte\u0026InitialTabID=Ribbon.Read"
+      }, {
+        "parameter": "knowledge-titolo",
+        "value": "Approfondimenti"
+      }, {
+        "parameter": "flusso-corrente",
+        "value": "Start"
+      }, {
+        "parameter": "contatore",
+        "value": 0
+      }, {
+        "parameter": "data-ora-sistema",
+        "value": "$sys.func.NOW()"
+      }, {
+        "parameter": "chiamata-survey",
+        "value": "off"
+      }, {
+        "parameter": "tipo-attivita",
+        "value": "I"
+      }, {
+        "parameter": "sottoflusso-corrente",
+        "value": "Modifica limiti carta"
+      }, {
+        "parameter": "ticket-id ",
+        "value": "EllisConversazioneGenerica"
+      }, {
+        "parameter": "identificazione-necessaria",
+        "value": "Strong"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "6afb2a3d-8f26-4605-8e8e-7e0ab301f640"
+  }, {
+    "condition": "$session.params.Tipo-prodotto-PIN-limiti-domiciliazioni = \"conto\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Al momento non mi occupo della gestione dei limiti del conto, ma puoi sempre modificarli dal sito o dall'app della banca." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Flusso attualmente non gestito da Ellis"
+      }, {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.MLOP"
+      }, {
+        "parameter": "routing-macroarea",
+        "value": "CTY_CC_OPZ"
+      }, {
+        "parameter": "routing-microarea",
+        "value": "CTY_CC_operaz"
+      }, {
+        "parameter": "knowledge-url",
+        "value": "https://knowledgefol.intesasanpaolo.com/sites/FOL/operativita/Lists/Gestione%20Clienti/DispForm.aspx?ID=46\u0026k=modifica%20limiti%20operativi\u0026InitialTabID=Ribbon.Read"
+      }, {
+        "parameter": "knowledge-titolo",
+        "value": "Approfondimenti"
+      }, {
+        "parameter": "flusso-corrente",
+        "value": "Start"
+      }, {
+        "parameter": "contatore",
+        "value": 0
+      }, {
+        "parameter": "data-ora-sistema",
+        "value": "$sys.func.NOW()"
+      }, {
+        "parameter": "chiamata-survey",
+        "value": "off"
+      }, {
+        "parameter": "tipo-attivita",
+        "value": "I"
+      }, {
+        "parameter": "sottoflusso-corrente",
+        "value": "Modifica limiti operativi"
+      }, {
+        "parameter": "ticket-id",
+        "value": "EllisConversazioneGenerica"
+      }, {
+        "parameter": "identificazione-necessaria",
+        "value": "Strong"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "7c907599-ff88-483d-9faa-ed701050aa6f"
+  }, {
+    "condition": "$session.params.Tipo-prodotto-PIN-limiti-domiciliazioni = \"carta virtuale\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Al momento non gestisco le richieste relative ai limiti delle carte virtuali. Se lo de-sideri, puoi agire in autonomia dalla sezione \"Le mie carte\" dal sito o dall'app della banca." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Flusso attualmente non gestito da Ellis"
+      }, {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.CAML"
+      }, {
+        "parameter": "routing-macroarea",
+        "value": "CTY_CC_ASSINFO"
+      }, {
+        "parameter": "routing-microarea",
+        "value": "CTY_CC_assnavig"
+      }, {
+        "parameter": "knowledge-url",
+        "value": "https://knowledgefol.intesasanpaolo.com/sites/FOL/sito/Lists/La%20Tua%20Banca%20Online/DispForm.aspx?ID=57\u0026k=carte%20virtuali\u0026InitialTabID=Ribbon.Read"
+      }, {
+        "parameter": "knowledge-titolo",
+        "value": "Approfondimenti"
+      }, {
+        "parameter": "flusso-corrente",
+        "value": "Start"
+      }, {
+        "parameter": "contatore",
+        "value": 0
+      }, {
+        "parameter": "data-ora-sistema",
+        "value": "$sys.func.NOW()"
+      }, {
+        "parameter": "chiamata-survey",
+        "value": "off"
+      }, {
+        "parameter": "tipo-attivita",
+        "value": "I"
+      }, {
+        "parameter": "sottoflusso-corrente",
+        "value": "Modifica limiti carta virtuale"
+      }, {
+        "parameter": "ticket-id",
+        "value": "EllisConversazioneGenerica"
+      }, {
+        "parameter": "identificazione-necessaria",
+        "value": "SRE"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "58577a4e-2833-46f8-afa0-3faa588eab30"
+  } ]
+}

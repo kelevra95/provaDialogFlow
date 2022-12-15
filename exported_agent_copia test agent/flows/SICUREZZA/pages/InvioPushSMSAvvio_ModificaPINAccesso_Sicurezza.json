@@ -1,0 +1,26 @@
+{
+  "name": "bbea4972-53fc-4adf-a70b-c8597f35547a",
+  "displayName": "InvioPushSMSAvvio_ModificaPINAccesso_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Comunicazioni",
+    "tag": "sendChangePINBeginMessage"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "31205386-502f-4555-a5a6-2896f2b36541"
+  }, {
+    "condition": "$session.params.fulfillment-error = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ChiamataOTS_ModificaPINAccesso_Sicurezza",
+    "name": "087c0eb1-61ed-4de8-a240-5c1199fdf7d6"
+  } ]
+}

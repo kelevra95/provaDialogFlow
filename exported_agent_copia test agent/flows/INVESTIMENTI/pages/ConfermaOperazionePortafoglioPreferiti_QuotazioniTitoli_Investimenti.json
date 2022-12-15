@@ -1,0 +1,30 @@
+{
+  "name": "66c83ba6-6c95-44a6-b230-96aaa2e2a342",
+  "displayName": "ConfermaOperazionePortafoglioPreferiti_QuotazioniTitoli_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "RichiestaNuovaQuotazione_QuotazioniTitoli_Investimenti",
+    "name": "9868fbca-915b-4eab-9abd-a03ca346b765"
+  }, {
+    "intent": "si",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Per operare sul titolo scelto ti sto mettendo in contatto con un operatore." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "d780976d-d166-41ea-b876-23420126e664"
+  } ]
+}

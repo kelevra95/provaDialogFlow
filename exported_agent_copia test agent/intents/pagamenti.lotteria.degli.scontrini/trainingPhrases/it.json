@@ -1,0 +1,109 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "come funziona la lotteria degli scontrini?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cosa devo fare per partecipare ",
+      "auto": true
+    }, {
+      "text": "alla",
+      "auto": true
+    }, {
+      "text": " lotteria scontrini statali?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso avere istruzioni sulla lotteria degli scontrini?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei approfondimenti sulla lotteria nazionale degli scontrini",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "anche intesa aderisce ",
+      "auto": true
+    }, {
+      "text": "alla",
+      "auto": true
+    }, {
+      "text": " lotteria degli scontrini?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come funziona la lotteria nazionale della pubblica amministrazione",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "lotteria di stato sugli scontrini, come funziona?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come partecipare ",
+      "auto": true
+    }, {
+      "text": "alla",
+      "auto": true
+    }, {
+      "text": " lotteria ",
+      "auto": true
+    }, {
+      "text": "nazionale",
+      "auto": true
+    }, {
+      "text": " degli scontrini?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "è possibile aderire ",
+      "auto": true
+    }, {
+      "text": "alla",
+      "auto": true
+    }, {
+      "text": " lotteria scontrini?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso partecipare ",
+      "auto": true
+    }, {
+      "text": "alla",
+      "auto": true
+    }, {
+      "text": " lotteria degli scontrini?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "entrata",
+    "synonyms": [ "+", "a mio favore", "arrivati", "arrivato", "credito", "entrata", "entrate", "in accredito", "in avere", "ingresso", "più", "ricevuti", "ricevuto" ],
+    "languageCode": "it"
+  }, {
+    "value": "uscita",
+    "synonyms": [ "-", "debito", "effettuati", "effettuato ", "eseguito", "in addebito", "in dare", "in uscita", "meno", "pagati", "pagato ", "uscita", "uscite", "effettuate" ],
+    "languageCode": "it"
+  } ]
+}

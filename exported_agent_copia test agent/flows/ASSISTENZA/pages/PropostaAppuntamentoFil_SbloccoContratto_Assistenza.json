@@ -1,0 +1,57 @@
+{
+  "name": "e433e582-996e-4fc3-859a-268a6e3c5fd3",
+  "displayName": "PropostaAppuntamentoFil_SbloccoContratto_Assistenza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "tipo-colloquio-GF",
+        "value": "fisico"
+      }, {
+        "parameter": "motivo-appuntamento",
+        "value": "altro"
+      }, {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.PRAP"
+      } ]
+    },
+    "targetFlow": "Default Start Flow",
+    "name": "9bbd9388-331d-4348-a619-51333d950c5b"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "SalutiFinali_SbloccoContratto_Assistenza",
+    "name": "59784f3b-e2e6-4553-9eab-e41c8b5f1178"
+  }, {
+    "intent": "non.so",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Senza la certificazione del cellulare, non posso aiutarti, e comunque dovrai recarti fisicamente in filiale. Vuoi fissare l'appuntamento?" ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "8ad8d079-15d6-4ea9-8e1e-a8a1c255f006"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

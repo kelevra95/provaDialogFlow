@@ -1,0 +1,10 @@
+{
+  "name": "f516ca85-072b-4e04-8e8a-d35a75b70c6d",
+  "displayName": "esecuzione.ricarica",
+  "parameters": [ {
+    "id": "Tipo-Ricarica",
+    "entityType": "@Tipo-Ricarica"
+  } ],
+  "priority": 500000,
+  "description": "Intento per disambiguare tra richiesta ricarica carta e ricarica cellulare"
+}

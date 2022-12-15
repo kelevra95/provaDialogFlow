@@ -1,0 +1,69 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "posso bloccare altre ",
+      "auto": true
+    }, {
+      "text": "carte",
+      "auto": true
+    }, {
+      "text": " della banca fideuram?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cosa mi dici delle ",
+      "auto": true
+    }, {
+      "text": "carte",
+      "auto": true
+    }, {
+      "text": " fideuram?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso chiedere ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " te per ",
+      "auto": true
+    }, {
+      "text": "le carte",
+      "auto": true
+    }, {
+      "text": " fideuram?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cosa faccio con le mie carte fideuram",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho delle carte fideuram",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sono cliente fideuram",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

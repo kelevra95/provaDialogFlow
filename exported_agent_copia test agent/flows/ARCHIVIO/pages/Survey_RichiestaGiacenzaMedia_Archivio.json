@@ -1,0 +1,51 @@
+{
+  "name": "c3b12050-3f4c-4528-b4bb-5293b6742c6b",
+  "displayName": "Survey_RichiestaGiacenzaMedia_Archivio",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Sono riuscito ad aiutarti?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Bene. Sono contento. È stato un piacere parlare con te. A presto!" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "esito-survey",
+        "value": "si"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "5177438a-e4c7-47a2-b479-71f765fe5a71"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace. Cercherò di migliorare per il futuro." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "esito-survey",
+        "value": "no"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Il cliente non è soddisfatto dell'aiuto di Ellis"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "1b98d241-4ce1-4a3b-bef4-0d32506d915c"
+  } ]
+}

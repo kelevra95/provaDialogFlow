@@ -1,0 +1,138 @@
+{
+  "name": "68eb38dc-d7c5-4d39-acd5-69b50bd8fba3",
+  "displayName": "IdentificazioneBT_HandoverConID_Tecnico",
+  "form": {
+    "parameters": [ {
+      "displayName": "codice-titolare",
+      "required": true,
+      "entityType": "@Codice-Titolare",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Dimmi, o digita con il tastierino, il tuo codice di 8 numeri." ]
+            },
+            "languageCode": "it"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho sentito. Digita gli 8 numeri del tuo codice titolare My Key, compresi gli eventuali zeri iniziali." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "07490f8a-2480-4443-ab65-97bbb164a74b"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non sono riuscito ad identificarti. Se il tuo codice titolare My Key ha meno di 8 numeri,  inserisci prima degli zeri. Per favore digita di nuovo il codice." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "7838aa04-499a-4e9a-8208-0df8519b5d1a"
+        }, {
+          "targetPage": "GestioneRamo_HandoverConID_Tecnico",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non hai inserito il codice." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "a351bd97-89f3-46f3-9233-1046586f8ae5"
+        }, {
+          "targetPage": "GestioneRamo_HandoverConID_Tecnico",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "I dati che hai inserito non sono corretti." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "148665fd-7480-4ebe-a16f-942bc8f60a0e"
+        } ]
+      },
+      "redact": true,
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 8,
+          "finishDigit": "#",
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "uscita",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "intento",
+        "value": "uscita"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "nani"
+      } ]
+    },
+    "targetFlow": "HandoverOK",
+    "name": "21e050aa-9609-48a4-8a02-4aa8a0731955"
+  }, {
+    "intent": "operatore",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "intento",
+        "value": "operatore"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "nani"
+      } ]
+    },
+    "targetFlow": "HandoverOK",
+    "name": "87ed9987-9c7e-4bc2-aea6-1c0b8f031919"
+  }, {
+    "intent": "codice.titolare.dimenticato",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "GestioneRamo_HandoverConID_Tecnico",
+    "name": "9c4085f1-80b3-4edf-a31c-3aa8c771dba3"
+  }, {
+    "condition": "$page.params.status = FINAL AND $session.params.codice-titolare != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "codice-titolare",
+        "value": "$sys.func.TO_TEXT($session.params.codice-titolare)"
+      }, {
+        "parameter": "codice-titolare",
+        "value": "$sys.func.SUBSTITUTE($session.params.codice-titolare,\" \",\"\")"
+      } ]
+    },
+    "targetPage": "InterrogazioneBT_HandoverConID_Tecnico",
+    "name": "69c3e58a-56c1-4a8c-a877-385a1053f915"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 5,
+      "noSpeechTimeout": {
+        "seconds": 10
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

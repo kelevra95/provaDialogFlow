@@ -1,0 +1,191 @@
+{
+  "name": "25b9d6c3-7409-4f66-b8f6-e1e4fd638a22",
+  "displayName": "VerificaFasciaOrariaAgenda_PresaAppuntamento_Assistenza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Gestione-agenda",
+    "tag": "checkAdvisorAgendaSlotsInOtherDays"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "20afb51e-93a3-4db4-b589-96057d4be1cf"
+  }, {
+    "condition": "$session.params.numero-slot = 0 AND $session.params.tipo-gestore = \"filiale\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non ho trovato disponibilità in agenda. Ti consiglio di accedere al sito o all'app della banca, nella sezione parla con noi, per inserire in autonomia l'appuntamento." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "SalutiFinali_PresaAppuntamento_Assistenza",
+    "name": "08a4a5f3-a6e5-49d2-9b16-9eed6932d99e"
+  }, {
+    "condition": "$session.params.numero-slot = 0 AND $session.params.tipo-gestore = \"remoto\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Purtroppo, non ho trovato disponibilità in agenda. Da sito e app non è attualmente possibile inserire in autonomia un appuntamento con il gestore digitale remoto." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Ellis non ha trovato slot liberi per fissare l'appuntamento"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "aa419ac1-78ad-43a0-9115-983187239ac8"
+  }, {
+    "condition": "$session.params.numero-slot = 1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$session.params.cliente-nome, il gestore è disponibile solo $sys.func.FORMAT_DATE($session.params.data-ora-slot1, EEEE dd MMMM, \"it\")" ]
+        },
+        "languageCode": "it"
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.data-ora-slot1.hours = 12",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "a $sys.func.FORMAT_DATE($session.params.data-ora-slot1, HH:mm, \"it\"). Può andarti bene?" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "alle $sys.func.FORMAT_DATE($session.params.data-ora-slot1, HH:mm, \"it\"). Può andarti bene?" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "ConfermaSingoloSlotAgenda_PresaAppuntamento_Assistenza",
+    "name": "8123df52-0ec3-4280-82fc-7d2a37fa8957"
+  }, {
+    "condition": "$session.params.numero-slot = 2 AND $session.params.tipo-gestore = \"filiale\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$session.params.cliente-nome, il tuo gestore è disponibile $sys.func.FORMAT_DATE($session.params.data-ora-slot1, EEEE dd MMMM, \"it\")" ]
+        },
+        "languageCode": "it"
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.data-ora-slot1.hours = 12",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "a $sys.func.FORMAT_DATE($session.params.data-ora-slot1, HH:mm, \"it\") o" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "alle $sys.func.FORMAT_DATE($session.params.data-ora-slot1, HH:mm, \"it\") o" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        } ]
+      }, {
+        "cases": [ {
+          "condition": "$session.params.data-ora-slot2.hours = 12",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "$sys.func.FORMAT_DATE($session.params.data-ora-slot2, EEEE dd MMMM, \"it\") a $sys.func.FORMAT_DATE($session.params.data-ora-slot2, HH:mm, \"it\"). Quale alternativa preferisci? La prima o la seconda?" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "$sys.func.FORMAT_DATE($session.params.data-ora-slot2, EEEE dd MMMM, \"it\") alle $sys.func.FORMAT_DATE($session.params.data-ora-slot2, HH:mm, \"it\"). Quale alternativa preferisci? La prima o la seconda?" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "SceltaSlotAgendaGF_PresaAppuntamento_Assistenza",
+    "name": "4174343a-e804-4c0b-8823-b7a2377df46e"
+  }, {
+    "condition": "$session.params.numero-slot = 2 AND $session.params.tipo-gestore = \"remoto\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$session.params.cliente-nome, il tuo gestore è disponibile $sys.func.FORMAT_DATE($session.params.data-ora-slot1, EEEE dd MMMM, \"it\")" ]
+        },
+        "languageCode": "it"
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.data-ora-slot1.hours = 12",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "a $sys.func.FORMAT_DATE($session.params.data-ora-slot1, HH:mm, \"it\") o" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "alle $sys.func.FORMAT_DATE($session.params.data-ora-slot1, HH:mm, \"it\") o" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        } ]
+      }, {
+        "cases": [ {
+          "condition": "$session.params.data-ora-slot2.hours = 12",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "$sys.func.FORMAT_DATE($session.params.data-ora-slot2, EEEE dd MMMM, \"it\") a $sys.func.FORMAT_DATE($session.params.data-ora-slot2, HH:mm, \"it\"). Quale alternativa preferisci? La prima o la seconda?" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "$sys.func.FORMAT_DATE($session.params.data-ora-slot2, EEEE dd MMMM, \"it\") alle $sys.func.FORMAT_DATE($session.params.data-ora-slot2, HH:mm, \"it\"). Quale alternativa preferisci? La prima o la seconda?" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "SceltaSlotAgendaGR_PresaAppuntamento_Assistenza",
+    "name": "100cce5f-1851-48f4-91a2-43ddf242a0e5"
+  } ]
+}

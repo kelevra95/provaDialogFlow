@@ -1,0 +1,40 @@
+{
+  "name": "f47d6475-3f05-42ba-a3d9-04b8310069dd",
+  "displayName": "GestioneParametroEntrataUscita_RicercaMovimenti_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Mi avevi chiesto una ricerca per i soli movimenti in $session.params.entrata-uscita. Vuoi modificare questo filtro?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DisambiguazioneContoCarta_RicercaMovimenti_ContiCarte",
+    "name": "cf7815c3-68c0-49c4-b70e-795fb06b794a"
+  }, {
+    "intent": "si",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "AcquisizioneParametroEntrataUscita_RicercaMovimenti_ContiCarte",
+    "name": "e07c9b96-470c-4032-b056-192d2af81df2"
+  }, {
+    "intent": "elimina.parametro",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "entrata-uscita",
+        "value": null
+      } ]
+    },
+    "targetPage": "DisambiguazioneContoCarta_RicercaMovimenti_ContiCarte",
+    "name": "b7ce2235-821b-4d88-b27f-952801d82230"
+  } ]
+}

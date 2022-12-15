@@ -1,0 +1,31 @@
+{
+  "name": "b2d09716-2f4e-433b-b905-d526ab8c9e3c",
+  "displayName": "sblocco carta2",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "ciao, scusami ellis ieri ho bloccato per errore una carta, adesso la voglio sbloccare"
+        },
+        "languageCode": "it"
+      }
+    },
+    "virtualAgentOutput": {
+      "currentPage": {
+        "name": "Start Page",
+        "flow": "Default Start Flow"
+      },
+      "textResponses": [ {
+        "text": [ "Non sono sicuro di aver capito. Ripetimi la tua richiesta." ]
+      } ]
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1666101584,
+    "nanos": 826054000
+  },
+  "testConfig": {
+    "flow": "Default Start Flow"
+  }
+}

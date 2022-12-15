@@ -1,0 +1,38 @@
+{
+  "name": "aff42f8a-7623-4c6a-911f-d5e58005d512",
+  "displayName": "GestioneRepeatZeroCarte_CarteLimiti_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Se si tratta di carte Intesa Sanpaolo Praivat Banking contatta il numero verde 800, 9 9, 5 5, 3 3, se chiami dall'Italia. Oppure +39, 0 1 1, 8 0, 1 9, 1 1 1 se chiami dall'estero." ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "grazie",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "SalutiFinali_CarteLimiti_ContiCarte",
+    "name": "b697a219-1bd9-479e-bd76-67fe121b9484"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "HandoverProposta",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+    
+    },
+    "name": "fe1dab9a-1a2a-47c7-acd4-9f699dfc1553"
+  }, {
+    "targetFlow": "HandoverProposta",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+    
+    },
+    "name": "e4b42634-7f8a-4ebc-ba29-1c175d3cf370"
+  } ]
+}

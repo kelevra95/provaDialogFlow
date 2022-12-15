@@ -1,0 +1,45 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "giorno 27 ore 13",
+      "parameterId": "data-ora-conferma"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dopodomani alle 13",
+      "parameterId": "data-ora-conferma"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "giovedì alle 9",
+      "parameterId": "data-ora-conferma"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "il 15 alle 17",
+      "parameterId": "data-ora-conferma"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "domani alle 15",
+      "parameterId": "data-ora-conferma"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "domani",
+      "parameterId": "data-ora-conferma"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

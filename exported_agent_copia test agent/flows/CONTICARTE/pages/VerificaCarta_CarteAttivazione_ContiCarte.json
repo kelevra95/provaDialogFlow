@@ -1,0 +1,47 @@
+{
+  "name": "da40bc26-d5bb-4129-a0d9-3cfb26625882",
+  "displayName": "VerificaCarta_CarteAttivazione_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Gestione-carte",
+    "tag": "getActivableCardInfo"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "4817ed8d-d0c1-4543-b31c-4cb2031da498"
+  }, {
+    "condition": "$session.params.carta-da-attivare-trovata = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ancora qualche istante." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "ChiamataOTS_CarteAttivazione_ContiCarte",
+    "name": "d9d82cb8-fe5b-445e-97e7-d6358906c84e"
+  }, {
+    "condition": "$session.params.carta-da-attivare-trovata = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non sono riuscito ad attivare la carta con i numeri che mi hai indicato." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Mancata corrispondenza con la carta da attivare"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "f551dac3-6c0c-4d68-9981-6190454136a8"
+  } ]
+}

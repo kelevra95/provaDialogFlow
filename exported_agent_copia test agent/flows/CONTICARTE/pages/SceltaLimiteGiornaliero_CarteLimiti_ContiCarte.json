@@ -1,0 +1,40 @@
+{
+  "name": "e78f1dfa-64cb-4e4c-ad4f-6a555121b22b",
+  "displayName": "SceltaLimiteGiornaliero_CarteLimiti_ContiCarte",
+  "form": {
+    "parameters": [ {
+      "displayName": "limite-giornaliero-nuovo",
+      "required": true,
+      "entityType": "@sys.cardinal",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Dimmi il nuovo limite giornaliero di $session.params.operazione che desideri impostare." ]
+            },
+            "languageCode": "it"
+          } ]
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "operazione",
+      "value": "$sys.func.GET($session.params.operazione-limite-operativo, 0)"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "RiletturaLimiteGiornaliero_CarteLimiti_ContiCarte",
+    "name": "9de03e0b-c032-4d52-a627-e0923f5c93c9"
+  } ]
+}

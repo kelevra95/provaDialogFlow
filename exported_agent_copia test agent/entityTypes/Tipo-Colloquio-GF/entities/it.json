@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "@Telefonico",
+    "synonyms": [ "@Telefonico" ],
+    "languageCode": "it"
+  }, {
+    "value": "@Fisico",
+    "synonyms": [ "@Fisico" ],
+    "languageCode": "it"
+  } ]
+}

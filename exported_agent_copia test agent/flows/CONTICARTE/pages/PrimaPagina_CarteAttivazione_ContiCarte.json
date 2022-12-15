@@ -1,0 +1,45 @@
+{
+  "name": "5bddd78b-5e07-4569-b91c-32ea5c8da3f5",
+  "displayName": "PrimaPagina_CarteAttivazione_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.codice-titolare = null AND ($session.params.ivrBt = \"00000000\" OR $session.params.ivrBt = \"\" OR $session.params.ivrBt = null)",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneStrong",
+    "name": "c873d925-1256-408b-9e46-646a3ef72631"
+  }, {
+    "condition": "$session.params.codice-titolare != null AND $session.params.livello-identificazione != \"Strong\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneStrong",
+    "name": "59e941f4-5188-40b7-8517-ddf285920eb1"
+  }, {
+    "condition": "$session.params.ivrBt != \"00000000\" AND $session.params.ivrBt != \"\" AND $session.params.ivrBt != null AND $session.params.livello-identificazione = null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "codice-titolare",
+        "value": "$sys.func.MID($session.params.ivrBt, 1, 8)"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "Strong"
+      } ]
+    },
+    "targetFlow": "IdentificazioneStrong",
+    "name": "c6a5b234-255a-4b53-981f-1ed8b0d91c19"
+  }, {
+    "condition": "$session.params.codice-titolare != null AND $session.params.livello-identificazione = \"Strong\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaPGDisgiuntaClienteMinore_CarteAttivazione_ContiCarte",
+    "name": "610cfe60-733c-4f17-8797-51f16ba1ce15"
+  } ]
+}

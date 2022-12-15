@@ -1,0 +1,25 @@
+{
+  "name": "92667212-6822-4b0c-9bc4-5714d9689c24",
+  "displayName": "VerificaFulfillmentPF_AbilitazioniSceltaRapporto_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "f423cf16-82a9-4c06-ab60-aaf2a0cf7bc1"
+  }, {
+    "condition": "$session.params.fulfillment-error = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaRapportiPF_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "34a207d3-9fdb-4077-8fbf-b37415f2a1f5"
+  } ]
+}

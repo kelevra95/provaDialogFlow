@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "\\b(\\d\\s*){8}\\b",
+    "synonyms": [ "\\b(\\d\\s*){8}\\b" ],
+    "languageCode": "it"
+  }, {
+    "value": "\\b(\\d(\\s+)?){8}\\b",
+    "synonyms": [ "\\b(\\d(\\s+)?){8}\\b" ],
+    "languageCode": "it"
+  } ]
+}

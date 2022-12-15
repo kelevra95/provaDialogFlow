@@ -1,0 +1,159 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "ti dico l'aisin: ",
+      "auto": true
+    }, {
+      "text": "FR1234007321",
+      "parameterId": "quotazioni-isin",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "il nome dell'azione è "
+    }, {
+      "text": "Ferrari",
+      "parameterId": "quotazioni-nome"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "il radiocor ",
+      "auto": true
+    }, {
+      "text": "dell"
+    }, {
+      "text": "'",
+      "auto": true
+    }, {
+      "text": "azione"
+    }, {
+      "text": " è ",
+      "auto": true
+    }, {
+      "text": "2632",
+      "parameterId": "quotazioni-radiocor"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "il codice aisin "
+    }, {
+      "text": "dell"
+    }, {
+      "text": "'"
+    }, {
+      "text": "azione"
+    }, {
+      "text": " è "
+    }, {
+      "text": "IT5678901234",
+      "parameterId": "quotazioni-isin",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "DE1234J56789",
+      "parameterId": "quotazioni-isin",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "89 49",
+      "parameterId": "quotazioni-radiocor",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "5254",
+      "parameterId": "quotazioni-radiocor"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "il radiocor è ",
+      "auto": true
+    }, {
+      "text": "9090",
+      "parameterId": "quotazioni-radiocor"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "il radiocore che voglio è"
+    }, {
+      "text": " "
+    }, {
+      "text": "3823",
+      "parameterId": "quotazioni-radiocor"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "isin è ",
+      "auto": true
+    }, {
+      "text": "IT1234509876",
+      "parameterId": "quotazioni-isin",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "il nome è "
+    }, {
+      "text": "Apple",
+      "parameterId": "quotazioni-nome"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "il nome è "
+    }, {
+      "text": "Signorini",
+      "parameterId": "quotazioni-nome"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Redbull Race",
+      "parameterId": "quotazioni-nome"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "voglio le azioni di "
+    }, {
+      "text": "Google",
+      "parameterId": "quotazioni-nome"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "voglio le quotazioni di "
+    }, {
+      "text": "Unicorno",
+      "parameterId": "quotazioni-nome"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

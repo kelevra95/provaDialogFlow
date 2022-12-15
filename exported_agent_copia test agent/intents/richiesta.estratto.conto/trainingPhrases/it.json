@@ -1,0 +1,291 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "voglio l'estratto conto di "
+    }, {
+      "text": "fine anno 2020",
+      "parameterId": "date-period"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "puoi darmi l'estratto conto dell'"
+    }, {
+      "text": "ultimo semestre 2018",
+      "parameterId": "date-period"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei il documento di estratto conto del "
+    }, {
+      "text": "secondo bimestre dell'anno scorso",
+      "parameterId": "date-period"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve l'estratto conto del "
+    }, {
+      "text": "primo trimestre 2019",
+      "parameterId": "date-period"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "rendiconto del rapporto cointestato"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "avrei bisogno del resoconto dell'anno "
+    }, {
+      "text": "2020",
+      "parameterId": "date-period"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve la mail con l'estratto conto del "
+    }, {
+      "text": "2018",
+      "parameterId": "date-period"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve lo scalare dei miei depositi"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo vedere la lista delle operazioni finale"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei l'estratto conto di "
+    }, {
+      "text": "aprile 2019",
+      "parameterId": "date-period"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei estratto mensile del mio rapporto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi puoi dare l'Estratto conto condiviso "
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Mi serve l'estratto conto del conto cointestato con mio marito"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "chiedo l'Estratto conto scalare "
+    }, {
+      "text": "maggio 2021",
+      "parameterId": "date-period"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve cortesemente l'Estratto conto corrente"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve Estratto carta blu"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cerco l'Estratto conto "
+    }, {
+      "text": "ottobre 2020",
+      "parameterId": "date-period"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Vorrei verificare l'estratto carta nel mese di "
+    }, {
+      "text": "aprile 2021",
+      "parameterId": "date-period"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Non trovo l'estratto conto di "
+    }, {
+      "text": "gennaio di quest'anno",
+      "parameterId": "date-period"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Estratto conto carta dell'"
+    }, {
+      "text": "ultimo mese",
+      "parameterId": "date-period"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "necessito dell'estratto conto del conto di mia figlia"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "voglio l'ultimo estratto conto bancario"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei l'estratto conto mensile: quello trimestrale non mi va bene"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho provato da solo ma non riesco. Mi serve l'estratto conto del conto chiuso"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "puoi fornirmi l'estratto conto dell'"
+    }, {
+      "text": "ultimo anno",
+      "parameterId": "date-period"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve l'estratto conto "
+    }, {
+      "text": "dal primo gennaio al 30 aprile 2020",
+      "parameterId": "date-period"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "si riesce ad avere l'ultimo estratto conto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho bisogno di tutti gli estratto conto disponibili"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "se possibile mi servirebbe una copia dell'estratto conto della mia carta superflash"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "necessito del documento di estratto conto del "
+    }, {
+      "text": "2020",
+      "parameterId": "date-period"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso richiedere l'estratto conto anche dal telefono?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "le chiedo l'estratto conto del mio conto numero 1077"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sarebbe possibile ottenere una copia degli estratti conto del "
+    }, {
+      "text": "2018",
+      "parameterId": "date-period"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non trovo l'estratto conto di "
+    }, {
+      "text": "agosto 2020",
+      "parameterId": "date-period"
+    }, {
+      "text": ". Posso chiedere a lei?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "estratto conto grazie"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi servirebbe una copia dell'ultimo estratto conto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso chiedere a lei l'estratto conto di "
+    }, {
+      "text": "dicembre 2019",
+      "parameterId": "date-period"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "avrei bisogno dell'estratto conto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

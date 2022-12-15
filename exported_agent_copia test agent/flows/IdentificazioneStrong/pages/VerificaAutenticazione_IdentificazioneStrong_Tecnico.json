@@ -1,0 +1,41 @@
+{
+  "name": "e09bba27-d476-4d56-826d-9138414dce34",
+  "displayName": "VerificaAutenticazione_IdentificazioneStrong_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.authResponse = \"OK\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "livello-identificazione",
+        "value": "Strong"
+      }, {
+        "parameter": "codice-titolare",
+        "value": "$session.params.ivrBt"
+      } ]
+    },
+    "targetPage": "InterrogazioneBT_IdentificazioneStrong_Tecnico",
+    "name": "901640f9-3110-4151-aaec-5c7af30c5876"
+  }, {
+    "condition": "$session.params.authResponse != \"OK\" AND $session.params.esito-handover = \"si\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Flow",
+    "name": "1e7384e4-77b4-446c-8ea4-0a4476076afd"
+  }, {
+    "condition": "$session.params.authResponse != \"OK\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Il cliente non è riuscito ad autenticarsi"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "9d426df1-8f2e-4b3f-90fc-4d43eeaec7d4"
+  } ]
+}

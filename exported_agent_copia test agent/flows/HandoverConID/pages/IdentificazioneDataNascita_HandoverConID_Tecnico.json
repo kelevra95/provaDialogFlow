@@ -1,0 +1,131 @@
+{
+  "name": "1ff12867-c0b0-4e32-bede-e8f11dc94c6d",
+  "displayName": "IdentificazioneDataNascita_HandoverConID_Tecnico",
+  "form": {
+    "parameters": [ {
+      "displayName": "data-nascita-input",
+      "required": true,
+      "entityType": "@sys.date",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Per conferma dimmi la tua data di nascita, specificando il giorno, il mese, e l'anno per esteso" ]
+            },
+            "languageCode": "it"
+          } ],
+          "setParameterActions": [ {
+            "parameter": "nuova-richiesta-data",
+            "value": "si"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Mi dispiace, non ho sentito. Per conferma, dimmi la tua data di nascita, specificando il giorno, il mese, e poi l'anno per esteso." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "4b03054d-3b66-4a8c-9c65-91839d8ad7cf"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Mi dispiace, non ho capito. Per conferma, dimmi la tua data di nascita, specificando il giorno, il mese, e poi l'anno per esteso." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "3ddabf48-8812-4360-8de5-5374ac5880ea"
+        }, {
+          "targetFlow": "HandoverOK",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "livello-identificazione",
+              "value": "nani"
+            } ]
+          },
+          "name": "010e0259-f518-4371-9404-2d89f3869f12"
+        }, {
+          "targetFlow": "HandoverOK",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "livello-identificazione",
+              "value": "nani"
+            } ]
+          },
+          "name": "d2078555-acdb-4706-abb3-917bc5a20f0e"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "uscita",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "intento",
+        "value": "uscita"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "nani"
+      } ]
+    },
+    "targetFlow": "HandoverOK",
+    "name": "b6dfb516-221a-4a85-868d-0e682c847550"
+  }, {
+    "intent": "operatore",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "intento",
+        "value": "operatore"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "nani"
+      } ]
+    },
+    "targetFlow": "HandoverOK",
+    "name": "9596575f-07ef-42ee-999f-3ab1668845f1"
+  }, {
+    "condition": "$page.params.status = FINAL AND $session.params.nuova-richiesta-data = \"si\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "data-nascita",
+        "value": "$sys.func.FORMAT_DATE($session.params.data-nascita-input, dd/MM/yyyy)"
+      } ]
+    },
+    "targetPage": "VerificaDataNascita_HandoverConID_Tecnico",
+    "name": "8d1de9a1-fcab-4e37-9bc0-29745bdbce95"
+  }, {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaDataNascita_HandoverConID_Tecnico",
+    "name": "50339a60-6f3c-420f-a5e9-67a04a68e8fb"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 80,
+      "noSpeechTimeout": {
+        "seconds": 10
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

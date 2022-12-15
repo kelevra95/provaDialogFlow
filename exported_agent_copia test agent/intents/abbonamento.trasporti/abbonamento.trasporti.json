@@ -1,0 +1,6 @@
+{
+  "name": "0f6dc99b-a06e-420a-a9b9-530cc6d6251c",
+  "displayName": "abbonamento.trasporti",
+  "priority": 500000,
+  "description": "Recepisce le richieste di pagamento dell'abbonamento al servizio trasporto pubblico"
+}

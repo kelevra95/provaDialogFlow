@@ -1,0 +1,47 @@
+{
+  "name": "552a85af-eeb8-4552-8e90-4154e9df4662",
+  "displayName": "ProseguiLetturaSiNo_EseguitiTitoli_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Vado avanti con la lettura?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "RicercaEseguiti_EseguitiTitoli_Investimenti",
+    "name": "ee33f2b0-1f03-497b-9885-dc8717af2529"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "In tal caso," ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "PropostaNuovaRicerca_EseguitiTitoli_Investimenti",
+    "name": "949028d2-0996-44b0-9ed4-1d6e7c7d4e4a"
+  }, {
+    "intent": "ripeti",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Va bene, ripeto." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "VerificaPresenzaEseguitiTitoli_EseguitiTitoli_Investimenti",
+    "name": "0fbb356e-d863-435c-9f1f-45346493b5ba"
+  } ]
+}

@@ -1,0 +1,98 @@
+{
+  "name": "da04c48c-d7e0-41aa-a360-824d8727a5bb",
+  "displayName": "PINRichiestaGenericoDisambiguazione_Tecnico_Tecnico",
+  "form": {
+    "parameters": [ {
+      "displayName": "Tipo-prodotto-PIN-limiti-domiciliazioni",
+      "required": true,
+      "entityType": "@Tipo-prodotto-PIN-limiti-domiciliazioni",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Ti riferisci al PIN del conto o di una carta?" ]
+            },
+            "languageCode": "it"
+          } ]
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.Tipo-prodotto-PIN-limiti-domiciliazioni = \"carta\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.RPCA"
+      }, {
+        "parameter": "identificazione-necessaria",
+        "value": "Strong"
+      } ]
+    },
+    "targetFlow": "CONTICARTE",
+    "name": "0547e1d7-13af-45cc-ba02-cacd99c383ca"
+  }, {
+    "condition": "$session.params.Tipo-prodotto-PIN-limiti-domiciliazioni = \"conto\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Se hai dimenticato i codici di accesso al tuo contratto My Key, puoi provare a recuperarli in autonomia dalla pagina di login dell'app della banca." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Flusso attualmente non gestito da Ellis"
+      }, {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.PADI"
+      }, {
+        "parameter": "routing-macroarea",
+        "value": "CTY_CC_ASSINFO"
+      }, {
+        "parameter": "routing-microarea",
+        "value": "CTY_CC_infoprod"
+      }, {
+        "parameter": "knowledge-url",
+        "value": "https://knowledgefol.intesasanpaolo.com/sites/FOL/app/Lists/La%20Tua%20Banca/DispForm.aspx?ID=1\u0026k=pin%20accesso%20dimenticato\u0026InitialTabID=Ribbon.Read"
+      }, {
+        "parameter": "knowledge-titolo",
+        "value": "Approfondimenti"
+      }, {
+        "parameter": "flusso-corrente",
+        "value": "Start"
+      }, {
+        "parameter": "contatore",
+        "value": 0
+      }, {
+        "parameter": "data-ora-sistema",
+        "value": "$sys.func.NOW()"
+      }, {
+        "parameter": "chiamata-survey",
+        "value": "off"
+      }, {
+        "parameter": "tipo-attivita",
+        "value": "I"
+      }, {
+        "parameter": "sottoflusso-corrente",
+        "value": "PIN di accesso dimenticato"
+      }, {
+        "parameter": "ticket-id",
+        "value": "EllisConversazioneGenerica"
+      }, {
+        "parameter": "identificazione-necessaria",
+        "value": "Strong"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "fff2d7d7-4541-41ae-a9e0-848c63de06a4"
+  } ]
+}

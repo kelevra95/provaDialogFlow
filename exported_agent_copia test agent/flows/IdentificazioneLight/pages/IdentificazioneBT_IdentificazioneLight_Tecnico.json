@@ -1,0 +1,178 @@
+{
+  "name": "85f0550a-52f6-48c0-9d3b-fea28a58c14e",
+  "displayName": "IdentificazioneBT_IdentificazioneLight_Tecnico",
+  "form": {
+    "parameters": [ {
+      "displayName": "codice-titolare",
+      "required": true,
+      "entityType": "@Codice-Titolare",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Dimmi, o digita con il tastierino, il tuo codice di 8 numeri." ]
+            },
+            "languageCode": "it"
+          } ],
+          "advancedSettings": {
+            "playbackInterruptionSettings": {
+            
+            }
+          }
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non sono riuscito ad identificarti. Se il tuo codice titolare My Key ha meno di 8 numeri,  inserisci prima degli zeri. Per favore digita di nuovo il codice." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "eec2e229-c97d-4983-820b-6fdd36c6f0a4"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non sono riuscito ad identificarti. Se il tuo codice titolare My Key ha meno di 8 numeri,  inserisci prima degli zeri. Per favore digita di nuovo il codice." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "eb02a476-3315-404f-86c2-4b912601b63d"
+        }, {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho sentito. Digita gli 8 numeri del tuo codice titolare My Key, compresi gli eventuali zeri iniziali." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "0e041aa2-1390-40e4-9de3-9bd0fbbdfd42"
+        }, {
+          "targetPage": "GestioneRamo_IdentificazioneLight_Tecnico",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Con la numerazione che mi hai fornito non ho trovato le informazioni che stavo cercando." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "5c5e43c9-663a-4189-9378-712db6e19012"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho sentito. Digita gli 8 numeri del tuo codice titolare My Key, compresi gli eventuali zeri iniziali." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "2954d155-1448-45e7-953e-a075675f6272"
+        }, {
+          "targetPage": "GestioneRamo_IdentificazioneLight_Tecnico",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non hai inserito il codice." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "65150965-8eb2-40b1-a822-1a14112d6f0f"
+        } ]
+      },
+      "redact": true,
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 8,
+          "finishDigit": "#",
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "codice.titolare.dimenticato",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "GestioneRamo_IdentificazioneLight_Tecnico",
+    "name": "7d1adbcc-6fd5-4b87-a90e-2a02ca9c283f"
+  }, {
+    "intent": "uscita",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "intento",
+        "value": "uscita"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "nani"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Il cliente non vuole parlare con Ellis"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "3be0e020-e1d3-492a-948d-2a493797b93d"
+  }, {
+    "intent": "operatore",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "intento",
+        "value": "operatore"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "nani"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Richiesta operatore"
+      } ]
+    },
+    "targetFlow": "HandoverRichiestaDiretta",
+    "name": "186d883b-b731-42b1-878c-426c29b07aca"
+  }, {
+    "intent": "aspetta",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "GestioneAttesa_IdentificazioneLight_Tecnico",
+    "name": "723c44b7-2970-4629-b5dd-05ac012bffc4"
+  }, {
+    "condition": "$page.params.status = FINAL AND $session.params.codice-titolare != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "codice-titolare",
+        "value": "$sys.func.TO_TEXT($session.params.codice-titolare)"
+      }, {
+        "parameter": "codice-titolare",
+        "value": "$sys.func.SUBSTITUTE($session.params.codice-titolare,\" \",\"\")"
+      } ]
+    },
+    "targetPage": "InterrogazioneBT_IdentificazioneLight_Tecnico",
+    "name": "aeba93c3-d20e-4723-820c-79aaa3251e02"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 5,
+      "noSpeechTimeout": {
+        "seconds": 10
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

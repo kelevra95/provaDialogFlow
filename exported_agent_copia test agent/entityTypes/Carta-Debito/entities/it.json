@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "Debito",
+    "synonyms": [ "bancocard", "bancocard basic", "bancocard plus", "bancomat", "Bancomat", "carta di debito", "debit", "debito", "ics me", "Libramat", "next card", "per me card", "perme card", "una carta di debito", "x me card", "xme card", "XME card" ],
+    "languageCode": "it"
+  } ]
+}

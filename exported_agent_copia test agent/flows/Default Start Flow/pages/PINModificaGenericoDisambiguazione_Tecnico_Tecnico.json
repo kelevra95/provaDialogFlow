@@ -1,0 +1,98 @@
+{
+  "name": "fbba5e14-b21b-416a-bae4-3349cc77fe8a",
+  "displayName": "PINModificaGenericoDisambiguazione_Tecnico_Tecnico",
+  "form": {
+    "parameters": [ {
+      "displayName": "Tipo-prodotto-PIN-limiti-domiciliazioni",
+      "required": true,
+      "entityType": "@Tipo-prodotto-PIN-limiti-domiciliazioni",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Ti riferisci al PIN del conto o di una carta?" ]
+            },
+            "languageCode": "it"
+          } ]
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.Tipo-prodotto-PIN-limiti-domiciliazioni = \"carta\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "La modifica del pin della carta non può essere effettuata al telefono o con un gestore della Filiale Digitale. Per le carte che lo permettono, puoi modificare il pin, in autonomia, direttamente presso i nostri sportelli automatici. Se posso fare altro per te, chiedimi pu-re." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Flusso attualmente non gestito da Ellis"
+      }, {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.PCRM"
+      }, {
+        "parameter": "routing-macroarea",
+        "value": "CTY_CC_ASSINFO"
+      }, {
+        "parameter": "routing-microarea",
+        "value": "CTY_CC_infoprod"
+      }, {
+        "parameter": "knowledge-url",
+        "value": "https://knowledgefol.intesasanpaolo.com/sites/FOL/commerciale/Lists/Focus%20Prodotti%20e%20Servizi/DispForm.aspx?ID=48\u0026k=pin%20personalizzato\u0026InitialTabID=Ribbon.Read"
+      }, {
+        "parameter": "knowledge-titolo",
+        "value": "Approfondimenti"
+      }, {
+        "parameter": "flusso-corrente",
+        "value": "Start"
+      }, {
+        "parameter": "contatore",
+        "value": 0
+      }, {
+        "parameter": "data-ora-sistema",
+        "value": "$sys.func.NOW()"
+      }, {
+        "parameter": "chiamata-survey",
+        "value": "off"
+      }, {
+        "parameter": "tipo-attivita",
+        "value": "E"
+      }, {
+        "parameter": "sottoflusso-corrente",
+        "value": "Modifica PIN carta"
+      }, {
+        "parameter": "ticket-id",
+        "value": "EllisConversazioneGenerica"
+      }, {
+        "parameter": "identificazione-necessaria",
+        "value": "Strong"
+      } ]
+    },
+    "targetPage": "Start Page",
+    "name": "f1b329fc-df26-442e-8146-7eee9526f263"
+  }, {
+    "condition": "$session.params.Tipo-prodotto-PIN-limiti-domiciliazioni = \"conto\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.MOPA"
+      }, {
+        "parameter": "identificazione-necessaria",
+        "value": "Strong"
+      } ]
+    },
+    "targetFlow": "SICUREZZA",
+    "name": "5415b046-a674-455f-993e-2377c4107059"
+  } ]
+}

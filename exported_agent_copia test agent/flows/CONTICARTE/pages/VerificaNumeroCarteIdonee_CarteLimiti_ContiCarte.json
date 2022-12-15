@@ -1,0 +1,45 @@
+{
+  "name": "0967b1d5-6611-4b17-96ff-e285896967ac",
+  "displayName": "VerificaNumeroCarteIdonee_CarteLimiti_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Gestione-carte",
+    "tag": "getCustomerCardsLimits",
+    "setParameterActions": [ {
+      "parameter": "tipo-carta",
+      "value": "Tutte"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "7a131e1c-3d64-485d-af5e-cd65761665a2"
+  }, {
+    "condition": "$session.params.numero-carte-idonee = 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "In questo momento non trovo carte emesse da Intesa Sanpaolo e intestate a tuo nome, per le quali poterti fornire i limiti. Tieni presente che per la richiesta dei limiti, la carta deve essere operativa (?)" ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "GestioneRepeatZeroCarte_CarteLimiti_ContiCarte",
+    "name": "b3b84590-bec3-4bf1-8824-a50508a4d1d8"
+  }, {
+    "condition": "$session.params.numero-carte-idonee \u003e= 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": 0
+      } ]
+    },
+    "targetPage": "InvioPushSMSAvvio_CarteLimiti_ContiCarte",
+    "name": "666441d4-f669-4569-917f-573172b74b4f"
+  } ]
+}

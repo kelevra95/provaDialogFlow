@@ -1,0 +1,19 @@
+{
+  "entities": [ {
+    "value": "@Carta-Debito",
+    "synonyms": [ "@Carta-Debito" ],
+    "languageCode": "it"
+  }, {
+    "value": "@Carta-Credito",
+    "synonyms": [ "@Carta-Credito" ],
+    "languageCode": "it"
+  }, {
+    "value": "@Prepagata",
+    "synonyms": [ "@Prepagata" ],
+    "languageCode": "it"
+  }, {
+    "value": "@Carta-Tutte",
+    "synonyms": [ "@Carta-Tutte" ],
+    "languageCode": "it"
+  } ]
+}

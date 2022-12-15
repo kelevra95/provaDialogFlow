@@ -1,0 +1,63 @@
+{
+  "name": "aac8da8f-03cd-4b4d-ab76-8836c997365e",
+  "displayName": "VerificaPresenzaEseguitiTitoli_EseguitiTitoli_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.eseguito-trovato = false",
+    "triggerFulfillment": {
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.data-ricerca = null",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Non ho trovato operazioni recenti in titoli da leggerti." ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Per il periodo che mi hai indicato non ho trovato operazioni in titoli da leggerti." ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "PropostaNuovaRicerca_EseguitiTitoli_Investimenti",
+    "name": "1d0a2ffa-df6a-47ef-b2c1-df9bb9cf00e5"
+  }, {
+    "condition": "$session.params.eseguito-trovato = true AND $session.params.fine-lettura = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$session.params.elenco-eseguiti." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "ProseguiLetturaSiNo_EseguitiTitoli_Investimenti",
+    "name": "15a42b62-d954-4d21-ba26-a4ffd43e751b"
+  }, {
+    "condition": "$session.params.eseguito-trovato = true AND $session.params.fine-lettura = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "$session.params.elenco-eseguiti. Ho terminato la lettura degli eseguiti." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "PropostaNuovaRicerca_EseguitiTitoli_Investimenti",
+    "name": "166f72b0-32cb-4b6c-896f-a8f9860bde1b"
+  } ]
+}

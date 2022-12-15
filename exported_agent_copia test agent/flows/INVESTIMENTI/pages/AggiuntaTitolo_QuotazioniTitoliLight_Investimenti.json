@@ -1,0 +1,30 @@
+{
+  "name": "23f1fcbe-31a5-4e73-a7e8-9e69ab2a53dd",
+  "displayName": "AggiuntaTitolo_QuotazioniTitoliLight_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "7d44849e-98ae-46da-8489-ac32d28ca70c"
+  }, {
+    "condition": "$session.params.fulfillment-error = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ho aggiunto il titolo come da tua richiesta." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "VerificaRichiestaOperazione_QuotazioniTitoliLight_Investimenti",
+    "name": "8c7d0a43-dedd-48e0-98fa-c5f22a93e01f"
+  } ]
+}

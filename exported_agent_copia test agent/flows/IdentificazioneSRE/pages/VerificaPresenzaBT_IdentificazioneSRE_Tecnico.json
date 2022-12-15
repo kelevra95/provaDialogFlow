@@ -1,0 +1,90 @@
+{
+  "name": "085b6789-4012-45d7-a7e3-a438e356bbbf",
+  "displayName": "VerificaPresenzaBT_IdentificazioneSRE_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.codice-titolare-PF != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "livello-identificazione",
+        "value": "SRE"
+      }, {
+        "parameter": "tipo-persona",
+        "value": null
+      }, {
+        "parameter": "codice-titolare",
+        "value": "$session.params.codice-titolare-PF"
+      }, {
+        "parameter": "cliente-tipo",
+        "value": "PF"
+      } ]
+    },
+    "targetPage": " RichiestaSegmentoCliente_IdentificazioneSRE_Tecnico",
+    "name": "84a8d7ed-77d5-4cd7-849d-047042a39e64"
+  }, {
+    "condition": "$session.params.codice-titolare-PF = null AND $session.params.cliente-cf = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace ma non sono riuscito a recuperare tutti i dati necessari per permetterti la completa operatività tramite i servizi multicanale." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "livello-identificazione",
+        "value": "SRE"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Cliente privo di contratto multicanale"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "3c4ced3e-102f-4149-9c7e-ee0e5c0c2f70"
+  }, {
+    "condition": "$session.params.codice-titolare-PF = null AND $session.params.cliente-cf != null AND $session.params.cliente-cf = $session.params.ivrCf",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace ma non sono riuscito a recuperare tutti i dati necessari per permetterti la completa operatività tramite i servizi multicanale." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "livello-identificazione",
+        "value": "SRE"
+      }, {
+        "parameter": "cliente-segmento",
+        "value": "$session.params.ivrSegmento"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Cliente privo di contratto multicanale"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "32fb2782-451e-4290-bcb4-5eaa23417a21"
+  }, {
+    "condition": "$session.params.codice-titolare-PF = null AND $session.params.cliente-cf != null AND $session.params.cliente-cf != $session.params.ivrCf",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace ma non sono riuscito a recuperare tutti i dati necessari per permetterti la completa operatività tramite i servizi multicanale." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "livello-identificazione",
+        "value": "SRE"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Cliente privo di contratto multicanale"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "3b7ab70e-faca-453a-a49e-4a68b4c34abd"
+  } ]
+}

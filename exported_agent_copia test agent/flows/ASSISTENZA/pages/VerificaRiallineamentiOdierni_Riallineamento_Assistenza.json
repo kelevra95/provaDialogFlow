@@ -1,0 +1,42 @@
+{
+  "name": "d147023e-6bbd-48e6-8317-0b440640a138",
+  "displayName": "VerificaRiallineamentiOdierni_Riallineamento_Assistenza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Riferimenti-contatto-cliente",
+    "tag": "getLastMyKeyRealignment"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "880517d6-650c-48ed-9732-9645a096bb22"
+  }, {
+    "condition": "$session.params.riallineamento-odierno = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace, mi risulta un aggiornamento già eseguito nelle ultime 24 ore. Per approfondire," ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Riallineamento già eseguito da Ellis e non risolutivo"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "dcf58678-11cd-4046-abdc-df0efd15b5bd"
+  }, {
+    "condition": "$session.params.riallineamento-odierno = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "EsecuzioneRiallineamento_Riallineamento_Assistenza",
+    "name": "26a40915-13ec-4f1e-805a-d58daeb2b47a"
+  } ]
+}

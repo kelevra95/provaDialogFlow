@@ -1,0 +1,26 @@
+{
+  "name": "2318670a-949a-4470-8f99-ded8c1ff0b2e",
+  "displayName": "InvioPushSMSAvvio_RicercaMovimenti_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Comunicazioni",
+    "tag": "sendSearchMovementsBeginMessage"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "7ab9fdfa-e1a4-4e3a-b204-3fbddf99777b"
+  }, {
+    "condition": "$session.params.fulfillment-error = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DisambiguazioneContoCarta_RicercaMovimenti_ContiCarte",
+    "name": "976d14ef-b587-4b4f-863a-b859a1e3e5e7"
+  } ]
+}

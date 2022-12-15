@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "PG",
+    "synonyms": [ "agenzia", "amministratore", "artigiano", "assicuratore", "attività commerciale", "azienda", "bar", "business", "ceo", "commercialista", "commerciante", "delegato aziendale", "direttore", "ditta", "ditta individuale", "impresa", "negozio", "notaio", "parucchiera", "persona giuridica", "PG", "pi gi", "pizzeria", "ristorante", "società", "spa", "srl", "studio", "negoziante" ],
+    "languageCode": "it"
+  } ]
+}

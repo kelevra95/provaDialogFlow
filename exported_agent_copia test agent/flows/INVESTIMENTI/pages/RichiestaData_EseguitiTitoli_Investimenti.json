@@ -1,0 +1,102 @@
+{
+  "name": "ef64c850-dfdd-4402-9e11-3ead337aa4a6",
+  "displayName": "RichiestaData_EseguitiTitoli_Investimenti",
+  "form": {
+    "parameters": [ {
+      "displayName": "data-ricerca",
+      "required": true,
+      "entityType": "@sys.date",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Dimmi per quale data vuoi gli eseguiti in titoli. In alternativa puoi dire \"ultimi eseguiti\" per le operazioni più recenti." ]
+            },
+            "languageCode": "it"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho sentito bene. Puoi ripetere?" ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "6a3d7c44-0b1a-453b-8d40-9d58ad544596"
+        }, {
+          "targetPage": "DettagliData_EseguitiTitoli_Investimenti",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non sentire. Procedo ad elencarti gli ultimi eseguiti in titoli partendo dal più recente in ordine temporale." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "data-ricerca",
+              "value": null
+            } ]
+          },
+          "name": "be78044a-8721-4f1d-9984-1e2abefb1fbd"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non sono sicuro di aver compreso correttamente. Puoi ripetere?" ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "ab487b5a-8889-4437-994a-85f75c5747ba"
+        }, {
+          "targetPage": "DettagliData_EseguitiTitoli_Investimenti",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non capire. Procedo ad elencarti gli ultimi eseguiti in titoli partendo dal più recente in ordine temporale." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "data-ricerca",
+              "value": null
+            } ]
+          },
+          "name": "4e54d115-a401-4233-a44d-e2b2b771d43f"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "ultimo.periodo",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "data-ricerca",
+        "value": null
+      } ]
+    },
+    "targetPage": "DettagliData_EseguitiTitoli_Investimenti",
+    "name": "d27ef2ad-3322-4774-90ec-37905a8a4547"
+  }, {
+    "condition": "$page.params.status = FINAL AND $session.params.data-ricerca != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DettagliData_EseguitiTitoli_Investimenti",
+    "name": "443f9bc2-653c-473a-bfce-5ea5a3de04db"
+  } ]
+}

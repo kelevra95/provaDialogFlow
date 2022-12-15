@@ -1,0 +1,10 @@
+{
+  "name": "e0662ac1-a878-4144-a647-cfabf5296918",
+  "displayName": "nome",
+  "parameters": [ {
+    "id": "cliente-nome",
+    "entityType": "@Nome",
+    "redact": true
+  } ],
+  "priority": 500000
+}

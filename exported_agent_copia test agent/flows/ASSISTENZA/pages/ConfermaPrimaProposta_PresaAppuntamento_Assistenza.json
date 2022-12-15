@@ -1,0 +1,42 @@
+{
+  "name": "f2992d5e-320e-4383-91da-aeb3e56febdb",
+  "displayName": "ConfermaPrimaProposta_PresaAppuntamento_Assistenza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "scelta-slot",
+        "value": "altroSlotInGiornata"
+      }, {
+        "parameter": "data-ora-scelta",
+        "value": "$sys.func.FORMAT_DATE($session.params.data-ora-alternativa, dd/MM/yyyy HH:mm:ss)"
+      } ]
+    },
+    "targetPage": "InserimentoAppuntamento_PresaAppuntamento_Assistenza",
+    "name": "aaa79a86-7ce1-4470-848d-8121fb2bb9b1"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "AcquisizionePreferenza_PresaAppuntamento_Assistenza",
+    "name": "bb0916c4-1d61-4c89-bbee-25ee890764f9"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

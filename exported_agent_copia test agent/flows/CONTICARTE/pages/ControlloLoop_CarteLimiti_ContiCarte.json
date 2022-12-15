@@ -1,0 +1,50 @@
+{
+  "name": "67db0632-f0d7-47a8-bb6d-a35ca0199d18",
+  "displayName": "ControlloLoop_CarteLimiti_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$sys.func.COUNT($session.params.operazione-limite-operativo) = 0",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ModificaLimiteOperativo_CarteLimiti_ContiCarte",
+    "name": "a9cb11aa-05ee-4dd9-b6a2-08bf8d0f099c"
+  }, {
+    "condition": "$sys.func.COUNT($session.params.operazione-limite-operativo) \u003e 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "limite-mensile-nuovo",
+        "value": null
+      }, {
+        "parameter": "limite-giornaliero-nuovo",
+        "value": null
+      } ]
+    },
+    "targetPage": "SceltaTipoLimite_CarteLimiti_ContiCarte",
+    "name": "ab9bb32a-91cc-448c-86d0-406bcfeff4f8"
+  }, {
+    "condition": "$session.params.limite-prelievo-giornaliero-nuovo = null AND $session.params.limite-pagamento-giornaliero-nuovo = null AND $session.params.limite-prelievo-mensile-nuovo = null AND $session.params.limite-pagamento-mensile-nuovo = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I limiti inseriti risultano essere uguali ai precedenti. Non è pertanto stata effettuata nessuna modifica." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "RichiestaAltroLimite_CarteLimiti_ContiCarte",
+    "name": "14df966e-4c2a-4b9a-a211-b73c233c129c"
+  }, {
+    "condition": "$session.params.aumento-limite-possibile = false AND ($session.params.limite-pagamento-giornaliero-nuovo \u003e= $session.params.limite-pagamento-giornaliero-corrente OR $session.params.limite-pagamento-mensile-nuovo \u003e= $session.params.limite-pagamento-mensile-corrente OR $session.params.limite-prelievo-giornaliero-nuovo \u003e= $session.params.limite-prelievo-giornaliero-corrente OR $session.params.limite-prelievo-mensile-nuovo \u003e= $session.params.limite-prelievo-mensile-corrente)",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PropostaAppuntamentoFil_CarteLimiti_ContiCarte",
+    "name": "5be3e4df-098d-4ff0-b56c-62b2651464f4"
+  } ]
+}

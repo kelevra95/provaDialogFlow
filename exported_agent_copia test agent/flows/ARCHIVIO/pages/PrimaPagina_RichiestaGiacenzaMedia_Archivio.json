@@ -1,0 +1,52 @@
+{
+  "name": "7c610c63-3914-4d32-9abb-65d9a29164c1",
+  "displayName": "PrimaPagina_RichiestaGiacenzaMedia_Archivio",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.codice-titolare = null AND ($session.params.ivrBt = \"00000000\" OR $session.params.ivrBt = \"\" OR $session.params.ivrBt = null) AND ($session.params.ivrCf != null AND $session.params.ivrCf != \"\")",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneSRE",
+    "name": "74d37412-d261-47e5-afcb-030a7e5e770a"
+  }, {
+    "condition": "$session.params.codice-titolare = null AND ($session.params.ivrBt = \"00000000\" OR $session.params.ivrBt = \"\" OR $session.params.ivrBt = null)",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneLight",
+    "name": "5c38dad2-24dc-4fca-a1cc-6a0614ea5c38"
+  }, {
+    "condition": "$session.params.ivrBt != \"00000000\" AND $session.params.ivrBt != \"\" AND $session.params.ivrBt != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "codice-titolare",
+        "value": "$sys.func.MID($session.params.ivrBt, 1, 8)"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "Strong"
+      } ]
+    },
+    "targetFlow": "IdentificazioneStrong",
+    "name": "40c6f086-b2d0-469f-aa1e-4aa076623165"
+  }, {
+    "condition": "$session.params.codice-titolare != null AND ($session.params.livello-identificazione != \"SRE\" AND $session.params.livello-identificazione != \"light\" AND $session.params.livello-identificazione != \"Strong\")",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneLight",
+    "name": "40c77fe0-2fc8-46fd-8de9-bef4dccde4a3"
+  }, {
+    "condition": "$session.params.codice-titolare != null AND ($session.params.livello-identificazione = \"SRE\" OR $session.params.livello-identificazione = \"light\" OR $session.params.livello-identificazione = \"Strong\")",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaPrimoAccesso_RichiestaGiacenzaMedia_Archivio",
+    "name": "4dc7d7e7-82c5-4001-9ea8-23c763c0f428"
+  } ]
+}

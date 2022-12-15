@@ -1,0 +1,27 @@
+{
+  "entities": [ {
+    "value": "BEU",
+    "synonyms": [ "austria", "belgio", "beu", "comunitario", "conto di terzi", "conto terzi", "domestico", "donazione", "donazioni", "estero europeo", "euro", "Europa", "europeo", "francia", "germania", "italia", "nazionale", "Olanda", "paesi bassi", "portogallo", "SEPA", "spagna" ],
+    "languageCode": "it"
+  }, {
+    "value": "extra UE",
+    "synonyms": [ "America", "Australia", "Cina", "credit transfer ", "dollari", "extra europeo", "extra UE", "Extra Unione Europea", "fuori dall'Europa", "fuori dall'Unione Europea", "fuori Europa", "Giappone", "India", "moneta diversa dall'Euro", "non in euro", "non in Europa", "paesi arabi", "Russia", "Stati Uniti", "sterlina", "sterline", "Ucraina", "valuta diversa dall'Euro", "valuta estera", "non ha l'euro" ],
+    "languageCode": "it"
+  }, {
+    "value": "fiscale",
+    "synonyms": [ "agevolazione fiscale", "agevolazioni fiscali", "bonus 110", "bonus ristrutturazioni", "bonus verde", "detrazioni fiscali", "fiscale", "fiscali", "risparmio energetico", "ristrutturazione" ],
+    "languageCode": "it"
+  }, {
+    "value": "giroconto",
+    "synonyms": [ "giroconto", "girofondi" ],
+    "languageCode": "it"
+  }, {
+    "value": "istantaneo",
+    "synonyms": [ "immediato", "istantaneo", "rapido", "urgente", "veloce" ],
+    "languageCode": "it"
+  }, {
+    "value": "estero",
+    "synonyms": [ "all'estero", "estero", "internazionale" ],
+    "languageCode": "it"
+  } ]
+}

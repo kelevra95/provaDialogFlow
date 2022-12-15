@@ -1,0 +1,236 @@
+{
+  "name": "95597cbc-9db6-4269-a8bf-369c735e6550",
+  "displayName": "GestioneRamo_HandoverConID_Tecnico",
+  "form": {
+    "parameters": [ {
+      "displayName": "codice-titolare",
+      "required": true,
+      "entityType": "@Codice-Titolare",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho sentito. Ricordi il tuo codice titolare My Key di 8 numeri?" ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "566a21f0-fcf5-4322-ad48-8082a6bada04"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho capito. Ricordi il tuo codice titolare My Key di 8 numeri?" ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "0b97712d-471e-41db-bf66-bae4f713ca01"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho sentito. Ricordi il tuo codice titolare My Key di 8 numeri che utilizzi per accedere al sito della banca?" ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "f676933c-86e1-4e8a-9ebf-196f9afbaafc"
+        }, {
+          "targetFlow": "HandoverOK",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho sentito." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "334404d4-9900-4395-bd93-d5a96f33cf22"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho capito. Ricordi il tuo codice titolare My Key di 8 numeri?" ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "4cdcdb74-ecd7-408f-90f1-b6351f8a891a"
+        }, {
+          "targetFlow": "HandoverOK",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho capito." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "fbf6c0f6-dba3-4490-8bf8-ad7941890a57"
+        } ]
+      },
+      "redact": true,
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 8,
+          "finishDigit": "#",
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "identificazione-BT",
+        "value": true
+      } ]
+    },
+    "targetPage": "IdentificazioneBT_HandoverConID_Tecnico",
+    "name": "485fdf7b-dd6f-455e-a7c5-01368c8912ed"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Nessun problema." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "identificazione-cognome",
+        "value": true
+      } ]
+    },
+    "targetPage": "IdentificazioneCognome_HandoverConID_Tecnico",
+    "name": "e67be1b4-218e-4b91-99b7-425d8ed5677f"
+  }, {
+    "intent": "non.so",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "identificazione-cognome",
+        "value": true
+      } ]
+    },
+    "targetPage": "IdentificazioneCognome_HandoverConID_Tecnico",
+    "name": "34267c25-203a-47a7-8b28-d83dc6b692fc"
+  }, {
+    "intent": "codice.titolare",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Il codice titolare, formato da 8 numeri, serve per accedere ai servizi online offerti dalla banca tramite sito, app e telefono. Sei in possesso di questo codice?" ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "705d9d02-0db3-407b-80d7-e5630583350a"
+  }, {
+    "condition": "$session.params.codice-titolare != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "identificazione-BT",
+        "value": true
+      } ]
+    },
+    "targetPage": "IdentificazioneBT_HandoverConID_Tecnico",
+    "name": "82ef3a1a-438b-4f8e-a2bb-e99fcbe2d130"
+  }, {
+    "condition": "$session.params.identificazione-BT = true AND $session.params.identificazione-cognome = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Proviamo in un altro modo." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "identificazione-cognome",
+        "value": true
+      }, {
+        "parameter": "codice-titolare",
+        "value": null
+      }, {
+        "parameter": "cliente-cf",
+        "value": null
+      }, {
+        "parameter": "presenza-PF",
+        "value": null
+      }, {
+        "parameter": "presenza-PG",
+        "value": null
+      }, {
+        "parameter": "partita-iva-PG",
+        "value": null
+      }, {
+        "parameter": "cliente-tipo",
+        "value": null
+      }, {
+        "parameter": "cliente-minore",
+        "value": null
+      }, {
+        "parameter": "codice-filiale",
+        "value": null
+      }, {
+        "parameter": "cliente-altri-cloni",
+        "value": null
+      } ]
+    },
+    "targetPage": "IdentificazioneCognome_HandoverConID_Tecnico",
+    "name": "bb2a3dad-3729-456a-b993-2c768c873642"
+  }, {
+    "condition": "$session.params.identificazione-BT = false AND $session.params.identificazione-cognome = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Proviamo in un altro modo." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "identificazione-BT",
+        "value": true
+      } ]
+    },
+    "targetPage": "IdentificazioneBT_HandoverConID_Tecnico",
+    "name": "dac6284f-7b69-449d-9ba5-fc223b347e11"
+  }, {
+    "condition": "$session.params.identificazione-BT = true AND $session.params.identificazione-cognome = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "livello-identificazione",
+        "value": "nani"
+      } ]
+    },
+    "targetFlow": "HandoverOK",
+    "name": "201051b6-0560-4913-9531-92fcae565fe7"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

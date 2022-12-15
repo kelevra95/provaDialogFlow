@@ -1,0 +1,63 @@
+{
+  "name": "a91780e2-8202-443a-acfe-4cad83284678",
+  "displayName": "PrimaPagina_RichiestaSaldo_Conticarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "anno-corrente",
+      "value": "$sys.func.ADD($session.params.data-ora-sistema.year,+0)"
+    }, {
+      "parameter": "anno-successivo",
+      "value": "$sys.func.ADD($session.params.data-ora-sistema.year,+1)"
+    }, {
+      "parameter": "anno-precedente",
+      "value": "$sys.func.ADD($session.params.data-ora-sistema.year,-1)"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.codice-titolare = null AND ($session.params.ivrBt = \"00000000\" OR $session.params.ivrBt = \"\" OR $session.params.ivrBt = null)",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneStrong",
+    "name": "0de3f8c4-690c-4ae0-bb5b-aac867b1a41c"
+  }, {
+    "condition": "$session.params.codice-titolare != null AND $session.params.livello-identificazione != \"Strong\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneStrong",
+    "name": "087968da-f3f8-4287-ada9-f190d131f5d8"
+  }, {
+    "condition": "$session.params.ivrBt != \"00000000\" AND $session.params.ivrBt != \"\" AND $session.params.ivrBt != null AND $session.params.livello-identificazione = null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "codice-titolare",
+        "value": "$sys.func.MID($session.params.ivrBt, 1, 8)"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "Strong"
+      } ]
+    },
+    "targetFlow": "IdentificazioneStrong",
+    "name": "c3e608d4-78a0-40f2-92ab-ed0c28bd47b8"
+  }, {
+    "condition": "$session.params.codice-titolare != null AND $session.params.livello-identificazione = \"Strong\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "anno-corrente-text",
+        "value": "$sys.func.TO_TEXT($session.params.anno-corrente)"
+      }, {
+        "parameter": "anno-successivo-text",
+        "value": "$sys.func.TO_TEXT($session.params.anno-successivo)"
+      }, {
+        "parameter": "anno-precedente-text",
+        "value": "$sys.func.TO_TEXT($session.params.anno-precedente)"
+      } ]
+    },
+    "targetPage": "VerificaCorrispondenzaCelcertNumeroSRE_RichiestaSaldo_Conticarte",
+    "name": "0ffe1543-59e8-4363-91ae-2ea531e9b781"
+  } ]
+}

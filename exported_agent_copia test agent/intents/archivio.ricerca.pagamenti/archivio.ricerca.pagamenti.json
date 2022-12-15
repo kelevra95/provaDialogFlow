@@ -1,0 +1,19 @@
+{
+  "name": "bd78833a-93eb-48a7-a9de-e839113eba5a",
+  "displayName": "archivio.ricerca.pagamenti",
+  "parameters": [ {
+    "id": "periodo-ricerca",
+    "entityType": "@sys.date-period"
+  }, {
+    "id": "tipo-pagamento",
+    "entityType": "@Tipo-Pagamento"
+  }, {
+    "id": "contabile-movimento",
+    "entityType": "@Contabile-Movimento"
+  }, {
+    "id": "entrata-uscita",
+    "entityType": "@Entrata-Uscita"
+  } ],
+  "priority": 500000,
+  "description": "Fornisce le ricevute e le contabili di pagamento presenti all'interno dell'archivio per le operazioni effettuate"
+}

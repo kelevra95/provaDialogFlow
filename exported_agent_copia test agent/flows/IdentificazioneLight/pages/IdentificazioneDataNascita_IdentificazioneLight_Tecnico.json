@@ -1,0 +1,245 @@
+{
+  "name": "e1788608-513c-48e8-97aa-84b826509482",
+  "displayName": "IdentificazioneDataNascita_IdentificazioneLight_Tecnico",
+  "form": {
+    "parameters": [ {
+      "displayName": "data-nascita-input",
+      "required": true,
+      "entityType": "@sys.date",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Per conferma, dimmi la tua data di nascita, specificando il giorno, il mese, e l'anno per esteso." ]
+            },
+            "languageCode": "it"
+          } ],
+          "setParameterActions": [ {
+            "parameter": "nuova-richiesta-data",
+            "value": "si"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Mi dispiace, non ho sentito. Per conferma, dimmi la tua data di nascita, specificando il giorno, il mese e poi l'anno per esteso." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "478568da-bff3-4f02-9d48-57424b34a42e"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho capito. Per conferma, dimmi la tua data di nascita, specificando il giorno, il mese, e poi l'anno per esteso." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "ea83bfe4-f197-4a53-826d-7a8da63e3b99"
+        }, {
+          "targetFlow": "HandoverNonPrevistoProposta",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Mi dispiace ma continuo a non capire." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "livello-identificazione",
+              "value": "nani"
+            }, {
+              "parameter": "motivo-handover",
+              "value": "Il cliente non è riuscito ad identificarsi"
+            }, {
+              "parameter": "codice-titolare",
+              "value": null
+            }, {
+              "parameter": "codice-titolare-PG",
+              "value": null
+            }, {
+              "parameter": "codice-titolare-PF",
+              "value": null
+            }, {
+              "parameter": "cliente-cf",
+              "value": null
+            }, {
+              "parameter": "cliente-data-nascita",
+              "value": null
+            }, {
+              "parameter": "cliente-luogo-nascita",
+              "value": null
+            }, {
+              "parameter": "cliente-nsg",
+              "value": null
+            }, {
+              "parameter": "cliente-nome",
+              "value": null
+            }, {
+              "parameter": "cliente-cognome",
+              "value": null
+            }, {
+              "parameter": "lista-partita-iva",
+              "value": null
+            }, {
+              "parameter": "numero-partita-iva",
+              "value": null
+            }, {
+              "parameter": "cliente-minore",
+              "value": null
+            }, {
+              "parameter": "codice-filiale",
+              "value": null
+            }, {
+              "parameter": "cliente-altri-cloni",
+              "value": null
+            }, {
+              "parameter": "cliente-inabile",
+              "value": null
+            } ]
+          },
+          "name": "20958c66-1734-4b97-9dde-581fa027ef2b"
+        }, {
+          "targetFlow": "HandoverNonPrevistoProposta",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Mi dispiace, continuo a non sentire." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "livello-identificazione",
+              "value": "nani"
+            }, {
+              "parameter": "motivo-handover",
+              "value": "Il cliente non è riuscito ad identificarsi"
+            }, {
+              "parameter": "codice-titolare",
+              "value": null
+            }, {
+              "parameter": "codice-titolare-PG",
+              "value": null
+            }, {
+              "parameter": "codice-titolare-PF",
+              "value": null
+            }, {
+              "parameter": "cliente-cf",
+              "value": null
+            }, {
+              "parameter": "cliente-data-nascita",
+              "value": null
+            }, {
+              "parameter": "cliente-luogo-nascita",
+              "value": null
+            }, {
+              "parameter": "cliente-nsg",
+              "value": null
+            }, {
+              "parameter": "cliente-nome",
+              "value": null
+            }, {
+              "parameter": "cliente-cognome",
+              "value": null
+            }, {
+              "parameter": "lista-partita-iva",
+              "value": null
+            }, {
+              "parameter": "numero-partita-iva",
+              "value": null
+            }, {
+              "parameter": "cliente-minore",
+              "value": null
+            }, {
+              "parameter": "codice-filiale",
+              "value": null
+            }, {
+              "parameter": "cliente-altri-cloni",
+              "value": null
+            }, {
+              "parameter": "cliente-inabile",
+              "value": null
+            } ]
+          },
+          "name": "6c2bfab6-4dce-407a-9d77-919e70604132"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "uscita",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "intento",
+        "value": "uscita"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "nani"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Il cliente non vuole parlare con Ellis"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "273be776-8d27-4918-bc94-ad092ed378e4"
+  }, {
+    "intent": "operatore",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "intento",
+        "value": "operatore"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "nani"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Richiesta operatore"
+      } ]
+    },
+    "targetFlow": "HandoverRichiestaDiretta",
+    "name": "af49f397-8dc1-4ccc-8205-fe7027c8416a"
+  }, {
+    "condition": "$page.params.status = FINAL AND $session.params.nuova-richiesta-data = \"si\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "data-nascita",
+        "value": "$sys.func.FORMAT_DATE($session.params.data-nascita-input, dd/MM/yyyy)"
+      } ]
+    },
+    "targetPage": "VerificaDataNascita_IdentificazioneLight_Tecnico",
+    "name": "6e713551-9568-45fe-ac30-7330da90c88b"
+  }, {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaDataNascita_IdentificazioneLight_Tecnico",
+    "name": "003679ab-b69c-4b7d-9a12-bffaa99b0e3d"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 80,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

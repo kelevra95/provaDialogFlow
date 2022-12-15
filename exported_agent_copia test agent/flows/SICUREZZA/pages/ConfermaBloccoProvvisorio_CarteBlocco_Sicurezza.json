@@ -1,0 +1,186 @@
+{
+  "name": "9da6e7b6-8870-4d1b-a827-1c5d29686a15",
+  "displayName": "ConfermaBloccoProvvisorio_CarteBlocco_Sicurezza",
+  "form": {
+    "parameters": [ {
+      "displayName": "motivazione-blocco",
+      "required": true,
+      "entityType": "@Tipo-Motivazione-Blocco",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho sentito bene. Il blocco provvisorio che vuoi inserire, è per smarrimento?" ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "motivazione-blocco",
+              "value": null
+            } ]
+          },
+          "name": "36741a2c-0383-4e6f-8999-a3c77d435afd"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho capito. Il blocco provvisorio che vuoi inserire, è per smarrimento?" ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "motivazione-blocco",
+              "value": null
+            } ]
+          },
+          "name": "235f8e95-7c17-4e30-a465-fbb3073ab7ff"
+        }, {
+          "targetPage": "InserimentoBloccoProvvisorio_CarteBlocco_Sicurezza",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non sentire. Proseguo con un blocco provvisorio generico." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "motivazione-blocco",
+              "value": "cautelativo"
+            }, {
+              "parameter": "riemissione-carta",
+              "value": false
+            } ]
+          },
+          "name": "20417cad-a2da-40cc-b472-cc636c65b404"
+        }, {
+          "targetPage": "InserimentoBloccoProvvisorio_CarteBlocco_Sicurezza",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non capire. Proseguo con un blocco provvisorio generico." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "motivazione-blocco",
+              "value": "cautelativo"
+            }, {
+              "parameter": "riemissione-carta",
+              "value": false
+            } ]
+          },
+          "name": "ffe6a571-6347-4088-a090-9be052ada715"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Il blocco provvisorio che vuoi inserire, è per smarrimento?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivazione-blocco",
+        "value": "smarrimento"
+      }, {
+        "parameter": "contatore",
+        "value": 0
+      } ]
+    },
+    "targetPage": "VerificaDocumentoCellulareCertificato_CarteBlocco_Sicurezza",
+    "name": "09e9dafa-f3e7-4131-b3d7-49e0b74d4f75"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Va bene, procedo con un blocco provvisorio generico." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivazione-blocco",
+        "value": "cautelativo"
+      }, {
+        "parameter": "riemissione-carta",
+        "value": false
+      } ]
+    },
+    "targetPage": "InserimentoBloccoProvvisorio_CarteBlocco_Sicurezza",
+    "name": "0dce18f5-4372-428f-a431-68d386218c9d"
+  }, {
+    "intent": "non.so",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Per poter procedere ho bisogno di una risposta." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "ConfermaBloccoProvvisorio_CarteBlocco_Sicurezza",
+    "name": "e8ed9c82-218e-4f3e-99e1-aa37e0088a1e"
+  }, {
+    "condition": "$session.params.motivazione-blocco = \"smarrimento\" AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": 0
+      }, {
+        "parameter": "motivazione-blocco",
+        "value": "smarrimento"
+      } ]
+    },
+    "targetPage": "VerificaDocumentoCellulareCertificato_CarteBlocco_Sicurezza",
+    "name": "f053e50b-6523-4d1a-8f9d-9b2d8d726cc7"
+  }, {
+    "condition": "$session.params.motivazione-blocco != \"smarrimento\" AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Va bene, procedo con un blocco provvisorio generico. " ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivazione-blocco",
+        "value": "cautelativo"
+      }, {
+        "parameter": "riemissione-carta",
+        "value": false
+      } ]
+    },
+    "targetPage": "InserimentoBloccoProvvisorio_CarteBlocco_Sicurezza",
+    "name": "95af618c-5560-45ce-b6a1-9d1bd287ff73"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

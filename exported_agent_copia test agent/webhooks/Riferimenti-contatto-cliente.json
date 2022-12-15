@@ -1,0 +1,13 @@
+{
+  "name": "963d97bc-fc82-42a6-ae83-9e9708215967",
+  "displayName": "Riferimenti-contatto-cliente",
+  "timeout": {
+    "seconds": 30
+  },
+  "serviceDirectory": {
+    "service": "projects/prj-isp-tlc00-spk-test-001/locations/europe-west3/namespaces/dialogflow/services/webhook-ivr-ew3",
+    "genericWebService": {
+      "uri": "https://df-bot.syssede.systest.sanpaoloimi.com/fullfillment/customerInfo"
+    }
+  }
+}

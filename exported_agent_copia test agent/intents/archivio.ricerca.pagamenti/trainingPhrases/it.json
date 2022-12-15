@@ -1,0 +1,1024 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "mi servono le operazioni che ho "
+    }, {
+      "text": "eseguito",
+      "parameterId": "entrata-uscita"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sto verificando le operazioni "
+    }, {
+      "text": "effettuate",
+      "parameterId": "entrata-uscita"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "buongiorno ellis sto cercando ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": "'operazione in ",
+      "auto": true
+    }, {
+      "text": "uscita",
+      "parameterId": "entrata-uscita",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo verificare ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": "'operazione in ",
+      "auto": true
+    }, {
+      "text": "entrata",
+      "parameterId": "entrata-uscita",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei le "
+    }, {
+      "text": "ricevute",
+      "parameterId": "contabile-movimento"
+    }, {
+      "text": " dei "
+    }, {
+      "text": "bonifici",
+      "parameterId": "tipo-pagamento",
+      "auto": true
+    }, {
+      "text": " eseguiti"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cerco la "
+    }, {
+      "text": "contabile",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " del "
+    }, {
+      "text": "bonifico istantaneo",
+      "parameterId": "tipo-pagamento",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso recuperare la "
+    }, {
+      "text": "quietanza",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " del "
+    }, {
+      "text": "bonifico per il risparmio energetico",
+      "parameterId": "tipo-pagamento",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve la "
+    }, {
+      "text": "contabile",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " del "
+    }, {
+      "text": "bonifico di ristrutturazione",
+      "parameterId": "tipo-pagamento"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cerco ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "bonifico",
+      "parameterId": "tipo-pagamento",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sto aspettando ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "bonifico",
+      "parameterId": "tipo-pagamento",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho un pagamento in "
+    }, {
+      "text": "ingresso",
+      "parameterId": "entrata-uscita"
+    }, {
+      "text": " da controllare"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sto aspettando un "
+    }, {
+      "text": "bonifico",
+      "parameterId": "tipo-pagamento",
+      "auto": true
+    }, {
+      "text": " in "
+    }, {
+      "text": "ingresso",
+      "parameterId": "entrata-uscita"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "verifica "
+    }, {
+      "text": "bonifici",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " in "
+    }, {
+      "text": "entrata",
+      "parameterId": "entrata-uscita",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "voglio controllare se è arrivato il "
+    }, {
+      "text": "bonifico",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " che stavo aspettando"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "risulta ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "bonifico",
+      "parameterId": "tipo-pagamento",
+      "auto": true
+    }, {
+      "text": " in ",
+      "auto": true
+    }, {
+      "text": "entrata",
+      "parameterId": "entrata-uscita",
+      "auto": true
+    }, {
+      "text": " sul mio conto?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "volevo sapere se si poteva vedere se c'era "
+    }, {
+      "text": "un"
+    }, {
+      "text": " "
+    }, {
+      "text": "bonifico",
+      "parameterId": "tipo-pagamento",
+      "auto": true
+    }, {
+      "text": " in "
+    }, {
+      "text": "entrata",
+      "parameterId": "entrata-uscita",
+      "auto": true
+    }, {
+      "text": " sul mio conto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho "
+    }, {
+      "text": "ricevuto",
+      "parameterId": "entrata-uscita"
+    }, {
+      "text": " un "
+    }, {
+      "text": "bonifico",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " a mio favore ma ancora non lo vedo"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho urgenza di verificare se mi sono arrivati pagamenti che stavo aspettando",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non riesco a visualizzare ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "bonifico",
+      "parameterId": "tipo-pagamento",
+      "auto": true
+    }, {
+      "text": " in ",
+      "auto": true
+    }, {
+      "text": "entrata",
+      "parameterId": "entrata-uscita",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso vedere se mi è "
+    }, {
+      "text": "arrivato",
+      "parameterId": "entrata-uscita"
+    }, {
+      "text": " un "
+    }, {
+      "text": "bonifico",
+      "parameterId": "tipo-pagamento",
+      "auto": true
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dove trovo i ",
+      "auto": true
+    }, {
+      "text": "bonifici",
+      "parameterId": "tipo-pagamento",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "ricevuti",
+      "parameterId": "entrata-uscita"
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cerco le "
+    }, {
+      "text": "contabili",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " dei "
+    }, {
+      "text": "bonifici",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " "
+    }, {
+      "text": "ricevuti",
+      "parameterId": "entrata-uscita"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cerco le "
+    }, {
+      "text": "contabili",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " "
+    }, {
+      "text": "f24",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " in "
+    }, {
+      "text": "entrata",
+      "parameterId": "entrata-uscita"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei vedere le "
+    }, {
+      "text": "contabili",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " i "
+    }, {
+      "text": "bonifici",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " in "
+    }, {
+      "text": "entrata",
+      "parameterId": "entrata-uscita"
+    }, {
+      "text": " di tutto il "
+    }, {
+      "text": "2021",
+      "parameterId": "periodo-ricerca"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve la "
+    }, {
+      "text": "ricevuta",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " dell'avvenuto pagamento del "
+    }, {
+      "text": "F24",
+      "parameterId": "tipo-pagamento"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dove trovo la "
+    }, {
+      "text": "ricevuta",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " del "
+    }, {
+      "text": "bonifico",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " che ho fatto "
+    }, {
+      "text": "ieri mattina",
+      "parameterId": "periodo-ricerca",
+      "auto": true
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non riesco a visualizzare la ",
+      "auto": true
+    }, {
+      "text": "ricevuta",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " di ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": " pagamento",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dove trovo le "
+    }, {
+      "text": "quietanze",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " dell'"
+    }, {
+      "text": "anno scorso",
+      "parameterId": "periodo-ricerca",
+      "auto": true
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Mi servono tutte le "
+    }, {
+      "text": "ricevute",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " dei "
+    }, {
+      "text": "bonifici",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " dell'"
+    }, {
+      "text": "ultimo mese",
+      "parameterId": "periodo-ricerca",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi servono i "
+    }, {
+      "text": "bonifici",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " in "
+    }, {
+      "text": "uscita",
+      "parameterId": "entrata-uscita"
+    }, {
+      "text": " di "
+    }, {
+      "text": "maggio",
+      "parameterId": "periodo-ricerca",
+      "auto": true
+    }, {
+      "text": " dal mio conto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi dici i "
+    }, {
+      "text": "bonifici",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " di ristrutturazione che ho pagato nel "
+    }, {
+      "text": "2021",
+      "parameterId": "periodo-ricerca",
+      "auto": true
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei recuperare tutti gli "
+    }, {
+      "text": "F24",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " pagati nel "
+    }, {
+      "text": "2021",
+      "parameterId": "periodo-ricerca"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "necessito dei "
+    }, {
+      "text": "bonifici",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " "
+    }, {
+      "text": "effettuati",
+      "parameterId": "entrata-uscita"
+    }, {
+      "text": " a "
+    }, {
+      "text": "marzo",
+      "parameterId": "periodo-ricerca",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi fai avere l'elenco dei "
+    }, {
+      "text": "bonifici",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " "
+    }, {
+      "text": "pagati",
+      "parameterId": "entrata-uscita"
+    }, {
+      "text": " a "
+    }, {
+      "text": "novembre 2020",
+      "parameterId": "periodo-ricerca"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso avere la "
+    }, {
+      "text": "ricevuta",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " di pagamento del "
+    }, {
+      "text": "Cbill",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "necessito della "
+    }, {
+      "text": "quietanza",
+      "parameterId": "contabile-movimento"
+    }, {
+      "text": " del pagamento dell'"
+    }, {
+      "text": "F24",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " semplificato di 450 euro pagato il "
+    }, {
+      "text": "14 febbraio 2022",
+      "parameterId": "periodo-ricerca"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso avere la "
+    }, {
+      "text": "conferma",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " di avvenuto pagamento del "
+    }, {
+      "text": "RAV",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso recuperare le "
+    }, {
+      "text": "contabili",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " delle "
+    }, {
+      "text": "ri.ba",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " "
+    }, {
+      "text": "pagate",
+      "parameterId": "entrata-uscita"
+    }, {
+      "text": " a mio nome?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi servono le "
+    }, {
+      "text": "contabili",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " di pagamento delle "
+    }, {
+      "text": "ricevute bancarie",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " "
+    }, {
+      "text": "pagate",
+      "parameterId": "entrata-uscita"
+    }, {
+      "text": " a mio nome"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi fai avere le "
+    }, {
+      "text": "ricevute",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " delle "
+    }, {
+      "text": "tasse universitarie",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " che ho pagato con home banking?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi servono le "
+    }, {
+      "text": "contabili",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " dei "
+    }, {
+      "text": "bonifici",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " per agevolazione fiscale dell'anno "
+    }, {
+      "text": "2021",
+      "parameterId": "periodo-ricerca",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "necessito delle ",
+      "auto": true
+    }, {
+      "text": "ricevute",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " dei bonifici di ristrutturazione del ",
+      "auto": true
+    }, {
+      "text": "2021",
+      "parameterId": "periodo-ricerca",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi puoi recuperare gli "
+    }, {
+      "text": "eseguiti",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " dei pagamenti a favore di cesvi onlus?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dovrei recuperare le ",
+      "auto": true
+    }, {
+      "text": "contabili",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " dei versamenti fatti a unicef italia nel ",
+      "auto": true
+    }, {
+      "text": "2021",
+      "parameterId": "periodo-ricerca",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "di 150",
+      "auto": true
+    }, {
+      "text": " euro",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "saresti così gentile da fornirmi gli ",
+      "auto": true
+    }, {
+      "text": "eseguiti",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " dei bonifici pagati a Save The Children ONLUS nel ",
+      "auto": true
+    }, {
+      "text": "2021",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "avrei bisogno della "
+    }, {
+      "text": "ricevuta",
+      "parameterId": "contabile-movimento"
+    }, {
+      "text": " di pagamento di un bollettino postale pagato a "
+    }, {
+      "text": "inizio anno",
+      "parameterId": "periodo-ricerca"
+    }, {
+      "text": " a favore dell' ACI"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi mandi la notifica con le ",
+      "auto": true
+    }, {
+      "text": "contabili",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " in pdf dei bonifici estero effettuati l'",
+      "auto": true
+    }, {
+      "text": "anno scorso",
+      "parameterId": "periodo-ricerca",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi servono le ",
+      "auto": true
+    }, {
+      "text": "quietanze",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " di pagamento degli F24 di ",
+      "auto": true
+    }, {
+      "text": "gennaio",
+      "parameterId": "periodo-ricerca",
+      "auto": true
+    }, {
+      "text": " scorso",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sarebbe possibile risalire ai bonifici Italia "
+    }, {
+      "text": "effettuati"
+    }, {
+      "text": " a "
+    }, {
+      "text": "dicembre",
+      "parameterId": "periodo-ricerca",
+      "auto": true
+    }, {
+      "text": " sul conto 5597 finale?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "potrei avere la ",
+      "auto": true
+    }, {
+      "text": "ricevuta",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " del pagamento del bollo auto?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi servirebbero le ",
+      "auto": true
+    }, {
+      "text": "contabili",
+      "parameterId": "contabile-movimento",
+      "auto": true
+    }, {
+      "text": " dei bonifici effettuati al consorzio nuova edilizia",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi puoi dare i "
+    }, {
+      "text": "MAV",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " pagati nel "
+    }, {
+      "text": "2021",
+      "parameterId": "periodo-ricerca",
+      "auto": true
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dove trovo gli "
+    }, {
+      "text": "F24",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " effettuati"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi servono i "
+    }, {
+      "text": "bonifici",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " del "
+    }, {
+      "text": "2021",
+      "parameterId": "periodo-ricerca"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dove trovo gli "
+    }, {
+      "text": "mav",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " pagati"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve la "
+    }, {
+      "text": "conferma",
+      "parameterId": "contabile-movimento"
+    }, {
+      "text": " di pagamento del bollo auto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dove trovo la "
+    }, {
+      "text": "quietanza",
+      "parameterId": "contabile-movimento"
+    }, {
+      "text": " dell'F24"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "necessito delle "
+    }, {
+      "text": "ricevute",
+      "parameterId": "contabile-movimento"
+    }, {
+      "text": " dei bonifici di "
+    }, {
+      "text": "giugno",
+      "parameterId": "periodo-ricerca"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Mi servono le "
+    }, {
+      "text": "contabili",
+      "parameterId": "contabile-movimento"
+    }, {
+      "text": " dei "
+    }, {
+      "text": "bonifici",
+      "parameterId": "tipo-pagamento"
+    }, {
+      "text": " di "
+    }, {
+      "text": "100"
+    }, {
+      "text": " euro "
+    }, {
+      "text": "in uscita"
+    }, {
+      "text": " dal conto1234 effettuati nel mese di "
+    }, {
+      "text": "marzo",
+      "parameterId": "periodo-ricerca",
+      "auto": true
+    }, {
+      "text": " (ultimo passato) a favore di "
+    }, {
+      "text": "costruzioni alfa srl"
+    }, {
+      "text": "."
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

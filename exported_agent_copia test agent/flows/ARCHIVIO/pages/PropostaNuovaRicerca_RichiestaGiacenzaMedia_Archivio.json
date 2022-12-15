@@ -1,0 +1,47 @@
+{
+  "name": "d39278f6-ee1e-4f14-ba85-2ecf08e45c1d",
+  "displayName": "PropostaNuovaRicerca_RichiestaGiacenzaMedia_Archivio",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Vuoi fare la ricerca per l'anno $session.params.anno-consigliato consigliato per la dichiarazione ISEE?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "periodo-ricerca",
+        "value": null
+      }, {
+        "parameter": "anno-ricerca",
+        "value": null
+      } ]
+    },
+    "targetPage": "DettagliDocumento_RichiestaGiacenzaMedia_Archivio",
+    "name": "a8c57815-7c97-4714-b682-4f782dd38b50"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "67bfb903-83a4-41a9-b141-5b6b8c50d6b4"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

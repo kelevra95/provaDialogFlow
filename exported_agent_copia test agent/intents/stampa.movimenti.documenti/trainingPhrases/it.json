@@ -1,0 +1,124 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "aiutami a stampare i miei bonifici",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non riesco a trovare una lista del miei movimenti di conto",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "si",
+      "auto": true
+    }, {
+      "text": " può stampare la lista di movimenti direttamente ",
+      "auto": true
+    }, {
+      "text": "dall'",
+      "auto": true
+    }, {
+      "text": "app?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "visualizza movimenti del mio conto in pdf",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "stampa i miei movimenti dal primo maggio dell'anno scorso",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dove ",
+      "auto": true
+    }, {
+      "text": "si",
+      "auto": true
+    }, {
+      "text": " trovano i ",
+      "auto": true
+    }, {
+      "text": "miei",
+      "auto": true
+    }, {
+      "text": " movimenti sull'app?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "scarica ",
+      "auto": true
+    }, {
+      "text": "l'",
+      "auto": true
+    }, {
+      "text": "archivio dei movimenti del ",
+      "auto": true
+    }, {
+      "text": "2021",
+      "auto": true
+    }, {
+      "text": " in pdf",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "puoi stampare ",
+      "auto": true
+    }, {
+      "text": "l'",
+      "auto": true
+    }, {
+      "text": "archivio movimenti?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei stampare i tutti i movimenti di quest'anno",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "apri i ",
+      "auto": true
+    }, {
+      "text": "miei",
+      "auto": true
+    }, {
+      "text": " movimenti degli ",
+      "auto": true
+    }, {
+      "text": "ultimi 4 mesi",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

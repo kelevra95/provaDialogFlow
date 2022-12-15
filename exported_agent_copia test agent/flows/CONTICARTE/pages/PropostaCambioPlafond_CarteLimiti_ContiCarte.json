@@ -1,0 +1,44 @@
+{
+  "name": "7a169db3-5946-4425-aa4d-222c793a8315",
+  "displayName": "PropostaCambioPlafond_CarteLimiti_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Vuoi provare con un plafond differente?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "SalutiFinali_CarteLimiti_ContiCarte",
+    "name": "2e77be07-5bb9-4256-94f1-c9eec2519b58"
+  }, {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "limite-nuovo",
+        "value": null
+      } ]
+    },
+    "targetPage": "SceltaPlafond_CarteLimiti_ContiCarte",
+    "name": "4e47231f-0818-456a-bd90-ee6256f9e580"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

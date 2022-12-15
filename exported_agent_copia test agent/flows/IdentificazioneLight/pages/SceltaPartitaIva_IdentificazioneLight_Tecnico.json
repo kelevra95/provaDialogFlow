@@ -1,0 +1,136 @@
+{
+  "name": "ade68881-d3d6-4bf0-bf7c-f458920a72cc",
+  "displayName": "SceltaPartitaIva_IdentificazioneLight_Tecnico",
+  "form": {
+    "parameters": [ {
+      "displayName": "partita-iva-PG",
+      "required": true,
+      "entityType": "@Partita-Iva",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Mi risultano più società. Dimmi o digita la partita iva su cui vuoi operare." ]
+            },
+            "languageCode": "it"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho sentito, per favore dimmi o digita la partita Iva su cui vuoi operare." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "2279f92a-eda2-4fd3-a8e2-2c8072c8f7cb"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho capito bene, per favore dimmi o digita la partita Iva su cui vuoi operare." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "92897d26-8059-4fe7-8986-4cf449b97dc4"
+        }, {
+          "targetFlow": "HandoverNonPrevistoProposta",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non capire." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "motivo-handover",
+              "value": "Il cliente multi-azienda non ha specificato la partita iva su cui operare"
+            } ]
+          },
+          "name": "9cf91ebb-f321-40a2-b425-b3f30ddc4888"
+        }, {
+          "targetFlow": "HandoverNonPrevistoProposta",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non sentire." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "motivo-handover",
+              "value": "Il cliente multi-azienda non ha specificato la partita iva su cui operare"
+            } ]
+          },
+          "name": "bb5f2854-440e-4b78-b035-56d8a540e43b"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 11,
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "operatore",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "intento",
+        "value": "operatore"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Richiesta operatore"
+      } ]
+    },
+    "targetFlow": "HandoverRichiestaDiretta",
+    "name": "e9a89567-2be5-4e9b-b484-366ec53122fe"
+  }, {
+    "intent": "uscita",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "intento",
+        "value": "uscita"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Il cliente non vuole parlare con Ellis"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "6b923f10-daf1-46a3-ac63-795018afda60"
+  }, {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "partita-iva-PG",
+        "value": "$sys.func.TO_TEXT($session.params.partita-iva-PG)"
+      }, {
+        "parameter": "partita-iva-PG",
+        "value": "$sys.func.SUBSTITUTE($session.params.partita-iva-PG,\" \",\"\")"
+      } ]
+    },
+    "targetPage": "VerificaPresenzaPartitaIva_IdentificazioneLight_Tecnico",
+    "name": "3e3cd987-2666-45e6-9f5f-5094be60a806"
+  }, {
+    "condition": "$session.params.contatore \u003e 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Il cliente multi-azienda non conferma la partita iva su cui vuole operare"
+      } ]
+    },
+    "targetFlow": "HandoverNonPrevistoProposta",
+    "name": "f09fa380-a01e-4fca-925d-4e557dba9ee8"
+  } ]
+}

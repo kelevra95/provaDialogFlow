@@ -1,0 +1,48 @@
+{
+  "name": "5a1d7d33-a9f9-440b-a3bb-f02e6a4899e7",
+  "displayName": "PropostaNuovaRicerca_EseguitiTitoli_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Vuoi effettuare una nuova ricerca di eseguiti titoli?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "data-ricerca",
+        "value": null
+      }, {
+        "parameter": "contatore",
+        "value": 1
+      } ]
+    },
+    "targetPage": "VerificaAbilitazioneRapporto_EseguitiTitoli_Investimenti",
+    "name": "afa39c42-c700-4ea5-976c-8ec9bb364e73"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "SalutiFinali_EseguitiTitoli_Investimenti",
+    "name": "c0d15d1c-e7c4-46f8-87f5-9527f927c7ae"
+  }, {
+    "intent": "ripeti",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Va bene, ripeto." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "VerificaPresenzaEseguitiTitoli_EseguitiTitoli_Investimenti",
+    "name": "84c04260-ebac-47ef-92ab-81e42fbf5fbf"
+  } ]
+}

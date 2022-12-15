@@ -1,0 +1,174 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "come si fa nel caso mi dimenticassi il pin della "
+    }, {
+      "text": "carta",
+      "parameterId": "Tipo-Carta"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho scordato il pin del "
+    }, {
+      "text": "bancocard",
+      "parameterId": "Tipo-Carta"
+    }, {
+      "text": ". Puoi aiutarmi a recuperarlo?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non ricordo più il pin della "
+    }, {
+      "text": "prepagata",
+      "parameterId": "Tipo-Carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "necessito del pin del "
+    }, {
+      "text": "bancocard",
+      "parameterId": "Tipo-Carta"
+    }, {
+      "text": " che ho dimenticato"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dovrei recuperare il codice della "
+    }, {
+      "text": "xme card",
+      "parameterId": "Tipo-Carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei richiedere il pin del "
+    }, {
+      "text": "bancomat",
+      "parameterId": "Tipo-Carta"
+    }, {
+      "text": " perchè l'ho scordato"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dovrei recuperare il pin della carta "
+    }, {
+      "text": "mastercard",
+      "parameterId": "Tipo-Carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "necessito del pin dalla carta "
+    }, {
+      "text": "visa",
+      "parameterId": "Tipo-Carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve il pin della "
+    }, {
+      "text": "carta",
+      "parameterId": "Tipo-Carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho dimenticato il pin della "
+    }, {
+      "text": "superflash",
+      "parameterId": "Tipo-Carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "puoi dirmi il pin della "
+    }, {
+      "text": "carta",
+      "parameterId": "Tipo-Carta"
+    }, {
+      "text": "3456",
+      "parameterId": "Numero-Finale-Carta"
+    }, {
+      "text": " finale?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non ricordo il pin della mia carta "
+    }, {
+      "text": "visa",
+      "parameterId": "Tipo-Carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve il pin della carta di "
+    }, {
+      "text": "debito",
+      "parameterId": "Tipo-Carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei il pin della mia carta "
+    }, {
+      "text": "prepagata",
+      "parameterId": "Tipo-Carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei il pin della mia carta di "
+    }, {
+      "text": "credito",
+      "parameterId": "Tipo-Carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non ricordo il PIN "
+    }, {
+      "text": "carta",
+      "parameterId": "Tipo-Carta"
+    }, {
+      "text": " "
+    }, {
+      "text": "9878",
+      "parameterId": "Numero-Finale-Carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio a richiedere il pin della "
+    }, {
+      "text": "carta",
+      "parameterId": "Tipo-Carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

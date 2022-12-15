@@ -1,0 +1,58 @@
+{
+  "name": "bbb92840-a6a8-45e7-bef7-657e72dc6bbc",
+  "displayName": "OrariFOL_HandoverProposta_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Riferimenti-filiale",
+    "tag": "isFolOpen"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "esito-handover",
+        "value": "si"
+      } ]
+    },
+    "targetFlow": "HandoverOK",
+    "name": "9c36782a-4286-4003-a7cd-f52db57b2700"
+  }, {
+    "condition": "$session.params.fol-aperta = false AND ($session.params.sottoflusso-precedente = \"Carte Blocco - blocco titolare\" OR $session.params.sottoflusso-corrente = \"Carte Blocco - blocco titolare\")",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "esito-handover",
+        "value": "si"
+      } ]
+    },
+    "targetFlow": "HandoverOK",
+    "name": "34a91fd2-61ec-4e4a-96ec-c12fb13f335f"
+  }, {
+    "condition": "$session.params.fol-aperta = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "In questo momento non riesco a trasferire la telefonata ad un gestore in quanto la Filiale Digitale è chiusa. Ricontatta-ci nei giorni feriali, da lunedì al sabato, dalle ore 7. In alternativa puoi scrivere la tua richiesta in chat nell'app o nel sito della banca, e alla riapertura un gestore ti risponderà non appena possibile." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "VerificaIntento_HandoverProposta_Tecnico",
+    "name": "dc37e5bf-9a15-4e27-b629-4b038d9b4a75"
+  }, {
+    "condition": "$session.params.fol-aperta = true AND $session.params.intento = \"offese\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverOK",
+    "name": "a213f1a9-0aae-4d25-b472-b2893885cbc3"
+  }, {
+    "condition": "$session.params.fol-aperta = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "OffertaGestore_HandoverProposta_Tecnico",
+    "name": "6fb1e184-a424-415f-b3c9-22fbc43c826e"
+  } ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "6e4966df-af28-4290-bf5f-70408ac3a423",
+  "displayName": "domiciliazioni.generico",
+  "priority": 500000,
+  "description": "Intento per disambiguare tra gestione domiciliazione in conto dalla gestione (non ammessa) su carta"
+}

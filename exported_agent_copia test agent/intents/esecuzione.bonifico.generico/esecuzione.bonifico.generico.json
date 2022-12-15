@@ -1,0 +1,6 @@
+{
+  "name": "d9741be1-3fbf-46c0-8687-876f518b8b73",
+  "displayName": "esecuzione.bonifico.generico",
+  "priority": 500000,
+  "description": "Intento per disambiguare il tipo di bonifico da effettuare"
+}

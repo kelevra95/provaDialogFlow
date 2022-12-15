@@ -1,0 +1,232 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "aiuto con prelievo sos",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come funziona il prelievo sos",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "il ",
+      "auto": true
+    }, {
+      "text": "prelievo",
+      "auto": true
+    }, {
+      "text": " sos funziona anche ",
+      "auto": true
+    }, {
+      "text": "all'",
+      "auto": true
+    }, {
+      "text": "estero",
+      "auto": true
+    }, {
+      "text": "? ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "mio",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "amico",
+      "auto": true
+    }, {
+      "text": " hanno ",
+      "auto": true
+    }, {
+      "text": "rubato il portafoglio",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "ad",
+      "auto": true
+    }, {
+      "text": " Atene ed è senza soldi",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "è possibile ",
+      "auto": true
+    }, {
+      "text": "eseguire",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "prelievo",
+      "auto": true
+    }, {
+      "text": " sos più di ",
+      "auto": true
+    }, {
+      "text": "due",
+      "auto": true
+    }, {
+      "text": " volte in ",
+      "auto": true
+    }, {
+      "text": "un giorno",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho bisogno di un prelievo sos di 50 euro urgentemente. Come posso fare ?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sto cercando di autorizzare ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "prelievo",
+      "auto": true
+    }, {
+      "text": " sos e mi arriva ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " sms con ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " codice. ",
+      "auto": true
+    }, {
+      "text": "A",
+      "auto": true
+    }, {
+      "text": " cosa mi serve?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei autorizzare un prelievo sos allo sportello automatico in favore di mio fratello per fargli avere dei soldi",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "tento di attivare il prelievo SOS  ma continua a rispondere \"importo superiore ai limiti previsti\" nonostante questo mese non abbia effettuato nessuna operazione"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso autorizzare ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "prelievo",
+      "auto": true
+    }, {
+      "text": " sos su ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " atm del banco di Napoli ?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei chiedere quanto è il limite giornaliero e mensile sui miei conti per il prelievo sos",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quando ",
+      "auto": true
+    }, {
+      "text": "si",
+      "auto": true
+    }, {
+      "text": " smagnetizza il ",
+      "auto": true
+    }, {
+      "text": "bancomat",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "si",
+      "auto": true
+    }, {
+      "text": " può utilizzare il servizio sos?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei avere informazioni sul funzionamento del servizio PrelievoSOS",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

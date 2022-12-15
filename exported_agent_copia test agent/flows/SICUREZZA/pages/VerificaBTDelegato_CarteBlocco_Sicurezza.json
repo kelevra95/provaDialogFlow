@@ -1,0 +1,74 @@
+{
+  "name": "f20e4287-d9f0-4e0b-9441-d848f51f391e",
+  "displayName": "VerificaBTDelegato_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.codice-titolare != null AND ($session.params.livello-identificazione = \"SRE\" OR $session.params.livello-identificazione = \"light\" OR $session.params.livello-identificazione = \"Strong\")",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Il cliente deve bloccare più carte aziendali"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "9998bf40-7795-466e-8e86-f04e847b6250"
+  }, {
+    "condition": "$session.params.codice-titolare = null AND ($session.params.ivrBt = \"00000000\" OR $session.params.ivrBt = \"\" OR $session.params.ivrBt = null) AND ($session.params.ivrCf != null AND $session.params.ivrCf != \"\")",
+    "triggerFulfillment": {
+      "webhook": "Riferimenti-contatto-cliente",
+      "tag": "searchCustomerInfoFromCF",
+      "setParameterActions": [ {
+        "parameter": "livello-identificazione",
+        "value": "SRE"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Il cliente deve bloccare più carte aziendali"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "1248e423-4bf5-41d2-9bbc-1040e1e05dd6"
+  }, {
+    "condition": "$session.params.codice-titolare = null AND ($session.params.ivrBt = \"00000000\" OR $session.params.ivrBt = \"\" OR $session.params.ivrBt = null)",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Il cliente deve bloccare più carte aziendali"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "29320dcc-7244-4f67-a703-d119f1ebe8f7"
+  }, {
+    "condition": "$session.params.ivrBt != \"00000000\" AND $session.params.ivrBt != \"\" AND $session.params.ivrBt != null",
+    "triggerFulfillment": {
+      "webhook": "Riferimenti-contatto-cliente",
+      "tag": "searchCustomerInfoFromBT",
+      "setParameterActions": [ {
+        "parameter": "codice-titolare",
+        "value": "$sys.func.MID($session.params.ivrBt, 1, 8)"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "Strong"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Il cliente deve bloccare più carte aziendali"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "c76c9eb0-8e5b-4f0c-a921-c19fa3e9a2da"
+  }, {
+    "condition": "$session.params.codice-titolare != null AND ($session.params.livello-identificazione != \"SRE\" AND $session.params.livello-identificazione != \"light\" AND $session.params.livello-identificazione != \"Strong\")",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Il cliente deve bloccare più carte aziendali"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "cb01e636-4716-47e0-924e-9fb3cd03fd39"
+  } ]
+}

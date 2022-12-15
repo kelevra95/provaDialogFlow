@@ -1,0 +1,107 @@
+{
+  "name": "a548a1b5-877d-4722-abda-ddf59b32c6d6",
+  "displayName": "RichiestaNumeroCarta_CarteLimiti_ContiCarte",
+  "form": {
+    "parameters": [ {
+      "displayName": "numero-finale-carta",
+      "required": true,
+      "entityType": "@Numero-Finale-Carta",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Dimmi o digita le ultime 4 cifre della carta per la quale desideri modificare i limiti." ]
+            },
+            "languageCode": "it"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non hai detto alcun numero. Ripeti per favore." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "62df4953-fc85-456f-826a-6df6fde1d469"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "La numerazione indicata non è corretta. Ripeti per favore." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "59e76d3b-c7aa-4e02-9b55-4bf2b28d7f2e"
+        }, {
+          "targetFlow": "HandoverNonPrevistoProposta",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non sentire." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "d3e21e32-56d2-4c22-9bd1-2b156472f0dd"
+        }, {
+          "targetFlow": "HandoverNonPrevistoProposta",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "La numerazione non è corretta." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "930df541-cf12-4bac-a838-51d99d2a9024"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "enabled": true,
+          "maxDigits": 4,
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Ti ricordo che posso solo aiutarti con la modifica temporanea dei limiti. Per la modifica definitiva è necessario prendere un appuntamento in filiale." ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.contatore \u003e 2",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Il cliente non conferma il numero della carta su cui richiedere il cambio limiti"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "c07e169c-3f12-404e-bf5c-eed19772924e"
+  }, {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "numero-finale-carta",
+        "value": "$sys.func.TO_TEXT($session.params.numero-finale-carta)"
+      }, {
+        "parameter": "numero-finale-carta",
+        "value": "$sys.func.SUBSTITUTE($session.params.numero-finale-carta,\" \",\"\")"
+      } ]
+    },
+    "targetPage": "RiletturaCarta_CarteLimiti_ContiCarte",
+    "name": "a321b96e-883d-4d0f-b843-1d5d05f4e51c"
+  } ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "3aebcfbf-2dca-4ac8-a325-911df2b5cddf",
+  "displayName": "VerificaOTS_ModificaPINAccesso_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.newAccesPinResponse = \"OK\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Il tuo pin è stato modificato correttamente." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "SalutiFinali_ModificaPINAccesso_Sicurezza",
+    "name": "e6d76efe-135b-4e58-ae78-72e960e96024"
+  }, {
+    "condition": "$session.params.newAccesPinResponse != \"OK\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "KO processo di modifica PIN contratto My Key"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "b04dd3d8-ae6e-4287-a246-eb24fc93a811"
+  } ]
+}

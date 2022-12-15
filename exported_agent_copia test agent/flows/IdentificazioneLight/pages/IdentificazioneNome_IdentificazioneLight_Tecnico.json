@@ -1,0 +1,23 @@
+{
+  "name": "6caa9f32-2210-4dd2-a719-39db21027724",
+  "displayName": "IdentificazioneNome_IdentificazioneLight_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Ora dimmi il tuo nome.", "Ora il tuo nome." ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "nome",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "RiletturaCognomeNome_IdentificazioneLight_Tecnico",
+    "name": "00e2af4b-9ea5-4231-9527-4bfd37179e88"
+  } ]
+}

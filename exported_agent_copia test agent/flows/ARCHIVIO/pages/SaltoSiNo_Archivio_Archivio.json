@@ -1,0 +1,48 @@
+{
+  "name": "6978115b-187b-45a4-bfb6-95994421c2c3",
+  "displayName": "SaltoSiNo_Archivio_Archivio",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ivrMotivoChiamata",
+        "value": null
+      } ]
+    },
+    "targetFlow": "Default Start Flow",
+    "name": "fc0ee5b4-b249-40ac-aa61-5d7dbcf1ca49"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ok. Riprendiamo da dove eravamo rimasti." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-contatto",
+        "value": null
+      } ]
+    },
+    "targetPage": "Previous Page",
+    "name": "49dc3001-c326-475f-8068-0a8bfda620ed"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

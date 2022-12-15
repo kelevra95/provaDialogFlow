@@ -1,0 +1,52 @@
+{
+  "name": "f46b608d-b5b7-4dd8-8d39-bb20f271f8e9",
+  "displayName": "SaldoAl31Dicembre_RichiestaSaldo_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Ho notato che mi hai chiesto il saldo al 31 dicembre. Ti servono anche i documenti per il calcolo dell'isee?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.RIGM"
+      }, {
+        "parameter": "anno-ricerca",
+        "value": "$sys.func.MID($session.params.data-saldo,7,4)"
+      } ]
+    },
+    "targetFlow": "ARCHIVIO",
+    "name": "dfebd188-862d-49e0-be63-882dee1228e5"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ok." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "SalutiFinali_RichiestaSaldo_ContiCarte",
+    "name": "f17e35e8-b1f1-47e0-a126-d654ad3c3651"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

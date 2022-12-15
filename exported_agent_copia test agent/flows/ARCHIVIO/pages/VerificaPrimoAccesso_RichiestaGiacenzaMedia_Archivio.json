@@ -1,0 +1,57 @@
+{
+  "name": "400b699d-3710-496b-8936-0632f235eb57",
+  "displayName": "VerificaPrimoAccesso_RichiestaGiacenzaMedia_Archivio",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Riferimenti-contatto-cliente",
+    "tag": "getFirstAccess"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "90202953-0afc-47d6-a261-23bc5db71a97"
+  }, {
+    "condition": "$session.params.cliente-tipo = \"PG\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Per le Persone Giuridiche la documentazione richiesta non è recuperabile tramite i canali della filiale digitale. Vuoi prendere un appuntamento in filiale con il tuo gestore?" ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "PropostaAppuntamentoFil_RichiestaGiacenzaMedia_Archivio",
+    "name": "61f9ee2f-836b-4e18-aed6-43cda2b0e1c7"
+  }, {
+    "condition": "$session.params.primo-accesso = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ho verificato che non utilizzi i canali digitali della banca. Per  procedere con la tua richiesta, è necessario effettuare un primo accesso all'app della banca. " ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Manca il primo accesso ai canali digitali"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "6b52ea95-9443-4812-b83a-4951df18d498"
+  }, {
+    "condition": "$session.params.primo-accesso = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "anno-consigliato",
+        "value": "$sys.func.TO_TEXT($sys.func.ADD($session.params.data-ora-sistema.year, -2))"
+      } ]
+    },
+    "targetPage": "DettagliDocumento_RichiestaGiacenzaMedia_Archivio",
+    "name": "4c24fdfa-de14-4e0a-9a47-95df0dde6eec"
+  } ]
+}

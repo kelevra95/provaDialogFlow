@@ -1,0 +1,6 @@
+{
+  "name": "49a2668e-ee11-4626-906a-930a2649170f",
+  "displayName": "operazioni.contabilizzate",
+  "priority": 500000,
+  "description": "Restituisce informazioni in merito a operazioni e movimenti contabilizzati e non"
+}

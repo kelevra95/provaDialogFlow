@@ -1,0 +1,57 @@
+{
+  "name": "bbbfd870-47ce-40c4-b997-0f9e11b9a63a",
+  "displayName": "VerificaEsistenzaPANTerzi_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Gestione-carte",
+    "tag": "getBlockableCardInfoFromPAN"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "e247bd39-c037-4902-b2e4-cd62aaea346a"
+  }, {
+    "condition": "$session.params.carta-ID = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non mi risultano carte associate al numero che hai indicato. Potrebbe trattarsi di una carta non emessa da Intesa Sanpaolo." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Il PAN carta indicato dal chiamante non corrisponde ad alcuna carta da bloccare"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "12dd6e52-5ef7-428d-919b-5bb447bcb160"
+  }, {
+    "condition": "$session.params.carta-ID != null AND $session.params.stato-carta != \"Attivo\" AND $session.params.stato-carta != \"AttivaDigitalmente\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "In questo momento la carta che mi hai indicato, non risulta operativa." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "UlterioreBloccoTerzi_CarteBlocco_Sicurezza",
+    "name": "f01d9353-4e49-4d56-93bb-af9b454cff49"
+  }, {
+    "condition": "$session.params.carta-ID != null AND ($session.params.stato-carta = \"Attivo\" OR $session.params.stato-carta = \"AttivaDigitalmente\")",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivazione-blocco",
+        "value": "cautelativo"
+      } ]
+    },
+    "targetPage": "ControlloBTTerzi_CarteBlocco_Sicurezza",
+    "name": "5b562c4c-7c3a-4f7d-a341-6433c62aab73"
+  } ]
+}

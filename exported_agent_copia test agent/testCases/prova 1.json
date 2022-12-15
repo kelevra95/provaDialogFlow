@@ -1,0 +1,63 @@
+{
+  "name": "0058154c-a6ae-4795-accb-ff33f00c5c1f",
+  "displayName": "prova 1",
+  "testCaseConversationTurns": [ {
+    "userInput": {
+      "isWebhookEnabled": true,
+      "input": {
+        "text": {
+          "text": "vorrei sbloccare una tessera"
+        },
+        "languageCode": "it"
+      }
+    },
+    "virtualAgentOutput": {
+      "sessionParameters": {
+        "chiamata-survey": "off",
+        "cliente-abi": "01025",
+        "contatore": 0,
+        "data-ora-sistema": {
+          "day": 18,
+          "hours": 15,
+          "minutes": 54,
+          "month": 10,
+          "nanos": 761879000,
+          "seconds": 42,
+          "year": 2022
+        },
+        "flusso-corrente": "Start",
+        "fol-aperta": true,
+        "fulfillment-error": false,
+        "identificazione-necessaria": "Strong",
+        "knowledge-titolo": "Approfondimenti",
+        "knowledge-url": "https://knowledgefol.intesasanpaolo.com/sites/FOL/SitePages/Pagina%20iniziale.aspx",
+        "motivo-contatto": "ELLIS.CESC",
+        "motivo-handover": "Flusso attualmente non gestito da Ellis",
+        "routing-macroarea": "CTY_CC_OPZ",
+        "routing-microarea": "CTY_CC_carte",
+        "sottoflusso-corrente": "Sblocco carta per codice errato",
+        "ticket-id": "Education",
+        "tipo-attivita": "I"
+      },
+      "triggeredIntent": {
+        "name": "carte.sblocco.codice.errato"
+      },
+      "currentPage": {
+        "name": "OffertaGestore_HandoverProposta_Tecnico",
+        "flow": "HandoverProposta"
+      },
+      "textResponses": [ {
+        "text": [ "Al momento non mi occupo delle richieste di sblocco carta. Se possiedi una banco-card o una per me card plus, puoi procedere con l'aiuto di un gestore. Se invece possiedi una carta di credito, prepagata o una per me card, il blocco per inserimento del pin errato, decade automaticamente dopo 24 ore. " ]
+      }, {
+        "text": [ "Vuoi che trasferisca la telefonata ad un gestore?" ]
+      } ]
+    }
+  } ],
+  "creationTime": {
+    "seconds": 1666101304,
+    "nanos": 788799000
+  },
+  "testConfig": {
+    "flow": "Default Start Flow"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "00acabff-c651-4877-a9a0-b0e762bdf88d",
+  "displayName": "operazioni.obbligazioni.fondi",
+  "priority": 500000,
+  "description": "Recepisce richieste di operazioni su titoli obbligazioni, fondi e polizze d'investimento"
+}

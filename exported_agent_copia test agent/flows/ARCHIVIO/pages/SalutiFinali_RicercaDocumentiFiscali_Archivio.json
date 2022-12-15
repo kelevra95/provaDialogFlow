@@ -1,0 +1,25 @@
+{
+  "name": "ecfb3a3c-edc2-4fc9-89bf-421884e082ca",
+  "displayName": "SalutiFinali_RicercaDocumentiFiscali_Archivio",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.chiamata-survey = \"on\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Survey_RicercaDocumentiFiscali_Archivio",
+    "name": "2995361a-fd80-45c3-8f80-a0579dd09e53"
+  }, {
+    "condition": "$session.params.chiamata-survey = \"off\" OR $session.params.chiamata-survey = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "End Session",
+    "name": "fa088a51-ce45-408b-b1f4-9664cf113bb1"
+  } ]
+}

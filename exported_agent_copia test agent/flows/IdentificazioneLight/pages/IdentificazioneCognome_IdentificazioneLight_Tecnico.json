@@ -1,0 +1,26 @@
+{
+  "name": "c1386b10-bb0e-465a-8742-355690c6ba3a",
+  "displayName": "IdentificazioneCognome_IdentificazioneLight_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Qual è il tuo cognome?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "cognome",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "IdentificazioneNome_IdentificazioneLight_Tecnico",
+    "name": "b7a81205-15bc-4e2d-ade1-432358ba319f"
+  } ],
+  "speakerIdSettings": {
+  
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "52a6c905-d831-42b0-a250-2c738970e93e",
+  "displayName": "operazioni.ricorrenti.pianificate",
+  "priority": 500000,
+  "description": "Recepisce le richieste relative a operazioni ricorrenti  e pianificate"
+}

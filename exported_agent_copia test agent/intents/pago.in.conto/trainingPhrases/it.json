@@ -1,0 +1,191 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "ho sentito parlare del programma",
+      "auto": true
+    }, {
+      "text": " "
+    }, {
+      "text": "pago",
+      "auto": true
+    }, {
+      "text": " in conto, come si fa ad accederci?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come ",
+      "auto": true
+    }, {
+      "text": "si",
+      "auto": true
+    }, {
+      "text": " fa ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " collegare il ",
+      "auto": true
+    }, {
+      "text": "conto corrente",
+      "auto": true
+    }, {
+      "text": " al ",
+      "auto": true
+    }, {
+      "text": "pago",
+      "auto": true
+    }, {
+      "text": " in ",
+      "auto": true
+    }, {
+      "text": "conto",
+      "auto": true
+    }, {
+      "text": " per comprare su internet?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi spieghi come funziona il ",
+      "auto": true
+    }, {
+      "text": "pago",
+      "auto": true
+    }, {
+      "text": " in ",
+      "auto": true
+    }, {
+      "text": "conto",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho problemi con il vostro servizio pago in conto",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come posso addebitare le ",
+      "auto": true
+    }, {
+      "text": "mie",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "spese",
+      "auto": true
+    }, {
+      "text": " online con il ",
+      "auto": true
+    }, {
+      "text": "pago",
+      "auto": true
+    }, {
+      "text": " in ",
+      "auto": true
+    }, {
+      "text": "conto",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "è ",
+      "auto": true
+    }, {
+      "text": "sicuro",
+      "auto": true
+    }, {
+      "text": " acquistare online con il ",
+      "auto": true
+    }, {
+      "text": "pago",
+      "auto": true
+    }, {
+      "text": " in ",
+      "auto": true
+    }, {
+      "text": "conto",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio ",
+      "auto": true
+    }, {
+      "text": "ad",
+      "auto": true
+    }, {
+      "text": " usufrire del programma ",
+      "auto": true
+    }, {
+      "text": "pago",
+      "auto": true
+    }, {
+      "text": " in ",
+      "auto": true
+    }, {
+      "text": "conto",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei annullare il servizio pago in conto",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei avere maggiori dettagli sul pago in conto per gli acquisti online",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Come funziona il servizio "
+    }, {
+      "text": "Pago",
+      "auto": true
+    }, {
+      "text": " in "
+    }, {
+      "text": "conto",
+      "auto": true
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

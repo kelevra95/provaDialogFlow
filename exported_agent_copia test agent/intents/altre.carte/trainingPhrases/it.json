@@ -1,0 +1,89 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "ho una "
+    }, {
+      "text": "carta",
+      "parameterId": "tipo-carta"
+    }, {
+      "text": " emessa da fideuram"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "carta",
+      "parameterId": "tipo-carta"
+    }, {
+      "text": " enjoy"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "carta",
+      "parameterId": "tipo-carta"
+    }, {
+      "text": " like"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho una "
+    }, {
+      "text": "carta",
+      "parameterId": "tipo-carta"
+    }, {
+      "text": " ex UBI"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sono anche cliente Intesa Sanpaolo Private Banking"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho una "
+    }, {
+      "text": "carta",
+      "parameterId": "tipo-carta"
+    }, {
+      "text": " Fideuram"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho una "
+    }, {
+      "text": "carta",
+      "parameterId": "tipo-carta"
+    }, {
+      "text": " private"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho altre carte?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quali altre?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "e per le altre?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

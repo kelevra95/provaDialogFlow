@@ -1,0 +1,155 @@
+{
+  "name": "49f0cb77-364b-4959-95f9-0c51bd9ab39a",
+  "displayName": "ConfermaCambioRapportoPF_AbilitazioniSceltaRapporto_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Vuoi utilizzare " ]
+      },
+      "languageCode": "it"
+    } ],
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.tipologia-rapporto-PF = \"IBAN\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "un altro conto o carta prepagata?" ]
+            },
+            "languageCode": "it"
+          }
+        } ]
+      }, {
+        "caseContent": [ {
+          "additionalCases": {
+            "cases": [ {
+              "condition": "$session.params.tipologia-rapporto-PF = \"carte\"",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "un'altra carta?" ]
+                  },
+                  "languageCode": "it"
+                }
+              } ]
+            }, {
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "un altro rapporto?" ]
+                  },
+                  "languageCode": "it"
+                }
+              } ]
+            } ]
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "no",
+    "condition": "$session.params.tipologia-rapporto-PF = \"IBAN\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "35373bff-b78d-4c47-a061-e44c9b0c1c0d"
+  }, {
+    "intent": "no",
+    "condition": "$session.params.tipologia-rapporto-PF = \"carte\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "7ce01113-907b-4017-b436-297091c2bdf4"
+  }, {
+    "intent": "no",
+    "condition": "$session.params.tipologia-rapporto-PF = \"DA\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "d7bf5fa3-b67d-4c63-917f-dc5842a7c6cb"
+  }, {
+    "intent": "si",
+    "condition": "$session.params.tipologia-rapporto-PF = \"IBAN\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "estratto-rapporto-IBAN-PF",
+        "value": null
+      }, {
+        "parameter": "estratto-abilitazione-IBAN-PF",
+        "value": null
+      }, {
+        "parameter": "estratto-intestazione-IBAN-PF",
+        "value": null
+      }, {
+        "parameter": "estratto-verifica-firma-disgiunta-IBAN-PF",
+        "value": null
+      }, {
+        "parameter": "numero-rapporto-PF",
+        "value": null
+      } ]
+    },
+    "targetPage": "VerificaRapportiPF_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "5fba5636-328e-47c8-ad2b-b5418e85f232"
+  }, {
+    "intent": "si",
+    "condition": "$session.params.tipologia-rapporto-PF = \"carte\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "estratto-rapporto-carte-PF",
+        "value": null
+      }, {
+        "parameter": "estratto-abilitazione-carte-PF",
+        "value": null
+      }, {
+        "parameter": "estratto-intestazione-carte-PF",
+        "value": null
+      }, {
+        "parameter": "numero-rapporto-PF",
+        "value": null
+      } ]
+    },
+    "targetPage": "VerificaRapportiPF_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "d9298026-3122-487b-a257-8b27b5852bc5"
+  }, {
+    "intent": "si",
+    "condition": "$session.params.tipologia-rapporto-PF = \"DA\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "estratto-rapporto-DA-PF",
+        "value": null
+      }, {
+        "parameter": "estratto-abilitazione-DA-PF",
+        "value": null
+      }, {
+        "parameter": "estratto-intestazione-DA-PF",
+        "value": null
+      }, {
+        "parameter": "estratto-verifica-firma-disgiunta-DA-PF",
+        "value": null
+      }, {
+        "parameter": "numero-rapporto-PF",
+        "value": null
+      } ]
+    },
+    "targetPage": "VerificaRapportiPF_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "6134b99f-a92e-471f-8c6f-0abd66a4bca8"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

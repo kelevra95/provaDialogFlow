@@ -1,0 +1,53 @@
+{
+  "name": "b0bd1aa0-5433-47bf-8eb9-7f5ae1920806",
+  "displayName": "PerimetroEllis",
+  "transitionRoutes": [ {
+    "intent": "carte.attivazione",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi confermi che vuoi attivare una carta?" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.ATCA"
+      } ]
+    },
+    "targetPage": "SaltoSiNo_Assistenza_Assistenza",
+    "name": "70cea376-b23d-4cd2-b27e-14df94b6a7cc"
+  }, {
+    "intent": "carte.blocco",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi confermi che vuoi bloccare una o più carte? " ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.BLCA"
+      } ]
+    },
+    "targetPage": "SaltoSiNo_Assistenza_Assistenza",
+    "name": "df827e22-da1f-49b1-90bb-a076bf7198a9"
+  }, {
+    "intent": "richiesta.estratto.conto",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi confermi che vuoi passare alla ricerca di un estratto conto?" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.RIEC"
+      } ]
+    },
+    "targetPage": "SaltoSiNo_Assistenza_Assistenza",
+    "name": "3f07e2cb-d62a-4ae7-be80-80ae3e1087d7"
+  } ]
+}
