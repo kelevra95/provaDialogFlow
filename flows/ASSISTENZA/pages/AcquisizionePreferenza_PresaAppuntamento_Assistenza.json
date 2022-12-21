@@ -1,0 +1,92 @@
+{
+  "name": "b10cf75c-9d11-476e-ac3b-347f7ba20f7e",
+  "displayName": "AcquisizionePreferenza_PresaAppuntamento_Assistenza",
+  "form": {
+    "parameters": [ {
+      "displayName": "fascia-oraria",
+      "required": true,
+      "entityType": "@Tipo-Fascia-Oraria",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Verifico comunque la disponibilità del tuo gestore per le prossime due settimane. Preferisci fissare l'appuntamento al mattino, al pomeriggio o ti è indifferente?" ]
+            },
+            "languageCode": "it"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho capito. Puoi dirmi se preferisci mattino, pomeriggio o ti è indifferente?" ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "054655d6-ea89-45a7-ae19-141b9e5905db"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho capito. Mi puoi ripetere se mattino o pomeriggio o ti è indifferente?" ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "8dc966e4-6ef0-498e-b409-2a09c8cd0d15"
+        }, {
+          "targetPage": "VerificaFasciaOrariaAgenda_PresaAppuntamento_Assistenza",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non capire. Provo a cercare in tutta la giornata." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "fascia-oraria",
+              "value": "indifferente"
+            } ]
+          },
+          "name": "b8cc214d-2a40-4d56-9cb9-c529fef0aac8"
+        }, {
+          "targetPage": "VerificaFasciaOrariaAgenda_PresaAppuntamento_Assistenza",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non capire. Cerco in tutta la giornata." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "fascia-oraria",
+              "value": "indifferente"
+            } ]
+          },
+          "name": "06b4f539-0763-4a41-84b5-3300635a361a"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = FINAL AND $session.params.fascia-oraria != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaFasciaOrariaAgenda_PresaAppuntamento_Assistenza",
+    "name": "f07dafd6-4f9f-4ced-bce2-d48c561c19df"
+  } ]
+}

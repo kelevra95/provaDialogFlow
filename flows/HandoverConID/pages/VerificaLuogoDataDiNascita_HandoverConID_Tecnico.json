@@ -1,0 +1,35 @@
+{
+  "name": "6812f0ef-33dd-447d-b942-f3e6c65c3bf8",
+  "displayName": "VerificaLuogoDataDiNascita_HandoverConID_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.cliente-data-nascita = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "IdentificazioneLuogo_HandoverConID_Tecnico",
+    "name": "c86edc41-e247-403a-bb33-910ba869f12d"
+  }, {
+    "condition": "$session.params.cliente-data-nascita != null AND $session.params.codice-titolare != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "livello-identificazione",
+        "value": "light"
+      } ]
+    },
+    "targetPage": "RichiestaSegmentoCliente_HandoverConID_Tecnico",
+    "name": "e8c04a56-bf50-4ee4-a05a-de6eeb248bc2"
+  }, {
+    "condition": "$session.params.cliente-data-nascita != null AND $session.params.codice-titolare = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaPresenzaBT_HandoverConID_Tecnico",
+    "name": "8253b224-d2be-40e0-af69-e68d138d4742"
+  } ]
+}

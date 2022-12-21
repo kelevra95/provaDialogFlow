@@ -1,0 +1,46 @@
+{
+  "name": "631a7460-8cbd-47b5-882b-53c637532741",
+  "displayName": "InserimentoBloccoProvvisorioTutte_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Gestione-carte",
+    "tag": "blockCardByIndex",
+    "setParameterActions": [ {
+      "parameter": "descrizione-ticket",
+      "value": "Ellis - Blocco Carte cautelativo"
+    }, {
+      "parameter": "indice-lista-carte-attive",
+      "value": "$sys.func.ADD($session.params.indice-lista-carte-attive,1)"
+    } ],
+    "returnPartialResponses": true
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "512073a3-8f68-43eb-aa69-287d68935529"
+  }, {
+    "condition": "$session.params.fulfillment-error = false AND $session.params.indice-lista-carte-attive \u003c $session.params.numero-carte-attive",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "InserimentoBloccoProvvisorioTutte_CarteBlocco_Sicurezza",
+    "name": "302782d5-0ecb-4b21-9716-34f034a70542"
+  }, {
+    "condition": "$session.params.fulfillment-error = false AND $session.params.indice-lista-carte-attive = $session.params.numero-carte-attive",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ti confermo che il blocco temporaneo è stato inserito. Se de-sideri riattivare una carta contatta la filiale digitale o la tua agenzia. Ti ricordo che le operazioni di blocco non sospendono il canone della carta." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "RecuperoEmailFilialeCarteTutte_CarteBlocco_Sicurezza",
+    "name": "7a31af42-a705-4ebc-a167-fc9434ddadbe"
+  } ]
+}

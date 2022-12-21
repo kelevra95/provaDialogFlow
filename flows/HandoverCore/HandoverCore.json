@@ -1,0 +1,72 @@
+{
+  "name": "790d719f-16a2-48cb-8272-bb6c65472ab5",
+  "displayName": "HandoverCore",
+  "transitionRoutes": [ {
+    "intent": "uscita",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "OrariFOL_HandoverCore_Tecnico",
+    "name": "2e270e87-3093-4ad5-b9e9-a7cd81e24022"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace ma qualcosa non ha funzionato correttamente." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Errore tecnico su chiamata servizi banca"
+      } ]
+    },
+    "targetPage": "VerificaFlussoProvenienza_HandoverCore_Tecnico",
+    "name": "fca6bc16-49d9-45c5-b878-d012bb1711c3"
+  } ],
+  "eventHandlers": [ {
+    "targetFlow": "HandoverOK",
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non ho capito bene." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "3b7ae876-d135-498a-9658-82b0a95b56ff"
+  }, {
+    "targetFlow": "HandoverOK",
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non ti ho sentito." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "1927d4c5-be97-4c1d-a551-e0e435db2caf"
+  }, {
+    "targetFlow": "HandoverOK",
+    "event": "webhook.error",
+    "triggerFulfillment": {
+    
+    },
+    "name": "4987f855-52d5-4ed8-800f-a68de6ea0849"
+  }, {
+    "targetFlow": "HandoverOK",
+    "event": "webhook.error.timeout",
+    "triggerFulfillment": {
+    
+    },
+    "name": "fcd070b2-2438-4f83-a62f-0e69dfd07a4f"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.60000002,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+  }
+}

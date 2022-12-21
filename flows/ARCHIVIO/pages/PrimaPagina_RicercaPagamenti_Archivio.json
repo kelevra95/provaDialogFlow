@@ -1,0 +1,45 @@
+{
+  "name": "0003dc7b-a5a0-4df9-9944-9a0738af2d4e",
+  "displayName": "PrimaPagina_RicercaPagamenti_Archivio",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.codice-titolare = null AND ($session.params.ivrBt = \"00000000\" OR $session.params.ivrBt = \"\" OR $session.params.ivrBt = null)",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneStrong",
+    "name": "c4587168-0f75-4ef7-b9fd-657b6709b87f"
+  }, {
+    "condition": "$session.params.codice-titolare != null AND $session.params.livello-identificazione != \"Strong\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneStrong",
+    "name": "b8cd3af5-211c-41a1-a79a-6559cb90b745"
+  }, {
+    "condition": "$session.params.ivrBt != \"00000000\" AND $session.params.ivrBt != \"\" AND $session.params.ivrBt != null AND $session.params.livello-identificazione = null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "codice-titolare",
+        "value": "$sys.func.MID($session.params.ivrBt,1,8)"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "Strong"
+      } ]
+    },
+    "targetFlow": "IdentificazioneStrong",
+    "name": "1b452892-8a00-40ab-a0af-4e0f76af9b37"
+  }, {
+    "condition": "$session.params.codice-titolare != null AND $session.params.livello-identificazione = \"Strong\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DisambiguazioneContabileMovimento_RicercaPagamenti_Archivio",
+    "name": "6b7c7f6a-8ad7-4397-9b0a-b9c7e40a9586"
+  } ]
+}

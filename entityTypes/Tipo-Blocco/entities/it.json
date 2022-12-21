@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "definitivo",
+    "synonyms": [ "blocco definitivo", "clonazione", "completo", "definitivo", "irreversibile", "per sempre", "totale" ],
+    "languageCode": "it"
+  }, {
+    "value": "cautelativo",
+    "synonyms": [ "blocco cautelativo", "blocco provvisorio", "blocco sbloccabile", "cautelativo", "per adesso", "preventivo", "provvisorio", "sospendere", "temporaneo", "temporaneamente" ],
+    "languageCode": "it"
+  } ]
+}

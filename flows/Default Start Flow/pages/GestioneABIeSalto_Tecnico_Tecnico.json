@@ -1,0 +1,279 @@
+{
+  "name": "28b4da4c-47fe-4599-b000-931c55229702",
+  "displayName": "GestioneABIeSalto_Tecnico_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.motivo-contatto = \"ELLIS\\.STRT\" AND $session.params.ivrAbi = \"01025\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cliente-abi",
+        "value": "$session.params.ivrAbi"
+      }, {
+        "parameter": "motivo-contatto",
+        "value": null
+      }, {
+        "parameter": "ivrMotivoChiamata",
+        "value": null
+      }, {
+        "parameter": "provenienza-chiamata",
+        "value": "IVR"
+      } ]
+    },
+    "targetPage": "Start Page",
+    "name": "c3f8666f-1185-49f2-a949-5077bcf2944b"
+  }, {
+    "condition": "$session.params.motivo-contatto = \"ELLIS\\.STRT\" AND $session.params.ivrAbi != \"01025\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cliente-abi",
+        "value": "01025"
+      }, {
+        "parameter": "motivo-contatto",
+        "value": null
+      }, {
+        "parameter": "ivrMotivoChiamata",
+        "value": null
+      }, {
+        "parameter": "provenienza-chiamata",
+        "value": "IVR"
+      } ]
+    },
+    "targetPage": "Start Page",
+    "name": "0929b31c-f07e-4919-bd13-9cfd812c87d8"
+  }, {
+    "condition": "$session.params.motivo-contatto = \"ELLIS\\.SHKE\" AND $session.params.ivrAbi = \"01025\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cliente-abi",
+        "value": "$session.params.ivrAbi"
+      }, {
+        "parameter": "motivo-contatto",
+        "value": null
+      }, {
+        "parameter": "ivrMotivoChiamata",
+        "value": null
+      }, {
+        "parameter": "provenienza-chiamata",
+        "value": "APP-SHAKE"
+      } ]
+    },
+    "targetPage": "Start Page",
+    "name": "b34d622d-197c-44d8-aa1f-ce3d7ed88aa0"
+  }, {
+    "condition": "$session.params.motivo-contatto = \"ELLIS\\.SHKE\" AND $session.params.ivrAbi != \"01025\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cliente-abi",
+        "value": "01025"
+      }, {
+        "parameter": "motivo-contatto",
+        "value": null
+      }, {
+        "parameter": "ivrMotivoChiamata",
+        "value": null
+      }, {
+        "parameter": "provenienza-chiamata",
+        "value": "APP-SHAKE"
+      } ]
+    },
+    "targetPage": "Start Page",
+    "name": "1f85a9b8-c921-4685-a194-61983acf095b"
+  }, {
+    "condition": "$session.params.motivo-contatto = \"ELLIS\\.BLCA\" AND $session.params.ivrAbi = \"01025\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cliente-abi",
+        "value": "$session.params.ivrAbi"
+      }, {
+        "parameter": "provenienza-chiamata",
+        "value": "APP-VISUAL"
+      }, {
+        "parameter": "ivrMotivoChiamata",
+        "value": null
+      } ]
+    },
+    "targetFlow": "SICUREZZA",
+    "name": "790e773b-32bb-4235-a44f-6b6a0b7f8a5c"
+  }, {
+    "condition": "$session.params.motivo-contatto = \"ELLIS\\.BLCA\" AND $session.params.ivrAbi != \"01025\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cliente-abi",
+        "value": "01025"
+      }, {
+        "parameter": "provenienza-chiamata",
+        "value": "APP-VISUAL"
+      }, {
+        "parameter": "ivrMotivoChiamata",
+        "value": null
+      } ]
+    },
+    "targetFlow": "SICUREZZA",
+    "name": "e09cf692-1bf8-4771-873f-ec600f991535"
+  }, {
+    "condition": "$session.params.motivo-contatto = \"ELLIS\\.RIEC\" AND $session.params.ivrAbi = \"01025\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cliente-abi",
+        "value": "$session.params.ivrAbi"
+      }, {
+        "parameter": "provenienza-chiamata",
+        "value": "APP-VISUAL"
+      }, {
+        "parameter": "ivrMotivoChiamata",
+        "value": null
+      } ]
+    },
+    "targetFlow": "ARCHIVIO",
+    "name": "ed6c3433-47f3-456d-8db9-28896f9cf61e"
+  }, {
+    "condition": "$session.params.motivo-contatto = \"ELLIS\\.RIEC\" AND $session.params.ivrAbi != \"01025\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cliente-abi",
+        "value": "01025"
+      }, {
+        "parameter": "provenienza-chiamata",
+        "value": "APP-VISUAL"
+      }, {
+        "parameter": "ivrMotivoChiamata",
+        "value": null
+      } ]
+    },
+    "targetFlow": "ARCHIVIO",
+    "name": "550af4bc-43fc-4df1-8c84-07451ce4c240"
+  }, {
+    "condition": "$session.params.motivo-contatto = \"ELLIS\\.ATCA\" AND $session.params.ivrAbi = \"01025\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cliente-abi",
+        "value": "$session.params.ivrAbi"
+      }, {
+        "parameter": "provenienza-chiamata",
+        "value": "APP-VISUAL"
+      }, {
+        "parameter": "ivrMotivoChiamata",
+        "value": null
+      } ]
+    },
+    "targetFlow": "CONTICARTE",
+    "name": "8d5f70af-8400-4695-ad3f-cd78e3ecfaf2"
+  }, {
+    "condition": "$session.params.motivo-contatto = \"ELLIS\\.ATCA\" AND $session.params.ivrAbi != \"01025\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cliente-abi",
+        "value": "01025"
+      }, {
+        "parameter": "provenienza-chiamata",
+        "value": "APP-VISUAL"
+      }, {
+        "parameter": "ivrMotivoChiamata",
+        "value": null
+      } ]
+    },
+    "targetFlow": "CONTICARTE",
+    "name": "cf87dcc9-aae6-49b4-9ab3-638249600199"
+  }, {
+    "condition": "$session.params.motivo-contatto = \"ELLIS\\.PRAP\" AND $session.params.ivrAbi = \"01025\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cliente-abi",
+        "value": "$session.params.ivrAbi"
+      }, {
+        "parameter": "provenienza-chiamata",
+        "value": "APP-VISUAL"
+      }, {
+        "parameter": "ivrMotivoChiamata",
+        "value": null
+      } ]
+    },
+    "targetFlow": "ASSISTENZA",
+    "name": "e3abcc83-e7e5-4f9c-9799-5c7d01758cdf"
+  }, {
+    "condition": "$session.params.motivo-contatto = \"ELLIS\\.PRAP\" AND $session.params.ivrAbi != \"01025\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cliente-abi",
+        "value": "01025"
+      }, {
+        "parameter": "provenienza-chiamata",
+        "value": "APP-VISUAL"
+      }, {
+        "parameter": "ivrMotivoChiamata",
+        "value": null
+      } ]
+    },
+    "targetFlow": "ASSISTENZA",
+    "name": "e217a381-6dac-45d7-ba98-9880955298b7"
+  }, {
+    "condition": "$session.params.motivo-contatto = \"ELLIS\\.SBCO\" AND $session.params.ivrAbi = \"01025\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cliente-abi",
+        "value": "$session.params.ivrAbi"
+      }, {
+        "parameter": "provenienza-chiamata",
+        "value": "APP-VISUAL"
+      }, {
+        "parameter": "ivrMotivoChiamata",
+        "value": null
+      } ]
+    },
+    "targetFlow": "ASSISTENZA",
+    "name": "8ff85a2c-12b0-45d9-b6df-35857a19270b"
+  }, {
+    "condition": "$session.params.motivo-contatto = \"ELLIS\\.SBCO\" AND $session.params.ivrAbi != \"01025\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cliente-abi",
+        "value": "01025"
+      }, {
+        "parameter": "provenienza-chiamata",
+        "value": "APP-VISUAL"
+      }, {
+        "parameter": "ivrMotivoChiamata",
+        "value": null
+      } ]
+    },
+    "targetFlow": "ASSISTENZA",
+    "name": "b3a747ce-3aba-4cca-8855-caf8cbf8f9da"
+  }, {
+    "condition": "$session.params.motivo-contatto = \"ELLIS\\.NOAU\" AND $session.params.ivrAbi = \"01025\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cliente-abi",
+        "value": "$session.params.ivrAbi"
+      }, {
+        "parameter": "provenienza-chiamata",
+        "value": "IVR"
+      }, {
+        "parameter": "ivrMotivoChiamata",
+        "value": null
+      } ]
+    },
+    "targetFlow": "HandoverConID",
+    "name": "722bbd9e-86ea-4fcb-ba78-0013ae8595d3"
+  }, {
+    "condition": "$session.params.motivo-contatto = \"ELLIS\\.NOAU\" AND $session.params.ivrAbi != \"01025\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cliente-abi",
+        "value": "01025"
+      }, {
+        "parameter": "provenienza-chiamata",
+        "value": "IVR"
+      }, {
+        "parameter": "ivrMotivoChiamata",
+        "value": null
+      } ]
+    },
+    "targetFlow": "HandoverConID",
+    "name": "d92205d6-dddc-4eb9-a3e7-4671077c8abb"
+  } ]
+}

@@ -1,0 +1,104 @@
+{
+  "name": "98fa0c7f-b63b-4dd8-a8bd-5b4991f13289",
+  "displayName": "RiletturaLuogoData_HandoverConID_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Mi confermi $session.params.cliente-luogo-nascita $sys.func.FORMAT_DATE($session.params.cliente-data-nascita-input, dd/MM/yyyy)?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cliente-data-nascita",
+        "value": "$sys.func.FORMAT_DATE($session.params.cliente-data-nascita-input, dd/MM/yyyy)"
+      }, {
+        "parameter": "data-nascita",
+        "value": "$sys.func.FORMAT_DATE($session.params.cliente-data-nascita-input, dd/MM/yyyy)"
+      }, {
+        "parameter": "data-nascita-input",
+        "value": "$sys.func.FORMAT_DATE($session.params.cliente-data-nascita-input, dd/MM/yyyy)"
+      } ]
+    },
+    "targetPage": "VerificaPFPG_HandoverConID_Tecnico",
+    "name": "36d71557-d203-4afc-821b-9c30221a8ee0"
+  }, {
+    "intent": "no",
+    "condition": "$session.params.contatore \u003e 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace ma con questi dati non sono riuscito a verificare la tua identità." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "GestioneRamo_HandoverConID_Tecnico",
+    "name": "493afebf-4ce3-4b30-b6c5-fd65ca22bd5f"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ok, riproviamo." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "cliente-luogo-nascita",
+        "value": null
+      }, {
+        "parameter": "cliente-data-nascita-input",
+        "value": null
+      }, {
+        "parameter": "contatore",
+        "value": "$sys.func.ADD($session.params.contatore, 1)"
+      } ]
+    },
+    "targetPage": "IdentificazioneLuogo_HandoverConID_Tecnico",
+    "name": "a3528d4d-fca8-4458-a43a-3449d28e64ce"
+  }, {
+    "intent": "uscita",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "intento",
+        "value": "uscita"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "nani"
+      } ]
+    },
+    "targetFlow": "HandoverOK",
+    "name": "5b0e30bf-610c-4ed0-8c37-a4af21f66437"
+  }, {
+    "intent": "operatore",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "intento",
+        "value": "operatore"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "nani"
+      } ]
+    },
+    "targetFlow": "HandoverOK",
+    "name": "f4197d44-5dfa-4275-a26b-d1d2c0b25174"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

@@ -1,0 +1,126 @@
+{
+  "name": "0a153f15-43aa-4a71-8883-d97e5350714a",
+  "displayName": "IdentificazioneData_HandoverConID_Tecnico",
+  "form": {
+    "parameters": [ {
+      "displayName": "cliente-data-nascita-input",
+      "required": true,
+      "entityType": "@sys.date",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Ora dimmi la tua data di nascita indicando il giorno, il mese, e l'anno per esteso. " ]
+            },
+            "languageCode": "it"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho sentito. Per favore, indica la tua data di nascita, specificando prima il giorno, il mese, e poi l'anno per esteso." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "aabec79e-065f-4446-af00-497b16f5a5ab"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Scusa, ma non ho capito. Per favore, indica la tua data di nascita, specificando prima il giorno, il mese, e poi l'anno per esteso." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "ecf6b581-130b-44eb-a730-38c0bc47b958"
+        }, {
+          "targetPage": "GestioneRamo_HandoverConID_Tecnico",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Mi dispiace continuo a non capire." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "8ef8e514-f767-48c8-9657-814dbb0e995f"
+        }, {
+          "targetPage": "GestioneRamo_HandoverConID_Tecnico",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non sono riuscito a riconoscere la data che mi hai indicato." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "72d2ea67-639e-47f3-8126-928f4cff8973"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "($page.params.status = FINAL AND ($session.params.cliente-data-nascita-input.year \u003c 1915 OR ($session.params.cliente-data-nascita-input.year \u003e $session.params.data-ora-sistema.year OR ($session.params.cliente-data-nascita-input.year = $session.params.data-ora-sistema.year AND $session.params.cliente-data-nascita-input.month \u003e $session.params.data-ora-sistema.month) OR ($session.params.cliente-data-nascita-input.year = $session.params.data-ora-sistema.year AND $session.params.cliente-data-nascita-input.month = $session.params.data-ora-sistema.month AND $session.params.cliente-data-nascita-input.day \u003e $session.params.data-ora-sistema.day)))) AND $session.params.contatore = 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "La data inserita non è corretta." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": "$sys.func.ADD($session.params.contatore, 1)"
+      }, {
+        "parameter": "cliente-data-nascita-input",
+        "value": null
+      } ]
+    },
+    "targetPage": "IdentificazioneData_HandoverConID_Tecnico",
+    "name": "80fadf4f-f7a5-4e13-8b41-866644647703"
+  }, {
+    "condition": "($page.params.status = FINAL AND ($session.params.cliente-data-nascita-input.year \u003c 1915 OR ($session.params.cliente-data-nascita-input.year \u003e $session.params.data-ora-sistema.year OR ($session.params.cliente-data-nascita-input.year = $session.params.data-ora-sistema.year AND $session.params.cliente-data-nascita-input.month \u003e $session.params.data-ora-sistema.month) OR ($session.params.cliente-data-nascita-input.year = $session.params.data-ora-sistema.year AND $session.params.cliente-data-nascita-input.month = $session.params.data-ora-sistema.month AND $session.params.cliente-data-nascita-input.day \u003e $session.params.data-ora-sistema.day)))) AND $session.params.contatore \u003e 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace ma con questi dati non sono riuscito a verificare la tua identità." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "GestioneRamo_HandoverConID_Tecnico",
+    "name": "e04e5b82-85c9-4318-afab-b84613927adf"
+  }, {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "RiletturaLuogoData_HandoverConID_Tecnico",
+    "name": "e198b306-2442-4353-a2d8-45ed6738d38d"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 90,
+      "noSpeechTimeout": {
+        "seconds": 10
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

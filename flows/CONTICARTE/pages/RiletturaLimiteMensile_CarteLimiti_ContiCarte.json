@@ -1,0 +1,47 @@
+{
+  "name": "27923c53-99c5-4a0f-9e7f-1b1655a50503",
+  "displayName": "RiletturaLimiteMensile_CarteLimiti_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Mi confermi che il nuovo limite mensile di $session.params.operazione scelto è €$session.params.limite-mensile-nuovo?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ValidazioneLimiteMensile_CarteLimiti_ContiCarte",
+    "name": "d865df6b-d9d7-4d3d-a042-e179933ec8a2"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": "$sys.func.ADD($session.params.contatore, 1)"
+      }, {
+        "parameter": "limite-mensile-nuovo",
+        "value": null
+      } ]
+    },
+    "targetPage": "SceltaLimiteMensile_CarteLimiti_ContiCarte",
+    "name": "ff6140cc-973c-4d30-8f1b-5817bf59f040"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

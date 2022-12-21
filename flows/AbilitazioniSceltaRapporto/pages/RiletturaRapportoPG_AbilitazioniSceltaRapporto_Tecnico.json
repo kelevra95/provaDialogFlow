@@ -1,0 +1,151 @@
+{
+  "name": "3aea5264-3c69-4c4a-9a8a-76348a23b2a0",
+  "displayName": "RiletturaRapportoPG_AbilitazioniSceltaRapporto_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Mi confermi che" ]
+      },
+      "languageCode": "it"
+    } ],
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.tipologia-rapporto-PG = \"IBAN\"",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "\u003cspeak\u003e" ]
+            },
+            "languageCode": "it"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "il numero di conto o le ultime 4 cifre della carta prepagata su cui vuoi operare sono" ]
+            },
+            "languageCode": "it"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "\u003csay-as interpret-as=\"verbatim\"\u003e$session.params.numero-rapporto-PG\u003c/say-as\u003e?" ]
+            },
+            "languageCode": "it"
+          }
+        }, {
+          "message": {
+            "text": {
+              "text": [ "\u003c/speak\u003e" ]
+            },
+            "languageCode": "it"
+          }
+        } ]
+      }, {
+        "caseContent": [ {
+          "additionalCases": {
+            "cases": [ {
+              "condition": "$session.params.tipologia-rapporto-PG = \"carte\"",
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "\u003cspeak\u003e" ]
+                  },
+                  "languageCode": "it"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "le ultime 4 cifre della carta su cui vuoi operare sono" ]
+                  },
+                  "languageCode": "it"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "\u003csay-as interpret-as=\"verbatim\"\u003e$session.params.numero-rapporto-PG\u003c/say-as\u003e?" ]
+                  },
+                  "languageCode": "it"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "\u003c/speak\u003e" ]
+                  },
+                  "languageCode": "it"
+                }
+              } ]
+            }, {
+              "caseContent": [ {
+                "message": {
+                  "text": {
+                    "text": [ "\u003cspeak\u003e" ]
+                  },
+                  "languageCode": "it"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "il numero di deposito amministrato su cui vuoi operare è" ]
+                  },
+                  "languageCode": "it"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "\u003csay-as interpret-as=\"verbatim\"\u003e$session.params.numero-rapporto-PG\u003c/say-as\u003e?" ]
+                  },
+                  "languageCode": "it"
+                }
+              }, {
+                "message": {
+                  "text": {
+                    "text": [ "\u003c/speak\u003e" ]
+                  },
+                  "languageCode": "it"
+                }
+              } ]
+            } ]
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": "$sys.func.ADD($session.params.contatore, 1)"
+      }, {
+        "parameter": "numero-rapporto",
+        "value": null
+      }, {
+        "parameter": "numero-rapporto-PG",
+        "value": null
+      } ]
+    },
+    "targetPage": "SceltaRapportoPG_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "647ffe9c-6e67-4bea-8030-4a889b4db4f5"
+  }, {
+    "intent": "si",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "RicercaRapportoPG_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "26df7a18-b395-4ed2-a955-6adf66016521"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

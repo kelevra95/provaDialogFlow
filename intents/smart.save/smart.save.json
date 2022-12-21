@@ -1,0 +1,6 @@
+{
+  "name": "08d2b846-c21a-4a1a-a0eb-aca8c7d18ad3",
+  "displayName": "smart.save",
+  "priority": 500000,
+  "description": "Recepisce richieste generiche sul servizio Smart Save"
+}

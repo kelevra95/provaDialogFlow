@@ -1,0 +1,284 @@
+{
+  "name": "d7a70b27-729a-4a5e-a00f-2aa855bfd7d8",
+  "displayName": "VerificaQuantitaCarteDaBloccare_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Gestione-carte",
+    "tag": "getCustomerCards"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "3924bd00-4d2a-49cd-aaff-2968a136723f"
+  }, {
+    "condition": "$session.params.numero-carte-da-bloccare = 0 AND $session.params.tipo-carta = \"Credito\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non mi risultano carte di credito da bloccare. Provo a fare una verifica su tutte le carte." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "tipo-carta",
+        "value": "Tutte"
+      }, {
+        "parameter": "tipo-carta-cliente",
+        "value": "carta-tutte-cliente"
+      } ]
+    },
+    "targetPage": "VerificaQuantitaCarteDaBloccare_CarteBlocco_Sicurezza",
+    "name": "dc9ebcd5-0c86-496c-b96c-4b503e183240"
+  }, {
+    "condition": "$session.params.numero-carte-da-bloccare = 0 AND $session.params.tipo-carta = \"Debito\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non mi risultano carte di debito da bloccare. Provo a fare una verifica su tutte le carte." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "tipo-carta",
+        "value": "Tutte"
+      }, {
+        "parameter": "tipo-carta-cliente",
+        "value": "carta-tutte-cliente"
+      } ]
+    },
+    "targetPage": "VerificaQuantitaCarteDaBloccare_CarteBlocco_Sicurezza",
+    "name": "05559985-dd01-481f-8053-548cd847459b"
+  }, {
+    "condition": "$session.params.numero-carte-da-bloccare = 0 AND $session.params.tipo-carta = \"Prepagata\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non mi risultano carte prepagate da bloccare. Provo a fare una verifica su tutte le carte." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "tipo-carta",
+        "value": "Tutte"
+      }, {
+        "parameter": "tipo-carta-cliente",
+        "value": "carta-tutte-cliente"
+      } ]
+    },
+    "targetPage": "VerificaQuantitaCarteDaBloccare_CarteBlocco_Sicurezza",
+    "name": "33e8e2dd-1e32-4272-bee1-fe600acc5bed"
+  }, {
+    "condition": "$session.params.numero-carte-da-bloccare = 0 AND $session.params.tipo-carta = \"Tutte\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non mi risultano carte Intesa Sanpaolo da bloccare e intestate a tuo nome. La tua carta potrebbe essere stata emessa da un'altra banca del gruppo." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Carte da bloccare non presenti"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "effe08a7-b3f8-4836-bbd5-0bbe70a6aea2"
+  }, {
+    "condition": "$session.params.numero-carte-da-bloccare = 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "numero-finale-carta",
+        "value": null
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.tipo-carta = \"Tutte\"",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Dalla verifica che ho effettuato mi risulta una sola carta Intesa Sanpaolo, intestata a tuo nome, che puoi bloccare." ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "additionalCases": {
+              "cases": [ {
+                "condition": "$session.params.tipo-carta = \"Prepagata\"",
+                "caseContent": [ {
+                  "message": {
+                    "text": {
+                      "text": [ "Dalla verifica che ho effettuato mi risulta una sola carta prepagata di Intesa Sanpaolo, intestata a tuo nome, che puoi bloccare." ]
+                    },
+                    "languageCode": "it"
+                  }
+                } ]
+              }, {
+                "caseContent": [ {
+                  "message": {
+                    "text": {
+                      "text": [ "Dalla verifica che ho effettuato mi risulta una sola carta di $session.params.tipo-carta di Intesa Sanpaolo, intestata a tuo nome, che puoi bloccare." ]
+                    },
+                    "languageCode": "it"
+                  }
+                } ]
+              } ]
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "VerificaEsistenzaCarta_CarteBlocco_Sicurezza",
+    "name": "c293c4d7-f1f3-4349-b299-9cda81af16e4"
+  }, {
+    "condition": "$session.params.numero-carte-da-bloccare \u003e 1 AND $session.params.tipo-carta = \"Tutte\" AND $session.params.tipo-carta-cliente = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi risultano più carte emesse da Intesa Sanpaolo intestate a te. " ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "RichiestaUltimeCifreCartaDaBloccare_CarteBlocco_Sicurezza",
+    "name": "8d79bd45-6e75-4f21-a49a-104be2b7b1e1"
+  }, {
+    "condition": "$session.params.numero-carte-da-bloccare \u003e 1 AND $session.params.tipo-carta = \"Tutte\" AND $session.params.tipo-carta-cliente = \"carta-tutte-cliente\" AND $session.params.numero-carte-attive \u003e 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ti suggerisco un blocco provvisorio su tutte le tue carte. In seguito potrai comunque riattivarle chiamando la filiale digitale, o recandoti presso la tua agenzia." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "ConfermaBloccoProvvisorioTutte_CarteBlocco_Sicurezza",
+    "name": "6df134db-915e-492b-b830-050c566dde84"
+  }, {
+    "condition": "$session.params.numero-carte-da-bloccare \u003e 1 AND $session.params.tipo-carta = \"Tutte\" AND $session.params.tipo-carta-cliente = \"carta-tutte-cliente\" AND $session.params.numero-carte-attive = 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Le tue carte risultano già non operative. Se preferisci inserire un blocco definitivo, è necessario agire sulla singola carta specificando-ne le ultime 4 cifre.  " ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "UlterioreBlocco_CarteBlocco_Sicurezza",
+    "name": "63742f8f-40f4-4030-9a71-e7ed924fab5a"
+  }, {
+    "condition": "$session.params.numero-carte-da-bloccare \u003e 1 AND $session.params.tipo-carta = \"Debito\" AND ($session.params.tipo-carta-cliente = null OR $session.params.tipo-carta-cliente = \"carta-debito-cliente\")",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi risultano più carte di debito emesse da Intesa Sanpaolo intestate a te. " ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "RichiestaUltimeCifreCartaDaBloccare_CarteBlocco_Sicurezza",
+    "name": "8332a522-ec0f-4664-b979-52494303b444"
+  }, {
+    "condition": "$session.params.numero-carte-da-bloccare \u003e 1 AND $session.params.tipo-carta = \"Debito\" AND $session.params.tipo-carta-cliente = \"carta-debito-tutte-cliente\" AND $session.params.numero-carte-attive \u003e 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ti suggerisco un blocco provvisorio su tutte le tue carte di debito. In seguito potrai comunque riattivarle chiamando la filiale digitale, o recandoti presso la tua agenzia." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "ConfermaBloccoProvvisorioTutte_CarteBlocco_Sicurezza",
+    "name": "56b17b29-bbd0-4d32-ae36-ca460a606e08"
+  }, {
+    "condition": "$session.params.numero-carte-da-bloccare \u003e 1 AND $session.params.tipo-carta = \"Debito\" AND $session.params.tipo-carta-cliente = \"carta-debito-tutte-cliente\" AND $session.params.numero-carte-attive = 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Le tue carte di debito risultano già non operative. Se preferisci inserire un blocco definitivo, è necessario agire sulla singola carta specificando-ne le ultime 4 cifre.  " ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "UlterioreBlocco_CarteBlocco_Sicurezza",
+    "name": "b622713b-f75c-42cd-9f84-d97fbd531997"
+  }, {
+    "condition": "$session.params.numero-carte-da-bloccare \u003e 1 AND $session.params.tipo-carta = \"Credito\" AND ($session.params.tipo-carta-cliente = null OR $session.params.tipo-carta-cliente = \"carta-credito-cliente\")",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi risultano più carte di credito emesse da Intesa Sanpaolo intestate a te." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "RichiestaUltimeCifreCartaDaBloccare_CarteBlocco_Sicurezza",
+    "name": "1c209f82-5819-4b93-ab96-e5611818167f"
+  }, {
+    "condition": "$session.params.numero-carte-da-bloccare \u003e 1 AND $session.params.tipo-carta = \"Credito\" AND $session.params.tipo-carta-cliente = \"carta-credito-tutte-cliente\" AND $session.params.numero-carte-attive \u003e 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ti suggerisco un blocco provvisorio su tutte le tue carte di credito. In seguito potrai comunque riattivarle chiamando la filiale digitale, o recandoti presso la tua agenzia." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "ConfermaBloccoProvvisorioTutte_CarteBlocco_Sicurezza",
+    "name": "dae708fa-1f4e-4df7-a179-ce6ded385c8a"
+  }, {
+    "condition": "$session.params.numero-carte-da-bloccare \u003e 1 AND $session.params.tipo-carta = \"Credito\" AND $session.params.tipo-carta-cliente = \"carta-credito-tutte-cliente\" AND $session.params.numero-carte-attive = 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Le tue carte di credito risultano già non operative. Se preferisci inserire un blocco definitivo, è necessario agire sulla singola carta specificando-ne le ultime 4 cifre.  " ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "UlterioreBlocco_CarteBlocco_Sicurezza",
+    "name": "7d62618a-1551-40fc-bb92-229fddb3ed55"
+  }, {
+    "condition": "$session.params.numero-carte-da-bloccare \u003e 1 AND $session.params.tipo-carta = \"Prepagata\" AND ($session.params.tipo-carta-cliente = null OR $session.params.tipo-carta-cliente = \"prepagata-cliente\")",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi risultano più carte prepagate emesse da Intesa Sanpaolo intestate a te." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "RichiestaUltimeCifreCartaDaBloccare_CarteBlocco_Sicurezza",
+    "name": "3fca8d55-729c-4f9f-a9b5-f872a23e004c"
+  }, {
+    "condition": "$session.params.numero-carte-da-bloccare \u003e 1 AND $session.params.tipo-carta = \"Prepagata\" AND $session.params.tipo-carta-cliente = \"prepagata-tutte-cliente\" AND $session.params.numero-carte-attive \u003e 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ti suggerisco un blocco provvisorio su tutte le tue carte prepagate. In seguito potrai comunque riattivarle chiamando la filiale digitale, o recandoti presso la tua agenzia." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "ConfermaBloccoProvvisorioTutte_CarteBlocco_Sicurezza",
+    "name": "292fff15-badb-4dc1-af7a-1f6cf60de7b8"
+  }, {
+    "condition": "$session.params.numero-carte-da-bloccare \u003e 1 AND $session.params.tipo-carta = \"Prepagata\" AND $session.params.tipo-carta-cliente = \"prepagata-tutte-cliente\" AND $session.params.numero-carte-attive = 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Le tue carte prepagate risultano già non operative. Se preferisci inserire un blocco definitivo, è necessario agire sulla singola carta specificando-ne le ultime 4 cifre." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "UlterioreBlocco_CarteBlocco_Sicurezza",
+    "name": "fed5cd32-7044-47f8-9adc-cb9607ae92ff"
+  } ]
+}

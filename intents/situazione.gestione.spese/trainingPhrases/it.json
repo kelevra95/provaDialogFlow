@@ -1,0 +1,172 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "qual'è il mio benessere finanziario",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo chiedere dettagli sulla mappa delle spese",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei sapere come spendono i clienti come me",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve il bilancio familiare"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dove si impostano le categorie di spesa?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve la sezione gestione spese"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cerca la mappa delle spese"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " quale limite gestione ",
+      "auto": true
+    }, {
+      "text": "spese",
+      "auto": true
+    }, {
+      "text": " sono più ",
+      "auto": true
+    }, {
+      "text": "vicino",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso vedere i grafici gestione ",
+      "auto": true
+    }, {
+      "text": "spese",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " vedere la gestione ",
+      "auto": true
+    }, {
+      "text": "spese",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso cambare i ",
+      "auto": true
+    }, {
+      "text": "miei",
+      "auto": true
+    }, {
+      "text": " parametri ",
+      "auto": true
+    }, {
+      "text": "spese",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mostrami le mie categorie gestione spese",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso impostare ",
+      "auto": true
+    }, {
+      "text": "una",
+      "auto": true
+    }, {
+      "text": " gestione ",
+      "auto": true
+    }, {
+      "text": "spese",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quanto mi ",
+      "auto": true
+    }, {
+      "text": "manca",
+      "auto": true
+    }, {
+      "text": " al limite di ",
+      "auto": true
+    }, {
+      "text": "spesa",
+      "auto": true
+    }, {
+      "text": " di gestione ",
+      "auto": true
+    }, {
+      "text": "spese",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

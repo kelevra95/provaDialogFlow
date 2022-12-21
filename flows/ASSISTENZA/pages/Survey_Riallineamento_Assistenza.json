@@ -1,0 +1,62 @@
+{
+  "name": "73383646-8cc7-41b3-a743-fb6d4fe008aa",
+  "displayName": "Survey_Riallineamento_Assistenza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Sono riuscito ad aiutarti?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Bene. Sono contento. È stato un piacere parlare con te. A presto!" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "esito-survey",
+        "value": "si"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "4cdfab39-ce25-4024-b8b3-64c3642fea89"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace. Cercherò di migliorare per il futuro." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "esito-survey",
+        "value": "no"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Il cliente non è soddisfatto dell'aiuto di Ellis"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "fc94ceff-5243-4134-a825-3a5eba9c824c"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

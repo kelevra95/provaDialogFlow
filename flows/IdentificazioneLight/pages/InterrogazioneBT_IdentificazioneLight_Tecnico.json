@@ -1,0 +1,45 @@
+{
+  "name": "87abd67d-6c2b-40e8-b204-7d3ef222bd65",
+  "displayName": "InterrogazioneBT_IdentificazioneLight_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Riferimenti-contatto-cliente",
+    "tag": "searchCustomerInfoFromBT"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "b3094d83-6645-4615-8f57-e87cde93200d"
+  }, {
+    "condition": "$session.params.codice-titolare-PF = null AND $session.params.codice-titolare-PG = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non sono riuscito ad identificarti." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "codice-titolare",
+        "value": null
+      } ]
+    },
+    "targetPage": "GestioneRamo_IdentificazioneLight_Tecnico",
+    "name": "8737853a-7aa4-44c5-ae1b-4f8ff6e256f0"
+  }, {
+    "condition": "$session.params.codice-titolare-PF != null OR $session.params.codice-titolare-PG != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "IdentificazioneDataNascita_IdentificazioneLight_Tecnico",
+    "name": "b8f412e6-7de8-4cef-94f3-d87ef9afedbf"
+  } ],
+  "speakerIdSettings": {
+  
+  }
+}

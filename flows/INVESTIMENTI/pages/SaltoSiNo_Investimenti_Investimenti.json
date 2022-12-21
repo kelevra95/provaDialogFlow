@@ -1,0 +1,37 @@
+{
+  "name": "d733090e-efe7-4f1b-9d27-4e6e8bdd581b",
+  "displayName": "SaltoSiNo_Investimenti_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ivrMotivoChiamata",
+        "value": null
+      } ]
+    },
+    "targetFlow": "Default Start Flow",
+    "name": "e5795f67-943e-4dd0-b735-7192ee8fd0e8"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ok. Riprendiamo da dove eravamo rimasti." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-contatto",
+        "value": null
+      } ]
+    },
+    "targetPage": "Previous Page",
+    "name": "f991510b-b8cb-409f-b57b-e4f778b51b01"
+  } ]
+}

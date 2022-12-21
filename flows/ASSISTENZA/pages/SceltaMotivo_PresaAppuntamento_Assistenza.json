@@ -1,0 +1,103 @@
+{
+  "name": "38a7f71e-e1fb-45ee-a9e3-beee1918e2c1",
+  "displayName": "SceltaMotivo_PresaAppuntamento_Assistenza",
+  "form": {
+    "parameters": [ {
+      "displayName": "motivo-appuntamento",
+      "required": true,
+      "entityType": "@Tipo-Motivo-Appuntamento",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Vuoi fissare un appuntamento per parlare di conti, carte, assicurazioni, investimenti, previdenza, finanziamenti o altro?" ]
+            },
+            "languageCode": "it"
+          } ],
+          "advancedSettings": {
+            "playbackInterruptionSettings": {
+              "allowPlaybackInterruption": true
+            }
+          }
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho sentito. Puoi ripetere?" ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "79a64ed2-1dda-4606-808d-9882fc0dbfa1"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho capito. Puoi ripetere?" ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "c43bb5ef-f143-47f1-ba0a-4a1e600a94f5"
+        }, {
+          "targetPage": "Current Page",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "motivo-appuntamento",
+              "value": "altro"
+            } ]
+          },
+          "name": "5a0b0dca-21ff-4ca6-b337-af262426c20f"
+        }, {
+          "targetPage": "Current Page",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "setParameterActions": [ {
+              "parameter": "motivo-appuntamento",
+              "value": "altro"
+            } ]
+          },
+          "name": "a9b083f5-43cc-4492-bdbc-5713d9f3ec74"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = FINAL AND $session.params.motivo-appuntamento != null AND $session.params.tipo-gestore = \"filiale\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ModalitaColloquioGF_PresaAppuntamento_Assistenza",
+    "name": "d3ce5747-bebb-40a0-a75c-d7afaefd4652"
+  }, {
+    "condition": "$page.params.status = FINAL AND $session.params.motivo-appuntamento != null AND $session.params.tipo-gestore = \"remoto\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "AcquisizioneDataOra_PresaAppuntamento_Assistenza",
+    "name": "3a65c32c-3268-4746-848f-c4c7748789ac"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 40,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

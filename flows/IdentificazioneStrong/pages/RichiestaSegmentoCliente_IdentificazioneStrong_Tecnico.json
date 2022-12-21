@@ -1,0 +1,42 @@
+{
+  "name": "d5ee12ff-7366-4e30-8b8d-3b4bd558fb05",
+  "displayName": "RichiestaSegmentoCliente_IdentificazioneStrong_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "$session.params.cliente-nome, procediamo insieme." ]
+      },
+      "languageCode": "it"
+    } ],
+    "webhook": "Riferimenti-contatto-cliente",
+    "tag": "getSREData",
+    "setParameterActions": [ {
+      "parameter": "contatore",
+      "value": 0
+    }, {
+      "parameter": "flusso-corrente",
+      "value": "$session.params.flusso-precedente"
+    }, {
+      "parameter": "flusso-precedente",
+      "value": "Identificazione Strong"
+    }, {
+      "parameter": "sottoflusso-corrente",
+      "value": "$session.params.sottoflusso-precedente"
+    }, {
+      "parameter": "sottoflusso-precedente",
+      "value": "Identificazione Strong"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "webhook": "Tracciatura",
+      "tag": "traceEllisRecognition"
+    },
+    "targetPage": "End Flow",
+    "name": "755f289c-d68b-4ee0-9ce9-e0208d13d852"
+  } ]
+}

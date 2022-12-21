@@ -1,0 +1,105 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "non mi arrivano più le lettere cartacee della banca",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei cambiare la rendicontazione da online a cartacea",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ricevo gli estratti conto online ma li rivoglio cartacei",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non mi arriva più l'estratto conto della mia carta a casa",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "attivare il resoconto cartaceo dei miei conti",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come ",
+      "auto": true
+    }, {
+      "text": "si",
+      "auto": true
+    }, {
+      "text": " attiva la rendicontazione cartacea?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non voglio più ricevere posta a casa ma solo online",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quanto costa la rendicontazione cartacea?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non trovo la pagina per modificare le modalità di rendicontazione",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei ricevere l'estratto conto solo in formato digitale",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "è possibile annullare ",
+      "auto": true
+    }, {
+      "text": "l'",
+      "auto": true
+    }, {
+      "text": "invio della rendicontazione ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " casa?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei annullare l'invio cartaceo della rendicontazione",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

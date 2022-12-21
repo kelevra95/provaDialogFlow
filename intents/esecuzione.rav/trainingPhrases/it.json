@@ -1,0 +1,135 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "dove devo andare per ",
+      "auto": true
+    }, {
+      "text": "pagare",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "rav",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi dite come ",
+      "auto": true
+    }, {
+      "text": "si",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "pagano",
+      "auto": true
+    }, {
+      "text": " i ",
+      "auto": true
+    }, {
+      "text": "rav",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quali sono i tempo per il pagamento di un rav?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso ",
+      "auto": true
+    }, {
+      "text": "pagare",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "rav",
+      "auto": true
+    }, {
+      "text": " solo sul sito dell'ente riscossore?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "il fisco mi ha inviato un avviso per pagare un rav"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "avrei bisogno di pagare un rav",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "tramite il vostro online banking si può pagare un rav?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "per il ",
+      "auto": true
+    }, {
+      "text": "pagamento",
+      "auto": true
+    }, {
+      "text": " di ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "rav",
+      "auto": true
+    }, {
+      "text": " devo andare sul sito di equitalia?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dovrei pagare un avviso che mi è arrivato tramite rav",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

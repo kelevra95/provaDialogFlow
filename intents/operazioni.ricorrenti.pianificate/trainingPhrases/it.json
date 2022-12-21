@@ -1,0 +1,125 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "come rendere ricorrente il bonifico",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio a pianificare delle operazioni",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso pianificare delle operazioni?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei rendere ricorrente ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " pagamento",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo pianificare dei pagamenti",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come posso impostare un bonifico ricorrente?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei che il bonifico venisse ripetuto ogni mese, come si fa?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "si può impostare l'esecuzione automatica di un'operazione ricorrente?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei modificare l'importo di un pagamento continuativo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso bloccare il ",
+      "auto": true
+    }, {
+      "text": "bonifico",
+      "auto": true
+    }, {
+      "text": " automatico?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dove si trova la sezione per impostare le operazioni ricorrenti?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho pianificato un bonifico che si ripete ogni mese, dove lo trovo?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "è possibile programmare delle operazioni ogni mese?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dove trovo la sezione pagamenti ricorrenti?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso creare ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "pagamento",
+      "auto": true
+    }, {
+      "text": " periodico?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

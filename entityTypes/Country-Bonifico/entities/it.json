@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "europeo",
+    "synonyms": [ "Austria", "belgio", "europeo", "francia", "Germania", "Irlanda", "Olanda", "Paesi Bassi", "spagna" ],
+    "languageCode": "it"
+  }, {
+    "value": "extra europeo",
+    "synonyms": [ "america", "australia", "Cina", "extra europeo", "giappone", "india", "paesi arabi", "Russia", "stati uniti", "Ucraina" ],
+    "languageCode": "it"
+  } ]
+}

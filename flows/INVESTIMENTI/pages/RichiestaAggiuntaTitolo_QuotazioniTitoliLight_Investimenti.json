@@ -1,0 +1,25 @@
+{
+  "name": "e6632479-9e4d-4f15-a0f5-e864c24d151e",
+  "displayName": "RichiestaAggiuntaTitolo_QuotazioniTitoliLight_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaCapienzaPortafoglio_QuotazioniTitoliLight_Investimenti",
+    "name": "5dbefb87-1276-416c-b073-67b320e235c8"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaRichiestaOperazione_QuotazioniTitoliLight_Investimenti",
+    "name": "b76c9a22-462d-42c1-81bd-220e9b5a22e3"
+  } ]
+}

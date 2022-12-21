@@ -1,0 +1,45 @@
+{
+  "name": "7dd5122d-25f3-483c-82b7-ec6b454c40f6",
+  "displayName": "PrimaPagina_ModificaPINAccesso_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.codice-titolare = null AND ($session.params.ivrBt = \"00000000\" OR $session.params.ivrBt = \"\" OR $session.params.ivrBt = null)",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneStrong",
+    "name": "094b8a19-70b3-417e-b596-6aa7f1f0a261"
+  }, {
+    "condition": "$session.params.codice-titolare != null AND $session.params.livello-identificazione != \"Strong\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneStrong",
+    "name": "86f662af-c034-4863-af29-dae7882e5ee1"
+  }, {
+    "condition": "$session.params.ivrBt != \"00000000\" AND $session.params.ivrBt != \"\" AND $session.params.ivrBt != null AND $session.params.livello-identificazione = null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "codice-titolare",
+        "value": "$sys.func.MID($session.params.ivrBt, 1, 8)"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "Strong"
+      } ]
+    },
+    "targetFlow": "IdentificazioneStrong",
+    "name": "683b5195-ff5c-40d6-8c65-77a70d966812"
+  }, {
+    "condition": "$session.params.codice-titolare != null AND $session.params.livello-identificazione = \"Strong\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaCorrispondenzaCelcertNumeroSRE_ModificaPINAccesso_Sicurezza",
+    "name": "3c983138-29f9-47c4-81fe-c58acee78119"
+  } ]
+}

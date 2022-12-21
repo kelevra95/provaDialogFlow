@@ -1,0 +1,59 @@
+{
+  "name": "f21b7ac4-f42a-4182-b200-1ac64a8f3897",
+  "displayName": "PropostaNuovaRicerca_RicercaMovimenti_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Vuoi effettuare una nuova ricerca?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "periodo-ricerca",
+        "value": null
+      }, {
+        "parameter": "tipo-rapporto",
+        "value": null
+      } ]
+    },
+    "targetPage": "VerificaParametroImporto_RicercaMovimenti_ContiCarte",
+    "name": "e27f6e3d-f688-4b98-9231-3ecf071f50ef"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "SalutiFinali_RicercaMovimenti_ContiCarte",
+    "name": "6ec499fd-391c-463e-bc8e-c6a4c60ac36e"
+  }, {
+    "intent": "ripeti",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Va bene, ripeto." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "VerificaPresenzaMovimento_RicercaMovimenti_ContiCarte",
+    "name": "f88f0c1e-10d1-4e33-8095-54523367a34b"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

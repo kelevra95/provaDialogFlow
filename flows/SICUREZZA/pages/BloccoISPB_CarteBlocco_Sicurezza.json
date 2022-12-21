@@ -1,0 +1,34 @@
+{
+  "name": "e7c3c87e-9501-4046-a894-743353b4cc5e",
+  "displayName": "BloccoISPB_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.cliente-altri-cloni = \"ISPB\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Se sei un cliente Intesa Sanpaolo Praivat Banking possiamo fare ulteriori verifiche sulle tue carte. Vuoi procedere?" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Cliente ISP condiviso con ISPB"
+      } ]
+    },
+    "targetPage": "BloccoISPBSiNo_CarteBlocco_Sicurezza",
+    "name": "5f9425bb-bb9d-4326-8efd-43ac260f60c4"
+  }, {
+    "condition": "$session.params.cliente-altri-cloni != \"ISPB\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "SalutiFinali_CarteBlocco_Sicurezza",
+    "name": "2d707297-d1c5-4180-b1e7-a8a1d70851e0"
+  } ]
+}

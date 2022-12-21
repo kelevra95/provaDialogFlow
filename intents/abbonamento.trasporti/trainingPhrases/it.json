@@ -1,0 +1,70 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Posso pagare l'abbonamento a atm?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come si fa a ricaricare l'abbonamento ai trasporti pubblici"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ricaricare abbonamento pullman",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "pagare abbonamento tram"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo pagare l'abbonamento della GTT"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "assistenza per pagare l'abbonamento alla gtt"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "rinnovo tesserino abbonamento mensile"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ricarica abbonamento sita"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei pagare abbonamento mensile al trasporto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "rinnovare l'abbonamento a trenord"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "rinnovo abbonamento trasporto pubblico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

@@ -1,0 +1,63 @@
+{
+  "name": "ca2be6cd-d70f-4682-8ae6-21a5c6df9091",
+  "displayName": "VerificaTipoCarta_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.tipo-carta = \"Tutte\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Se non hai con te le ultime 4 cifre, dimmi se si tratta di un bancomat, di una per me card, di una carta di credito, di una prepagata o se vuoi bloccare tutte le carte." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "tipo-carta",
+        "value": null
+      } ]
+    },
+    "targetPage": "RichiestaTipoCartaDaBloccare_CarteBlocco_Sicurezza",
+    "name": "8407ac13-0420-4888-915e-52383c090e86"
+  }, {
+    "condition": "$session.params.tipo-carta = \"Debito\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Se non hai con te le ultime 4 cifre, ti suggerisco un blocco provvisorio su tutte le tue carte di debito. In seguito potrai comunque riattivarle chiamando la filiale digitale o recandoti presso la tua agenzia." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "ConfermaBloccoProvvisorioTutte_CarteBlocco_Sicurezza",
+    "name": "556c16b8-e272-4bb0-b5ec-592987a7bde5"
+  }, {
+    "condition": "$session.params.tipo-carta = \"Credito\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Se non hai con te le ultime 4 cifre, ti suggerisco un blocco provvisorio su tutte le tue carte di credito. In seguito potrai comunque riattivarle chiamando la filiale digitale o recandoti presso la tua agenzia." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "ConfermaBloccoProvvisorioTutte_CarteBlocco_Sicurezza",
+    "name": "bc774d33-ce37-4f31-b27c-93a17f34f531"
+  }, {
+    "condition": "$session.params.tipo-carta = \"Prepagata\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Se non hai con te le ultime 4 cifre, ti suggerisco un blocco provvisorio su tutte le tue carte prepagate. In seguito potrai comunque riattivarle chiamando la filiale digitale o recandoti presso la tua agenzia." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "ConfermaBloccoProvvisorioTutte_CarteBlocco_Sicurezza",
+    "name": "b52e41c5-dd36-412c-82d7-fc72240fa234"
+  } ]
+}

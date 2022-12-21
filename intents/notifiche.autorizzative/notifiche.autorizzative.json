@@ -1,0 +1,6 @@
+{
+  "name": "b9013cd3-c119-40f8-b930-2374a6d8cbc8",
+  "displayName": "notifiche.autorizzative",
+  "priority": 500000,
+  "description": "Recepisce le richieste di mancata ricezione delle notifiche per autorizzare i pagamenti e per accedere al sito (no cruscotto notifiche)"
+}

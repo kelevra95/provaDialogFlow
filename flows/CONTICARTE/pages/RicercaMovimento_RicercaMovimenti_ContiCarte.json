@@ -1,0 +1,26 @@
+{
+  "name": "5a3ac3f6-906f-46d3-8bfb-704fc8466cad",
+  "displayName": "RicercaMovimento_RicercaMovimenti_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Comunicazioni",
+    "tag": "sendMovementsSearch"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "07497861-146d-4e75-a7bd-1c889f96ff37"
+  }, {
+    "condition": "$session.params.fulfillment-error = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaPresenzaMovimento_RicercaMovimenti_ContiCarte",
+    "name": "be7c3e24-bb79-4977-9695-7f8633c2a03c"
+  } ]
+}

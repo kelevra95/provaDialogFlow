@@ -1,0 +1,26 @@
+{
+  "name": "14b1a06e-cd17-4c20-ad45-9f0c7b0d6465",
+  "displayName": "RecuperoDatiPartitaIva_IdentificazioneSRE_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Riferimenti-contatto-cliente",
+    "tag": "getPgInfoFromPiva"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "98dc2600-579b-4188-ad5c-6b748b3ff498"
+  }, {
+    "condition": "$session.params.fulfillment-error = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": " RichiestaSegmentoCliente_IdentificazioneSRE_Tecnico",
+    "name": "585d7906-7bad-48a1-9d55-2870c9951fba"
+  } ]
+}

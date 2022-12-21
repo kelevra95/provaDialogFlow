@@ -1,0 +1,56 @@
+{
+  "name": "da8d0eea-30e4-48c3-b925-e9f9b448326d",
+  "displayName": "FakeRaccoltaSlot",
+  "form": {
+    "parameters": [ {
+      "displayName": "data-ora-slot1",
+      "required": true,
+      "entityType": "@sys.date-time",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Dammi slot 1" ]
+            },
+            "languageCode": "it"
+          } ]
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    }, {
+      "displayName": "data-ora-slot2",
+      "required": true,
+      "entityType": "@sys.date-time",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Dimmi slot 2 " ]
+            },
+            "languageCode": "it"
+          } ]
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaFasciaOrariaAgenda_PresaAppuntamento_Assistenza",
+    "name": "c4f055c5-d2e3-49ad-a559-dedae8984657"
+  } ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "6e855309-9a55-473f-b782-3c69f141c72d",
+  "displayName": "scelta",
+  "parameters": [ {
+    "id": "scelta",
+    "entityType": "@Tipo-Scelta"
+  } ],
+  "priority": 500000
+}

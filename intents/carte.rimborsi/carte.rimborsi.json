@@ -1,0 +1,6 @@
+{
+  "name": "d1ab873e-1d2c-4eba-8675-669bb4e8dbec",
+  "displayName": "carte.rimborsi",
+  "priority": 500000,
+  "description": "Recepisce le richieste di rimborsi su carte e generici (vista la casistica più ampia di rimborso su carta che su conto). Per rimborsi tramite domiciliazione o conto vedi intento conto.rimborsi"
+}

@@ -1,0 +1,507 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "bonifico "
+    }, {
+      "text": "estero",
+      "parameterId": "tipo-bonifico"
+    }, {
+      "text": " per la "
+    }, {
+      "text": "Russia",
+      "parameterId": "Country-Bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "bonifico "
+    }, {
+      "text": "estero",
+      "parameterId": "tipo-bonifico"
+    }, {
+      "text": " per la "
+    }, {
+      "text": "Francia",
+      "parameterId": "Country-Bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "bonifico per l'"
+    }, {
+      "text": "estero",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo fare ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": " bonifico",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ma il bonifico "
+    }, {
+      "text": "veloce",
+      "parameterId": "tipo-bonifico"
+    }, {
+      "text": " va su qualsiasi iban"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi potete aiutare a effettuare un bonifico "
+    }, {
+      "text": "immediato",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei fare un bonifico "
+    }, {
+      "text": "rapido",
+      "parameterId": "tipo-bonifico"
+    }, {
+      "text": " al telefono"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo fare un bonifico bancario "
+    }, {
+      "text": "urgente",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei impartire un bonifico "
+    }, {
+      "text": "istantaneo",
+      "parameterId": "tipo-bonifico"
+    }, {
+      "text": " al telefono"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio a inviare dei soldi tramite bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "informazioni su disposizioni di bonifici"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo eseguire un trasferimento di denaro"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come si dispongono i bonifici online?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo effettuare un trasferimento di denaro di 500 euro"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "si possono fare i bonifici al telefono?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio a fare il bonifico dalla carta al conto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "esecuzione bonifico "
+    }, {
+      "text": "fiscale",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "fate bonifici per "
+    }, {
+      "text": "bonus 110",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "bonifico per "
+    }, {
+      "text": "bonus verde",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo fare un bonifico di 5000 Euro per la "
+    }, {
+      "text": "ristrutturazione",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei fare un bonifico "
+    }, {
+      "text": "fiscale",
+      "parameterId": "tipo-bonifico"
+    }, {
+      "text": " sull'app"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dovrei inserire un bonifico per "
+    }, {
+      "text": "detrazioni fiscali",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso inserire un bonifico per "
+    }, {
+      "text": "agevolazioni fiscali",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo effettuare un trasferimento di denaro "
+    }, {
+      "text": "all'estero",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Bonifico "
+    }, {
+      "text": "internazionale",
+      "parameterId": "tipo-bonifico"
+    }, {
+      "text": " verso "
+    }, {
+      "text": "paesi arabi",
+      "parameterId": "Country-Bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho acquistato un prodotto negli "
+    }, {
+      "text": "Stati Uniti",
+      "parameterId": "Country-Bonifico"
+    }, {
+      "text": " e devo fare un bonifico "
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi occorre un bonifico in "
+    }, {
+      "text": "dollari",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo fare un bonifico ma "
+    }, {
+      "text": "non in euro",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi urge di fare un bonifico verso la "
+    }, {
+      "text": "Cina",
+      "parameterId": "Country-Bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo disporre un bonifico verso un paese che "
+    }, {
+      "text": "non ha l'euro",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "bonifico verso "
+    }, {
+      "text": "Stati Uniti",
+      "parameterId": "Country-Bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei effettuare un'operazione di bonifico "
+    }, {
+      "text": "estero"
+    }, {
+      "text": " in "
+    }, {
+      "text": "dollari",
+      "parameterId": "tipo-bonifico"
+    }, {
+      "text": " canadesi"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come eseguire bonifico internazionale "
+    }, {
+      "text": "fuori europa",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei assistenza per effettuare un bonifico estero negli "
+    }, {
+      "text": "stati uniti",
+      "parameterId": "Country-Bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho bisogno di fare un bonifico internazionale per il "
+    }, {
+      "text": "Kenya",
+      "parameterId": "Country-Bonifico"
+    }, {
+      "text": " in "
+    }, {
+      "text": "sterline",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo fare un bonifico "
+    }, {
+      "text": "extra UE",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho necessità di trasferire denaro su conto corrente in "
+    }, {
+      "text": "India",
+      "parameterId": "Country-Bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso effettuare un versamento a un mio parente che vive "
+    }, {
+      "text": "fuori dall'Europa",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei fare una "
+    }, {
+      "text": "donazione",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "so che intesa gestisce la raccolta fondi per "
+    }, {
+      "text": "donazioni",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "differenze tra bonifico verso l'"
+    }, {
+      "text": "Italia",
+      "parameterId": "tipo-bonifico"
+    }, {
+      "text": " e verso l'estero"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho necessità di disporre un bonifico in "
+    }, {
+      "text": "europa",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dovrei fare un bonifico "
+    }, {
+      "text": "domestico",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve aiuto per effettuare un bonifico in "
+    }, {
+      "text": "spagna",
+      "parameterId": "Country-Bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quanto tempo richiede l'invio del bonifico "
+    }, {
+      "text": "Italia",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dopo quanto arriva il bonifico "
+    }, {
+      "text": "sepa",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei disporre un bonifico "
+    }, {
+      "text": "nazionale",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo effettuare un trasferimento di denaro in "
+    }, {
+      "text": "germania",
+      "parameterId": "Country-Bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dovrei fare un bonifico "
+    }, {
+      "text": "europeo",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei autorizzare un bonifico "
+    }, {
+      "text": "estero",
+      "parameterId": "tipo-bonifico"
+    }, {
+      "text": " "
+    }, {
+      "text": "europeo",
+      "parameterId": "Country-Bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei assistenza per fare un bonifico "
+    }, {
+      "text": "BEU",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso fare un "
+    }, {
+      "text": "giroconto",
+      "parameterId": "tipo-bonifico"
+    }, {
+      "text": " al telefono"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo fare un bonifico "
+    }, {
+      "text": "conto terzi",
+      "parameterId": "tipo-bonifico"
+    } ],
+    "repeatCount": 2,
+    "languageCode": "it"
+  } ]
+}

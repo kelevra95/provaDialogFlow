@@ -1,0 +1,110 @@
+{
+  "name": "dba3b8db-a8e6-4897-add9-995f2c832017",
+  "displayName": "RiletturaLuogoData_IdentificazioneLight_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Mi confermi $session.params.cliente-luogo-nascita $sys.func.FORMAT_DATE($session.params.cliente-data-nascita-input, dd/MM/yyyy)?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cliente-data-nascita",
+        "value": "$sys.func.FORMAT_DATE($session.params.cliente-data-nascita-input, dd/MM/yyyy)"
+      }, {
+        "parameter": "data-nascita",
+        "value": "$sys.func.FORMAT_DATE($session.params.cliente-data-nascita-input, dd/MM/yyyy)"
+      }, {
+        "parameter": "data-nascita-input",
+        "value": "$sys.func.FORMAT_DATE($session.params.cliente-data-nascita-input, dd/MM/yyyy)"
+      } ]
+    },
+    "targetPage": "VerificaPFPG_IdentificazioneLight_Tecnico",
+    "name": "65102ebf-59bb-4c86-b17a-2f5d6cde1b51"
+  }, {
+    "intent": "no",
+    "condition": "$session.params.contatore \u003e 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace ma con questi dati non sono riuscito a verificare la tua identità." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "GestioneRamo_IdentificazioneLight_Tecnico",
+    "name": "907dc0c3-51c3-46bb-8d62-91426981a473"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ok, riproviamo." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "cliente-luogo-nascita",
+        "value": null
+      }, {
+        "parameter": "cliente-data-nascita-input",
+        "value": null
+      }, {
+        "parameter": "contatore",
+        "value": "$sys.func.ADD($session.params.contatore, 1)"
+      } ]
+    },
+    "targetPage": "IdentificazioneLuogo_IdentificazioneLight_Tecnico",
+    "name": "05bf9ec9-42ff-4588-9bd4-eff8d7bdb144"
+  }, {
+    "intent": "uscita",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "intento",
+        "value": "uscita"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "nani"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Il cliente non vuole parlare con Ellis"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "4ca13712-e1c0-41dc-a0a3-fd760fe17a76"
+  }, {
+    "intent": "operatore",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "intento",
+        "value": "operatore"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "nani"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Richiesta operatore"
+      } ]
+    },
+    "targetFlow": "HandoverRichiestaDiretta",
+    "name": "dbd2b77f-9b5b-427a-8c07-1801946c6ce4"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "f1e2efaa-a7d6-4b23-96de-7ba5511389aa",
+  "displayName": "PropostaAppuntamentoFil_ModificaPINAccesso_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "tipo-colloquio-GF",
+        "value": "fisico"
+      }, {
+        "parameter": "motivo-appuntamento",
+        "value": "altro"
+      }, {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.PRAP"
+      } ]
+    },
+    "targetFlow": "Default Start Flow",
+    "name": "6b4dc4ff-b451-4f8a-987e-127f85a4d284"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "SalutiFinali_ModificaPINAccesso_Sicurezza",
+    "name": "c9c817f7-9a88-4840-b492-8e7401df6f01"
+  }, {
+    "intent": "non.so",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Senza la certificazione del cellulare, non posso aiutarti, e comunque dovrai recarti fisicamente in filiale. Vuoi fissare l'appuntamento?" ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "75af3858-3e72-427d-8a19-be91f5ea0952"
+  } ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "e24c4e6c-d1a0-436e-b8fd-11b65837c49a",
+  "displayName": "SaltoSiNo_ContiCarte_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "ivrMotivoChiamata",
+        "value": null
+      } ]
+    },
+    "targetFlow": "Default Start Flow",
+    "name": "1c804f0f-e27e-42b0-90ce-da59ab6c5ed6"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ok. Riprendiamo da dove eravamo rimasti." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-contatto",
+        "value": null
+      } ]
+    },
+    "targetPage": "Previous Page",
+    "name": "9379027d-f511-4413-b3b0-c440bf5f12ab"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

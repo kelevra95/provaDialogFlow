@@ -1,0 +1,68 @@
+{
+  "name": "c69fad39-bdfb-4411-adc0-ba643ecfead1",
+  "displayName": "VerificaPresenzaDocumentoInvioNotifica_RichiestaGiacenzaMedia_Archivio",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Comunicazioni",
+    "tag": "sendAverageDeposits"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "6b1333d4-f7e4-4c45-8778-bab74c21fddd"
+  }, {
+    "condition": "$session.params.documento-trovato = false AND $session.params.livello-identificazione = \"Strong\" AND $session.params.anno-ricerca != $session.params.anno-consigliato",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace, ma non ho trovato la documentazione richiesta. Se devi fare l'ISEE per l'anno in corso, potrebbero servirti i documenti del $session.params.anno-consigliato che trovi nell'archivio. Ti ho inviato comunque una notifica con il link di accesso all'archivio e le indicazioni per ulteriori ricerche." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "PropostaNuovaRicerca_RichiestaGiacenzaMedia_Archivio",
+    "name": "c37568c8-cb28-433a-ba27-84cc7c4115d4"
+  }, {
+    "condition": "$session.params.documento-trovato = false AND $session.params.livello-identificazione = \"Strong\" AND $session.params.anno-ricerca = $session.params.anno-consigliato",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace, non ho trovato la documentazione richiesta. Ti ho inviato comunque una notifica con il link di accesso all'archivio e le indicazioni per ulteriori ricerche." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "98e3eed3-26fe-414a-aa1c-b9771ef03c36"
+  }, {
+    "condition": "($session.params.documento-trovato = true AND $session.params.livello-identificazione = \"Strong\") OR $session.params.livello-identificazione != \"Strong\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ho inviato l'esito della ricerca nella sezione Avvisi dell'App e del sito della Banca. Se non visualizzi tutti i documenti desiderati, richiamami e chiedi l'aiuto di un gestore, oppure dialoga con lui in chat, da sito o da app." ]
+        },
+        "languageCode": "it"
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.anno-ricerca != $session.params.anno-consigliato",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Se devi fare l'ISEE per l'anno in corso, potrebbe esserti richiesta la documentazione del $session.params.anno-consigliato." ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "SalutiFinali_RichiestaGiacenzaMedia_Archivio",
+    "name": "85879ed3-04ad-46eb-8993-dc09db2d1920"
+  } ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "430bbf68-e19d-467b-8ec0-f5f06fd33b12",
+  "displayName": "SalutiFinali_RichiestaCodiceTitolare_Assistenza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.chiamata-survey = \"on\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Survey_RichiestaCodiceTitolare_Assistenza",
+    "name": "0fb7d4e3-26e8-4cae-bef9-0e5e6e995663"
+  }, {
+    "condition": "$session.params.chiamata-survey = \"off\" OR $session.params.chiamata-survey = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "È stato un piacere parlare con te. A presto!" ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "3d1cb6af-f6ea-4e31-8cf2-6a73930ad2ed"
+  } ]
+}

@@ -1,0 +1,135 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "cos'è l'iban?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "è possibile sapere l'iban della mia carta?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi puoi dire l'iban del mio conto?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " trovare ",
+      "auto": true
+    }, {
+      "text": "l'",
+      "auto": true
+    }, {
+      "text": "IBAN?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo comunicare le ",
+      "auto": true
+    }, {
+      "text": "mie",
+      "auto": true
+    }, {
+      "text": " coordinate bancarie, dove ",
+      "auto": true
+    }, {
+      "text": "si",
+      "auto": true
+    }, {
+      "text": " trovano?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "necessito sapere il mio IBAN",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non riesco a trovare il mio codice IBAN, ho bisogno di assistenza"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve l'IBAN",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi dite il ",
+      "auto": true
+    }, {
+      "text": "mio",
+      "auto": true
+    }, {
+      "text": " codice IBAN?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho bisongno delle mie coordinate bancarie",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "qual è il ",
+      "auto": true
+    }, {
+      "text": "mio",
+      "auto": true
+    }, {
+      "text": " codice IBAN?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho bisogno del mio IBAN",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dove trovo il ",
+      "auto": true
+    }, {
+      "text": "mio",
+      "auto": true
+    }, {
+      "text": " codice IBAN?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

@@ -1,0 +1,87 @@
+{
+  "name": "34b10e40-30dc-46b0-95d4-1c1e3838484c",
+  "displayName": "ValidazionePlafond_CarteLimiti_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "NOT ($session.params.limite-nuovo \u003c= $session.params.limite-massimo AND $session.params.limite-nuovo \u003e= $session.params.limite-minimo)",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "limite-nuovo",
+        "value": null
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.limite-nuovo \u003e $session.params.limite-massimo",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Il plafond che hai selezionato è più alto del limite massimo." ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "condition": "$session.params.limite-nuovo \u003c $session.params.limite-minimo",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Il plafond che hai selezionato è più basso del limite minimo." ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "PropostaCambioPlafond_CarteLimiti_ContiCarte",
+    "name": "c08a86dc-c326-4a94-b529-431c72ad2fb7"
+  }, {
+    "condition": "$session.params.limite-corrente = $session.params.limite-nuovo",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Il plafond corrente corrisponde al nuovo plafond richiesto e quindi non verrà cambiato." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "SalutiFinali_CarteLimiti_ContiCarte",
+    "name": "6de60f0f-8b20-473e-81c3-a780802065e9"
+  }, {
+    "condition": "$session.params.aumento-limite-possibile = falso AND $session.params.limite-corrente \u003c= $session.params.limite-nuovo",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non è stato possibile aumentare il plafond perchè è stato raggiunto il numero massimo di tentativi annuale" ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "PropostaAppuntamentoFil_CarteLimiti_ContiCarte",
+    "name": "024600e2-cc7c-4823-89d5-834c10f4ffe5"
+  }, {
+    "condition": "NOT $sys.func.MID($sys.func.TO_TEXT($session.params.limite-nuovo), $sys.func.MINUS($sys.func.LEN($sys.func.TO_TEXT($session.params.limite-nuovo)), 1), 2) = \"00\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Il limite che vuoi impostare non è un multiplo di 100.  " ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "PropostaCambioPlafond_CarteLimiti_ContiCarte",
+    "name": "1bb6cc26-56f0-4f70-9292-d58fb724cecf"
+  }, {
+    "condition": "$session.params.limite-nuovo \u003c= $session.params.limite-massimo AND $session.params.limite-nuovo \u003e= $session.params.limite-minimo AND (($session.params.aumento-limite-possibile = true AND $session.params.limite-corrente \u003c $session.params.limite-nuovo) OR $session.params.limite-corrente \u003e $session.params.limite-nuovo) AND $sys.func.MID($sys.func.TO_TEXT($session.params.limite-nuovo), $sys.func.MINUS($sys.func.LEN($sys.func.TO_TEXT($session.params.limite-nuovo)), 1), 2) = \"00\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ModificaPlafond_CarteLimiti_ContiCarte",
+    "name": "73e648f5-c4e9-4bde-967d-10c33d2aa2de"
+  } ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "74c643dd-8ece-45be-a0c4-5eb796013ae8",
+  "displayName": "profilo.dati.personali",
+  "priority": 500000,
+  "description": "Recepisce le richieste del cliente di modifica dei propri dati anagrafici e di contatto personali"
+}

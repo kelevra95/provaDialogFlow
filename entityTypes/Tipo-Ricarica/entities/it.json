@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "cellulare",
+    "synonyms": [ "cellulare", "device", "dispositivo", "iphone", "samsung", "sim", "smartphone", "telefonica", "telefonico", "telefonino", "telefono" ],
+    "languageCode": "it"
+  }, {
+    "value": "prepagata",
+    "synonyms": [ "carta", "carta ", "carta prepagata", "flash", "postepay", "prepagata", "ricaricabile", "super flash", "superflash", "carta ricaricabile" ],
+    "languageCode": "it"
+  } ]
+}

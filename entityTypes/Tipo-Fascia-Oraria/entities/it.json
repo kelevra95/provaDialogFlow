@@ -1,0 +1,15 @@
+{
+  "entities": [ {
+    "value": "@Mattino",
+    "synonyms": [ "@Mattino" ],
+    "languageCode": "it"
+  }, {
+    "value": "@Pomeriggio",
+    "synonyms": [ "@Pomeriggio" ],
+    "languageCode": "it"
+  }, {
+    "value": "@Indifferente",
+    "synonyms": [ "@Indifferente" ],
+    "languageCode": "it"
+  } ]
+}

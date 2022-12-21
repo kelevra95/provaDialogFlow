@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "mattino",
+    "synonyms": [ "all'apertura", "am", "ante mezzogiorno", "appena possibile", "di buon'ora", "il prima possibile", "inizio giornata", "mattina", "mattinata", "mattino", "presto", "prima dell'una", "prima di mezzogiorno", "prima di pranzo", "primo orario d'ufficio", "il mattino ha l'oro in bocca" ],
+    "languageCode": "it"
+  } ]
+}

@@ -1,0 +1,78 @@
+{
+  "name": "e10014d0-b33a-4ea8-9873-8691e831a4bf",
+  "displayName": "ConfermaDominioEmail_SbloccoContratto_Assistenza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Sto per inviarti il modulo di sblocco contratto via mail . Il tuo indirizzo termina con $session.params.cliente-email-dominio?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "InvioMail_SbloccoContratto_Assistenza",
+    "name": "f2a74c29-6ae1-44cb-9122-3ce2a232f18f"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "In fase di richiesta dello sblocco contratto non posso modificare la tua email e proseguire." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "L'email del cliente presente in archivio non è corretta"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "9eec0272-a7ad-44b6-8e7b-7f729ba86607"
+  }, {
+    "intent": "non.so",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "In tal caso non posso proseguire." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "L'email del cliente presente in archivio non è confermata dal cliente"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "65a6af81-c8a9-4483-a7d5-50d7bb351672"
+  }, {
+    "intent": "email.personale.interrogazione",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "In questo momento, per questioni di riservatezza, non posso leggere l'indirizzo email per esteso, e non posso nemmeno cambiarlo. Provo ad inviare comunque il modulo?" ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "6f880693-9c3c-4881-8dd4-d17488cf2b64"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

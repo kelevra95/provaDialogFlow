@@ -1,0 +1,212 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "errore 75bt01",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non capisco perchè mi blocchiate il pagamento",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi avete bloccato l'operatività per sicurezza",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "esigo lo sblocco per fare il mio bonifico bloccato per sicurezza"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "errore blocco sicurezza",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "errore blocco cautelativo operazione"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non riesco a fare la ricarica a causa di ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " problema di sicurezza",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi dice che c'è qualche problema di sicurezza per l'operazione che sto effettuando",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "per motivi di sicurezza non è possibile terminare l'operazione",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "errore sicurezza creazione carta virtuale",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "bonifico istantaneo bloccato per motivi di sicurezza"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " avviso di blocco di sicurezza",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "operativita bloccata, che fare?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "per problemi di sicurezza l'operazione non va a buon fine",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "per problemi di sicurezza il bonifico non va a buon fine",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "bonifico bloccato",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "pagamento bollettino postale bloccato",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "operazione bloccata dal sistema",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non riesco ad effettuare ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " bonifico perché viene identificato come operazione sospetta",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Mi state continuando a bloccare ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " bonifico",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " blocco per sicurezza",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "manca la necessaria sicurezza per concludere l'operazione",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "qualcosa non va, mi dice problemi di sicurezza",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi hanno bloccato l'operatività per motivi di sicurezza",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sto riscontrando degli errori antifrode",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non riesco a concludere il pagamento causa errore 75BT01",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

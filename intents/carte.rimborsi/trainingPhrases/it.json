@@ -1,0 +1,89 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "buongiorno Ellis. sto aspettando ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " rimborso",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sto aspettando ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " rimborso da amazon ma non lo vedo ancora",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei avere informazione sul rimborso di un acquisto online"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Quanto tempo ci vuole per un rimborso su carta di credito?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quali sono le tempistiche di accredito di un rimborso sulla mia carta di credito?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho bisogno di assistenza per uno storno"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi devono fare degli storni sulla carta, mi potete dire i tempi?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come si fa la richiesta per i rimborsi su carta di credito?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non mi risulta un rimborso sulla carta, potete verificare?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "esistono tempi precisi per i rimborsi tramite carta visa?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "aspetto dei rimborsi da 2 settimane sulla mia carta mastercard, quanto ci vuole?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "nel plafond della mia carta non vedo ancora il rimborso che sto aspettando"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

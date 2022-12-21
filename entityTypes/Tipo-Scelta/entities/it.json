@@ -1,0 +1,15 @@
+{
+  "entities": [ {
+    "value": "@Prima-Opzione",
+    "synonyms": [ "@Prima-Opzione" ],
+    "languageCode": "it"
+  }, {
+    "value": "@Seconda-Opzione",
+    "synonyms": [ "@Seconda-Opzione" ],
+    "languageCode": "it"
+  }, {
+    "value": "@Nessuna-Opzione",
+    "synonyms": [ "@Nessuna-Opzione" ],
+    "languageCode": "it"
+  } ]
+}

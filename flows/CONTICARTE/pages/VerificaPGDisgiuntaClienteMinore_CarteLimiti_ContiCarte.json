@@ -1,0 +1,37 @@
+{
+  "name": "25187244-9bf6-4a5b-afab-086408955ca9",
+  "displayName": "VerificaPGDisgiuntaClienteMinore_CarteLimiti_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.cliente-tipo = \"PG\" AND $session.params.codice-titolare-PG != $session.params.codice-titolare-PF",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "GestioneRepeatPresenzaPG_CarteLimiti_ContiCarte",
+    "name": "f29af65f-6ffe-4093-a1d7-2406f7c3094a"
+  }, {
+    "condition": "$session.params.cliente-minore = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "L'operazione richiesta di cambio limiti non è consentita. Per questa operazione devi rivolgerti al genitore o tutore." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "SalutiFinali_CarteLimiti_ContiCarte",
+    "name": "3d58b071-22e9-471e-8936-b71ad98da48b"
+  }, {
+    "condition": "$session.params.cliente-minore = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaCorrispondenzaCelcertNumeroSRE_CarteLimiti_ContiCarte",
+    "name": "493ca865-a8b0-4eeb-8890-8a03a0312464"
+  } ]
+}

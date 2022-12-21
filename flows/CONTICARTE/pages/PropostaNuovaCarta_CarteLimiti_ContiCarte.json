@@ -1,0 +1,53 @@
+{
+  "name": "95d02268-0d5f-4370-9f56-9a4fe9ebb542",
+  "displayName": "PropostaNuovaCarta_CarteLimiti_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Vuoi cambiare i limiti di un'altra carta?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "numero-finale-carta",
+        "value": null
+      } ]
+    },
+    "targetPage": "RichiestaNumeroCarta_CarteLimiti_ContiCarte",
+    "name": "165d7ff7-ab6f-4a8c-ae5f-f2200a7b4720"
+  }, {
+    "intent": "no",
+    "condition": "$session.params.limite-carta-modificabile = true OR $session.params.tipo-carta = \"Prepagata\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "SalutiFinali_CarteLimiti_ContiCarte",
+    "name": "fe88a83b-b59b-40d3-935f-1a6431f1af9f"
+  }, {
+    "intent": "no",
+    "condition": "$session.params.limite-carta-modificabile = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "9563bf36-90de-44d4-815b-18ea840874a0"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

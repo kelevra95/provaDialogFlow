@@ -1,0 +1,6 @@
+{
+  "name": "7b0209c4-8381-46dd-8632-c6e2e2f90750",
+  "displayName": "email.gestore.richiesta",
+  "priority": 500000,
+  "description": "Recepisce le richieste del cliente che desidera conoscere i riferimenti del proprio gestore"
+}

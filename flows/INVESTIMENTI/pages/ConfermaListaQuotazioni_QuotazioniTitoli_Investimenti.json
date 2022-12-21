@@ -1,0 +1,31 @@
+{
+  "name": "066a6bfe-8370-4e66-bdde-de8ade717e38",
+  "displayName": "ConfermaListaQuotazioni_QuotazioniTitoli_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "indice-lettura",
+        "value": "$sys.func.ADD($session.params.indice-lettura, 1)"
+      } ]
+    },
+    "targetPage": "LetturaListaQuotazioni_QuotazioniTitoli_Investimenti",
+    "name": "c9b7337f-30b7-4a9f-9760-ba2183193b46"
+  }, {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "indice-lettura",
+        "value": null
+      } ]
+    },
+    "targetPage": "LetturaQuotazione_QuotazioniTitoli_Investimenti",
+    "name": "abf3fcfa-c28c-45b4-a90e-f8b2a4da6a34"
+  } ]
+}

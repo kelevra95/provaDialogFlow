@@ -1,0 +1,105 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "devo pagare la tassa sui rifiuti",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo pagare la tari",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sto cercando la pagina da cui pagare la TARI",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi sta per scadere la tassa sui rifuti, posso pagarla con ",
+      "auto": true
+    }, {
+      "text": "l'",
+      "auto": true
+    }, {
+      "text": "app?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo pagare la TARI di dicembre",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho problemi con il pagamento della TARI, mi serve assistenza",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho bisogno di assistenza riguardo il pagamento della tassa rifiuti",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non riesco a procedere con il pagamento della TARI",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso pagare la TARI sulla ",
+      "auto": true
+    }, {
+      "text": "vostra",
+      "auto": true
+    }, {
+      "text": " app?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho bisogno di informazioni per il pagamento della TARI",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " pagare la tassa sui rifiuti?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo effettuare il pagamento della TARI in scadenza",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

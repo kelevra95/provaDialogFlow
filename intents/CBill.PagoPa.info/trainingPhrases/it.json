@@ -1,0 +1,123 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "tramite la banca ",
+      "auto": true
+    }, {
+      "text": "si",
+      "auto": true
+    }, {
+      "text": " paga ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " cbill?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come procedo per pagare ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " bollettino cbill ",
+      "auto": true
+    }, {
+      "text": "l'",
+      "auto": true
+    }, {
+      "text": "ente è ",
+      "auto": true
+    }, {
+      "text": "l'",
+      "auto": true
+    }, {
+      "text": "agenzia",
+      "auto": true
+    }, {
+      "text": " della riscossione?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi dareste informazioni sui pagamenti PagoPa",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "HO BISOGNO DI AIUTO PER LA COMPILAZIONE DI UN PAGAMENTO PAGOPA",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non riesco a procedere con un pago pa"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Mi aiutereste ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " pagare la bolletta con QR code?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo pagare un bollettino contributi colf INPS  con codice QR CBILL",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Posso pagare tramite la ",
+      "auto": true
+    }, {
+      "text": "Filiale",
+      "auto": true
+    }, {
+      "text": " Online il cbill?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho un bollettino pagopa della pubblica amministrazione da pagare",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come ",
+      "auto": true
+    }, {
+      "text": "si",
+      "auto": true
+    }, {
+      "text": " pagano i bollettini con cbill?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

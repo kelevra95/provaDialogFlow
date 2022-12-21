@@ -1,0 +1,270 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "vorrei saltare ",
+      "auto": true
+    }, {
+      "text": "una"
+    }, {
+      "text": " rata del mutuo se possibile",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso sospendere una rata del finanziamento?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso sospendere delle rate del mutuo?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei bloccare la rata del mutuo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "rate residue finanziamento",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quante rate devo ancora pagare per il mio finanziamento?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi servono i conteggi del mio mutuo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei conoscere il residuo del mio mutuo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quante ",
+      "auto": true
+    }, {
+      "text": "rate",
+      "auto": true
+    }, {
+      "text": " devo ancora ",
+      "auto": true
+    }, {
+      "text": "pagare",
+      "auto": true
+    }, {
+      "text": " per ",
+      "auto": true
+    }, {
+      "text": "l'",
+      "auto": true
+    }, {
+      "text": "estinzione",
+      "auto": true
+    }, {
+      "text": " del ",
+      "auto": true
+    }, {
+      "text": "mio",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "mutuo",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " sapere quante ",
+      "auto": true
+    }, {
+      "text": "rate",
+      "auto": true
+    }, {
+      "text": " del ",
+      "auto": true
+    }, {
+      "text": "mutuo",
+      "auto": true
+    }, {
+      "text": " mi ",
+      "auto": true
+    }, {
+      "text": "mancano",
+      "auto": true
+    }, {
+      "text": " da ",
+      "auto": true
+    }, {
+      "text": "pagare",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei parlare con qualcuno per visionare il piano di ammortamento del mio mutuo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non riesco a trovare nell'area personale la sezione rate del mio muto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "è possibile vedere il residuo da ",
+      "auto": true
+    }, {
+      "text": "pagare",
+      "auto": true
+    }, {
+      "text": " per estinguere il ",
+      "auto": true
+    }, {
+      "text": "mutuo",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sapete dirmi in quale sezione devo andare per vedere quante ",
+      "auto": true
+    }, {
+      "text": "rate",
+      "auto": true
+    }, {
+      "text": " del ",
+      "auto": true
+    }, {
+      "text": "mutuo",
+      "auto": true
+    }, {
+      "text": " mi ",
+      "auto": true
+    }, {
+      "text": "mancano",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso controllare le ",
+      "auto": true
+    }, {
+      "text": "rate",
+      "auto": true
+    }, {
+      "text": " del ",
+      "auto": true
+    }, {
+      "text": "mio",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "mutuo",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " quanto ammontano le ",
+      "auto": true
+    }, {
+      "text": "rate",
+      "auto": true
+    }, {
+      "text": " mancanti del ",
+      "auto": true
+    }, {
+      "text": "mutuo",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dove posso vedere la situazione del ",
+      "auto": true
+    }, {
+      "text": "mio",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "mutuo",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei sapere quante rate mancano per estinguere il mio mutuo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

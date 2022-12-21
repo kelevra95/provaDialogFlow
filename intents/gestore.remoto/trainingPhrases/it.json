@@ -1,0 +1,117 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "ma chi è ",
+      "auto": true
+    }, {
+      "text": "il mio",
+      "auto": true
+    }, {
+      "text": " gestore ",
+      "auto": true
+    }, {
+      "text": "remoto",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "chi è il gestore remoto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non so nemmeno chi sia",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ma è il consulente della ",
+      "auto": true
+    }, {
+      "text": "mia",
+      "auto": true
+    }, {
+      "text": " filiale?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "si",
+      "auto": true
+    }, {
+      "text": " tratta del signor mario rossi?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "si",
+      "auto": true
+    }, {
+      "text": " tratta del gestore di filiale?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "io ho ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": " gestore dedicato?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "chi è il gestore dedicato?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "remoto o vicino vorrei un gestore"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cosa vi siete inventati"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non conosco nessun gestore remoto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cosa vuol dire gestore remoto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cos'è il gestore remoto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

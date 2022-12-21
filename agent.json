@@ -1,0 +1,37 @@
+{
+  "defaultLanguageCode": "it",
+  "timeZone": "Europe/Madrid",
+  "enableLogging": true,
+  "projectNumber": 127860422728,
+  "speechToTextSettings": {
+    "enableSpeechAdaptation": true
+  },
+  "startFlow": "Default Start Flow",
+  "enableStackdriverLogging": true,
+  "advancedSettings": {
+    "enabled": true,
+    "audioExportGcsDestination": {
+      "uri": "gs://bkt-isp-ccfa0-ivr-svil-001-ew3/STT_Model_Test"
+    },
+    "speechSettings": {
+      "endpointerSensitivity": 44,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    },
+    "playbackInterruptionSettings": {
+    
+    },
+    "loggingSettings": {
+      "enableStackdriverLogging": true,
+      "enableInteractionLogging": true
+    }
+  },
+  "dataResidencyOption": "DATA_RESIDENCY_IN_USE_COMPLIANT",
+  "speakerIdSettings": {
+  
+  },
+  "bigqueryExportSettings": {
+  
+  }
+}

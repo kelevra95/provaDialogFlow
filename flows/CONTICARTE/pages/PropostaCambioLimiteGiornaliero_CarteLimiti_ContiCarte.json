@@ -1,0 +1,44 @@
+{
+  "name": "5e6a5d34-6a2d-4e6a-bb04-24bb5155982a",
+  "displayName": "PropostaCambioLimiteGiornaliero_CarteLimiti_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Vuoi selezionare un importo diverso per il limite?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "RichiestaAltroLimite_CarteLimiti_ContiCarte",
+    "name": "42bc284d-0da3-44a3-86c9-285e2b6fefd5"
+  }, {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "limite-giornaliero-nuovo",
+        "value": null
+      } ]
+    },
+    "targetPage": "SceltaLimiteGiornaliero_CarteLimiti_ContiCarte",
+    "name": "9e82b74c-7231-47b1-929a-15d276f2097d"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "name": "0803fe7d-1fea-47a9-ac48-169d2a1d0c49",
+  "displayName": "DisambiguazioneContoCarta_RichiestaSaldo_ContiCarte",
+  "form": {
+    "parameters": [ {
+      "displayName": "tipo-rapporto",
+      "required": true,
+      "entityType": "@Tipo-Rapporto",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Ti serve il saldo di un conto o di una carta?" ]
+            },
+            "languageCode": "it"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Scusa, ma non ho sentito. Per favore indicami se hai bisogno del saldo di un conto o di una carta." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "cde3c412-b6c4-449a-a592-994ed34d7096"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Scusa, ma non ho capito. Per favore indicami se hai bisogno del saldo di un conto o di una carta." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "c7544b8c-8cb7-478b-a1ec-8b7c9d5c3807"
+        }, {
+          "targetFlow": "HandoverNonPrevistoProposta",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Mi dispiace, continuo a non sentire bene." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "motivo-handover",
+              "value": "Il cliente non ha specificato se vuole il saldo su conto o su carta."
+            } ]
+          },
+          "name": "268571eb-6e53-4839-87e7-d2acfd075335"
+        }, {
+          "targetFlow": "HandoverNonPrevistoProposta",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Mi dispiace, continuo a non capire." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "motivo-handover",
+              "value": "Il cliente non ha specificato se vuole il saldo su conto o su carta."
+            } ]
+          },
+          "name": "2da877b6-ff1f-4a1f-8b8d-28de70ed2716"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "livello-abilitazione-esito",
+      "value": "false"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.tipo-rapporto = \"IBAN\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "tipologia-rapporto-PG",
+        "value": "IBAN"
+      }, {
+        "parameter": "tipologia-rapporto-PF",
+        "value": "IBAN"
+      } ]
+    },
+    "targetFlow": "AbilitazioniSceltaRapporto",
+    "name": "a140bbee-f8d0-4691-81a1-99cfcdf79cda"
+  }, {
+    "condition": "$session.params.tipo-rapporto = \"carte\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "tipologia-rapporto-PG",
+        "value": "carte"
+      }, {
+        "parameter": "tipologia-rapporto-PF",
+        "value": "carte"
+      }, {
+        "parameter": "data-ricerca",
+        "value": null
+      } ]
+    },
+    "targetFlow": "AbilitazioniSceltaRapporto",
+    "name": "bc1c5943-b2c3-4f81-b85f-efd8e092f9de"
+  }, {
+    "condition": "$session.params.tipo-rapporto = \"DA\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Posso fornirti il saldo di un conto o di una carta. Non sono in grado di comunicarti il contro valore del deposito amministrato." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Ellis al momento non è in grado di comunicare il ctv del deposito amministrato"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "11e5b4d6-ba18-44f4-b080-03cc83b938ec"
+  }, {
+    "condition": "$session.params.livello-abilitazione-esito = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "DettagliData_RichiestaSaldo_ContiCarte",
+    "name": "a7ba3322-7490-4394-a59c-60b85d7bfb51"
+  } ]
+}

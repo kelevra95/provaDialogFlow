@@ -1,0 +1,60 @@
+{
+  "name": "06105ef2-838d-4c7b-b6ad-f5ef783ff386",
+  "displayName": "VerificaPFPGConBT_IdentificazioneStrong_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.codice-titolare = $session.params.codice-titolare-PF AND $session.params.codice-titolare = $session.params.codice-titolare-PG",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "SceltaPFPGConBT_IdentificazioneStrong_Tecnico",
+    "name": "c69cd71e-c4e7-4b5d-94c1-914b6482ddec"
+  }, {
+    "condition": "$session.params.codice-titolare = $session.params.codice-titolare-PG",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "livello-identificazione",
+        "value": "Strong"
+      }, {
+        "parameter": "cliente-tipo",
+        "value": "PG"
+      } ]
+    },
+    "targetPage": "NumeroPartitaIva_IdentificazioneStrong_Tecnico",
+    "name": "66e85fa5-601c-4135-8350-10cce7a34c9f"
+  }, {
+    "condition": "$session.params.codice-titolare = $session.params.codice-titolare-PF",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "livello-identificazione",
+        "value": "Strong"
+      }, {
+        "parameter": "cliente-tipo",
+        "value": "PF"
+      } ]
+    },
+    "targetPage": "RichiestaSegmentoCliente_IdentificazioneStrong_Tecnico",
+    "name": "ed018854-756e-47fc-a3a9-1054d74dc0c6"
+  }, {
+    "condition": "$session.params.codice-titolare-PF = null AND $session.params.codice-titolare-PG = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non sono riuscito ad identificarti." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Il cliente si è autenticato con un BT non presente"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "214772f6-94cc-4ea9-8db0-e29c2c47ca6d"
+  } ]
+}

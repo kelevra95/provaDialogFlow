@@ -1,0 +1,65 @@
+{
+  "name": "3049a657-1b1a-463f-9587-f8db81e4e597",
+  "displayName": "PerimetroEllis",
+  "transitionRoutes": [ {
+    "intent": "carte.blocco",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Se de-sideri bloccare una o più carte, ti invito a richiamare." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "8622d0c6-a9e8-4bbc-9481-b80dcc488de7"
+  }, {
+    "intent": "presa.appuntamento",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Se de-sideri fissare un appuntamento, ti invito a richiamare." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "3f596c66-d224-49ff-8f94-811e50a77cfa"
+  }, {
+    "intent": "richiesta.estratto.conto",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Se de-sideri l'estratto conto, ti invito a richiamare." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "ef061c62-f91d-4665-93b0-ed40d7827e1b"
+  }, {
+    "intent": "sblocco.contratto",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Se de-sideri richiedere lo sblocco del contratto multicanale, ti invito a richiamare." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "ceaeb231-de3d-4d4d-af3d-53fb5e434fce"
+  }, {
+    "intent": "carte.attivazione",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Se de-sideri attivare una carta, ti invito a richiamare." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "77cb91b0-67d2-46e2-b7b5-1404658e0655"
+  } ]
+}

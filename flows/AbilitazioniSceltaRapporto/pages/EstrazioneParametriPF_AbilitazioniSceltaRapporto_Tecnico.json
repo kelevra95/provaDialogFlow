@@ -1,0 +1,56 @@
+{
+  "name": "cd544904-ea7c-4831-8325-b263f40be4d6",
+  "displayName": "EstrazioneParametriPF_AbilitazioniSceltaRapporto_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.tipologia-rapporto-PF = \"IBAN\" AND $session.params.tot-rapporti-abilitati-IBAN-PF = null",
+    "triggerFulfillment": {
+      "webhook": "Riferimenti-contatto-cliente",
+      "tag": "getAbilitazioniFromCF"
+    },
+    "targetPage": "VerificaFulfillmentPF_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "3d674155-d216-4e9c-8b51-a20f94b4a70c"
+  }, {
+    "condition": "$session.params.tipologia-rapporto-PF = \"carte\" AND $session.params.tot-rapporti-abilitati-carte-PF = null",
+    "triggerFulfillment": {
+      "webhook": "Riferimenti-contatto-cliente",
+      "tag": "getAbilitazioniFromCF"
+    },
+    "targetPage": "VerificaFulfillmentPF_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "68ae8a5d-bffa-43c0-b373-bcfb891ab05e"
+  }, {
+    "condition": "$session.params.tipologia-rapporto-PF = \"DA\" AND $session.params.tot-rapporti-abilitati-DA-PF = null",
+    "triggerFulfillment": {
+      "webhook": "Riferimenti-contatto-cliente",
+      "tag": "getAbilitazioniFromCF"
+    },
+    "targetPage": "VerificaFulfillmentPF_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "53e6c564-d40a-46a9-8206-e53cff430939"
+  }, {
+    "condition": "$session.params.tipologia-rapporto-PF = \"IBAN\" AND $session.params.tot-rapporti-abilitati-IBAN-PF != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaRapportiPF_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "b2398a30-4fca-4b2d-8b52-ed14063bba31"
+  }, {
+    "condition": "$session.params.tipologia-rapporto-PF = \"carte\" AND $session.params.tot-rapporti-abilitati-carte-PF != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaRapportiPF_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "06bfe8e2-ef45-4475-a07c-869c98078efb"
+  }, {
+    "condition": "$session.params.tipologia-rapporto-PF = \"DA\" AND $session.params.tot-rapporti-abilitati-DA-PF != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaRapportiPF_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "02a33ee8-f62d-403e-99f5-fe2b25a6d61e"
+  } ]
+}

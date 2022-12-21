@@ -1,0 +1,129 @@
+{
+  "name": "09707388-db16-4c1e-97f9-627561fedd75",
+  "displayName": "VerificaLivelloAbilitazionePG_AbilitazioniSceltaRapporto_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "flusso-corrente",
+      "value": "$session.params.flusso-precedente"
+    }, {
+      "parameter": "flusso-precedente",
+      "value": "Abilitazioni Scelta Rapporto"
+    }, {
+      "parameter": "sottoflusso-corrente",
+      "value": "$session.params.sottoflusso-precedente"
+    }, {
+      "parameter": "sottoflusso-precedente",
+      "value": "Abilitazioni Scelta Rapporto"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.tipologia-rapporto-PG = \"IBAN\" AND $session.params.tot-rapporti-abilitati-IBAN-PG = 1 AND (($session.params.livello-abilitazione = \"DISPONI\" AND $session.params.estratto-abilitazione-IBAN-PG != \"DISPONI\") OR ($session.params.livello-abilitazione = \"CONSULTA\" AND $session.params.estratto-abilitazione-IBAN-PG != \"CONSULTA\" AND $session.params.estratto-abilitazione-IBAN-PG != \"DISPONI\"))",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "\u003cspeak\u003e\n Per l'operazione che mi stai richiedendo, non mi risultano le necessarie abilitazioni sul conto o carta prepagata numero\n  \u003csay-as interpret-as=\"verbatim\"\u003e$session.params.estratto-rapporto-IBAN-PG\u003c/say-as\u003e.\n  \u003c/speak\u003e" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "$sys.func.CONCATENATE(\"Il cliente PG non ha le abilitazioni necessarie per l'operazione richiesta sul conto/carta prepagata numero \", $session.params.estratto-rapporto-IBAN-PG)"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "ea435dd8-ddcd-4a9f-a81e-a5a05c7c8c37"
+  }, {
+    "condition": "$session.params.tipologia-rapporto-PG = \"carte\" AND $session.params.tot-rapporti-abilitati-carte-PG = 1 AND (($session.params.livello-abilitazione = \"DISPONI\" AND $session.params.estratto-abilitazione-carte-PG != \"DISPONI\") OR ($session.params.livello-abilitazione = \"CONSULTA\" AND $session.params.estratto-abilitazione-carte-PG != \"CONSULTA\" AND $session.params.estratto-abilitazione-carte-PG != \"DISPONI\"))",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "\u003cspeak\u003e\n Per l'operazione che mi stai richiedendo, non mi risultano le necessarie abilitazioni sulla carta con le 4 cifre finali \n  \u003csay-as interpret-as=\"verbatim\"\u003e$session.params.estratto-rapporto-carte-PG\u003c/say-as\u003e.\n  \u003c/speak\u003e" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "$sys.func.CONCATENATE(\"Il cliente PG non ha le abilitazioni necessarie per l'operazione richiesta sulla carta numero \", $session.params.estratto-rapporto-carte-PG)"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "86de59c0-88a5-47ca-8c48-b2c51ba43c6f"
+  }, {
+    "condition": "$session.params.tipologia-rapporto-PG = \"DA\" AND $session.params.tot-rapporti-abilitati-carte-PG = 1 AND (($session.params.livello-abilitazione = \"DISPONI\" AND $session.params.estratto-abilitazione-DA-PG != \"DISPONI\") OR ($session.params.livello-abilitazione = \"CONSULTA\" AND $session.params.estratto-abilitazione-DA-PG != \"CONSULTA\" AND $session.params.estratto-abilitazione-DA-PG != \"DISPONI\"))",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "\u003cspeak\u003e\n Per l'operazione che mi stai richiedendo, non mi risultano le necessarie abilitazioni sul deposito amministrato numero  \u003csay-as interpret-as=\"verbatim\"\u003e$session.params.estratto-rapporto-DA-PG\u003c/say-as\u003e.\n  \u003c/speak\u003e" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "$sys.func.CONCATENATE(\"Il cliente PG non ha le abilitazioni necessarie per l'operazione richiesta sul deposito amministrato numero \", $session.params.estratto-rapporto-DA-PG)"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "a004161d-8f2d-4b0d-9a94-38599d8d7859"
+  }, {
+    "condition": "$session.params.tipologia-rapporto-PG = \"IBAN\" AND $session.params.tot-rapporti-abilitati-IBAN-PG \u003e 1 AND (($session.params.livello-abilitazione = \"DISPONI\" AND $session.params.estratto-abilitazione-IBAN-PG != \"DISPONI\") OR ($session.params.livello-abilitazione = \"CONSULTA\" AND $session.params.estratto-abilitazione-IBAN-PG != \"CONSULTA\" AND $session.params.estratto-abilitazione-IBAN-PG != \"DISPONI\"))",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "\u003cspeak\u003e\r\n Per l'operazione che mi stai richiedendo, non mi risultano le necessarie abilitazioni sul conto o carta prepagata numero\r\n  \u003csay-as interpret-as=\"verbatim\"\u003e$session.params.estratto-rapporto-IBAN-PG\u003c/say-as\u003e.\r\n  \u003c/speak\u003e" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "$sys.func.CONCATENATE(\"Il cliente PG non ha le abilitazioni necessarie per l'operazione richiesta sul conto o carta prepagata numero \", $session.params.estratto-rapporto-IBAN-PG, \" e non ha scelto di cambiare rapporto\")"
+      } ]
+    },
+    "targetPage": "ConfermaCambioRapportoPG_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "f32e8254-3600-450b-b77a-aa0b84c57d57"
+  }, {
+    "condition": "$session.params.tipologia-rapporto-PG = \"carte\" AND $session.params.tot-rapporti-abilitati-carte-PG \u003e 1 AND (($session.params.livello-abilitazione = \"DISPONI\" AND $session.params.estratto-abilitazione-carte-PG != \"DISPONI\") OR ($session.params.livello-abilitazione = \"CONSULTA\" AND $session.params.estratto-abilitazione-carte-PG != \"CONSULTA\" AND $session.params.estratto-abilitazione-carte-PG != \"DISPONI\"))",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "\u003cspeak\u003e\r\n Per l'operazione che mi stai richiedendo, non mi risultano le necessarie abilitazioni sulla carta con le 4 cifre finali \r\n  \u003csay-as interpret-as=\"verbatim\"\u003e$session.params.estratto-rapporto-carte-PG\u003c/say-as\u003e.\r\n  \u003c/speak\u003e" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "$sys.func.CONCATENATE(\"Il cliente PG non ha le abilitazioni necessarie per l'operazione richiesta sulla carta numero \", $session.params.estratto-rapporto-carte-PG, \" e non ha scelto di cambiare rapporto\")"
+      } ]
+    },
+    "targetPage": "ConfermaCambioRapportoPG_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "afad3cb5-eb82-4615-9872-3db088a744b0"
+  }, {
+    "condition": "$session.params.tipologia-rapporto-PG = \"DA\" AND $session.params.tot-rapporti-abilitati-carte-PG \u003e 1 AND (($session.params.livello-abilitazione = \"DISPONI\" AND $session.params.estratto-abilitazione-DA-PG != \"DISPONI\") OR ($session.params.livello-abilitazione = \"CONSULTA\" AND $session.params.estratto-abilitazione-DA-PG != \"CONSULTA\" AND $session.params.estratto-abilitazione-DA-PG != \"DISPONI\"))",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "\u003cspeak\u003e\r\n Per l'operazione che mi stai richiedendo, non mi risultano le necessarie abilitazioni sul deposito amministrato numero  \u003csay-as interpret-as=\"verbatim\"\u003e$session.params.estratto-rapporto-DA-PG\u003c/say-as\u003e.\r\n  \u003c/speak\u003e" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "$sys.func.CONCATENATE(\"Il cliente PG non ha le abilitazioni necessarie per l'operazione richiesta sul deposito amministrato numero \", $session.params.estratto-rapporto-DA-PG, \" e non ha scelto di cambiare rapporto\")"
+      } ]
+    },
+    "targetPage": "ConfermaCambioRapportoPG_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "9c864ab8-2962-4a9b-8a97-0561d1a14b33"
+  }, {
+    "condition": "($session.params.tipologia-rapporto-PG = \"IBAN\" AND (($session.params.livello-abilitazione = \"DISPONI\" AND $session.params.estratto-abilitazione-IBAN-PG = \"DISPONI\") OR ($session.params.livello-abilitazione = \"CONSULTA\" AND $session.params.estratto-abilitazione-IBAN-PG = \"CONSULTA\") OR ($session.params.livello-abilitazione = \"CONSULTA\" AND $session.params.estratto-abilitazione-IBAN-PG = \"DISPONI\"))) OR ($session.params.tipologia-rapporto-PG = \"carte\" AND (($session.params.livello-abilitazione = \"DISPONI\" AND $session.params.estratto-abilitazione-carte-PG = \"DISPONI\") OR ($session.params.livello-abilitazione = \"CONSULTA\" AND $session.params.estratto-abilitazione-carte-PG = \"CONSULTA\") OR ($session.params.livello-abilitazione = \"CONSULTA\" AND $session.params.estratto-abilitazione-carte-PG = \"DISPONI\"))) OR ($session.params.tipologia-rapporto-PG = \"DA\" AND (($session.params.livello-abilitazione = \"DISPONI\" AND $session.params.estratto-abilitazione-DA-PG = \"DISPONI\") OR ($session.params.livello-abilitazione = \"CONSULTA\" AND $session.params.estratto-abilitazione-DA-PG = \"CONSULTA\") OR ($session.params.livello-abilitazione = \"CONSULTA\" AND $session.params.estratto-abilitazione-DA-PG = \"DISPONI\")))",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "livello-abilitazione-esito",
+        "value": true
+      } ]
+    },
+    "targetPage": "End Flow",
+    "name": "654ee259-2bbd-46f8-9416-279970b5b95e"
+  } ]
+}

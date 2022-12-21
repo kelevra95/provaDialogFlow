@@ -1,0 +1,208 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "volevo sapere se fosse sicuro inserire i codici della banca sulla vostra app",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "se",
+      "auto": true
+    }, {
+      "text": " mi ",
+      "auto": true
+    }, {
+      "text": "rubano",
+      "auto": true
+    }, {
+      "text": " il ",
+      "auto": true
+    }, {
+      "text": "telefono",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "l'",
+      "auto": true
+    }, {
+      "text": "accesso",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "all'",
+      "auto": true
+    }, {
+      "text": "app ",
+      "auto": true
+    }, {
+      "text": "della banca",
+      "auto": true
+    }, {
+      "text": " è al ",
+      "auto": true
+    }, {
+      "text": "sicuro",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho il dubbio che l'app che ho installato sul mio telefono non sia sicura",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "possono ",
+      "auto": true
+    }, {
+      "text": "rubarmi",
+      "auto": true
+    }, {
+      "text": " i dati ",
+      "auto": true
+    }, {
+      "text": "dall'",
+      "auto": true
+    }, {
+      "text": "app che ho sul ",
+      "auto": true
+    }, {
+      "text": "telefono",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo scaricare l'app sul mio cellulare ma ho paura che non sia sicura",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "è ",
+      "auto": true
+    }, {
+      "text": "sicura",
+      "auto": true
+    }, {
+      "text": " la ",
+      "auto": true
+    }, {
+      "text": "vostra",
+      "auto": true
+    }, {
+      "text": " app?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei avere informazioni sulla sicurezza della vostra app",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "se",
+      "auto": true
+    }, {
+      "text": " faccio il download ",
+      "auto": true
+    }, {
+      "text": "dell'app",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "della banca",
+      "auto": true
+    }, {
+      "text": " sul ",
+      "auto": true
+    }, {
+      "text": "mio",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "telefono",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "c",
+      "auto": true
+    }, {
+      "text": "'è qualche rischio ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " livello di privacy?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei sapere se c'è il rischio che rubino i miei dati scaricando la vostra app",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "è ",
+      "auto": true
+    }, {
+      "text": "sicuro",
+      "auto": true
+    }, {
+      "text": " scaricare ",
+      "auto": true
+    }, {
+      "text": "l'",
+      "auto": true
+    }, {
+      "text": "app sul ",
+      "auto": true
+    }, {
+      "text": "mio",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "telefono",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

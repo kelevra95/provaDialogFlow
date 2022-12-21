@@ -1,0 +1,30 @@
+{
+  "name": "152584de-65e2-4978-ae2c-076ceff271a7",
+  "displayName": "SalutiFinali_EseguitiTitoli_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.chiamata-survey = \"on\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Survey_EseguitiTitoli_Investimenti",
+    "name": "24bf7ef8-9fb9-420e-81fd-53308101fd87"
+  }, {
+    "condition": "$session.params.chiamata-survey = \"off\" OR $session.params.chiamata-survey = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "È stato un piacere parlare con te. A presto!" ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "a24873d2-8cdd-4061-9944-ff4a1911588e"
+  } ]
+}

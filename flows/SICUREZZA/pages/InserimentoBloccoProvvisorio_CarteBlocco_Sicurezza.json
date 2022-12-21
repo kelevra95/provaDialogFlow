@@ -1,0 +1,67 @@
+{
+  "name": "f9bbb8e0-4d6a-493e-9f9f-9ba43f13e569",
+  "displayName": "InserimentoBloccoProvvisorio_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Gestione-carte",
+    "tag": "blockCard",
+    "setParameterActions": [ {
+      "parameter": "descrizione-ticket",
+      "value": "Ellis - Blocco Carta cautelativo"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "6b24fac3-0eb3-4b19-abb8-8eec800d4a81"
+  }, {
+    "condition": "$session.params.fulfillment-error = false",
+    "triggerFulfillment": {
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.tipo-carta = \"Tutte\"",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Ti confermo che la tua carta è stata bloccata temporaneamente. Se de-sideri riattivare la carta, contatta la filiale digitale, oppure rècati nella tua agenzia. Ti ricordo inoltre, che le operazioni di blocco non sospendono il canone della carta." ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "additionalCases": {
+              "cases": [ {
+                "condition": "$session.params.tipo-carta = \"Prepagata\"",
+                "caseContent": [ {
+                  "message": {
+                    "text": {
+                      "text": [ "Ti confermo che la tua carta prepagata è stata bloccata temporaneamente. Se de-sideri riattivare la carta, contatta la filiale digitale, oppure rècati nella tua agenzia. Ti ricordo inoltre, che le operazioni di blocco non sospendono il canone della carta." ]
+                    },
+                    "languageCode": "it"
+                  }
+                } ]
+              }, {
+                "caseContent": [ {
+                  "message": {
+                    "text": {
+                      "text": [ "Ti confermo che la tua carta di $session.params.tipo-carta è stata bloccata temporaneamente. Se de-sideri riattivare la carta, contatta la filiale digitale, oppure rècati nella tua agenzia. Ti ricordo inoltre, che le operazioni di blocco non sospendono il canone della carta." ]
+                    },
+                    "languageCode": "it"
+                  }
+                } ]
+              } ]
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "RecuperoEmailFiliale_CarteBlocco_Sicurezza",
+    "name": "e5b8644e-949b-4414-b0f6-5c492bc44652"
+  } ]
+}

@@ -1,0 +1,79 @@
+{
+  "name": "32af00b0-6224-4e30-88b8-e4c4506cce37",
+  "displayName": "InserimentoBloccoDefinitivoConRiemissione_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Gestione-carte",
+    "tag": "blockCard",
+    "setParameterActions": [ {
+      "parameter": "descrizione-ticket",
+      "value": "$sys.func.CONCATENATE(\"Ellis - Blocco Carte per \", $session.params.motivazione-blocco,\" con riemissione\")"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "afc9d343-eedf-475a-b791-cc14db0e8313"
+  }, {
+    "condition": "$session.params.fulfillment-error = false",
+    "triggerFulfillment": {
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.tipo-carta = \"Tutte\"",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Ti confermo di aver bloccato in modo definitivo la tua carta e di averne richiesto la riemissione. Riceverai la carta nelle prossime settimane tramite il servizio postale." ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "additionalCases": {
+              "cases": [ {
+                "condition": "$session.params.tipo-carta = \"Prepagata\"",
+                "caseContent": [ {
+                  "message": {
+                    "text": {
+                      "text": [ "Ti confermo di aver bloccato in modo definitivo la tua carta prepagata e di averne richiesto la riemissione. Riceverai la carta nelle prossime settimane tramite il servizio postale." ]
+                    },
+                    "languageCode": "it"
+                  }
+                } ]
+              }, {
+                "caseContent": [ {
+                  "message": {
+                    "text": {
+                      "text": [ "Ti confermo di aver bloccato in modo definitivo la tua carta di $session.params.tipo-carta e di averne richiesto la riemissione. Riceverai la carta nelle prossime settimane tramite il servizio postale." ]
+                    },
+                    "languageCode": "it"
+                  }
+                } ]
+              } ]
+            }
+          } ]
+        } ]
+      }, {
+        "cases": [ {
+          "condition": "$session.params.motivazione-blocco = \"smarrimento\"",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "È sempre buona norma sporgere denuncia presso le autorità competenti entro le 48 ore. La denuncia è inoltre indispensabile per disconoscere eventuali operazioni fraudolente." ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "RecuperoEmailFiliale_CarteBlocco_Sicurezza",
+    "name": "51e22ba2-3388-405d-aa0f-fca829637410"
+  } ]
+}

@@ -1,0 +1,107 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "vorrei attivare una domiciliazione su "
+    }, {
+      "text": "carta",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso respingere la bolletta che mi addebitano sulla "
+    }, {
+      "text": "carta",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso modificare la domiciliazione sulla mia "
+    }, {
+      "text": "carta",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei cancellare una domiciliazione presente sulla "
+    }, {
+      "text": "carta",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    }, {
+      "text": " di credito"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei cancellare un rid presente sulla mia "
+    }, {
+      "text": "carta",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio a respingere un rid addebitato sulla "
+    }, {
+      "text": "carta",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi spieghi come respingere una domiciliazione su "
+    }, {
+      "text": "carta",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    }, {
+      "text": " mastercard?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei respongere un pagamento addebitato tramite rid su "
+    }, {
+      "text": "carta",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso gestire una domiciliazione sulla "
+    }, {
+      "text": "carta",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    }, {
+      "text": " visa?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei modificare una domiciliazione su "
+    }, {
+      "text": "carta",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    }, {
+      "text": " di credito"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

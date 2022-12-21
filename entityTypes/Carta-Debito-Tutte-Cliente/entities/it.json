@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "carta-debito-tutte-cliente",
+    "synonyms": [ "carte bancocard", "carte bancomat", "carte di debito", "i bancocard", "i bancomat", "i due bancocard", "i due bancomat", "i quattro bancocard plus", "le due carte di credito", "le tre x me card", "solo i bancomat", "solo le carte di debito", "solo le xme card", "tutte le bancocard", "tutte le carte di debito", "tutte le debit", "tutte le ics me card", "tutte le next card", "tutte le per me card", "tutte le tessere bancocard", "tutte le tessere bancomat", "tutte le xme card", "tutti i bancocard", "tutti i bancocard besic", "tutti i bancomat", "solo le per me card" ],
+    "languageCode": "it"
+  } ]
+}

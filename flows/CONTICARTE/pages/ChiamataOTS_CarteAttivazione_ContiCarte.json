@@ -1,0 +1,30 @@
+{
+  "name": "5630c1f8-8f6c-493a-b10c-2d8351f0c335",
+  "displayName": "ChiamataOTS_CarteAttivazione_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "payload": {
+        "Execute_Request": {
+          "Data": {
+            "Params": {
+            
+            }
+          },
+          "Event_Name": "activationCard_event"
+        }
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "eventHandlers": [ {
+    "targetPage": "VerificaOTS_CarteAttivazione_ContiCarte",
+    "event": "activationCard_event",
+    "triggerFulfillment": {
+    
+    },
+    "name": "9a06ef8e-4936-462b-bb09-117192064f8f"
+  } ]
+}

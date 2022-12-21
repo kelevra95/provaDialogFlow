@@ -1,0 +1,174 @@
+{
+  "name": "02fd4c1f-d136-470a-8ee5-4e4087e3bd5a",
+  "displayName": "ValidazioneLimiteMensile_CarteLimiti_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.operazione = \"pagamento\" AND $session.params.limite-mensile-nuovo \u003c= $session.params.limite-pagamento-mensile-massimo AND ($session.params.limite-mensile-nuovo \u003c= $session.params.limite-pagamento-mensile-corrente OR ($session.params.aumento-limite-possibile = true AND $session.params.limite-mensile-nuovo \u003e $session.params.limite-pagamento-mensile-corrente)) AND $session.params.limite-mensile-nuovo \u003e= $session.params.limite-pagamento-mensile-minimo AND $session.params.limite-mensile-nuovo \u003e= $session.params.limite-giornaliero-nuovo AND $sys.func.MID($sys.func.TO_TEXT($session.params.limite-mensile-nuovo), $sys.func.MINUS($sys.func.LEN($sys.func.TO_TEXT($session.params.limite-mensile-nuovo)), 1), 2) = \"00\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ho modificato il limite mensile come richiesto." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operazione-limite-operativo",
+        "value": "$sys.func.REMOVE($session.params.operazione-limite-operativo, $session.params.operazione)"
+      }, {
+        "parameter": "limite-pagamento-giornaliero-nuovo",
+        "value": "$sys.func.IF(\"$session.params.limite-giornaliero-nuovo = $session.params.limite-pagamento-giornaliero-corrente\", null, $session.params.limite-giornaliero-nuovo)"
+      }, {
+        "parameter": "limite-pagamento-mensile-nuovo",
+        "value": "$sys.func.IF(\"$session.params.limite-mensile-nuovo = $session.params.limite-pagamento-mensile-corrente\", null, $session.params.limite-mensile-nuovo)"
+      } ]
+    },
+    "targetPage": "ControlloLoop_CarteLimiti_ContiCarte",
+    "name": "cafd46e7-6457-41e9-90ac-3852b74cd79b"
+  }, {
+    "condition": "$session.params.operazione = \"prelievo\" AND $session.params.limite-mensile-nuovo \u003c= $session.params.limite-prelievo-mensile-massimo AND ($session.params.limite-mensile-nuovo \u003c= $session.params.limite-prelievo-mensile-corrente OR ($session.params.aumento-limite-possibile = true AND $session.params.limite-mensile-nuovo \u003e $session.params.limite-prelievo-mensile-corrente)) AND $session.params.limite-mensile-nuovo \u003e= $session.params.limite-prelievo-mensile-minimo AND $session.params.limite-mensile-nuovo \u003e= $session.params.limite-giornaliero-nuovo AND $sys.func.MID($sys.func.TO_TEXT($session.params.limite-mensile-nuovo), $sys.func.MINUS($sys.func.LEN($sys.func.TO_TEXT($session.params.limite-mensile-nuovo)), 1), 2) = \"00\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ho modificato il limite mensile come richiesto." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "operazione-limite-operativo",
+        "value": "$sys.func.REMOVE($session.params.operazione-limite-operativo, $session.params.operazione)"
+      }, {
+        "parameter": "limite-prelievo-giornaliero-nuovo",
+        "value": "$sys.func.IF(\"$session.params.limite-giornaliero-nuovo = $session.params.limite-prelievo-giornaliero-corrente\", null, $session.params.limite-giornaliero-nuovo)"
+      }, {
+        "parameter": "limite-prelievo-mensile-nuovo",
+        "value": "$sys.func.IF(\"$session.params.limite-mensile-nuovo = $session.params.limite-prelievo-mensile-corrente\", null, $session.params.limite-mensile-nuovo)"
+      } ]
+    },
+    "targetPage": "ControlloLoop_CarteLimiti_ContiCarte",
+    "name": "448c30bc-f811-4ca2-ae5b-80d925e970a7"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non è stato possibile cambiare il limite con la cifra richiesta." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "limite-mensile-nuovo",
+        "value": null
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.operazione = \"pagamento\" AND $session.params.limite-mensile-nuovo \u003e $session.params.limite-pagamento-mensile-massimo",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Il nuovo limite mensile di $session.params.operazione deve essere inferiore o uguale al limite mensile massimo di $session.params.limite-pagamento-mensile-massimo euro" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "condition": "$session.params.limite-mensile-nuovo \u003e $session.params.limite-pagamento-mensile-corrente AND $session.params.aumento-limite-possibile = false",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Il nuovo limite mensile di $session.params.operazione può solo essere ridotto in quanto hai esaurito le modifiche annuali in incremento" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "condition": "$session.params.limite-mensile-nuovo \u003c $session.params.limite-pagamento-mensile-minimo",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Il nuovo limite mensile di $session.params.operazione deve essere superiore o uguale al limite mensile minimo di $session.params.limite-pagamento-mensile-minimo euro" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "condition": "$session.params.limite-mensile-nuovo \u003c $session.params.limite-giornaliero-nuovo",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Il nuovo limite mensile di $session.params.operazione non può essere inferiore al limite giornaliero di $session.params.operazione settato attualmente a $session.params.limite-giornaliero-nuovo euro" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "condition": "NOT $sys.func.MID($sys.func.TO_TEXT($session.params.limite-mensile-nuovo), $sys.func.MINUS($sys.func.LEN($sys.func.TO_TEXT($session.params.limite-mensile-nuovo)), 1), 2) = \"00\"",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Il nuovo limite mensile di $session.params.operazione deve essere un multiplo di 100" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "condition": "$session.params.operazione = \"prelievo\" AND $session.params.limite-mensile-nuovo \u003e $session.params.limite-prelievo-mensile-massimo",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Il nuovo limite mensile di $session.params.operazione deve essere inferiore o uguale al limite mensile massimo di $session.params.limite-prelievo-mensile-massimo euro" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "condition": "$session.params.limite-mensile-nuovo \u003e $session.params.limite-prelievo-mensile-corrente AND $session.params.aumento-limite-possibile = false",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Il nuovo limite mensile di $session.params.operazione può solo essere ridotto in quanto hai esaurito le modifiche annuali in incremento" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "condition": "$session.params.limite-mensile-nuovo \u003c $session.params.limite-prelievo-mensile-minimo",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Il nuovo limite mensile di $session.params.operazione deve essere superiore o uguale al limite mensile minimo di $session.params.limite-prelievo-mensile-minimo euro" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "condition": "$session.params.limite-mensile-nuovo \u003c $session.params.limite-giornaliero-nuovo",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Il nuovo limite mensile di $session.params.operazione non può essere inferiore al limite giornaliero di $session.params.operazione settato attualmente a $session.params.limite-giornaliero-nuovo euro" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "condition": "NOT $sys.func.MID($sys.func.TO_TEXT($session.params.limite-mensile-nuovo), $sys.func.MINUS($sys.func.LEN($sys.func.TO_TEXT($session.params.limite-mensile-nuovo)), 1), 2) = \"00\"",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "Il nuovo limite mensile di $session.params.operazione deve essere un multiplo di 100" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "PropostaCambioLimiteMensile_CarteLimiti_ContiCarte",
+    "name": "7bdbae63-24c3-4894-a7e2-8d95dedbcb9b"
+  } ]
+}

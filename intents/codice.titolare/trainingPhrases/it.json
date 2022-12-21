@@ -1,0 +1,65 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "qual è il codice di ",
+      "auto": true
+    }, {
+      "text": "8"
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "numeri"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dove lo trovo"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cos'è il codice titolare"
+    } ],
+    "repeatCount": 3,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "a quale codice ti riferisci?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "a cosa serve il codice titolare?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "di quale codice parli?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "di che si tratta?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cos'è il codice my key"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non ho idea di cosa sia questo codice"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

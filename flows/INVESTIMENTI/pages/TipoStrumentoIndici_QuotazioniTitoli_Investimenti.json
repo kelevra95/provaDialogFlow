@@ -1,0 +1,15 @@
+{
+  "name": "aa8fa26c-00ff-45b9-8b29-bb1a664740ea",
+  "displayName": "TipoStrumentoIndici_QuotazioniTitoli_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Ok, ti elenco gli inidici più importanti." ]
+      },
+      "languageCode": "it"
+    } ]
+  }
+}

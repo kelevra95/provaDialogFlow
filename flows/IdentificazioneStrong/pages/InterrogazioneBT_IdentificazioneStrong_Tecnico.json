@@ -1,0 +1,26 @@
+{
+  "name": "87abd67d-6c2b-40e8-b204-7d3ef222bd65",
+  "displayName": "InterrogazioneBT_IdentificazioneStrong_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Riferimenti-contatto-cliente",
+    "tag": "searchCustomerInfoFromBT"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "b3094d83-6645-4615-8f57-e87cde93200d"
+  }, {
+    "condition": "$session.params.fulfillment-error = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaPFPGConBT_IdentificazioneStrong_Tecnico",
+    "name": "ee9625b4-38df-4fae-a157-4c6732f46b51"
+  } ]
+}

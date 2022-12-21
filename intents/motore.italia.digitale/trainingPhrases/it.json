@@ -1,0 +1,116 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "vorrei informazioni in merito al programma di digitalizzazione imprese",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "finaziamento D-loan",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "motore italia digitale"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dove posso trovare le informazioni necessarie per ottenere un finanziamento per pmi?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho bisogno di maggiori informazioni sul programma motore italia, grazie"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho bisogno di finanziare un progetto, posso usufruire del programma motore italia?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei saperne di più sul vostro programma a supporto delle piccole e medie imprese"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dove trovo ",
+      "auto": true
+    }, {
+      "text": "l'",
+      "auto": true
+    }, {
+      "text": "informazione sul programma motore ",
+      "auto": true
+    }, {
+      "text": "italia",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come funziona la procedura per la richiesta di finanziamenti aziendali in italia?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cos'è il vostro nuovo programma di motore italia?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi spigheresti come si ottengono i finanziamenti con fondo di motore italia?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come ",
+      "auto": true
+    }, {
+      "text": "si",
+      "auto": true
+    }, {
+      "text": " ottengono i ",
+      "auto": true
+    }, {
+      "text": "finanziamenti",
+      "auto": true
+    }, {
+      "text": " pmi?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come funziona il programma motore ",
+      "auto": true
+    }, {
+      "text": "italia",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

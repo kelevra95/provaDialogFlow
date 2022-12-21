@@ -1,0 +1,135 @@
+{
+  "name": "c6b16854-f855-4347-a80b-60ad052192f8",
+  "displayName": "SceltaPFPG_HandoverConID_Tecnico",
+  "form": {
+    "parameters": [ {
+      "displayName": "tipo-persona",
+      "required": true,
+      "entityType": "@Tipo-Persona",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Mi stai contattando come privato o come azienda?" ]
+            },
+            "languageCode": "it"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Puoi dirmi se persona fisica o persona giuridica?" ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "791dff85-2f85-4611-a3d2-ac2d31ab5477"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Puoi dirmi se persona fisica o persona giuridica?" ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "f6765967-92a7-463b-9c8d-1fbcef38d2b8"
+        }, {
+          "targetFlow": "HandoverOK",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non sentire." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "016e4a31-dda3-4362-954f-12003ca1ff7d"
+        }, {
+          "targetFlow": "HandoverOK",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non capire." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "5811e627-787a-4260-8dbb-a09a9e341847"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "uscita",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "intento",
+        "value": "uscita"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "nani"
+      } ]
+    },
+    "targetFlow": "HandoverOK",
+    "name": "56a4eefd-14ba-4f5b-a19a-f8d4c5107267"
+  }, {
+    "intent": "operatore",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "intento",
+        "value": "operatore"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "nani"
+      } ]
+    },
+    "targetFlow": "HandoverOK",
+    "name": "f1586620-762b-4176-84ee-118238e5ccbb"
+  }, {
+    "condition": "$page.params.status = FINAL AND $session.params.tipo-persona = \"PF\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "cliente-tipo",
+        "value": "PF"
+      }, {
+        "parameter": "codice-titolare",
+        "value": "$session.params.codice-titolare-PF"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "light"
+      } ]
+    },
+    "targetPage": "VerificaPresenzaBT_HandoverConID_Tecnico",
+    "name": "6dd1ace1-0f07-405a-8412-006d141f45cb"
+  }, {
+    "condition": "$page.params.status = FINAL AND $session.params.tipo-persona = \"PG\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "livello-identificazione",
+        "value": "light"
+      }, {
+        "parameter": "cliente-tipo",
+        "value": "PG"
+      }, {
+        "parameter": "codice-titolare",
+        "value": "$session.params.codice-titolare-PG"
+      } ]
+    },
+    "targetPage": "NumeroPartitaIva_HandoverConID_Tecnico",
+    "name": "c86e51dd-8708-494c-ab10-f7c86db9d127"
+  } ]
+}

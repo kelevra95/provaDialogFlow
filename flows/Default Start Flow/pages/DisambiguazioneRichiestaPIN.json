@@ -1,0 +1,56 @@
+{
+  "name": "9dffec2b-34f8-4a7d-8f22-766eb64c1260",
+  "displayName": "DisambiguazioneRichiestaPIN",
+  "form": {
+    "parameters": [ {
+      "displayName": "tipo-carta-conto",
+      "required": true,
+      "entityType": "@tipo-carta-conto",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "della carta o del conto?" ]
+            },
+            "languageCode": "it"
+          } ]
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.tipo-carta-conto = conto AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non si può richiedere il pin del conto" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "tipo-carta-conto",
+        "value": null
+      } ]
+    },
+    "targetPage": "Start Page",
+    "name": "23a899e5-cbfd-4acf-9ad2-c7def273face"
+  }, {
+    "condition": "$session.params.tipo-carta-conto != conto AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.RPCA"
+      } ]
+    },
+    "targetFlow": "CONTICARTE",
+    "name": "f952b2d6-1fe5-40aa-ace0-ca041e19cbbb"
+  } ]
+}

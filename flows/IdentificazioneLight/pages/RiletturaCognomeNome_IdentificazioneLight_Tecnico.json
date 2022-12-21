@@ -1,0 +1,72 @@
+{
+  "name": "3a5cea89-a02c-4f06-9d45-27a32e4591b5",
+  "displayName": "RiletturaCognomeNome_IdentificazioneLight_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Mi confermi che ti chiami $session.params.cliente-cognome $session.params.cliente-nome?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": 0
+      } ]
+    },
+    "targetPage": "IdentificazioneLuogo_IdentificazioneLight_Tecnico",
+    "name": "3f1762f0-d044-46e2-b873-c23af77a1ee1"
+  }, {
+    "intent": "no",
+    "condition": "$session.params.contatore \u003e 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace, con questi dati non sono riuscito a verificare la tua identità." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "GestioneRamo_IdentificazioneLight_Tecnico",
+    "name": "91e88f83-a156-497a-9d5b-938c15cbb822"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Nessun problema. Riproviamo." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "cliente-cognome",
+        "value": null
+      }, {
+        "parameter": "cliente-nome",
+        "value": null
+      }, {
+        "parameter": "contatore",
+        "value": "$sys.func.ADD($session.params.contatore, 1)"
+      } ]
+    },
+    "targetPage": "IdentificazioneCognome_IdentificazioneLight_Tecnico",
+    "name": "f94a94af-934b-4f0e-b36b-951f7d1e1075"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "3faf68ae-5949-4535-be02-aa256e612dc9",
+  "displayName": "VerificaEsistenzaCarta_RichiestaPINCarta_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Gestione-carte",
+    "tag": "getEligibleCardInfo"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "3cd062d6-123a-43c4-8e86-3bf7af7ae3b5"
+  }, {
+    "condition": "$session.params.carta-idonea-PIN-trovata = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "InvioPINCarta_CarteRichiestaPIN_ContiCarte",
+    "name": "dfa09204-1784-4474-a92c-3c9c8ebe5797"
+  }, {
+    "condition": "$session.params.carta-idonea-PIN-trovata = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Il numero finale della carta non corrisponde." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": "$sys.func.ADD($session.params.contatore, 1)"
+      }, {
+        "parameter": "numero-finale-carta",
+        "value": null
+      } ]
+    },
+    "targetPage": "RichiestaNumeroCartaIdonea_CarteRichiestaPIN_ContiCarte",
+    "name": "fc3e683b-aac0-4e15-b4ee-bcd6ed021d80"
+  } ]
+}

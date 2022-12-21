@@ -1,0 +1,65 @@
+{
+  "name": "89ad4cb2-f0df-406e-a80e-8f8ef72bdedf",
+  "displayName": "ConfermaSingoloSlotAgenda_PresaAppuntamento_Assistenza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "scelta-slot",
+        "value": "primaAlternativa"
+      }, {
+        "parameter": "data-ora-scelta",
+        "value": "$sys.func.FORMAT_DATE($session.params.data-ora-slot1, dd/MM/yyyy HH:mm:ss)"
+      } ]
+    },
+    "targetPage": "InserimentoAppuntamento_PresaAppuntamento_Assistenza",
+    "name": "45e0aea1-0562-4b72-9ec6-8224ef8850d8"
+  }, {
+    "intent": "no",
+    "condition": "$session.params.tipo-gestore = \"filiale\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non trovo ulteriori opzioni. Ti consiglio di accedere al sito o app della banca, nella sezione parla con noi, per inserire in autonomia l'appuntamento." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "SalutiFinali_PresaAppuntamento_Assistenza",
+    "name": "25d96173-b0ba-467d-9c6b-5ea970d59c6e"
+  }, {
+    "intent": "no",
+    "condition": "$session.params.tipo-gestore = \"remoto\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Purtroppo non ho trovato disponibilità in agenda. Al momento non è possibile inserire un appuntamento con il tuo gestore digitale remoto in autonomia da sito o app." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Al cliente non vanno bene le date proposte da Ellis per l'appuntamento con il gestore remoto"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "4d06f05a-3b24-49de-9daa-9b52654ffe52"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

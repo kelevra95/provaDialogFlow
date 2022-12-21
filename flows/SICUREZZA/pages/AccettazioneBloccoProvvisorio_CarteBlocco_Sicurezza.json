@@ -1,0 +1,44 @@
+{
+  "name": "d604b0b4-91b2-4bf5-8dee-a590a1a670e9",
+  "displayName": "AccettazioneBloccoProvvisorio_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Vuoi proseguire?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ConfermaBloccoProvvisorio_CarteBlocco_Sicurezza",
+    "name": "b69a1ffd-4f91-43d6-8004-35fbe3c9288d"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "tipo-blocco",
+        "value": null
+      } ]
+    },
+    "targetPage": "ConfermaCartaDaBloccare_CarteBlocco_Sicurezza",
+    "name": "0417efdb-c064-4da0-9a5d-b28673ea941c"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

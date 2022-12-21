@@ -1,0 +1,59 @@
+{
+  "name": "04410c67-ac2e-4533-8955-3f5eb7f2e6c0",
+  "displayName": "Survey_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Sono riuscito ad aiutarti?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Bene. Sono contento. È stato un piacere parlare con te. A presto!" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "esito-survey",
+        "value": "si"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "3c0939ea-ebce-4c46-b7e7-51bb7457afb3"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace. Cercherò di migliorare per il futuro." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Il cliente non è soddisfatto dell'aiuto di Ellis"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "6c024cba-5529-40a1-9e7d-e73151bc0afb"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

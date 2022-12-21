@@ -1,0 +1,63 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "non trovo la carta di credito"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho due carte appoggiate al mio conto, dove trovo i dettagli?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non vedo la mia carta di credito"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho due carte associate ma vedo solo la prima"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non vedo la carta associata al conto di mio marito"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non trovo la carta intestata a mia moglie"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Perché nella sezione carte non vedo tutte le carte collegate ai conti correnti?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non vedo il bancomat di mia sorella"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo associare una nuova carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come si inserisce una carta che non compare"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

@@ -1,0 +1,128 @@
+{
+  "name": "3a4fc07a-fcd9-4869-a4e7-c1005b9f1fd9",
+  "displayName": "PropostaListaRapportiPF_AbilitazioniSceltaRapporto_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "conditionalCases": [ {
+      "cases": [ {
+        "condition": "$session.params.indice = 0",
+        "caseContent": [ {
+          "message": {
+            "text": {
+              "text": [ "Va bene. Ti elenco uno a uno tutti i rapporti su cui risulti abilitato." ]
+            },
+            "languageCode": "it"
+          }
+        } ]
+      } ]
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.tipologia-rapporto-PF = \"IBAN\" AND $session.params.indice = $session.params.tot-rapporti-abilitati-IBAN-PF",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non mi risultano altri conti o carte prepagate." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Il cliente PF non ha scelto alcun conto/carta prepagata su cui operare"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "72cc65aa-e63f-4002-9222-30eb4d78c72a"
+  }, {
+    "condition": "$session.params.tipologia-rapporto-PF = \"carte\" AND $session.params.indice = $session.params.tot-rapporti-abilitati-carte-PF",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non mi risultano altre carte." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Il cliente PF non ha scelto alcuna carta su cui operare"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "1e7401b1-ba65-4584-b64d-6752e89c357e"
+  }, {
+    "condition": "$session.params.tipologia-rapporto-PF = \"DA\" AND $session.params.indice = $session.params.tot-rapporti-abilitati-DA-PF",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non mi risultano altri depositi amministrati." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Il cliente PF non ha scelto alcun deposito amministrato su cui operare"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "3036a7e9-4ec8-47db-9edf-dd1108e51d4d"
+  }, {
+    "condition": "$session.params.tipologia-rapporto-PF = \"IBAN\" AND $session.params.indice \u003c $session.params.tot-rapporti-abilitati-IBAN-PF",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ " \u003cspeak\u003eVuoi utilizzare il conto o carta prepagata numero\n \u003csay-as interpret-as=\"verbatim\"\u003e  $session.params.numero-rapporto-PF \u003c/say-as\u003e  intestato a $session.params.intestazione-rapporto-PF?\n \u003c/speak\u003e" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "numero-rapporto-PF",
+        "value": "$sys.func.GET($session.params.lista-IBAN-PF,$session.params.indice)"
+      }, {
+        "parameter": "intestazione-rapporto-PF",
+        "value": "$sys.func.GET($session.params.intestazione-IBAN-PF,$session.params.indice)"
+      } ]
+    },
+    "targetPage": "LetturaListaRapportiPF_AbilitazioneSceltaRapporto_Tecnico",
+    "name": "bd6d6f69-41e0-4922-9546-20973fa082cf"
+  }, {
+    "condition": "$session.params.tipologia-rapporto-PF = \"carte\" AND $session.params.indice \u003c $session.params.tot-rapporti-abilitati-carte-PF",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ " \u003cspeak\u003e\n   Vuoi utilizzare la carta numero\n    \u003csay-as interpret-as=\"verbatim\"\u003e $session.params.numero-rapporto-PF \u003c/say-as\u003e intestata a $session.params.intestazione-rapporto-PF ?\n    \u003c/speak\u003e" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "numero-rapporto-PF",
+        "value": "$sys.func.GET($session.params.lista-carte-PF,$session.params.indice)"
+      }, {
+        "parameter": "intestazione-rapporto-PF",
+        "value": "$sys.func.GET($session.params.intestazione-carte-PF,$session.params.indice)"
+      } ]
+    },
+    "targetPage": "LetturaListaRapportiPF_AbilitazioneSceltaRapporto_Tecnico",
+    "name": "292ed95d-54d6-4af2-b10d-05e25b3bbcbf"
+  }, {
+    "condition": "$session.params.tipologia-rapporto-PF = \"DA\" AND $session.params.indice \u003c $session.params.tot-rapporti-abilitati-DA-PF",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "\u003cspeak\u003e\n    Vuoi utilizzare il deposito amministrato numero\n    \u003csay-as interpret-as=\"verbatim\"\u003e $session.params.numero-rapporto-PF \u003c/say-as\u003e intestato a $session.params.intestazione-rapporto-PF?\n    \u003c/speak\u003e " ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "numero-rapporto-PF",
+        "value": "$sys.func.GET($session.params.lista-DA-PF,$session.params.indice)"
+      }, {
+        "parameter": "intestazione-rapporto-PF",
+        "value": "$sys.func.GET($session.params.intestazione-DA-PF,$session.params.indice)"
+      } ]
+    },
+    "targetPage": "LetturaListaRapportiPF_AbilitazioneSceltaRapporto_Tecnico",
+    "name": "3b8b507c-7788-4ebc-9dc9-abb7b74ab226"
+  } ]
+}

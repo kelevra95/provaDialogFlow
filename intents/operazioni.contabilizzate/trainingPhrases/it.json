@@ -1,0 +1,141 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "vorrei sapere quando verrà contabilizzato il bonifico che ho appena fatto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Cosa significa che il ",
+      "auto": true
+    }, {
+      "text": "pagamento",
+      "auto": true
+    }, {
+      "text": " è ",
+      "auto": true
+    }, {
+      "text": "non",
+      "auto": true
+    }, {
+      "text": " contabilizzato?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quanto tempo serve per contabilizzare ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "movimento",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quando saranno addebitate le ",
+      "auto": true
+    }, {
+      "text": "spese",
+      "auto": true
+    }, {
+      "text": " della ",
+      "auto": true
+    }, {
+      "text": "carta di credito",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "perché mi trovo alcuni ",
+      "auto": true
+    }, {
+      "text": "movimenti",
+      "auto": true
+    }, {
+      "text": " contabilizzati e ",
+      "auto": true
+    }, {
+      "text": "altri",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "no",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "movimento della carta non ancora contabilizzato",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "c'è un movimento non contabilizzato",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho fatto un bonifico ma non è ancora contabilizzato",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "transazioni pos non contabilizzate",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non",
+      "auto": true
+    }, {
+      "text": " vedo ancora il ",
+      "auto": true
+    }, {
+      "text": "pagamento",
+      "auto": true
+    }, {
+      "text": ", come ",
+      "auto": true
+    }, {
+      "text": "mai",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

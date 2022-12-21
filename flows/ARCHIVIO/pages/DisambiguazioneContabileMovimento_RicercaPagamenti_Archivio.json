@@ -1,0 +1,121 @@
+{
+  "name": "b9dc33b2-dc64-415c-86ba-ed48a3c95d68",
+  "displayName": "DisambiguazioneContabileMovimento_RicercaPagamenti_Archivio",
+  "form": {
+    "parameters": [ {
+      "displayName": "contabile-movimento",
+      "required": true,
+      "entityType": "@Contabile-Movimento",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Per la ricerca che mi hai richiesto, ti riferisci alle ricevute dei pagamenti o ai movimenti?" ]
+            },
+            "languageCode": "it"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Scusa, ma non ho sentito. Per favore indicami se hai bisogno delle contabili o dei movimenti." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "c084d49f-0489-42ba-a371-f457b165b52b"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Scusa, ma non ho capito. Per favore indicami se hai bisogno delle contabili o dei movimenti." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "6ab1b777-4d89-435b-bcf0-7f63103b7bc8"
+        }, {
+          "targetFlow": "HandoverNonPrevistoProposta",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Mi dispiace, continuo a non sentire bene." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "motivo-handover",
+              "value": "Il cliente non ha specificato se vuole effettuare una ricerca di contabili o di movimenti"
+            } ]
+          },
+          "name": "3421490a-95da-4288-9b66-6c7bfbdbec44"
+        }, {
+          "targetFlow": "HandoverNonPrevistoProposta",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Mi dispiace, continuo a non capire. " ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "motivo-handover",
+              "value": "Il cliente non ha specificato se vuole effettuare una ricerca di contabili o di movimenti"
+            } ]
+          },
+          "name": "f4b6109d-5872-4423-8248-19a8163d1e6d"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.contabile-movimento = \"movimento\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.RIMO"
+      } ]
+    },
+    "targetFlow": "Default Start Flow",
+    "name": "a356de5d-6f81-40ac-b168-689f8e2904e3"
+  }, {
+    "condition": "$session.params.contabile-movimento = \"contabile\" AND $session.params.entrata-uscita = \"entrata\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Le contabili sono disponibili solo per le operazioni in addebito. Se de-sideri verificare la presenza di un bonifico o di un'altra operazione in accredito sul tuo conto, ti consiglio una verifica dei movimenti in entrata." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.RIMO"
+      }, {
+        "parameter": "contabile-movimento",
+        "value": "movimento"
+      } ]
+    },
+    "targetFlow": "Default Start Flow",
+    "name": "706f6333-8517-49d1-a47d-8d60fe643734"
+  }, {
+    "condition": "$session.params.contabile-movimento = \"contabile\" AND $session.params.entrata-uscita != \"entrata\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaTipoPagamento_RicercaPagamenti_Archivio",
+    "name": "ea9d20e2-455f-4022-b9da-92410a96ea1e"
+  } ]
+}

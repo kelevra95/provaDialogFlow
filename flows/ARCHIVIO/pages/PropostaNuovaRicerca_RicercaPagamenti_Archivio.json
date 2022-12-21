@@ -1,0 +1,47 @@
+{
+  "name": "f8dbf991-8290-445b-ba13-2c23548ee9cb",
+  "displayName": "PropostaNuovaRicerca_RicercaPagamenti_Archivio",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Proviamo con una nuova ricerca?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "tipo-pagamento",
+        "value": null
+      }, {
+        "parameter": "periodo-ricerca",
+        "value": null
+      } ]
+    },
+    "targetPage": "VerificaTipoPagamento_RicercaPagamenti_Archivio",
+    "name": "4a670ec8-1e11-4eef-898f-eebffccf81e2"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "3fc64717-3b6b-4792-bff6-5c15c1c077a1"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

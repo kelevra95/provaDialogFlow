@@ -1,0 +1,74 @@
+{
+  "name": "866955ce-5d65-414a-8963-bc4f6b8ddbd3",
+  "displayName": "VerificaStatoPratica_SbloccoContratto_Assistenza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Riferimenti-contatto-cliente",
+    "tag": "getUnlockContractRequestState"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "c050b87f-2200-4eac-a393-06832b188c45"
+  }, {
+    "condition": "$session.params.pratica-evasa = \"evasaRecentemente\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "La tua richiesta di sblocco risulta già evasa. Se hai ancora difficoltà ad accedere è opportuno fare degli approfondimenti." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "39d269af-2036-4018-8bb7-69cb2404b867"
+  }, {
+    "condition": "$session.params.pratica-evasa = \"nonEvasa\" AND $session.params.pratica-sollecitabile = true AND $session.params.pratica-sollecitata = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non sono riuscito a sollecitare la tua pratica." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "419c925e-7e21-4e92-be4a-ff40754b9795"
+  }, {
+    "condition": "$session.params.pratica-evasa = \"nonEvasa\" AND $session.params.pratica-sollecitabile = true AND $session.params.pratica-sollecitata = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ho appena sollecitato la tua richiesta. Pazienta ancora un po'." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "SalutiFinali_SbloccoContratto_Assistenza",
+    "name": "2cfcd485-d4fe-4279-94c6-a2c3d35f9d68"
+  }, {
+    "condition": "$session.params.pratica-evasa = \"nonEvasa\" AND $session.params.pratica-sollecitabile = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "La tua pratica è stata presa in carico. Ti avviseremo non appena il tuo contratto tornerà operativo." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "SalutiFinali_SbloccoContratto_Assistenza",
+    "name": "25cebe0a-fec3-4116-b50c-f29259c57fc4"
+  }, {
+    "condition": "$session.params.pratica-evasa = \"nonPresente\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaContrattoSbloccabile_SbloccoContratto_Assistenza",
+    "name": "697bf0c9-779a-41f4-8228-deb369be4d1c"
+  } ]
+}

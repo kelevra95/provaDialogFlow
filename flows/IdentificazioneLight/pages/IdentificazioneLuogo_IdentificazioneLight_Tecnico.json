@@ -1,0 +1,23 @@
+{
+  "name": "89183867-b576-4bb2-8b55-0b0f80a6b72b",
+  "displayName": "IdentificazioneLuogo_IdentificazioneLight_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Dimmi il tuo comune di nascita. Se si tratta di una città estera, indicami solo la nazione di appartenenza." ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "luogo",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "IdentificazioneData_IdentificazioneLight_Tecnico",
+    "name": "2610341e-a297-40bf-94bd-2186a554117a"
+  } ]
+}

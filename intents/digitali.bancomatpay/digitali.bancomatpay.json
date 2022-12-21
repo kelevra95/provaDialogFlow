@@ -1,0 +1,6 @@
+{
+  "name": "015c687d-e6b6-471f-b3f8-f1b271afea9c",
+  "displayName": "digitali.bancomatpay",
+  "priority": 500000,
+  "description": "Restituisce informazioni generiche sulle caratteristiche del Bancomat Pay"
+}

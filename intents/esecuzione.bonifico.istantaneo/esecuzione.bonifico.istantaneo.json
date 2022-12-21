@@ -1,0 +1,6 @@
+{
+  "name": "1fff2e73-b9c5-441c-88c1-0ba8f6c24e84",
+  "displayName": "esecuzione.bonifico.istantaneo",
+  "priority": 500000,
+  "description": "Spiega come effettuare un bonifico istantaneo e che l'operazione non è revocabile"
+}

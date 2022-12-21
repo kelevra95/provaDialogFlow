@@ -1,0 +1,6 @@
+{
+  "name": "2ffcc524-2230-4196-97b5-17ff65218e5f",
+  "displayName": "conto.rimborsi",
+  "priority": 500000,
+  "description": "Recepisce le richieste di rimborsi su conto tramite bonifico o domiciliazione. Per rimborsi su carte o generici vedi intento carte.rimborsi "
+}

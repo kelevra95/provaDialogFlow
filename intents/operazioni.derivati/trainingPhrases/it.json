@@ -1,0 +1,204 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "vorrei effettuare operazioni in derivati",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "voglio sottoscrivere ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " contratto a termine forward",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei comprare delle opzioni su fincantieri",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei comprare ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " covered warrant",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso avere assistenza per acquistare ",
+      "auto": true
+    }, {
+      "text": "uno",
+      "auto": true
+    }, {
+      "text": " swap",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei vendere dei fiuciar"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come posso comprare dei certificates",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso acquistare dei fiuciar",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei fare delle operazioni in derivati",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "voglio comprare dei warrant",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come acquisto ",
+      "auto": true
+    }, {
+      "text": "2000",
+      "auto": true
+    }, {
+      "text": " futures sul grano ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "6 mesi",
+      "auto": true
+    }, {
+      "text": "\r ?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come ",
+      "auto": true
+    }, {
+      "text": "si",
+      "auto": true
+    }, {
+      "text": " acquistano ",
+      "auto": true
+    }, {
+      "text": "opzioni",
+      "auto": true
+    }, {
+      "text": " tramite voi?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dovrei trattare titoli di investimento complessi sul mercato americano",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "tramite la banca è possibile acquistare ",
+      "auto": true
+    }, {
+      "text": "titoli",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "derivati",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "stavo guardando ",
+      "auto": true
+    }, {
+      "text": "uno",
+      "auto": true
+    }, {
+      "text": " swap di ",
+      "auto": true
+    }, {
+      "text": "8 mesi",
+      "auto": true
+    }, {
+      "text": " su tassi di interesse in dollari",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dovrei piazzare ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ordine di ",
+      "auto": true
+    }, {
+      "text": "3000",
+      "auto": true
+    }, {
+      "text": " put sul ",
+      "auto": true
+    }, {
+      "text": "titolo",
+      "auto": true
+    }, {
+      "text": " unicredit",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

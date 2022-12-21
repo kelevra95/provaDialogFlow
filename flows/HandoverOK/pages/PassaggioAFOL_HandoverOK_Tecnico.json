@@ -1,0 +1,25 @@
+{
+  "name": "0d8d034b-fd47-4fb0-9b8b-abf7f8a3ba65",
+  "displayName": "PassaggioAFOL_HandoverOK_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Pre-work",
+    "tag": "savePreWorkData"
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "liveAgentHandoff": {
+          "metadata": {
+          
+          }
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "219bd0cd-04fd-4f0b-ad81-afa70304d0ad"
+  } ]
+}

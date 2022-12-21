@@ -1,0 +1,25 @@
+{
+  "name": "ad753257-758d-4d96-8798-e71a5a147d6a",
+  "displayName": "VerificaPresenzaPartitaIva_IdentificazioneStrong_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$sys.func.CONTAIN($session.params.lista-partita-iva, $session.params.partita-iva-PG) = false",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "RiletturaPartitaIva_IdentificazioneStrong_Tecnico",
+    "name": "a0071ce0-2064-4317-b407-5eceda300dcc"
+  }, {
+    "condition": "$sys.func.CONTAIN($session.params.lista-partita-iva, $session.params.partita-iva-PG) = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "RecuperoDatiPartitaIva_IdentificazioneStrong_Tecnico",
+    "name": "ec481e0b-4607-4500-bbf9-dec5eaa90351"
+  } ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "8a26306d-914c-4b5a-a0ff-1db68161528a",
+  "displayName": "PIN.carte.modifica",
+  "parameters": [ {
+    "id": "Tipo-Carta",
+    "entityType": "@Tipo-Carta"
+  } ],
+  "priority": 500000,
+  "description": "Gestisce unicamente la richiesta di personalizzazione del PIN. La richiesta PIN carta perché dimenticato aggancia l'intento PIN.carte.richiesta"
+}

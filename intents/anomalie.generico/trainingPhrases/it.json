@@ -1,0 +1,268 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "continuo ad avere problemi con l'estratto conto",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": " problema con ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": " bonifico che ho fatto",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "problema con l'estratto conto",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non trovo l'estratto conto che avevo chiesto",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "anomalia errore",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "l'app si blocca",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "anomalia bonifico istantaneo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dall'app il bonifico immediato non funziona",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ciao ho ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": " errore su bonifico",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "nel sito ho "
+    }, {
+      "text": "un"
+    }, {
+      "text": "'anomalia"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "errore sulla procedura",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": " errore strano sull'app cosa devo fare",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": "'anomalia",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "l'app non va",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non funziona più l'app",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Non funziona più l'opzione bonifico istantaneo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "stavo facendo ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": " bonifico istantaneo e si è presentato ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": " errore",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "il bonifico istantaneo restituisce ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": " errore, cosa devo fare",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "il bonifico istantaneo non funziona",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Perchè mi risulta ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": " errore quando faccio i bonifici istantanei",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ricevo ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": " errore quando faccio ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": " bonifico istantaneo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non riesco a fare il bonifico istantaneo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": "'anomalia sui bonifici istantanei",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non vanno i bonifici istantanei",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non trovo l'estratto conto di agosto 2020. Posso chiedere a lei"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi avete mandato l'estratto conto ma non è quello che cercavo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "è sbagliato l'estratto conto che mi avete mandato",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "L'estratto conto non è corretto",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Non trovo l'estratto conto",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

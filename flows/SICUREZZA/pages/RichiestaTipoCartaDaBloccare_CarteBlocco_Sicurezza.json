@@ -1,0 +1,143 @@
+{
+  "name": "de210345-bcaf-4caf-8391-27bc157c7629",
+  "displayName": "RichiestaTipoCartaDaBloccare_CarteBlocco_Sicurezza",
+  "form": {
+    "parameters": [ {
+      "displayName": "tipo-carta",
+      "required": true,
+      "entityType": "@Tipo-Carta",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+        
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho sentito. Dimmi se si tratta di un bancomat, di una per me card, di una carta di credito, di una prepagata o se vuoi bloccare tutte le carte." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "e172d6e0-06a5-4360-9377-ab300392ae85"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho capito. Dimmi se si tratta di un bancomat, di una per me card, di una carta di credito, di una prepagata o se vuoi bloccare tutte le carte." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "5fda368f-51f7-4905-ad22-887493ecf2b1"
+        }, {
+          "targetPage": "Current Page",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non sentire." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "tipo-carta",
+              "value": "Tutte"
+            } ]
+          },
+          "name": "a5364a53-593f-415d-9798-aeaa24c45e3e"
+        }, {
+          "targetPage": "Current Page",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non capire." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "tipo-carta",
+              "value": "Tutte"
+            } ]
+          },
+          "name": "92651c5f-3370-4fb6-89d6-deb795d4bd4e"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.tipo-carta = \"Debito\" AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "numero-carte-da-bloccare",
+        "value": 0
+      }, {
+        "parameter": "tipo-carta-cliente",
+        "value": "carta-debito-tutte-cliente"
+      } ]
+    },
+    "targetPage": "VerificaQuantitaCarteDaBloccare_CarteBlocco_Sicurezza",
+    "name": "c0b02c2e-ab5f-4277-b254-08eb2e8cb077"
+  }, {
+    "condition": "$session.params.tipo-carta = \"Credito\" AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "numero-carte-da-bloccare",
+        "value": 0
+      }, {
+        "parameter": "tipo-carta-cliente",
+        "value": "carta-credito-tutte-cliente"
+      } ]
+    },
+    "targetPage": "VerificaQuantitaCarteDaBloccare_CarteBlocco_Sicurezza",
+    "name": "ab96a743-3bcf-48ef-9b0f-036b986ff256"
+  }, {
+    "condition": "$session.params.tipo-carta = \"Prepagata\" AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "numero-carte-da-bloccare",
+        "value": 0
+      }, {
+        "parameter": "tipo-carta-cliente",
+        "value": "prepagata-tutte-cliente"
+      } ]
+    },
+    "targetPage": "VerificaQuantitaCarteDaBloccare_CarteBlocco_Sicurezza",
+    "name": "1d4d61e8-8403-451d-a7c9-d22833d47dae"
+  }, {
+    "condition": "$session.params.tipo-carta = \"Tutte\" AND $page.params.status = FINAL AND $session.params.numero-carte-attive \u003e 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ti suggerisco un blocco provvisorio su tutte le tue carte. In questo modo, potrai riattivarle in qualsiasi momento chiamando la filiale digitale , o recandoti presso la tua agenzia." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "ConfermaBloccoProvvisorioTutte_CarteBlocco_Sicurezza",
+    "name": "fb336bfc-0738-40d2-a099-0548eaeb8d0a"
+  }, {
+    "condition": "$session.params.tipo-carta = \"Tutte\" AND $page.params.status = FINAL AND $session.params.numero-carte-attive = 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Le tue carte risultano già non operative. Se de-sideri inserire un blocco definitivo, dovrai indicarmi le ultime 4 cifre di ogni carta che vuoi bloccare." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "UlterioreBlocco_CarteBlocco_Sicurezza",
+    "name": "0734c382-3b52-4c2e-ae09-0a7baa48a52f"
+  } ]
+}

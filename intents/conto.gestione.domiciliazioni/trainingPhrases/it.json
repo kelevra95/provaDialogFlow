@@ -1,0 +1,99 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Sto cercando la sezione dove poter gestire le domiciliazioni attive sul mio "
+    }, {
+      "text": "conto",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "trasferire una domiciliazione da un conto ad un altro "
+    }, {
+      "text": "conto",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei cancellare una domiciliazione per le bollette sul mio "
+    }, {
+      "text": "conto",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come si fa ad aggiungere un nuovo rid in "
+    }, {
+      "text": "conto",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho bisogno di annullare in autonomia una domiciliazione sul "
+    }, {
+      "text": "conto",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei monitorare le mie domiciliazioni collegate al mio "
+    }, {
+      "text": "conto",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dove si trovano le mie domiciliazioni in "
+    }, {
+      "text": "conto",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    }, {
+      "text": " corrente?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei gestire l'appoggio di un pagamento sul mio "
+    }, {
+      "text": "conto",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come si fa a vedere gli addebiti ricorrenti di fatture sul mio "
+    }, {
+      "text": "IBAN",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non capisco come autorizzare le domiciliazioni sul mio "
+    }, {
+      "text": "conto",
+      "parameterId": "Tipo-prodotto-PIN-limiti-domiciliazioni"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

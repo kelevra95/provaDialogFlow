@@ -1,0 +1,68 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "come funzionano i rimborsi del cashback di stato"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Non riesco ad aggiungere la mia carta banca intesa sull'applicazione IO",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "nell'app IO non mi riconosce entrambe le carte bancomat e Visa",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "la carta non entra nel sistema IO per il cashback"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "riaccredito con carta per pagamenti con bancomat",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio ",
+      "auto": true
+    }, {
+      "text": "ad",
+      "auto": true
+    }, {
+      "text": " attivare il cash back dello Stato?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei info sul cashback del governo"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come funziona il cashback del governo italiano",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sai dirmi qualcosa sul cash back di stato"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

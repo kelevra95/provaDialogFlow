@@ -1,0 +1,176 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "posso utilizzare la mia prepagata per spese in America?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sto programmando un viaggio negli usa e vorrei sapere se le mie carte sono valide in quel paese",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso usare la ",
+      "auto": true
+    }, {
+      "text": "carta",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " Parigi?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quali sono le funzionalità della carta all'estero",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho abilitato le ",
+      "auto": true
+    }, {
+      "text": "mie",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "carte",
+      "auto": true
+    }, {
+      "text": " per il mondo?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sono in partenza per il Brasile, la ",
+      "auto": true
+    }, {
+      "text": "mia",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "carta di credito",
+      "auto": true
+    }, {
+      "text": " ha limitazioni in questo paese?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "info utilizzo carta all'estero",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sono a madrid posso pagare con la mia carta",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "la ",
+      "auto": true
+    }, {
+      "text": "prossima settimana",
+      "auto": true
+    }, {
+      "text": " devo andare ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " Londra, potrò usare tranquillamente il ",
+      "auto": true
+    }, {
+      "text": "mio",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "bancomat",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Come abilito la ",
+      "auto": true
+    }, {
+      "text": "carta",
+      "auto": true
+    }, {
+      "text": " al ",
+      "auto": true
+    }, {
+      "text": "prelievo",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "all'",
+      "auto": true
+    }, {
+      "text": "estero",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Ci",
+      "auto": true
+    }, {
+      "text": " sono limitazioni per i ",
+      "auto": true
+    }, {
+      "text": "prelievi",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "esteri",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

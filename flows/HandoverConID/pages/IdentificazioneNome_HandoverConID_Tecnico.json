@@ -1,0 +1,23 @@
+{
+  "name": "dea445ab-b89b-4c15-af20-080cf57a66b8",
+  "displayName": "IdentificazioneNome_HandoverConID_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Ora dimmi il tuo nome.", "Ora il tuo nome." ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "nome",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "RiletturaCognomeNome_HandoverConID_Tecnico",
+    "name": "a22b5dd9-ff2d-44a2-8e57-f501636b37d0"
+  } ]
+}

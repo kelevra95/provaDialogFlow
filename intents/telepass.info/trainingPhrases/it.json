@@ -1,0 +1,224 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "devo attivare ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " telepass",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve la viacard",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "voglio collegare il telepass al conto",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "i ",
+      "auto": true
+    }, {
+      "text": "pagamenti",
+      "auto": true
+    }, {
+      "text": " del ",
+      "auto": true
+    }, {
+      "text": "telepass",
+      "auto": true
+    }, {
+      "text": " vengono addebitati subito?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dopo quanto vengono addebitati i ",
+      "auto": true
+    }, {
+      "text": "pagamenti",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "effettuati",
+      "auto": true
+    }, {
+      "text": " con il ",
+      "auto": true
+    }, {
+      "text": "telepass",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso utilizzare il ",
+      "auto": true
+    }, {
+      "text": "mio",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "conto",
+      "auto": true
+    }, {
+      "text": " per ",
+      "auto": true
+    }, {
+      "text": "pagare",
+      "auto": true
+    }, {
+      "text": " con il ",
+      "auto": true
+    }, {
+      "text": "telepass",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi potete spiegare come ",
+      "auto": true
+    }, {
+      "text": "si",
+      "auto": true
+    }, {
+      "text": " fa ",
+      "auto": true
+    }, {
+      "text": "l'",
+      "auto": true
+    }, {
+      "text": "associazione del ",
+      "auto": true
+    }, {
+      "text": "telepass",
+      "auto": true
+    }, {
+      "text": " al ",
+      "auto": true
+    }, {
+      "text": "conto",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso mettere il ",
+      "auto": true
+    }, {
+      "text": "mio",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "conto",
+      "auto": true
+    }, {
+      "text": " sul profilo del ",
+      "auto": true
+    }, {
+      "text": "telepass",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come ",
+      "auto": true
+    }, {
+      "text": "si",
+      "auto": true
+    }, {
+      "text": " fa ",
+      "auto": true
+    }, {
+      "text": "ad",
+      "auto": true
+    }, {
+      "text": " attivare il ",
+      "auto": true
+    }, {
+      "text": "telepass",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei acquistare un telepass"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come ",
+      "auto": true
+    }, {
+      "text": "si",
+      "auto": true
+    }, {
+      "text": " collega il ",
+      "auto": true
+    }, {
+      "text": "conto",
+      "auto": true
+    }, {
+      "text": " al ",
+      "auto": true
+    }, {
+      "text": "telepass",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei associare il mio conto al telepass",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

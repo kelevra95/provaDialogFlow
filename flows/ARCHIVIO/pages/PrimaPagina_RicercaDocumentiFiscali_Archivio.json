@@ -1,0 +1,52 @@
+{
+  "name": "6283d740-0d0f-4720-bea5-8e29c44af53f",
+  "displayName": "PrimaPagina_RicercaDocumentiFiscali_Archivio",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.codice-titolare = null AND ($session.params.ivrBt = \"00000000\" OR $session.params.ivrBt = \"\" OR $session.params.ivrBt = null) AND ($session.params.ivrCf != null AND $session.params.ivrCf != \"\")",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneSRE",
+    "name": "4ec6536a-eb72-4eac-a419-ae92377c07ec"
+  }, {
+    "condition": "$session.params.codice-titolare = null AND ($session.params.ivrBt = \"00000000\" OR $session.params.ivrBt = \"\" OR $session.params.ivrBt = null)",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneLight",
+    "name": "64b9f8d9-132f-46ad-86aa-40b858071831"
+  }, {
+    "condition": "$session.params.ivrBt != \"00000000\" AND $session.params.ivrBt != \"\" AND $session.params.ivrBt != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "codice-titolare",
+        "value": "$sys.func.MID($session.params.ivrBt, 1, 8)"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "Strong"
+      } ]
+    },
+    "targetFlow": "IdentificazioneStrong",
+    "name": "1eb494d6-de15-4965-a269-9fd036a9c01a"
+  }, {
+    "condition": "$session.params.codice-titolare != null AND ($session.params.livello-identificazione != \"SRE\" AND $session.params.livello-identificazione != \"light\" AND $session.params.livello-identificazione != \"Strong\")",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneLight",
+    "name": "a18b9ff5-5088-47eb-9826-282916035e6b"
+  }, {
+    "condition": "$session.params.codice-titolare != null AND ($session.params.livello-identificazione = \"SRE\" OR $session.params.livello-identificazione = \"light\" OR $session.params.livello-identificazione = \"Strong\")",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaPrimoAccesso_RicercaDocumentiFiscali_Archivio",
+    "name": "01577409-2c61-44a7-9836-ef0f7d83247d"
+  } ]
+}

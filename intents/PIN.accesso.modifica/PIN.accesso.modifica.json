@@ -1,0 +1,6 @@
+{
+  "name": "83c0aaf3-4eae-4949-ab9b-080be8c7a40b",
+  "displayName": "PIN.accesso.modifica",
+  "priority": 500000,
+  "description": "Recepisce SOLO le richieste di MODIFICA PIN di accesso e non anche quelle del PIN DIMENTICATO"
+}

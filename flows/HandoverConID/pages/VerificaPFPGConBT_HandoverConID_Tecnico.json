@@ -1,0 +1,44 @@
+{
+  "name": "7de72726-80b3-467d-99d8-3dc3ddd3c3b5",
+  "displayName": "VerificaPFPGConBT_HandoverConID_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.codice-titolare = $session.params.codice-titolare-PF AND $session.params.codice-titolare = $session.params.codice-titolare-PG",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "SceltaPFPGConBT_HandoverConID_Tecnico",
+    "name": "014b793e-f297-4717-b507-aedd2e2d9349"
+  }, {
+    "condition": "$session.params.codice-titolare = $session.params.codice-titolare-PG",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "livello-identificazione",
+        "value": "light"
+      }, {
+        "parameter": "cliente-tipo",
+        "value": "PG"
+      } ]
+    },
+    "targetPage": "NumeroPartitaIva_HandoverConID_Tecnico",
+    "name": "4a2fabd2-036d-4b8d-a854-23fb6b2b2282"
+  }, {
+    "condition": "$session.params.codice-titolare = $session.params.codice-titolare-PF",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "livello-identificazione",
+        "value": "light"
+      }, {
+        "parameter": "cliente-tipo",
+        "value": "PF"
+      } ]
+    },
+    "targetPage": "RichiestaSegmentoCliente_HandoverConID_Tecnico",
+    "name": "8e433897-0830-41df-8cf1-4d0bffda49e6"
+  } ]
+}

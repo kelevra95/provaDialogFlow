@@ -1,0 +1,39 @@
+{
+  "name": "f74ece57-63e3-4a13-af39-b5c0f47072f3",
+  "displayName": "VerificaOTS_CarteAttivazione_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.activationCardResponse = \"OK\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Perfetto! Ora la tua carta è attiva e pronta per essere utilizzata. Riceverai a breve un SMS per recuperare il PIN nel caso di carta nuova. Se invece si tratta di un rinnovo, dovrai utilizzare il primo PIN che ti è stato assegnato con l’emissione della carta che hai sostituito." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "SalutiFinali_CarteAttivazione_ContiCarte",
+    "name": "d61ce703-e7a9-4e8e-bcc4-e6713a6c23d2"
+  }, {
+    "condition": "$session.params.activationCardResponse != \"OK\"",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non sono riuscito ad attivare la carta." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "KO processo di attivazione carta"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "ac578ca0-33b5-4450-af0e-128011e788ee"
+  } ]
+}

@@ -1,0 +1,250 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "come si ricarica il credito sul "
+    }, {
+      "text": "telefonino",
+      "parameterId": "Tipo-Ricarica"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho esaurito il credito sullo "
+    }, {
+      "text": "smartphone",
+      "parameterId": "Tipo-Ricarica"
+    }, {
+      "text": ". Posso fare una ricarica qui?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo ricaricare la mia "
+    }, {
+      "text": "sim",
+      "parameterId": "Tipo-Ricarica"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho bisogno di fare una ricarica "
+    }, {
+      "text": "telefonica",
+      "parameterId": "Tipo-Ricarica"
+    }, {
+      "text": " sul cellulare di mio figlio"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei ricaricare il "
+    }, {
+      "text": "telefono",
+      "parameterId": "Tipo-Ricarica"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo fare una ricarica al "
+    }, {
+      "text": "cellulare",
+      "parameterId": "Tipo-Ricarica"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo fare una ricarica "
+    }, {
+      "text": "telefonica",
+      "parameterId": "Tipo-Ricarica"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio a caricare una "
+    }, {
+      "text": "carta prepagata",
+      "parameterId": "Tipo-Ricarica"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio a versare soldi sulla "
+    }, {
+      "text": "superflash",
+      "parameterId": "Tipo-Ricarica"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei ricaricare una "
+    }, {
+      "text": "carta",
+      "parameterId": "Tipo-Ricarica"
+    }, {
+      "text": " tramite conto corrente"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso trasferire una somma dal conto sulla "
+    }, {
+      "text": "prepagata",
+      "parameterId": "Tipo-Ricarica"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "riuscite a caricarmi la "
+    }, {
+      "text": "carta ricaricabile",
+      "parameterId": "Tipo-Ricarica"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "è possibile ricaricare la "
+    }, {
+      "text": "postepay",
+      "parameterId": "Tipo-Ricarica"
+    }, {
+      "text": " tramite voi?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei ricaricare la mia "
+    }, {
+      "text": "prepagata",
+      "parameterId": "Tipo-Ricarica"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ricarica "
+    }, {
+      "text": "prepagata",
+      "parameterId": "Tipo-Ricarica"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei ricaricare",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso fare una ricarica al "
+    }, {
+      "text": "telefono",
+      "parameterId": "Tipo-Ricarica"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio a ricaricare",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei effettuare una ricarica",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "si possono fare le ricariche online o devo farlo in persona?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi puoi spiegare come si fa una ricarica?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "per fare ",
+      "auto": true
+    }, {
+      "text": "una",
+      "auto": true
+    }, {
+      "text": " ricarica come ",
+      "auto": true
+    }, {
+      "text": "si",
+      "auto": true
+    }, {
+      "text": " fa?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo fare una ricarica ma non ci riesco",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dove posso fare una ricarica?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi spiegheresti come funzionano le ricariche?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo fare una ricarica ora"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ma le ricariche si possono fare anche online?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come funziona la ricarica?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

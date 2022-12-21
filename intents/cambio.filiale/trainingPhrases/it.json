@@ -1,0 +1,142 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Posso spostare il ",
+      "auto": true
+    }, {
+      "text": "mio",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "conto",
+      "auto": true
+    }, {
+      "text": " su ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": "'altra ",
+      "auto": true
+    }, {
+      "text": "filiale",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "avrei l'esigenza di trasferire il mio conto alla filiale di Somma Vesuviana",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei modificare la mia filiale di riferimento",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Cosa succede e spostassi il mio conto in un'altra filiale all'intento della stessa città",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "si",
+      "auto": true
+    }, {
+      "text": " può cambiare la ",
+      "auto": true
+    }, {
+      "text": "filiale",
+      "auto": true
+    }, {
+      "text": " di appartenenza?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " cambiare ",
+      "auto": true
+    }, {
+      "text": "filiale",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei sapere cosa devo fare per cambiare agenzia di radicamento dei miei rapporti",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "é possibile spostare i ",
+      "auto": true
+    }, {
+      "text": "miei",
+      "auto": true
+    }, {
+      "text": " rapporti da ",
+      "auto": true
+    }, {
+      "text": "una",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "filiale",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "all'",
+      "auto": true
+    }, {
+      "text": "altra?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "chiedo il passaggio della gestione del conto corrente dalla filiale di Sciacca alla filiale di Quinto di Treviso",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei cambiare il mio referente della filiale intesa San Paolo dove ho il conto",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

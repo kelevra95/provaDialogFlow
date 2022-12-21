@@ -1,0 +1,6 @@
+{
+  "name": "a82211cb-3d8d-405d-9bd8-716db15d2005",
+  "displayName": "blocco.operazioni.antifrode",
+  "priority": 500000,
+  "description": "Blocco operazioni per motivi di sicurezza: 75BT01, prelievi cardless, autorizzazioni pagamenti (no bonifici istantanei che hanno un intento di anomalie dedicato)"
+}

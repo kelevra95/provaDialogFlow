@@ -1,0 +1,19 @@
+{
+  "name": "3b6f977c-83e6-41ec-907b-8655f3d1c67a",
+  "displayName": "presa.appuntamento",
+  "parameters": [ {
+    "id": "data-ora-appuntamento",
+    "entityType": "@super-date-time"
+  }, {
+    "id": "Tipo-Motivo-Appuntamento",
+    "entityType": "@Tipo-Motivo-Appuntamento"
+  }, {
+    "id": "Tipo-Colloquio-GF",
+    "entityType": "@Tipo-Colloquio-GF"
+  }, {
+    "id": "Tipo-Gestore",
+    "entityType": "@Tipo-Gestore"
+  } ],
+  "priority": 500000,
+  "description": "ASSISTENZA"
+}

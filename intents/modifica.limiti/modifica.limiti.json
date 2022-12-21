@@ -1,0 +1,10 @@
+{
+  "name": "99403930-b4a4-4eb5-82d7-9d3b804f1bca",
+  "displayName": "modifica.limiti",
+  "parameters": [ {
+    "id": "Tipo-prodotto-PIN-limiti-domiciliazioni",
+    "entityType": "@Tipo-prodotto-PIN-limiti-domiciliazioni"
+  } ],
+  "priority": 500000,
+  "description": "Intento per disambiguare limiti di una carta e limiti del conto"
+}

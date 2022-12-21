@@ -1,0 +1,189 @@
+{
+  "name": "59280532-a28a-4ee1-8409-a7a411d0bbff",
+  "displayName": "IdentificazioneData_IdentificazioneLight_Tecnico",
+  "form": {
+    "parameters": [ {
+      "displayName": "cliente-data-nascita-input",
+      "required": true,
+      "entityType": "@sys.date",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Dimmi la tua data di nascita, specificando il giorno, il mese, e l'anno per esteso." ]
+            },
+            "languageCode": "it"
+          } ],
+          "advancedSettings": {
+            "playbackInterruptionSettings": {
+            
+            }
+          }
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Mi dispiace, non ho sentito bene. Per favore, indica la tua data di nascita, specificando prima il giorno, il mese e poi l'anno per esteso." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "7745755a-6a79-47d3-aa7d-1ece2c8fa90d"
+        }, {
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non sentire bene. Per favore, indica la tua data di nascita, specificando prima il giorno, il mese e poi l'anno per esteso." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "29f6ca30-896b-48df-b529-964aae4cb202"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Scusa, ma non ho capito. Per favore, indica la tua data di nascita, specificando prima il giorno, il mese, e poi l'anno per esteso." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "3b1cdd61-68b4-4a48-9901-485fd33954e6"
+        }, {
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non capire. Per favore, indica la tua data di nascita, specificando prima il giorno, il mese, e poi l'anno per esteso." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "15adfd3a-3497-417e-92f0-80360768d693"
+        }, {
+          "targetPage": "GestioneRamo_IdentificazioneLight_Tecnico",
+          "event": "sys.no-input-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Mi dispiace, continuo a non sentire bene." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "4da10038-1826-4326-8188-87b0df70ccf7"
+        }, {
+          "targetPage": "GestioneRamo_IdentificazioneLight_Tecnico",
+          "event": "sys.no-match-3",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non sono riuscito a riconoscere la data che mi hai indicato." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "81b7aa27-8e78-400e-9717-0721e23aec71"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "advancedSettings": {
+      "playbackInterruptionSettings": {
+        "allowPlaybackInterruption": true
+      }
+    }
+  },
+  "transitionRoutes": [ {
+    "intent": "operatore",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "intento",
+        "value": "operatore"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "nani"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Richiesta operatore"
+      } ]
+    },
+    "targetFlow": "HandoverRichiestaDiretta",
+    "name": "cce7dfd6-1c05-4ae0-acd4-c88019dfe3d8"
+  }, {
+    "intent": "uscita",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "intento",
+        "value": "uscita"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "nani"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Il cliente non vuole parlare con Ellis"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "39108956-006f-471a-bd7b-73da38c91e45"
+  }, {
+    "condition": "($page.params.status = FINAL AND ($session.params.cliente-data-nascita-input.year \u003c 1915 OR ($session.params.cliente-data-nascita-input.year \u003e $session.params.data-ora-sistema.year OR ($session.params.cliente-data-nascita-input.year = $session.params.data-ora-sistema.year AND $session.params.cliente-data-nascita-input.month \u003e $session.params.data-ora-sistema.month) OR ($session.params.cliente-data-nascita-input.year = $session.params.data-ora-sistema.year AND $session.params.cliente-data-nascita-input.month = $session.params.data-ora-sistema.month AND $session.params.cliente-data-nascita-input.day \u003e $session.params.data-ora-sistema.day)))) AND $session.params.contatore = 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non sono riuscito a riconoscere la data che mi hai comunicato." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": "$sys.func.ADD($session.params.contatore, 1)"
+      }, {
+        "parameter": "cliente-data-nascita-input",
+        "value": null
+      } ]
+    },
+    "targetPage": "IdentificazioneData_IdentificazioneLight_Tecnico",
+    "name": "5854eb11-e0ae-4a98-83e7-89cbfc80e736"
+  }, {
+    "condition": "($page.params.status = FINAL AND ($session.params.cliente-data-nascita-input.year \u003c 1915 OR ($session.params.cliente-data-nascita-input.year \u003e $session.params.data-ora-sistema.year OR ($session.params.cliente-data-nascita-input.year = $session.params.data-ora-sistema.year AND $session.params.cliente-data-nascita-input.month \u003e $session.params.data-ora-sistema.month) OR ($session.params.cliente-data-nascita-input.year = $session.params.data-ora-sistema.year AND $session.params.cliente-data-nascita-input.month = $session.params.data-ora-sistema.month AND $session.params.cliente-data-nascita-input.day \u003e $session.params.data-ora-sistema.day)))) AND $session.params.contatore \u003e 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace ma con questi dati non sono riuscito a verificare la tua identità." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "GestioneRamo_IdentificazioneLight_Tecnico",
+    "name": "cd2cab1b-cc64-4ce8-a83d-62e953454a96"
+  }, {
+    "condition": "$page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "RiletturaLuogoData_IdentificazioneLight_Tecnico",
+    "name": "6c21de02-07d8-4387-8a14-3c383adef4ea"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 80,
+      "noSpeechTimeout": {
+        "seconds": 10
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

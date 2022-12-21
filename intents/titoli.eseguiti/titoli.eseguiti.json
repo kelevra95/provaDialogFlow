@@ -1,0 +1,10 @@
+{
+  "name": "a5b94359-8613-4da8-8cbf-960435048447",
+  "displayName": "titoli.eseguiti",
+  "parameters": [ {
+    "id": "data-ricerca",
+    "entityType": "@sys.date"
+  } ],
+  "priority": 500000,
+  "description": "Gestisce E2E la ricerca di eseguiti in titoli vocalizzandone la ricerca"
+}

@@ -1,0 +1,81 @@
+{
+  "name": "38e3b7e6-227d-435c-be4d-d3c8a0a25662",
+  "displayName": "VerificaAgenda_PresaAppuntamento_Assistenza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Gestione-agenda",
+    "tag": "checkAndConfirmAdvisorAgendaSlot"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "16f716a1-4773-4f11-999a-8273fda89b96"
+  }, {
+    "condition": "$session.params.verifica-agenda = false AND $session.params.verifica-agenda-alternativa = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Il tuo gestore non è disponibile per l'orario che mi hai indicato." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "AcquisizionePreferenza_PresaAppuntamento_Assistenza",
+    "name": "181269a6-c8bf-4a6b-8cb7-d07e3ff988e3"
+  }, {
+    "condition": "$session.params.verifica-agenda = false AND $session.params.verifica-agenda-alternativa = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Il tuo gestore è già impegnato per l'orario che mi hai indicato. Sono però riuscito a trovare uno spazio disponibile per il giorno $sys.func.FORMAT_DATE($session.params.data-ora-alternativa, dd MMMM, \"it\")" ]
+        },
+        "languageCode": "it"
+      } ],
+      "conditionalCases": [ {
+        "cases": [ {
+          "condition": "$session.params.data-ora-alternativa.hours = 12",
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "a $sys.func.FORMAT_DATE($session.params.data-ora-alternativa, HH:mm, \"it\"). Può andarti bene comunque?" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        }, {
+          "caseContent": [ {
+            "message": {
+              "text": {
+                "text": [ "alle $sys.func.FORMAT_DATE($session.params.data-ora-alternativa, HH:mm, \"it\"). Può andarti bene comunque?" ]
+              },
+              "languageCode": "it"
+            }
+          } ]
+        } ]
+      } ]
+    },
+    "targetPage": "ConfermaPrimaProposta_PresaAppuntamento_Assistenza",
+    "name": "246c4fc4-6902-46b3-9d9a-bca05e047f71"
+  }, {
+    "condition": "$session.params.verifica-agenda = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Bene! Ho inserito l'appuntamento come da te indicato." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "data-ora-scelta",
+        "value": "$sys.func.FORMAT_DATE($session.params.data-ora, dd/MM/yyyy HH:mm:ss)"
+      } ]
+    },
+    "targetPage": "InvioConferma_PresaAppuntamento_Assistenza",
+    "name": "d6f1147c-d1bd-49e4-aaec-dc0338e7e653"
+  } ]
+}

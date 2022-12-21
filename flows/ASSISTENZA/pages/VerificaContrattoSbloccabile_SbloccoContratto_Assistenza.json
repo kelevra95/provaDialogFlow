@@ -1,0 +1,114 @@
+{
+  "name": "8a4133c9-5e8d-4e36-8225-b772a11f0d2a",
+  "displayName": "VerificaContrattoSbloccabile_SbloccoContratto_Assistenza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Riferimenti-contatto-cliente",
+    "tag": "getLockedContractInfo"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "bf0c5eaf-c069-4d2f-b2f5-3b307460f13a"
+  }, {
+    "condition": "$session.params.contratto-attivo = true AND $session.params.firma-mykey-bloccata = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ho verificato che il tuo contratto mykey risulta attivo, per ulteriori approfondimenti," ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Il cliente chiede di sbloccare un contratto già attivo o bloccato da cyber security"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "f97f7ec0-539e-41d9-bcc7-6dd3984a5c8f"
+  }, {
+    "condition": "$session.params.cliente-minore = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Per ora, non mi occupo delle richieste di sblocco contratto per conto di minori. In questo caso, è necessario prendere un appuntamento con il gestore della tua filiale. Vuoi procedere?" ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "PropostaAppuntamentoFil_SbloccoContratto_Assistenza",
+    "name": "6543bf7c-4308-4179-80d6-a83a304b4760"
+  }, {
+    "condition": "$session.params.cliente-inabile = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Per la tua richiesta sono necessari degli approfondimenti." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Contratto non sbloccabile per cliente interdetto o inabile"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "b2eccc66-a5a2-494f-9ca5-6d86e2635049"
+  }, {
+    "condition": "$session.params.blocco-antifrode = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Per la tua richiesta sono necessari degli approfondimenti." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Contratto non sbloccabile dal cliente per presenza di blocco antifrode o blocco manuale FOL"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "260eab15-14b9-494c-b7fc-ebefae38cfe0"
+  }, {
+    "condition": "$session.params.blocco-filiale-fisica = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Per sbloccare il tuo contratto è necessario prendere un appuntamento con il gestore della tua filiale. Vuoi procedere?" ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "PropostaAppuntamentoFil_SbloccoContratto_Assistenza",
+    "name": "3f497dce-b024-40fc-8bd3-dd04bd456af3"
+  }, {
+    "condition": "$session.params.contratto-attivo = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Per la tua richiesta sono necessari degli approfondimenti." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Contratto non sbloccabile dal cliente per stato diverso da attivo"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "c3f3ceea-6639-4ca6-9628-a3d0848bc052"
+  }, {
+    "condition": "$session.params.contratto-attivo = true AND $session.params.firma-mykey-bloccata = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ConfermaDominioEmail_SbloccoContratto_Assistenza",
+    "name": "fac41a9e-ad9b-406d-9097-ef069a866c40"
+  } ]
+}

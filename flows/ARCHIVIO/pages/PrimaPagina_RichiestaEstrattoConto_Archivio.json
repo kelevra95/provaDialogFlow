@@ -1,0 +1,52 @@
+{
+  "name": "373ed6b3-7b54-4144-b7c9-428b16c33eb6",
+  "displayName": "PrimaPagina_RichiestaEstrattoConto_Archivio",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.codice-titolare = null AND ($session.params.ivrBt = \"00000000\" OR $session.params.ivrBt = \"\" OR $session.params.ivrBt = null) AND ($session.params.ivrCf != null AND $session.params.ivrCf != \"\")",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneSRE",
+    "name": "ff4950c4-806f-46f1-ba6d-62bbea8287a4"
+  }, {
+    "condition": "$session.params.codice-titolare = null AND ($session.params.ivrBt = \"00000000\" OR $session.params.ivrBt = \"\" OR $session.params.ivrBt = null)",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneLight",
+    "name": "09496fc3-b422-4393-ac1a-cb794e8718c9"
+  }, {
+    "condition": "$session.params.ivrBt != \"00000000\" AND $session.params.ivrBt != \"\" AND $session.params.ivrBt != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "codice-titolare",
+        "value": "$sys.func.MID($session.params.ivrBt, 1, 8)"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "Strong"
+      } ]
+    },
+    "targetFlow": "IdentificazioneStrong",
+    "name": "f7319206-666c-4d48-b370-4ebeae8391b9"
+  }, {
+    "condition": "$session.params.codice-titolare != null AND ($session.params.livello-identificazione != \"SRE\" AND $session.params.livello-identificazione != \"light\" AND $session.params.livello-identificazione != \"Strong\")",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneLight",
+    "name": "8f683490-cca8-4499-9b79-4b01673e5205"
+  }, {
+    "condition": "$session.params.codice-titolare != null AND ($session.params.livello-identificazione = \"SRE\" OR $session.params.livello-identificazione = \"light\" OR $session.params.livello-identificazione = \"Strong\")",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaPrimoAccesso_RichiestaEstrattoConto_Archivio",
+    "name": "0d66403b-3fda-4945-9827-192d563da61e"
+  } ]
+}

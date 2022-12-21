@@ -1,0 +1,41 @@
+{
+  "name": "e79013b4-f8ce-4e73-b066-2985a5c29526",
+  "displayName": "PiuCarteAziendaliSiNo_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Hai più di una carta da bloccare?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaBTDelegato_CarteBlocco_Sicurezza",
+    "name": "489d7396-284a-4ecf-92d4-ca289595b6be"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "RichiestaPANCartaTerzi_CarteBlocco_Sicurezza",
+    "name": "e411b400-c0f8-4fc0-8319-938af4518998"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

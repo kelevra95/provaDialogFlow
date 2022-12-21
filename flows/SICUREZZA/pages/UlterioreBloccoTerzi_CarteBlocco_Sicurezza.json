@@ -1,0 +1,55 @@
+{
+  "name": "2de71375-2d9e-4674-89ae-42280e97a315",
+  "displayName": "UlterioreBloccoTerzi_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Hai altre carte non intestate a te che de-sideri bloccare?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ok." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "PAN-carta",
+        "value": null
+      } ]
+    },
+    "targetPage": "RichiestaPANCartaTerzi_CarteBlocco_Sicurezza",
+    "name": "c2032b10-14e8-4cdd-b609-7d6f86594494"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ok. Se ti è possibile riconsegna la carta al proprietario oppure presso una qualunque filiale del Gruppo Intesa Sanpaolo." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "SalutiFinali_CarteBlocco_Sicurezza",
+    "name": "febe8cc8-7aee-4b5a-a59c-a53d2a979b07"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

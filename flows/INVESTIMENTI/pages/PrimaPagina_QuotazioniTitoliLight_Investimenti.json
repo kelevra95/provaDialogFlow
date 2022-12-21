@@ -1,0 +1,45 @@
+{
+  "name": "0e5b1837-613b-4eba-94d6-5e074b407bcc",
+  "displayName": "PrimaPagina_QuotazioniTitoliLight_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.codice-titolare = null AND ($session.params.ivrBt = \"00000000\" OR $session.params.ivrBt = \"\" OR $session.params.ivrBt = null)",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneStrong",
+    "name": "f07fce5e-5ad7-40da-8fa1-d61952dc8e87"
+  }, {
+    "condition": "$session.params.codice-titolare != null AND $session.params.livello-identificazione != \"Strong\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneStrong",
+    "name": "2dfa4510-e898-41eb-8176-de4d1f36ecb9"
+  }, {
+    "condition": "$session.params.ivrBt != \"00000000\" AND $session.params.ivrBt != \"\" AND $session.params.ivrBt != null AND $session.params.livello-identificazione = null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "livello-identificazione",
+        "value": "Strong"
+      }, {
+        "parameter": "codice-titolare",
+        "value": "$sys.func.MID($session.params.ivrBt, 1, 8)"
+      } ]
+    },
+    "targetFlow": "IdentificazioneStrong",
+    "name": "fc9b0720-2a3d-4849-8601-0161ae17b670"
+  }, {
+    "condition": "$session.params.codice-titolare != null AND $session.params.livello-identificazione = \"Strong\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "PresenzaPortafoglioPreferiti_QuotazioniTitoliLight_Investimenti",
+    "name": "588890da-5f35-486d-b6a2-93db525be032"
+  } ]
+}

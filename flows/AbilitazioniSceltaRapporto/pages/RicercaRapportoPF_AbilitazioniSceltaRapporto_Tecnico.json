@@ -1,0 +1,45 @@
+{
+  "name": "416a013c-26af-4acf-ae8c-682711e27f4b",
+  "displayName": "RicercaRapportoPF_AbilitazioniSceltaRapporto_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Utility",
+    "tag": "searchRapporto"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "eb0361e9-9aed-4768-9e12-06650adf3bad"
+  }, {
+    "condition": "$session.params.fulfillment-error = false AND $session.params.esito-ricerca-rapporto = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaLivelloAbilitazionePF_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "6905b4ce-a22e-4e9a-b820-4d8e775ca772"
+  }, {
+    "condition": "$session.params.fulfillment-error = false AND $session.params.esito-ricerca-rapporto = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non sono riuscito a trovare il rapporto che mi hai indicato." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "numero-rapporto-PF",
+        "value": null
+      }, {
+        "parameter": "indice",
+        "value": 0
+      } ]
+    },
+    "targetPage": "PropostaListaRapportiPF_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "8ddd1f9a-772d-4143-a850-8fec4c918c6e"
+  } ]
+}

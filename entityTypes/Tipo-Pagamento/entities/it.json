@@ -1,0 +1,83 @@
+{
+  "entities": [ {
+    "value": "F24",
+    "synonyms": [ "deleghe", "f24", "imposte", "imu ", "irpef", "spazzatura", "tari ", "tasi ", "tasse", "tributi" ],
+    "languageCode": "it"
+  }, {
+    "value": "Bonifico",
+    "synonyms": [ "affitto", "alimenti", "bonifici", "bonifico", "bonifico estero ", "bonifico immediato", "bonifico istantaneo", "bonifico mensile", "bonifico permanente", "bonifico ricorrente", "bonifico urgente", "bonifico veloce", "credit transfer", "mantenimento ", "trasferimento", "vaglia" ],
+    "languageCode": "it"
+  }, {
+    "value": "Pagamento CBILL",
+    "synonyms": [ "bollettino cbill", "cbill", "pagopa" ],
+    "languageCode": "it"
+  }, {
+    "value": "Bollettino postale",
+    "synonyms": [ "bolletta", "bolletta della posta", "bollettino", "bollettino postale" ],
+    "languageCode": "it"
+  }, {
+    "value": "MAV/RAV",
+    "synonyms": [ "bollettino bancario", "mav", "mediante avviso", "rav", "ruoli mediante avviso " ],
+    "languageCode": "it"
+  }, {
+    "value": "RI.BA",
+    "synonyms": [ "ri.ba", "riba", "ricevute bancarie" ],
+    "languageCode": "it"
+  }, {
+    "value": "Multa",
+    "synonyms": [ "multa", "sanzione stradale" ],
+    "languageCode": "it"
+  }, {
+    "value": "Tasse Universitarie",
+    "synonyms": [ "pagamenti università", "tasse università", "tasse universitarie" ],
+    "languageCode": "it"
+  }, {
+    "value": "Western Union",
+    "synonyms": [ "money transfer", "transfer", "trasferimenti money", "western union" ],
+    "languageCode": "it"
+  }, {
+    "value": "BANCOMAT Pay",
+    "synonyms": [ "bancomat pay", "invio denaro", "pagamento con cellulare", "scambio denaro" ],
+    "languageCode": "it"
+  }, {
+    "value": "Ricarica cellulare",
+    "synonyms": [ "ricarica cellulare", "ricarica coopvoce", "ricarica erg", "ricarica fastweb", "ricarica numero telefono", "ricarica postemobile", "ricarica sim", "ricarica telefonica", "ricarica telefono", "ricarica tim", "ricarica tiscali", "ricarica vodafone", "ricarica windtre" ],
+    "languageCode": "it"
+  }, {
+    "value": "Ricarica carta",
+    "synonyms": [ "ricarica carta", "ricarica carta pensione", "ricarica flash", "ricarica prepagata", "ricarica superflash" ],
+    "languageCode": "it"
+  }, {
+    "value": "Bollo auto targa",
+    "synonyms": [ "bollo ape", "bollo auto", "bollo camper", "bollo macchina", "bollo moto", "bollo motorino", "bollo scooter", "tassa auto" ],
+    "languageCode": "it"
+  }, {
+    "value": "Bonifico agevolazioni fiscali",
+    "synonyms": [ "bonifico 110", "bonifico agevolazioni", "bonifico detrazioni fiscali", "bonifico fiscale", "bonifico per ristrutturazione", "bonifico risparmio energetico", "bonifico ristrutturazione", "bonifico scarico fiscale" ],
+    "languageCode": "it"
+  }, {
+    "value": "Giroconto verso",
+    "synonyms": [ "giro verso un mio conto", "giroconto" ],
+    "languageCode": "it"
+  }, {
+    "value": "Ricarica abbonamento",
+    "synonyms": [ "abbonamento trasporti", "abbonamento treno", "ricarica abbonamento", "ricarica trasporti", "ricarica treno" ],
+    "languageCode": "it"
+  }, {
+    "value": "Ricarica carta servizi",
+    "synonyms": [ "Ricarica carta servizi" ],
+    "languageCode": "it"
+  }, {
+    "value": "Versamento su XME Salvadanaio di",
+    "synonyms": [ "accantonamento su salvadanaio", "versamento salvadanaio", "versamento su salvadanaio di" ],
+    "languageCode": "it"
+  }, {
+    "value": "Versamento su XME conto UP! di",
+    "synonyms": [ "versamento su conto di mio figlio", "Versamento su XME conto UP! di", "versamento sul conto del figlio" ],
+    "languageCode": "it"
+  }, {
+    "value": "Pagamento sosta",
+    "synonyms": [ "Pagamento sosta", "parcheggio", "sosta" ],
+    "languageCode": "it"
+  } ]
+}

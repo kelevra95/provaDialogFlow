@@ -1,0 +1,10 @@
+{
+  "name": "a1eb5673-ff49-4c4a-bc59-daf63e0fd8e2",
+  "displayName": "luogo",
+  "parameters": [ {
+    "id": "cliente-luogo-nascita",
+    "entityType": "@Luogo",
+    "redact": true
+  } ],
+  "priority": 500000
+}

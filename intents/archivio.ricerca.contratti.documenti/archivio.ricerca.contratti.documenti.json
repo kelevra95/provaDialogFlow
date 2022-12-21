@@ -1,0 +1,6 @@
+{
+  "name": "7df59c76-10f4-47b3-9f94-acb7b46ea865",
+  "displayName": "archivio.ricerca.contratti.documenti",
+  "priority": 500000,
+  "description": "Ricerca i contratti e i documenti (sono escluse le contabili dei pagamenti che invece rientrano nel perimetro dell'intento ricerca.pagamenti)"
+}

@@ -1,0 +1,226 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "vorrei le quotazioni dell'",
+      "auto": true
+    }, {
+      "text": "azione",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "56 70",
+      "parameterId": "radiocor",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quotazioni di "
+    }, {
+      "text": "9041",
+      "parameterId": "radiocor"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "voglio le quotazioni di un titolo con questo isin "
+    }, {
+      "text": "FR67JHBF9026",
+      "parameterId": "Quotazioni-isin"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quotazioni di ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": " titolo che è identificato con ",
+      "auto": true
+    }, {
+      "text": "2452",
+      "parameterId": "radiocor"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quotazioni di "
+    }, {
+      "text": "Amazon",
+      "parameterId": "Quotazioni-nome"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "voglio le quotazioni di "
+    }, {
+      "text": "un"
+    }, {
+      "text": " "
+    }, {
+      "text": "indice"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "voglio le quotazioni di "
+    }, {
+      "text": "Google",
+      "parameterId": "Quotazioni-nome"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quanto quota l'"
+    }, {
+      "text": "azione"
+    }, {
+      "text": " "
+    }, {
+      "text": "DE67G12F9034",
+      "parameterId": "Quotazioni-isin"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Quanto quota "
+    }, {
+      "text": "a2a",
+      "parameterId": "Quotazioni-nome"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quotazioni dell'"
+    }, {
+      "text": "azione"
+    }, {
+      "text": " "
+    }, {
+      "text": "9245",
+      "parameterId": "radiocor"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei sapere quanto quota "
+    }, {
+      "text": "FCA Stellantis",
+      "parameterId": "Quotazioni-nome"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso avere la quotazione del titolo "
+    }, {
+      "text": "IT0001415246",
+      "parameterId": "Quotazioni-isin"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve la quotazione del titolo "
+    }, {
+      "text": "IT0000072618",
+      "parameterId": "Quotazioni-isin"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi servono i prezzi di "
+    }, {
+      "text": "borsa italiana"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei sapere la quotazione di un titolo di cui ho l'isin",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso conoscere gli "
+    }, {
+      "text": "indici"
+    }, {
+      "text": " di borsa?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quanto quota "
+    }, {
+      "text": "Enel",
+      "parameterId": "Quotazioni-nome"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei conoscere il controvalore del titolo "
+    }, {
+      "text": "ENI",
+      "parameterId": "Quotazioni-nome"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei conoscere il book dei titoli "
+    }, {
+      "text": "Stellantis",
+      "parameterId": "Quotazioni-nome"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quanto quota ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "titolo",
+      "auto": true
+    }, {
+      "text": " in borsa?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve il prezzo dell'"
+    }, {
+      "text": "azione"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

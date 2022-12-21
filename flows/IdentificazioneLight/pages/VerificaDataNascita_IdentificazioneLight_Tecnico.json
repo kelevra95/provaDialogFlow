@@ -1,0 +1,85 @@
+{
+  "name": "a0768436-f659-4bd5-825d-cab7e6d0cad2",
+  "displayName": "VerificaDataNascita_IdentificazioneLight_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.data-nascita != $session.params.cliente-data-nascita AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non sono riuscito a identificarti." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "codice-titolare",
+        "value": null
+      }, {
+        "parameter": "codice-titolare-PG",
+        "value": null
+      }, {
+        "parameter": "codice-titolare-PF",
+        "value": null
+      }, {
+        "parameter": "cliente-cf",
+        "value": null
+      }, {
+        "parameter": "cliente-data-nascita",
+        "value": null
+      }, {
+        "parameter": "cliente-luogo-nascita",
+        "value": null
+      }, {
+        "parameter": "cliente-nsg",
+        "value": null
+      }, {
+        "parameter": "cliente-nome",
+        "value": null
+      }, {
+        "parameter": "cliente-cognome",
+        "value": null
+      }, {
+        "parameter": "lista-partita-iva",
+        "value": null
+      }, {
+        "parameter": "numero-partita-iva",
+        "value": null
+      }, {
+        "parameter": "cliente-minore",
+        "value": null
+      }, {
+        "parameter": "codice-filiale",
+        "value": null
+      }, {
+        "parameter": "cliente-altri-cloni",
+        "value": null
+      }, {
+        "parameter": "cliente-inabile",
+        "value": null
+      } ]
+    },
+    "targetPage": "GestioneRamo_IdentificazioneLight_Tecnico",
+    "name": "b93474aa-d2f7-49e4-b568-a876463e9bad"
+  }, {
+    "condition": "$session.params.data-nascita = $session.params.cliente-data-nascita AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Perfetto $session.params.cliente-nome. Sono riuscito a identificarti correttamente." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "livello-identificazione",
+        "value": "light"
+      } ]
+    },
+    "targetPage": "VerificaPFPGConBT_IdentificazioneLight_Tecnico",
+    "name": "572be07d-0beb-40e2-91db-71df4cb9a0dc"
+  } ]
+}

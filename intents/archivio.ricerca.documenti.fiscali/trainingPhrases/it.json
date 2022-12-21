@@ -1,0 +1,272 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "devo fare la dichiarazione dei redditi e mi serve la documentazione"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi puoi aiutare con la produzione dei documenti necessari per la dichiarazione dei redditi?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo portare i documenti al commercialista per la dichiarazione dei redditi",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "avrei bisogno dei documenti per fare il modello unico",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso avere le carte per la dichiarazione dei redditi?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "necessito della documentazione per fare ",
+      "auto": true
+    }, {
+      "text": "il 730",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi servono i documenti per la dichiarazione dei redditi",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve il documento degli interessi pagati del mutuo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho bisogno del documento degli interessi passivi del mutuo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei tutte le quietanze del mutuo finora pagate",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "per la dichiarazione dei redditi necessito dell'attestazione degli ineterssi passivi del mutuo pagati l'",
+      "auto": true
+    }, {
+      "text": "anno scorso",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo fare il modello unico e mi serve il certificato degli interessi passivi del mutuo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve la certificazione degli interessi passivi per ",
+      "auto": true
+    }, {
+      "text": "il 730",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cerco gli interessi pagati del mio mutuo casa",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi servono gli interessi passivi del mutuo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi puoi fornire l'attestazione degli interessi pagati del mutuo?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve il certificato degli interessi del mutuo pagati",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cerco l'attestazione degli interessi passivi del mututo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho bisogno degli interessi passivi del mutuo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve la certificazione del mutuo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho bisogno delle rate mensili del mutuo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sto cercando i documenti fiscali del mutuo ma non riesco a trovarli",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi dovreste spedire i documenti del mutuo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho bisogno dei documenti fiscali del mutuo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " recuperare i documenti del ",
+      "auto": true
+    }, {
+      "text": "mutuo",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non",
+      "auto": true
+    }, {
+      "text": " riesco ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " trovare i documenti ",
+      "auto": true
+    }, {
+      "text": "fiscali",
+      "auto": true
+    }, {
+      "text": " del ",
+      "auto": true
+    }, {
+      "text": "mutuo",
+      "auto": true
+    }, {
+      "text": ", mi potete dire dove li trovo?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho sottoscritto un mutuo da voi e mi servono i documenti fiscali",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "potete inviarmi i documenti del ",
+      "auto": true
+    }, {
+      "text": "mutuo",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi servirebbero i documenti del mio mutuo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dove trovo i documenti ",
+      "auto": true
+    }, {
+      "text": "fiscali",
+      "auto": true
+    }, {
+      "text": " del ",
+      "auto": true
+    }, {
+      "text": "mutuo",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

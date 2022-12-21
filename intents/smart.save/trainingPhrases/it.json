@@ -1,0 +1,240 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "voglio fare ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " versamento aggiuntivo sul mio smart save",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo fare ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " versamento estemporaneo su smart save",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso sospendere smart save?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "chiedo ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " rimborso dello smart save",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei info su smart save",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei sottoscrivere ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " pac con smart save",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi spieghi la differenza tra le ",
+      "auto": true
+    }, {
+      "text": "opzioni",
+      "auto": true
+    }, {
+      "text": " di ",
+      "auto": true
+    }, {
+      "text": "fondi",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "smart save",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso scegliere ",
+      "auto": true
+    }, {
+      "text": "fondi",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "non",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "eurizon",
+      "auto": true
+    }, {
+      "text": " su smartsave?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "perché ho poche ",
+      "auto": true
+    }, {
+      "text": "opzioni",
+      "auto": true
+    }, {
+      "text": " di ",
+      "auto": true
+    }, {
+      "text": "investimenti",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "smart save",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso vedere le informazioni sul ",
+      "auto": true
+    }, {
+      "text": "conto",
+      "auto": true
+    }, {
+      "text": " smartsave che ho scelto?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cambia periodicità investimenti dello smart save"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quali sono i miei investimenti smart save",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quante ",
+      "auto": true
+    }, {
+      "text": "commissioni",
+      "auto": true
+    }, {
+      "text": " pago utilizzando ",
+      "auto": true
+    }, {
+      "text": "smart save",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quanto ho ",
+      "auto": true
+    }, {
+      "text": "investito",
+      "auto": true
+    }, {
+      "text": " con smartsave?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cambia fondo smart save",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quali ",
+      "auto": true
+    }, {
+      "text": "opzioni",
+      "auto": true
+    }, {
+      "text": " di ",
+      "auto": true
+    }, {
+      "text": "fondo",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "ci",
+      "auto": true
+    }, {
+      "text": " sono per ",
+      "auto": true
+    }, {
+      "text": "smart save",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

@@ -1,0 +1,56 @@
+{
+  "name": "3374702c-43e7-4058-806c-1bfc94a3a7e4",
+  "displayName": "ConfermaPANCartaTerzi_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "\u003cspeak\u003eMi confermi che il numero della carta è \u003csay-as interpret-as=\"verbatim\"\u003e$session.params.PAN-carta\u003c/say-as\u003e?\u003c/speak\u003e" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": 0
+      } ]
+    },
+    "targetPage": "VerificaEsistenzaPANTerzi_CarteBlocco_Sicurezza",
+    "name": "6a4dba53-7337-4037-b4e3-cc2472fcd221"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Nessun problema." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "PAN-carta",
+        "value": null
+      }, {
+        "parameter": "contatore",
+        "value": "$sys.func.ADD($session.params.contatore, 1)"
+      } ]
+    },
+    "targetPage": "RichiestaPANCartaTerzi_CarteBlocco_Sicurezza",
+    "name": "38a89c5a-7e83-4f77-9539-4492e8fb529e"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

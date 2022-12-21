@@ -1,0 +1,10 @@
+{
+  "name": "8f18dd89-549a-42f6-9255-8a46619cfa5b",
+  "displayName": "cognome",
+  "parameters": [ {
+    "id": "cliente-cognome",
+    "entityType": "@Cognome",
+    "redact": true
+  } ],
+  "priority": 500000
+}

@@ -1,0 +1,44 @@
+{
+  "name": "06105ef2-838d-4c7b-b6ad-f5ef783ff386",
+  "displayName": "VerificaPFPGConBT_IdentificazioneLight_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.codice-titolare = $session.params.codice-titolare-PF AND $session.params.codice-titolare = $session.params.codice-titolare-PG",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "SceltaPFPGConBT_IdentificazioneLight_Tecnico",
+    "name": "c69cd71e-c4e7-4b5d-94c1-914b6482ddec"
+  }, {
+    "condition": "$session.params.codice-titolare = $session.params.codice-titolare-PG",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "livello-identificazione",
+        "value": "light"
+      }, {
+        "parameter": "cliente-tipo",
+        "value": "PG"
+      } ]
+    },
+    "targetPage": "NumeroPartitaIva_IdentificazioneLight_Tecnico",
+    "name": "66e85fa5-601c-4135-8350-10cce7a34c9f"
+  }, {
+    "condition": "$session.params.codice-titolare = $session.params.codice-titolare-PF",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "livello-identificazione",
+        "value": "light"
+      }, {
+        "parameter": "cliente-tipo",
+        "value": "PF"
+      } ]
+    },
+    "targetPage": "RichiestaSegmentoCliente_IdentificazioneLight_Tecnico",
+    "name": "ed018854-756e-47fc-a3a9-1054d74dc0c6"
+  } ]
+}

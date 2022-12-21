@@ -1,0 +1,39 @@
+{
+  "name": "513cbd98-fb0a-4f19-857d-14a581e7045c",
+  "displayName": "BloccoISPBSiNo_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Cliente ISP condiviso con ISPB"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "711f37de-cb5b-496b-ae18-62582c0e33f2"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "SalutiFinali_CarteBlocco_Sicurezza",
+    "name": "aa5faf61-3ebe-4ce5-aeef-14c9a2b2a398"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "98b45cc1-bd95-4558-b797-2f63f34d68b5",
+  "displayName": "RecuperoEmailFiliale_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "true",
+    "triggerFulfillment": {
+      "webhook": "Riferimenti-filiale",
+      "tag": "getBranchData"
+    },
+    "targetPage": "InvioMailSMS_CarteBlocco_Sicurezza",
+    "name": "42fa2d7a-28a8-49b7-9cc5-7c128677addb"
+  } ]
+}

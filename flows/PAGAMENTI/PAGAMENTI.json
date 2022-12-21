@@ -1,0 +1,254 @@
+{
+  "name": "7eb7d3c1-240a-4d34-8dec-5acfe818a9bf",
+  "displayName": "PAGAMENTI",
+  "transitionRoutes": [ {
+    "intent": "esecuzione.bonifico.generico",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": 0
+      }, {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.ESBO"
+      }, {
+        "parameter": "flusso-precedente",
+        "value": "$session.params.flusso-corrente"
+      }, {
+        "parameter": "flusso-corrente",
+        "value": "PAGAMENTI"
+      }, {
+        "parameter": "ticket-id",
+        "value": "EllisEsecuzioneBonifico"
+      }, {
+        "parameter": "routing-macroarea",
+        "value": "CTY_CC_OPZ"
+      }, {
+        "parameter": "routing-microarea",
+        "value": "CTY_CC_operaz"
+      }, {
+        "parameter": "knowledge-url",
+        "value": "https://knowledgefol.intesasanpaolo.com/sites/FOL/operativita/Lists/Bonifici/Tutti%20gli%20elementi.aspx"
+      }, {
+        "parameter": "knowledge-titolo",
+        "value": "Approfondimenti"
+      }, {
+        "parameter": "data-ora-sistema",
+        "value": "$sys.func.NOW()"
+      }, {
+        "parameter": "chiamata-survey",
+        "value": "off"
+      }, {
+        "parameter": "tipo-attivita",
+        "value": "D"
+      }, {
+        "parameter": "sottoflusso-precedente",
+        "value": "$session.params.sottoflusso-corrente"
+      }, {
+        "parameter": "sottoflusso-corrente",
+        "value": "Esecuzione Bonifici"
+      }, {
+        "parameter": "livello-abilitazione",
+        "value": "DISPONI"
+      }, {
+        "parameter": "tipologia-rapporto-PG",
+        "value": "IBAN"
+      }, {
+        "parameter": "tipologia-rapporto-PF",
+        "value": "IBAN"
+      } ]
+    },
+    "targetPage": "PrimaPagina_Bonifici_Pagamenti",
+    "name": "8e5c6abf-a885-4ada-b2c9-e3df6995d1b4"
+  }, {
+    "intent": "ricomincia",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Default Start Flow",
+    "name": "da9862be-827f-4ba0-ab73-e2758c17bf82"
+  }, {
+    "intent": "uscita",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Il cliente non vuole proseguire con Ellis"
+      }, {
+        "parameter": "intento",
+        "value": "uscita"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "4f0f3992-381f-4ae9-9fa1-57139b4e2b9f"
+  }, {
+    "intent": "operatore",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Richiesta operatore"
+      }, {
+        "parameter": "intento",
+        "value": "operatore"
+      } ]
+    },
+    "targetFlow": "HandoverRichiestaDiretta",
+    "name": "b6a7ad6e-17cf-496e-93f1-78cb0f0f989d"
+  }, {
+    "intent": "offese",
+    "condition": "$session.params.indice-offese = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ti ricordo che sono qui per aiutarti. Se lo de-sideri prova a riformulare la tua richiesta. " ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "indice-offese",
+        "value": 1
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "3caf212c-cd00-413e-8ac8-8b3808ae5c20"
+  }, {
+    "intent": "offese",
+    "condition": "$session.params.indice-offese = 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "indice-offese",
+        "value": null
+      }, {
+        "parameter": "intento",
+        "value": "offese"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Ripetute offese da parte del cliente"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "6d3f1891-3ec5-419c-b16a-b78786a2698b"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non ho capito bene." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "829ca1f0-1d97-4a01-84d8-4ca08f0a4f48"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non ti ho sentito." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "eb69dd98-7a15-46d1-8f21-f6fd3f655a8a"
+  }, {
+    "targetFlow": "HandoverCore",
+    "event": "webhook.error",
+    "triggerFulfillment": {
+    
+    },
+    "name": "8fd3707b-00cb-4846-b112-8adaafccdad4"
+  }, {
+    "targetFlow": "HandoverCore",
+    "event": "webhook.error.timeout",
+    "triggerFulfillment": {
+    
+    },
+    "name": "c8bd39bd-75a0-4be9-b6fc-5362a991db53"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non sono sicuro di aver sentito. Prova a ripetere." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "adf88660-8f30-4ded-bd97-81f63585211f"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Continuo a non sentire. Prova a ripetere." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "28b5ba92-ca47-4c85-bc1a-ac7ef353acef"
+  }, {
+    "targetFlow": "HandoverNonPrevistoProposta",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace, continuo a non sentire." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Ellis non riesce a sentire la risposta del cliente"
+      } ]
+    },
+    "name": "bd502982-242e-48b2-968d-cb02af9ec4b5"
+  }, {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non sono sicuro di aver capito. Prova a ripetere." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "da2e1160-b183-4f1e-8192-79676896ce96"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Continuo a non capire. Prova a ripetere." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "42e3db3d-67ba-40b3-8332-3a64609d3a3e"
+  }, {
+    "targetFlow": "HandoverNonPrevistoProposta",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace, continuo a non capire." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Ellis non riesce a capire la risposta del cliente"
+      } ]
+    },
+    "name": "da531994-8e08-4c54-8ea2-e306a15a9d21"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.60000002,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "multiIntentSettings": {
+    
+    }
+  },
+  "advancedSettings": {
+    "enabled": true
+  }
+}

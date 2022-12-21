@@ -1,0 +1,477 @@
+{
+  "name": "75404ad9-2209-4856-8841-4fedc8681338",
+  "displayName": "ASSISTENZA",
+  "description": "Presa appuntamento, sblocco contratto, riallineamento, recupero BT, accessi sito e app, modifica anagrafica, rubrica, rendicontazione, modifica email, ricerca atm, ricerca fliale",
+  "transitionRoutes": [ {
+    "intent": "uscita",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Il cliente non vuole proseguire con Ellis"
+      }, {
+        "parameter": "intento",
+        "value": "uscita"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "b74a1965-78b7-419d-ac22-df3381da4208"
+  }, {
+    "intent": "operatore",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Richiesta operatore"
+      }, {
+        "parameter": "intento",
+        "value": "operatore"
+      } ]
+    },
+    "targetFlow": "HandoverRichiestaDiretta",
+    "name": "3b500d38-7920-4e54-9157-9fb39ea5237b"
+  }, {
+    "intent": "modifica.cancellazione.appuntamento",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Se vuoi modificare o cancellare un appuntamento, chiama direttamente il tuo gestore." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "4ec7e99f-3622-4ba1-92cb-18ad02e42ab2"
+  }, {
+    "intent": "visibilita.appuntamento",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Gli appuntamenti fissati direttamente con me, non sono visibili sull'app o sul sito della banca. Se hai bisogno di effettuare una modifica o una cancellazione, chiama direttamente il tuo gestore." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "0293d689-2809-4cec-9fc2-49461e2dd68c"
+  }, {
+    "intent": "gestore.remoto",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Il tuo gestore digitale remoto, è il consulente che ti assiste a distanza nella gestione dei servizi e prodotti bancari, senza dover andare in filiale." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "8cbf6d7a-0643-4402-973b-e59b1a4e5b44"
+  }, {
+    "intent": "chi.sei",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sono Ellis, l'assistente digitale di Intesa Sanpaolo, e sono qui per fornirti assistenza telefonica." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "206da49f-6360-4c50-909b-1ffd6f411183"
+  }, {
+    "intent": "Default Welcome Intent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ciao, sono Ellis, l'assistente digitale di Intesa Sanpaolo, e sono qui per aiutarti." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "bd3e7763-fcc5-4b70-98d9-4d0c5cdc2d7b"
+  }, {
+    "intent": "istruzioni.sblocco",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Una volta ricevuta-lamail-contenente il documento, rispondi direttamente al mittente allegando il modulo compilato e firmato, e un documento d'identità fronte retro. Se non puoi stampare, riscrivi a mano la richiesta e fotografala con il tuo smartphone. Non serve che ci ricontatti, ti avviseremo noi via mail non appena la tua richiesta sarà completata." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "a62e31cd-49a6-4782-b5f5-f379fff18bb8"
+  }, {
+    "intent": "ripeti",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ok, ripeto." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "a82e6bec-e5dc-4aba-a349-553c3f61894d"
+  }, {
+    "intent": "ricomincia",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Default Start Flow",
+    "name": "b1a0a2f2-debe-43da-a7c9-ac09ede65576"
+  }, {
+    "intent": "offese",
+    "condition": "$session.params.indice-offese = 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Ripetute offese da parte del cliente"
+      }, {
+        "parameter": "indice-offese",
+        "value": null
+      }, {
+        "parameter": "intento",
+        "value": "offese"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "55a4881c-1f16-436e-b875-a71712cd4be6"
+  }, {
+    "intent": "offese",
+    "condition": "$session.params.indice-offese = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ti ricordo che sono qui per aiutarti. Se lo de-sideri prova a riformulare la tua richiesta. " ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "indice-offese",
+        "value": 1
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "184cdce0-0757-49b7-a63d-80da5e4b9fa1"
+  }, {
+    "condition": "$session.params.ivrMotivoChiamata = \"ELLIS\\.PRAP\" OR $session.params.motivo-contatto = \"ELLIS\\.PRAP\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": 0
+      }, {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.PRAP"
+      }, {
+        "parameter": "flusso-precedente",
+        "value": "$session.params.flusso-corrente"
+      }, {
+        "parameter": "flusso-corrente",
+        "value": "ASSISTENZA"
+      }, {
+        "parameter": "ticket-id",
+        "value": "EllisPresaAppuntamento"
+      }, {
+        "parameter": "routing-macroarea",
+        "value": "CTY_CC_ASSINFO"
+      }, {
+        "parameter": "routing-microarea",
+        "value": "CTY_CC_ellisprendapp"
+      }, {
+        "parameter": "knowledge-url",
+        "value": "https://knowledgefol.intesasanpaolo.com/sites/FOL/Lists/Cosa%20pu%20fare%20un%20GOL/DispForm.aspx?ID=46\u0026k=presa%20appuntamento\u0026InitialTabID=Ribbon.Read"
+      }, {
+        "parameter": "knowledge-titolo",
+        "value": "Approfondimenti"
+      }, {
+        "parameter": "data-ora-sistema",
+        "value": "$sys.func.NOW()"
+      }, {
+        "parameter": "chiamata-survey",
+        "value": "off"
+      }, {
+        "parameter": "tipo-attivita",
+        "value": "D"
+      }, {
+        "parameter": "sottoflusso-precedente",
+        "value": "$session.params.sottoflusso-corrente"
+      }, {
+        "parameter": "sottoflusso-corrente",
+        "value": "Presa Appuntamento"
+      } ]
+    },
+    "targetPage": "PrimaPagina_PresaAppuntamento_Assistenza",
+    "name": "69c3df87-9503-41da-952e-020b4acea8e1"
+  }, {
+    "condition": "$session.params.ivrMotivoChiamata = \"ELLIS\\.SBCO\" OR $session.params.motivo-contatto = \"ELLIS\\.SBCO\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.SBCO"
+      }, {
+        "parameter": "flusso-precedente",
+        "value": "$session.params.flusso-corrente"
+      }, {
+        "parameter": "flusso-corrente",
+        "value": "ASSISTENZA"
+      }, {
+        "parameter": "ticket-id",
+        "value": "EllisSbloccoContratto"
+      }, {
+        "parameter": "routing-macroarea",
+        "value": "CTY_CC_ASSINFO"
+      }, {
+        "parameter": "routing-microarea",
+        "value": "CTY_CC_ellissbloccontr"
+      }, {
+        "parameter": "knowledge-url",
+        "value": "https://knowledgefol.intesasanpaolo.com/sites/FOL/operativita/Lists/Sblocchi/DispForm.aspx?ID=1\u0026Source=https%3A%2F%2Fknowledgefol%2Eintesasanpaolo%2Ecom%2Fsites%2FFOL%2Foperativita%2FLists%2FSblocchi%2FTutti%2520gli%2520elementi%2Easpx\u0026ContentTypeId=0x0100585483395EC6174BAAEF2624A95C141F009808EED6AA05764D99C4BC7C1C4DE840"
+      }, {
+        "parameter": "knowledge-titolo",
+        "value": "Approfondimenti"
+      }, {
+        "parameter": "contatore",
+        "value": 0
+      }, {
+        "parameter": "data-ora-sistema",
+        "value": "$sys.func.NOW()"
+      }, {
+        "parameter": "chiamata-survey",
+        "value": "off"
+      }, {
+        "parameter": "tipo-attivita",
+        "value": "D"
+      }, {
+        "parameter": "sottoflusso-precedente",
+        "value": "$session.params.sottoflusso-corrente"
+      }, {
+        "parameter": "sottoflusso-corrente",
+        "value": "Sblocco Contratto"
+      } ]
+    },
+    "targetPage": "PrimaPagina_SbloccoContratto_Assistenza",
+    "name": "b5792ec5-4ae8-4b01-93b5-20b2949c8333"
+  }, {
+    "condition": "$session.params.ivrMotivoChiamata = \"ELLIS\\.RIAL\" OR $session.params.motivo-contatto = \"ELLIS\\.RIAL\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": 0
+      }, {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.RIAL"
+      }, {
+        "parameter": "flusso-precedente",
+        "value": "$session.params.flusso-corrente"
+      }, {
+        "parameter": "flusso-corrente",
+        "value": "ASSISTENZA"
+      }, {
+        "parameter": "ticket-id",
+        "value": "EllisRiallineamento"
+      }, {
+        "parameter": "routing-macroarea",
+        "value": "CTY_CC_OPZ"
+      }, {
+        "parameter": "routing-microarea",
+        "value": "CTY_CC_banking"
+      }, {
+        "parameter": "knowledge-url",
+        "value": "https://knowledgefol.intesasanpaolo.com/sites/FOL/operativita/Lists/Gestione%20Clienti/DispForm.aspx?ID=122\u0026k=riallineamento\u0026InitialTabID=Ribbon.Readhttps://knowledgefol.intesasanpaolo.com/sites/FOL/operativita/Lists/Gestione%20Clienti/DispForm.aspx?ID=122\u0026k=riallineamento\u0026InitialTabID=Ribbon.Read"
+      }, {
+        "parameter": "knowledge-titolo",
+        "value": "Approfondimenti"
+      }, {
+        "parameter": "data-ora-sistema",
+        "value": "$sys.func.NOW()"
+      }, {
+        "parameter": "chiamata-survey",
+        "value": "off"
+      }, {
+        "parameter": "tipo-attivita",
+        "value": "D"
+      }, {
+        "parameter": "sottoflusso-precedenbte",
+        "value": "$session.params.sottoflusso-corrente"
+      }, {
+        "parameter": "sottoflusso-corrente",
+        "value": "Riallineamento My Key"
+      } ]
+    },
+    "targetPage": "PrimaPagina_Riallineamento_Assistenza",
+    "name": "e2eae406-df74-4bb1-bea1-53d2fc5ded2f"
+  }, {
+    "condition": "$session.params.ivrMotivoChiamata = \"ELLIS\\.RIBT\" OR $session.params.motivo-contatto = \"ELLIS\\.RIBT\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": 0
+      }, {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.RIBT"
+      }, {
+        "parameter": "flusso-precedente",
+        "value": "$session.params.flusso-corrente"
+      }, {
+        "parameter": "flusso-corrente",
+        "value": "ASSISTENZA"
+      }, {
+        "parameter": "ticket-id",
+        "value": "EllisRichiestaCodiceTitolare"
+      }, {
+        "parameter": "routing-macroarea",
+        "value": "CTY_CC_ASSINFO"
+      }, {
+        "parameter": "routing-microarea",
+        "value": "CTY_CC_infoprod"
+      }, {
+        "parameter": "knowledge-url",
+        "value": "https://knowledgefol.intesasanpaolo.com/sites/FOL/Lists/Cosa%20pu%20fare%20un%20GOL/DispForm.aspx?ID=5\u0026k=ricerca%20codice%20titolare\u0026InitialTabID=Ribbon.Read"
+      }, {
+        "parameter": "knowledge-titolo",
+        "value": "Approfondimenti"
+      }, {
+        "parameter": "data-ora-sistema",
+        "value": "$sys.func.NOW()"
+      }, {
+        "parameter": "chiamata-survey",
+        "value": "off"
+      }, {
+        "parameter": "tipo-attivita",
+        "value": "D"
+      }, {
+        "parameter": "sottoflusso-precedente",
+        "value": "$session.params.sottoflusso-corrente"
+      }, {
+        "parameter": "sottoflusso-corrente",
+        "value": "Richiesta Codice Titolare"
+      } ]
+    },
+    "targetPage": "PrimaPagina_RichiestaCodiceTitolare_Assistenza",
+    "name": "99d7c8b8-4f1b-4860-8382-2b755c62e285"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non ho capito bene." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "83085a48-1ee5-4e2a-87dc-c2a62718ea55"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non ti ho sentito." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "5c0d2987-9dec-4459-aba5-c8f0c9c6f833"
+  }, {
+    "targetFlow": "HandoverCore",
+    "event": "webhook.error",
+    "triggerFulfillment": {
+    
+    },
+    "name": "ab55961d-8129-4f48-89b5-c7ed744398b5"
+  }, {
+    "targetFlow": "HandoverCore",
+    "event": "webhook.error.timeout",
+    "triggerFulfillment": {
+    
+    },
+    "name": "702e8b14-334d-4ff2-a493-10022c82f658"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non sono sicuro di aver sentito. Prova a ripetere." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "374ff9af-9dde-4841-8e7e-f1d83ff49a1b"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Continuo a non sentire. Prova a ripetere." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "645e6d33-ca52-4fcb-9a55-14f628d01dc3"
+  }, {
+    "targetFlow": "HandoverNonPrevistoProposta",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace, continuo a non sentire." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Ellis non riesce a sentire la risposta del cliente"
+      } ]
+    },
+    "name": "e292e46e-93f4-474a-92dc-e2884545f471"
+  }, {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non sono sicuro di aver capito. Prova a ripetere." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "ce008819-9069-4533-bce3-1d416014f8bd"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Continuo a non capire. Prova a ripetere." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "35d1b6c0-3467-402e-8d05-b575c99d94b2"
+  }, {
+    "targetFlow": "HandoverNonPrevistoProposta",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace, continuo a non capire." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Ellis non riesce a capire la risposta del cliente"
+      } ]
+    },
+    "name": "c2dfc8a3-7528-4160-b7fb-6da120820d81"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.60000002,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "multiIntentSettings": {
+    
+    }
+  },
+  "advancedSettings": {
+    "enabled": true
+  }
+}

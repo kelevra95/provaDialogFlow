@@ -1,0 +1,430 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "mi spiegate come attivare la nuova "
+    }, {
+      "text": "carta di debito",
+      "parameterId": "Tipo-Carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come si attiva la carta "
+    }, {
+      "text": "prepagata",
+      "parameterId": "Tipo-Carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo attivare la mia "
+    }, {
+      "text": "per me card",
+      "parameterId": "Tipo-Carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio per attivare la nuova "
+    }, {
+      "text": "superflash",
+      "parameterId": "Tipo-Carta"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei attivare la mia nuova "
+    }, {
+      "text": "flash",
+      "parameterId": "Tipo-Carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei che attivassimo la carta che ho ricevuta stamane per posta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi è arrivata una lettera con una "
+    }, {
+      "text": "carta"
+    }, {
+      "text": " nuova"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "la tessera è arrivata a casa e devo attivarla"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi è arrivata la busta con la "
+    }, {
+      "text": "carta"
+    }, {
+      "text": " a casa"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio funzionare il nuovo "
+    }, {
+      "text": "bancomat",
+      "parameterId": "Tipo-Carta"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cerco aiuto per far funzionare la tessera che ho ricevuto"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "a chi posso chiedere l'attivazione della nuova "
+    }, {
+      "text": "visa",
+      "parameterId": "Tipo-Carta"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "la "
+    }, {
+      "text": "xme card",
+      "parameterId": "Tipo-Carta"
+    }, {
+      "text": " nuova risulta disattivata"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "la nuova tessera è da attivare"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "la nuova "
+    }, {
+      "text": "carta"
+    }, {
+      "text": " non va ancora"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "è arrivata la "
+    }, {
+      "text": "carta"
+    }, {
+      "text": " che ho ordinato che faccio?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei procedere con l'attivazione "
+    }, {
+      "text": "carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Vorrei attivare "
+    }, {
+      "text": "carta di credito",
+      "parameterId": "Tipo-Carta"
+    }, {
+      "text": " appena ricevuta per posta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio ad attivare la carta ricevuta per posta?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "per attivare una nuova "
+    }, {
+      "text": "carta"
+    }, {
+      "text": " cosa devo fare?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Per attivare la "
+    }, {
+      "text": "carta"
+    }, {
+      "text": " devo andare in Filiale?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "attivazione carta "
+    }, {
+      "text": "bancomat",
+      "parameterId": "Tipo-Carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho ricevuto la mia nuova "
+    }, {
+      "text": "carta"
+    }, {
+      "text": " come si attiva?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio ad attivare la mia "
+    }, {
+      "text": "carta"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Devo attivare la mia "
+    }, {
+      "text": "carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "attivazione della nuova "
+    }, {
+      "text": "carta"
+    }, {
+      "text": " "
+    }, {
+      "text": "3315"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi da una mano per attivare la "
+    }, {
+      "text": "carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non riesco ad attivare la "
+    }, {
+      "text": "carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "la carta è già attiva?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho ricevuto la "
+    }, {
+      "text": "carta"
+    }, {
+      "text": ": è subito utilizzabile?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei rendere attiva la "
+    }, {
+      "text": "carta"
+    }, {
+      "text": " avente numerazione finale "
+    }, {
+      "text": "5477"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "è possibile attivare la "
+    }, {
+      "text": "carta di credito",
+      "parameterId": "Tipo-Carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "c'è un modo per attivare la "
+    }, {
+      "text": "carta"
+    }, {
+      "text": " "
+    }, {
+      "text": "9913"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "c'è scritto che devo attivare la carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "devo attivare la "
+    }, {
+      "text": "prepagata",
+      "parameterId": "Tipo-Carta"
+    }, {
+      "text": " ricevuta a casa"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi può attivare il "
+    }, {
+      "text": "bancocard",
+      "parameterId": "Tipo-Carta"
+    }, {
+      "text": " qui al telefono?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi potrebbe dire come attivare la nuova "
+    }, {
+      "text": "mastercard",
+      "parameterId": "Tipo-Carta"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi servono indicazioni per rendere funzionante la "
+    }, {
+      "text": "xme card",
+      "parameterId": "Tipo-Carta"
+    }, {
+      "text": " nuova"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come procedo per attivare la prepagata "
+    }, {
+      "text": "7890"
+    }, {
+      "text": " finale?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve assistenza per attivare il "
+    }, {
+      "text": "bancomat",
+      "parameterId": "Tipo-Carta"
+    }, {
+      "text": " nuovo"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "cosa devo fare per attivare la nuova "
+    }, {
+      "text": "visa",
+      "parameterId": "Tipo-Carta"
+    }, {
+      "text": "?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho una "
+    }, {
+      "text": "carta"
+    }, {
+      "text": " nuova ma non so come attivarla"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dovrei rendere funzionante la mia nuova "
+    }, {
+      "text": "carta"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho ricevuto la "
+    }, {
+      "text": "carta"
+    }, {
+      "text": " nuova e ora la vorrei attivare"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei attivare la mia nuova "
+    }, {
+      "text": "carta"
+    }, {
+      "text": " numero "
+    }, {
+      "text": "1970"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

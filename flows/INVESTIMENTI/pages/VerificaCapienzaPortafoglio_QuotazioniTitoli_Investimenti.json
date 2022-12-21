@@ -1,0 +1,39 @@
+{
+  "name": "e4252f63-bd0a-408c-973d-046465a07bc3",
+  "displayName": "VerificaCapienzaPortafoglio_QuotazioniTitoli_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$sys.func.COUNT($session.params.portafoglio-titoli) = 5",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi spiace sembra che il tuo portafoglio preferito titoli sia al completo. Vuoi eliminare un titolo per inserire quello nuovo? " ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "ConfermaPuliziaTitoli_QuotazioniTitoli_Investimenti ",
+    "name": "81b021f1-be80-4ba8-89a8-1e18398dc448"
+  }, {
+    "condition": "$sys.func.COUNT($session.params.portafoglio-titoli) \u003c 5",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "ok, ho aggiornato il tuo portafoglio preferiti aggiungendo il titolo $session.params.nome-identificativo-titolo. Vuoi operare su quest'ultimo?" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "portafoglio-titoli",
+        "value": "$sys.func.APPEND($session.params.portafoglio-titoli, $session.params.nome-identificativo-titolo)"
+      } ]
+    },
+    "targetPage": "ConfermaOperazionePortafoglioPreferiti_QuotazioniTitoli_Investimenti",
+    "name": "3930588d-f0c4-4a88-a8c8-710ef85b1a1b"
+  } ]
+}

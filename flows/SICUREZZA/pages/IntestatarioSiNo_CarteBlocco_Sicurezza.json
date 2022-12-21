@@ -1,0 +1,63 @@
+{
+  "name": "65f6285d-9602-41d1-9c2f-80cb60abcc53",
+  "displayName": "IntestatarioSiNo_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Il telefono da cui mi stai chiamando è il tuo?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "condition": "$session.params.ivrBt != \"00000000\" AND $session.params.ivrBt != \"\" AND $session.params.ivrBt != null AND $session.params.livello-identificazione = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Va bene." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "codice-titolare",
+        "value": "$sys.func.MID($session.params.ivrBt, 1, 8)"
+      }, {
+        "parameter": "livello-identificazione",
+        "value": "Strong"
+      } ]
+    },
+    "targetFlow": "IdentificazioneStrong",
+    "name": "66c506eb-3224-49a1-b425-b974d0d95555"
+  }, {
+    "intent": "si",
+    "condition": "$session.params.codice-titolare = null AND ($session.params.ivrBt = \"00000000\" OR $session.params.ivrBt = \"\" OR $session.params.ivrBt = null) AND ($session.params.ivrCf != null AND $session.params.ivrCf != \"\")",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Va bene." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetFlow": "IdentificazioneSRE",
+    "name": "f26c9374-4436-4334-b4f9-1f28a2e317a8"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "IdentificazioneLight",
+    "name": "05154fa4-fc53-45b9-8f87-266bc005e10d"
+  }, {
+    "condition": "$session.params.livello-identificazione != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaBT_CarteBlocco_Sicurezza",
+    "name": "6e9c4d24-e70e-400f-ae50-2140a2804106"
+  } ]
+}

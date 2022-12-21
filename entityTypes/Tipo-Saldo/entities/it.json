@@ -1,0 +1,11 @@
+{
+  "entities": [ {
+    "value": "contabile",
+    "synonyms": [ "saldo contabile" ],
+    "languageCode": "it"
+  }, {
+    "value": "disponibile",
+    "synonyms": [ "saldo disponibile", "saldo effettivo" ],
+    "languageCode": "it"
+  } ]
+}

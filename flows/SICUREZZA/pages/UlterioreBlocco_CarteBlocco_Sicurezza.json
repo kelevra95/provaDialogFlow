@@ -1,0 +1,90 @@
+{
+  "name": "d1f68f74-977e-41c9-832b-92631388bd76",
+  "displayName": "UlterioreBlocco_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "De-sideri bloccare altre carte Intesa Sanpaolo?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ok, proseguiamo." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "tipo-carta-cliente",
+        "value": null
+      }, {
+        "parameter": "tipo-blocco",
+        "value": null
+      }, {
+        "parameter": "numero-finale-carta",
+        "value": null
+      }, {
+        "parameter": "tipo-carta",
+        "value": null
+      } ]
+    },
+    "targetPage": "PrimaPagina_CarteBlocco_Sicurezza",
+    "name": "cd145d58-e243-4d8e-9b55-93d57ace6e8b"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "BloccoISPB_CarteBlocco_Sicurezza",
+    "name": "0080a20a-aad0-446e-9df3-3e46b652ee98"
+  }, {
+    "intent": "movimenti.disconoscimento",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Una volta completato il blocco della carta, ti consiglio di sporgere denuncia alle autorità competenti per richiedere il rimborso di eventuali movimenti non autorizzati. Per verifiche puntuali sui movimenti, puoi chiedermi di parlare con un gestore. " ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "8138a1f4-ea32-42fc-9bb2-549a59cdb150"
+  }, {
+    "intent": "carte.blocco",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "tipo-blocco",
+        "value": null
+      }, {
+        "parameter": "tipo-carta-cliente",
+        "value": null
+      }, {
+        "parameter": "numero-finale-carta",
+        "value": null
+      }, {
+        "parameter": "tipo-carta",
+        "value": null
+      } ]
+    },
+    "targetPage": "PrimaPagina_CarteBlocco_Sicurezza",
+    "name": "d20a2cab-7e26-4422-ac92-916ac45e0279"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

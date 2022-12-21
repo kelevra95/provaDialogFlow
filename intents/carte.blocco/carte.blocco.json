@@ -1,0 +1,22 @@
+{
+  "name": "4cb4cbec-2f39-464f-9466-3714b8cc6d8f",
+  "displayName": "carte.blocco",
+  "parameters": [ {
+    "id": "motivazione-blocco",
+    "entityType": "@Tipo-Motivazione-Blocco"
+  }, {
+    "id": "tipo-carta-cliente",
+    "entityType": "@Tipo-Carta-Cliente"
+  }, {
+    "id": "Tipo-Proprieta-Carta",
+    "entityType": "@Tipo-Proprieta-Carta"
+  }, {
+    "id": "tipo-blocco",
+    "entityType": "@Tipo-Blocco"
+  }, {
+    "id": "PAN-Carta",
+    "entityType": "@PAN-Carta"
+  } ],
+  "priority": 500000,
+  "description": "CONTI-CARTE"
+}

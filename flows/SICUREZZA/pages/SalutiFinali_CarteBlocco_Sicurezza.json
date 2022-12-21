@@ -1,0 +1,30 @@
+{
+  "name": "ecaa8d6b-f3cc-4646-8f9f-9c29b71a4d69",
+  "displayName": "SalutiFinali_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.chiamata-survey = \"on\"",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Survey_CarteBlocco_Sicurezza",
+    "name": "ee73b856-4710-4bb7-874d-07e4662195fa"
+  }, {
+    "condition": "$session.params.chiamata-survey = \"off\" OR $session.params.chiamata-survey = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "È stato un piacere parlare con te. A presto!" ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "4e7452d4-05dd-4ec5-bc75-5253b7d96656"
+  } ]
+}

@@ -1,0 +1,62 @@
+{
+  "name": "2eaebbfe-64b9-43e9-a4ea-729831ebd70f",
+  "displayName": "Survey_RicercaMovimenti_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Sono riuscito ad aiutarti?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Bene. Sono contento. È stato un piacere parlare con te. A presto!" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "esito-survey",
+        "value": "si"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "df41ecd3-33ab-42ca-8b4b-27e90372529b"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace. Cercherò di migliorare per il futuro." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "esito-survey",
+        "value": "no"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Il cliente non è soddisfatto dell'aiuto di Ellis"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "270544e2-a729-4ec5-8c1f-869b41c27466"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

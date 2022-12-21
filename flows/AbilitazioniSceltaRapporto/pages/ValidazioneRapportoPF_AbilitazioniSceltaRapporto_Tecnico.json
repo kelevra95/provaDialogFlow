@@ -1,0 +1,92 @@
+{
+  "name": "84728461-413b-474c-b788-ec960a891d6a",
+  "displayName": "ValidazioneRapportoPF_AbilitazioniSceltaRapporto_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaLivelloAbilitazionePF_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "fa8ada5a-9639-437d-8921-43a757dc7da3"
+  }, {
+    "intent": "no",
+    "condition": "$session.params.tipologia-rapporto-PF = \"IBAN\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "estratto-rapporto-IBAN-PF",
+        "value": null
+      }, {
+        "parameter": "estratto-abilitazione-IBAN-PF",
+        "value": null
+      }, {
+        "parameter": "estratto-intestazione-IBAN-PF",
+        "value": null
+      }, {
+        "parameter": "estratto-verifica-firma-disgiunta-IBAN-PF",
+        "value": null
+      }, {
+        "parameter": "numero-rapporto-PF",
+        "value": null
+      } ]
+    },
+    "targetPage": "VerificaRapportiPF_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "10bad88b-e1b4-461c-8ee1-77c4962bc06b"
+  }, {
+    "intent": "no",
+    "condition": "$session.params.tipologia-rapporto-PF = \"carte\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "estratto-rapporto-carte-PF",
+        "value": null
+      }, {
+        "parameter": "estratto-abilitazione-carte-PF",
+        "value": null
+      }, {
+        "parameter": "estratto-intestazione-carte-PF",
+        "value": null
+      }, {
+        "parameter": "numero-rapporto-PF",
+        "value": null
+      } ]
+    },
+    "targetPage": "VerificaRapportiPF_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "41857c4e-4399-4b58-8fa2-a00f7028a765"
+  }, {
+    "intent": "no",
+    "condition": "$session.params.tipologia-rapporto-PF = \"DA\"",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "estratto-rapporto-DA-PF",
+        "value": null
+      }, {
+        "parameter": "estratto-abilitazione-DA-PF",
+        "value": null
+      }, {
+        "parameter": "estratto-intestazione-DA-PF",
+        "value": null
+      }, {
+        "parameter": "numero-rapporto-PF",
+        "value": null
+      } ]
+    },
+    "targetPage": "VerificaRapportiPF_AbilitazioniSceltaRapporto_Tecnico",
+    "name": "4f77cb1f-3a4f-44e4-a4e9-402b48afb63d"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

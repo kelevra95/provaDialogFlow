@@ -1,0 +1,143 @@
+{
+  "name": "3eb9ff8f-7f1e-433d-b17b-117492f91fa5",
+  "displayName": "DomiciliazioniGenericoDisambiguazione_Tecnico_Tecnico",
+  "form": {
+    "parameters": [ {
+      "displayName": "tipo-carta-conto",
+      "required": true,
+      "entityType": "@tipo-carta-conto",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Ti riferisci ad una domiciliazione in conto o carta?" ]
+            },
+            "languageCode": "it"
+          } ]
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.tipo-carta-conto = \"carta\" AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Dal numero di assistenza clienti non è possibile creare, gestire o eliminare una domiciliazione agganciata ad una carta di credito. Non è possibile nemmeno respingere un addebito. Per qualsiasi richiesta o esigenza, dovrai contattare direttamente l'azienda creditrice. Se c'è altro che posso fare per te, chiedimi pure." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Flusso attualmente non gestito da Ellis"
+      }, {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.DGCA"
+      }, {
+        "parameter": "routing-macroarea",
+        "value": "CTY_CC_ASSINFO"
+      }, {
+        "parameter": "routing-microarea",
+        "value": "CTY_CC_infoprod"
+      }, {
+        "parameter": "knowledge-url",
+        "value": "https://knowledgefol.intesasanpaolo.com/sites/FOL/operativita/Lists/Pagamenti/DispForm.aspx?ID=52\u0026k=domiciliazioni%20carte%20di%20credito\u0026InitialTabID=Ribbon.Read"
+      }, {
+        "parameter": "knowledge-titolo",
+        "value": "Approfondimenti"
+      }, {
+        "parameter": "flusso-corrente",
+        "value": "Start"
+      }, {
+        "parameter": "contatore",
+        "value": 0
+      }, {
+        "parameter": "data-ora-sistema",
+        "value": "$sys.func.NOW()"
+      }, {
+        "parameter": "chiamata-survey",
+        "value": "off"
+      }, {
+        "parameter": "tipo-attivita",
+        "value": "E"
+      }, {
+        "parameter": "sottoflusso-corrente",
+        "value": "Domiciliazioni su carta"
+      }, {
+        "parameter": "ticket-id",
+        "value": "EllisConversazioneGenerica"
+      }, {
+        "parameter": "tipo-carta-conto",
+        "value": null
+      } ]
+    },
+    "targetPage": "Start Page",
+    "name": "cbf250c4-320c-4df7-aa38-2c5d3434e27e"
+  }, {
+    "condition": "$session.params.tipo-carta-conto = \"conto\" AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Al momento non mi occupo della gestione delle domiciliazioni in conto corrente." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Flusso attualmente non gestito da Ellis"
+      }, {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.DOGC"
+      }, {
+        "parameter": "routing-macroarea",
+        "value": "CTY_CC_OPZ"
+      }, {
+        "parameter": "routing-microarea",
+        "value": "CTY_CC_operaz"
+      }, {
+        "parameter": "knowledge-url",
+        "value": "https://knowledgefol.intesasanpaolo.com/sites/FOL/operativita/Lists/Pagamenti/DispForm.aspx?ID=52\u0026k=domiciliazioni%20carte%20di%20credito\u0026InitialTabID=Ribbon.Read"
+      }, {
+        "parameter": "knowledge-titolo",
+        "value": "Approfondimenti"
+      }, {
+        "parameter": "flusso-corrente",
+        "value": "Start"
+      }, {
+        "parameter": "contatore",
+        "value": 0
+      }, {
+        "parameter": "data-ora-sistema",
+        "value": "$sys.func.NOW()"
+      }, {
+        "parameter": "chiamata-survey",
+        "value": "off"
+      }, {
+        "parameter": "tipo-attivita",
+        "value": "I"
+      }, {
+        "parameter": "sottoflusso-corrente",
+        "value": "Gestione domiciliazioni in conto"
+      }, {
+        "parameter": "ticket-id",
+        "value": "EllisConversazioneGenerica"
+      }, {
+        "parameter": "identificazione-necessaria",
+        "value": "Strong"
+      }, {
+        "parameter": "tipo-carta-conto",
+        "value": null
+      } ]
+    },
+    "targetPage": "Start Page",
+    "name": "5c911447-b034-48fd-a889-7a8bdad0a635"
+  } ]
+}

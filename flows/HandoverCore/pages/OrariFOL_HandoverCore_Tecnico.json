@@ -1,0 +1,54 @@
+{
+  "name": "ee5264a3-5155-452d-a58d-dead1b231ed9",
+  "displayName": "OrariFOL_HandoverCore_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Riferimenti-filiale",
+    "tag": "isFolOpen"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "esito-handover",
+        "value": "si"
+      } ]
+    },
+    "targetFlow": "HandoverOK",
+    "name": "d559042a-725d-4d67-bd0e-7fd67dc852bb"
+  }, {
+    "condition": "$session.params.fol-aperta = false AND ($session.params.sottoflusso-precedente = \"Carte Blocco - blocco titolare\" OR $session.params.sottoflusso-corrente = \"Carte Blocco - blocco titolare\")",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "esito-handover",
+        "value": "si"
+      } ]
+    },
+    "targetFlow": "HandoverOK",
+    "name": "848996fd-93ae-4703-bed0-3516aced538b"
+  }, {
+    "condition": "$session.params.fol-aperta = false",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "In questo momento non riesco a trasferire la telefonata ad un gestore in quanto la Filiale Digitale è chiusa. Ricontatta-ci nei giorni feriali, da lunedì al sabato, dalle ore 7. In alternativa puoi scrivere la tua richiesta in chat nell'app o nel sito della banca, e alla riapertura un gestore ti risponderà non appena possibile." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "End Session",
+    "name": "1c54756e-1b13-4537-aaf0-b0deb6538d91"
+  }, {
+    "condition": "$session.params.fol-aperta = true",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "esito-handover",
+        "value": "si"
+      } ]
+    },
+    "targetFlow": "HandoverOK",
+    "name": "42798e39-e72e-40f0-bc52-8debf8f586ff"
+  } ]
+}

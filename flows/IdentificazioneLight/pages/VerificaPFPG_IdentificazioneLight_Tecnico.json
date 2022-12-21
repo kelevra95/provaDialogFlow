@@ -1,0 +1,49 @@
+{
+  "name": "ff8b6bb0-8654-41cd-a735-a6b6b548172a",
+  "displayName": "VerificaPFPG_IdentificazioneLight_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Riferimenti-contatto-cliente",
+    "tag": "searchAnagraphic"
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "e3772c69-060e-4e0e-b70d-8ab5e70d3ae2"
+  }, {
+    "condition": "$session.params.codice-titolare-PG != null AND $session.params.codice-titolare-PF != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "SceltaPFPG_IdentificazioneLight_Tecnico",
+    "name": "7ddd00fc-c894-41c8-afe3-91864ecc47fd"
+  }, {
+    "condition": "$session.params.codice-titolare-PF = null AND $session.params.codice-titolare-PG != null",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "livello-identificazione",
+        "value": "light"
+      }, {
+        "parameter": "cliente-tipo",
+        "value": "PG"
+      }, {
+        "parameter": "codice-titolare",
+        "value": "$session.params.codice-titolare-PG"
+      } ]
+    },
+    "targetPage": "NumeroPartitaIva_IdentificazioneLight_Tecnico",
+    "name": "fb2b21e9-3989-4ab3-844e-81d22eedafb0"
+  }, {
+    "condition": "$session.params.codice-titolare-PG = null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaPresenzaBT_IdentificazioneLight_Tecnico",
+    "name": "2b643d1d-37a2-49b6-bc62-1edaea624b89"
+  } ]
+}

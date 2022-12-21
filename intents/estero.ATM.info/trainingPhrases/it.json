@@ -1,0 +1,247 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "posso pagare nei negozi all'estero con le vostre carte?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso pagare in america con il bancomat",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso prelevare all'estero con le carte intesa?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ci sono filiali vostre all'estero?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "avete filiali fuori italia?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ci sono filiali Intesa Sanpaolo all'estero?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "se",
+      "auto": true
+    }, {
+      "text": " vado in argentina trovo gli sportelli della ",
+      "auto": true
+    }, {
+      "text": "vostra",
+      "auto": true
+    }, {
+      "text": " banca?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ci",
+      "auto": true
+    }, {
+      "text": " sono sportelli intesa in ",
+      "auto": true
+    }, {
+      "text": "austria",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dove trovo ",
+      "auto": true
+    }, {
+      "text": "l'",
+      "auto": true
+    }, {
+      "text": "atm più ",
+      "auto": true
+    }, {
+      "text": "vicino",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " puerta del sol madrid?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ci",
+      "auto": true
+    }, {
+      "text": " sono sportelli automatici in nepal?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "avete ",
+      "auto": true
+    }, {
+      "text": "filiali",
+      "auto": true
+    }, {
+      "text": " in giappone per prelevare con il ",
+      "auto": true
+    }, {
+      "text": "bancomat",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "in grecia ci sono atm intesa sanpaolo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sono in vacanza ",
+      "auto": true
+    }, {
+      "text": "all'",
+      "auto": true
+    }, {
+      "text": "estero",
+      "auto": true
+    }, {
+      "text": ", come faccio ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " prelevare?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " prelevare ",
+      "auto": true
+    }, {
+      "text": "se",
+      "auto": true
+    }, {
+      "text": " mi trovo ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " parigi?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ci",
+      "auto": true
+    }, {
+      "text": " sono sportelli della san paolo "
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " londra?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "trovo sportelli intesa ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " new york?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sono ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " Barcellona, in Spagna, ",
+      "auto": true
+    }, {
+      "text": "se",
+      "auto": true
+    }, {
+      "text": " avessi bisogno di prelevare dove posso andare?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "avete atm anche fuori ",
+      "auto": true
+    }, {
+      "text": "dall'",
+      "auto": true
+    }, {
+      "text": "italia",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "36a67131-ae60-45cd-9651-b5f59ef24f52",
+  "displayName": "esecuzione.bonifico.fiscale",
+  "priority": 500000,
+  "description": "informa il cliente che è possibile procedere con la tipologia di bonifico solo in self o in filiale"
+}

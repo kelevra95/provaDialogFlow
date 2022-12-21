@@ -1,0 +1,7 @@
+{
+  "entities": [ {
+    "value": "^(\\d(\\s+)?){16}$",
+    "synonyms": [ "^(\\d(\\s+)?){16}$" ],
+    "languageCode": "it"
+  } ]
+}

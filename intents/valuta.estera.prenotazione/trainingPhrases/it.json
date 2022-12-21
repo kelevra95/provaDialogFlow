@@ -1,0 +1,175 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "posso prenotare della valuta ",
+      "auto": true
+    }, {
+      "text": "al telefono",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "il cambio euro leu è cambiato ultimamente?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho prenotato ",
+      "auto": true
+    }, {
+      "text": "800",
+      "auto": true
+    }, {
+      "text": " lire libanesi, quando posso venire ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " ritirarle?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi fate scambiare ",
+      "auto": true
+    }, {
+      "text": "150",
+      "auto": true
+    }, {
+      "text": " euro con ",
+      "auto": true
+    }, {
+      "text": "80",
+      "auto": true
+    }, {
+      "text": " corone svedesi?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei fissare ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ordine ",
+      "auto": true
+    }, {
+      "text": "di 500",
+      "auto": true
+    }, {
+      "text": " dollari australiani",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso acquistare ",
+      "auto": true
+    }, {
+      "text": "180",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "franchi",
+      "auto": true
+    }, {
+      "text": " CFA presso ",
+      "auto": true
+    }, {
+      "text": "uno",
+      "auto": true
+    }, {
+      "text": " dei ",
+      "auto": true
+    }, {
+      "text": "vostri",
+      "auto": true
+    }, {
+      "text": " sportelli",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "qual è il tasso di cambio euro usd al momento?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dovrei comprare 100 dollari canadesi per la fine del mese"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "avrei bisogno di ",
+      "auto": true
+    }, {
+      "text": "2000",
+      "auto": true
+    }, {
+      "text": " euro in sterline",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "è possibile ritirare presso ",
+      "auto": true
+    }, {
+      "text": "una",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "vostra",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "filiale",
+      "auto": true
+    }, {
+      "text": " il dirham degli Emirati?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dovrei prenotare ",
+      "auto": true
+    }, {
+      "text": "2000",
+      "auto": true
+    }, {
+      "text": " euro in pesos messicano",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

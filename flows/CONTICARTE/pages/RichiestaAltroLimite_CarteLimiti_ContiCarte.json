@@ -1,0 +1,47 @@
+{
+  "name": "b5b660c3-df5c-413f-8900-e9388107d795",
+  "displayName": "RichiestaAltroLimite_CarteLimiti_ContiCarte",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Vuoi modificare un altro limite?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "limite-giornaliero-nuovo",
+        "value": null
+      }, {
+        "parameter": "limite-mensile-nuovo",
+        "value": null
+      } ]
+    },
+    "targetPage": "SceltaTipoLimite_CarteLimiti_ContiCarte",
+    "name": "9ebaae9b-380a-445b-9508-a94ea33f3618"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "SalutiFinali_CarteLimiti_ContiCarte",
+    "name": "bab57537-14a4-4041-93ae-16b11107f8de"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

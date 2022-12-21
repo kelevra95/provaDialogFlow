@@ -1,0 +1,157 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "mi servono informazioni sulla mia posizione fiscale",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei info sulle mie plusvalenze",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "volevo sapere se ho delle minusvalenze in scadenza",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho delle minusvalenze in scadenza da compensare?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quando viene calcolata la tassazione sulla compravendita del titolo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "qual è la mia situazione del capital gain",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come viene tassato il guadagno su ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": "'operazione in titoli",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come viene tassata l'operazione in titoli",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quanto ho guadagnato dall'operazione in titoli?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi serve assistenza per minusvalenze",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi puoi dire quant'è la mia minusvalenza"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "le minusvalenze che vedo sull'App sono già state aggiornate in base ",
+      "auto": true
+    }, {
+      "text": "alle",
+      "auto": true
+    }, {
+      "text": " transazioni della ",
+      "auto": true
+    }, {
+      "text": "scorsa settimana",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vorrei sapere sul mio conto cosa c'è di Minus per essere scontato diciamo da guadagno",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "fino a quando durano le mie minusvalenze della perdita sulle obbligazioni dell'anno scorso?"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho ricevuto una lettera dalla mia banca però non riesco a capire cosa dicono perché riguarda comunicazione capital gain e riepilogo minusvalenze"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi può dare la minusvalenza accumulata ad oggi perché non sono riuscito più a tenere contabilità",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Volevo sapere a quanto ammontano le minusvalenze",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "è possibile visualizzare il saldo delle minusvalenze",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "avrei bisogno di conoscere la mia minusvalenza sul mio deposito titoli, cioè non conoscere avere una certificazione"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dovrei spostare le minusvalenze presso un altro deposito amministrato verso un'altra banca",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

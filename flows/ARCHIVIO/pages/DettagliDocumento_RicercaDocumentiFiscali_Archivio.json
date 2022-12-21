@@ -1,0 +1,125 @@
+{
+  "name": "ed59dc8b-e507-44db-b745-297883494f79",
+  "displayName": "DettagliDocumento_RicercaDocumentiFiscali_Archivio",
+  "form": {
+    "parameters": [ {
+      "displayName": "periodo-ricerca",
+      "required": true,
+      "entityType": "@sys.date-period",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Dimmi il periodo di tuo interesse entro gli ultimi 10 anni. Per esempio \"marzo $session.params.anno-precedente\" o in alternativa, \"dal primo gennaio $session.params.anno-precedente al 30 giugno $session.params.anno-precedente\". " ]
+            },
+            "languageCode": "it"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non mi hai detto alcuna data. Riprova, per favore." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "b50fa993-1546-40f8-ab34-84430abeaf9d"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "La data che mi hai indicato non è corretta. Puoi dire, per esempio: \"dicembre $session.params.anno-precedente\" o in alternativa, \"dal primo settembre $session.params.anno-precedente al 31 dicembre $session.params.anno-precedente\"." ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "268b4a05-4831-48e4-a5a9-17d47786494c"
+        }, {
+          "targetPage": "VerificaPresenzaDocumentoInvioNotifica_RicercaDocumentiFiscali_Archivio",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Il periodo che mi hai indicato non è corretto. Provvedo a fornirti tutti i documenti disponibili." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "periodo-ricerca",
+              "value": null
+            } ]
+          },
+          "name": "ff9a5888-d643-4f6a-abe8-55842aad59c7"
+        }, {
+          "targetPage": "VerificaPresenzaDocumentoInvioNotifica_RicercaDocumentiFiscali_Archivio",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non mi hai ancora specificato nulla. Provvedo a fornirti tutti i documenti disponibili." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "periodo-ricerca",
+              "value": null
+            } ]
+          },
+          "name": "7da4da8f-9097-4e15-a98a-2b10d1331bae"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "intent": "ultimo.periodo",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "periodo-ricerca",
+        "value": null
+      } ]
+    },
+    "targetPage": "VerificaPresenzaDocumentoInvioNotifica_RicercaDocumentiFiscali_Archivio",
+    "name": "a41d954e-2281-4b35-875c-26700c801099"
+  }, {
+    "condition": "$session.params.periodo-ricerca.endDate.year \u003e= $session.params.data-ora-sistema.year AND $session.params.periodo-ricerca.endDate.month \u003e $session.params.data-ora-sistema.month AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Il periodo di ricerca, non può essere successivo al mese in corso." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "periodo-ricerca",
+        "value": null
+      } ]
+    },
+    "targetPage": "DettagliDocumento_RicercaDocumentiFiscali_Archivio",
+    "name": "cfc4dd02-0a04-4531-b18b-13676fd6432b"
+  }, {
+    "condition": "$session.params.periodo-ricerca.endDate.year \u003e $session.params.data-ora-sistema.year AND $session.params.periodo-ricerca.endDate.month \u003c= $session.params.data-ora-sistema.month AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "Normalizzazione_RicercaDocumentiFiscali_Archivio",
+    "name": "2cc2454a-3144-46a3-b6d7-21140d74ed1f"
+  }, {
+    "condition": "($session.params.periodo-ricerca.endDate.year \u003c $session.params.data-ora-sistema.year OR ($session.params.periodo-ricerca.endDate.year = $session.params.data-ora-sistema.year AND $session.params.periodo-ricerca.endDate.month \u003c= $session.params.data-ora-sistema.month)) AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaPresenzaDocumentoInvioNotifica_RicercaDocumentiFiscali_Archivio",
+    "name": "5f86586d-06d4-417f-b5bf-6df8d9ef2f77"
+  } ]
+}

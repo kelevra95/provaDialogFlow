@@ -1,0 +1,47 @@
+{
+  "name": "51da4cbb-0b86-41bb-b10f-8e0c99c27cd2",
+  "displayName": "RiletturaCartaDaBloccare_CarteBlocco_Sicurezza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "\u003cspeak\u003e\nMi confermi che le ultime 4 cifre della carta da bloccare sono  \n  \u003csay-as interpret-as=\"verbatim\"\u003e$session.params.numero-finale-carta\u003c/say-as\u003e?\n\u003c/speak\u003e" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "no",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": "$sys.func.ADD($session.params.contatore, 1)"
+      }, {
+        "parameter": "numero-finale-carta",
+        "value": null
+      } ]
+    },
+    "targetPage": "SceltaCartaDaBloccare_CartaBlocco_Sicurezza",
+    "name": "5b498f2b-cef6-4bf3-9c72-a2ce74382771"
+  }, {
+    "intent": "si",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "VerificaEsistenzaCarta_CarteBlocco_Sicurezza",
+    "name": "f93a83bb-b57a-4798-aabc-02db67605cf6"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 92,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

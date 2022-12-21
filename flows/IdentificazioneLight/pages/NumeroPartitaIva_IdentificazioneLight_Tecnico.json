@@ -1,0 +1,47 @@
+{
+  "name": "dc5ead90-d4b5-4c49-a31a-e01ce23d7b86",
+  "displayName": "NumeroPartitaIva_IdentificazioneLight_Tecnico",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.numero-partita-iva = 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Con i dati che mi hai fornito non trovo alcuna partita iva collegata." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Il cliente ha scelto di operare come PG ma non ha alcuna partita iva collegata"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "e618d174-a605-4060-9b0d-56285b38af67"
+  }, {
+    "condition": "$session.params.numero-partita-iva = 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "partita-iva-PG",
+        "value": "$session.params.lista-partita-iva"
+      } ]
+    },
+    "targetPage": "RecuperoDatiPartitaIva_IdentificazioneLight_Tecnico",
+    "name": "882bf5a7-628c-4a77-a078-a4d560f58013"
+  }, {
+    "condition": "$session.params.numero-partita-iva \u003e 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": 0
+      } ]
+    },
+    "targetPage": "SceltaPartitaIva_IdentificazioneLight_Tecnico",
+    "name": "65e0338c-e6bb-4c98-9747-64b96d281e17"
+  } ]
+}

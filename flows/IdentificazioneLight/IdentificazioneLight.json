@@ -1,0 +1,259 @@
+{
+  "name": "7e833e0f-6dc0-49f3-9c5c-8d7936b3b6ca",
+  "displayName": "IdentificazioneLight",
+  "transitionRoutes": [ {
+    "intent": "chi.sei",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Sono Ellis, l'assistente digitale di Intesa Sanpaolo, e sono qui per fornirti assistenza telefonica." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "Previous Page",
+    "name": "bc8b5d05-5971-4bb0-b083-4fc7cacf01be"
+  }, {
+    "intent": "codice.titolare",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Il codice titolare, formato da 8 numeri, serve per accedere ai servizi online offerti dalla banca tramite sito, app e telefono." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "08a0bea7-28b7-466b-9588-a2e394a91e04"
+  }, {
+    "intent": "ricomincia",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "Default Start Flow",
+    "name": "956e951d-1fb0-45a2-8dc1-070353feedff"
+  }, {
+    "intent": "offese",
+    "condition": "$session.params.indice-offese = null",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ti ricordo che sono qui per aiutarti. Se lo de-sideri prova a riformulare la tua richiesta." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "indice-offese",
+        "value": 1
+      } ]
+    },
+    "targetPage": "Current Page",
+    "name": "3536465b-08a7-411b-8e9a-8a11a036c16c"
+  }, {
+    "intent": "offese",
+    "condition": "$session.params.indice-offese = 1",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "indice-offese",
+        "value": null
+      }, {
+        "parameter": "intento",
+        "value": "offese"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Ripetute offese da parte del cliente"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "14db6843-53a5-437d-abea-d2c48f67fda0"
+  }, {
+    "condition": "$session.params.identificazione-BT = true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Per proseguire vorrei verificare i tuoi dati anagrafici. Rispondimi solo con il dato richiesto." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": 0
+      }, {
+        "parameter": "flusso-precedente",
+        "value": "$session.params.flusso-corrente"
+      }, {
+        "parameter": "flusso-corrente",
+        "value": "Identificazione Light"
+      }, {
+        "parameter": "identificazione-cognome",
+        "value": true
+      }, {
+        "parameter": "sottoflusso-precedente",
+        "value": "$session.params.sottoflusso-corrente"
+      }, {
+        "parameter": "sottoflusso-corrente",
+        "value": "Identificazione Light"
+      } ]
+    },
+    "targetPage": "IdentificazioneCognome_IdentificazioneLight_Tecnico",
+    "name": "8623868e-0bf7-4fdc-bfd7-821cad116f78"
+  }, {
+    "condition": "true",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Per proseguire vorrei verificare i tuoi dati anagrafici. Rispondimi solo con il dato richiesto. Sei in possesso del codice titolare My Key?" ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "contatore",
+        "value": 0
+      }, {
+        "parameter": "flusso-precedente",
+        "value": "$session.params.flusso-corrente"
+      }, {
+        "parameter": "flusso-corrente",
+        "value": "Identificazione Light"
+      }, {
+        "parameter": "identificazione-BT",
+        "value": false
+      }, {
+        "parameter": "identificazione-cognome",
+        "value": false
+      }, {
+        "parameter": "sottoflusso-precedente",
+        "value": "$session.params.sottoflusso-corrente"
+      }, {
+        "parameter": "sottoflusso-corrente",
+        "value": "Identificazione Light"
+      } ]
+    },
+    "targetPage": "GestioneRamo_IdentificazioneLight_Tecnico",
+    "name": "ddc05581-657e-4820-9942-43dbb702c068"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non ho capito bene." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "f032b125-ef0e-4bd3-ad4d-0be61678b336"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non ti ho sentito." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "7224b576-e057-4365-80b0-d6a054e246df"
+  }, {
+    "targetFlow": "HandoverCore",
+    "event": "webhook.error",
+    "triggerFulfillment": {
+    
+    },
+    "name": "35852ac0-d620-4e6e-ba49-71471a2ac800"
+  }, {
+    "targetFlow": "HandoverCore",
+    "event": "webhook.error.timeout",
+    "triggerFulfillment": {
+    
+    },
+    "name": "4551b79e-4535-4c5d-98a8-b0bd88aeac06"
+  }, {
+    "event": "sys.no-input-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non sono sicuro di aver sentito. Prova a ripetere." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "66a58466-8f1e-4851-b3cc-c8d7baeed756"
+  }, {
+    "event": "sys.no-input-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Continuo a non sentire. Prova a ripetere." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "608d8237-c40e-4271-83a9-255122679b15"
+  }, {
+    "targetFlow": "HandoverNonPrevistoProposta",
+    "event": "sys.no-input-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace, continuo a non sentire." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Ellis non riesce a sentire la risposta del cliente"
+      } ]
+    },
+    "name": "1133e09d-4f67-40ab-b460-e34a55465146"
+  }, {
+    "event": "sys.no-match-1",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non sono sicuro di aver capito. Prova a ripetere." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "3efd1017-2ec5-46d6-88ec-1b836d46f0bc"
+  }, {
+    "event": "sys.no-match-2",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Continuo a non capire. Prova a ripetere." ]
+        },
+        "languageCode": "it"
+      } ]
+    },
+    "name": "f396b8f4-398f-42b7-9a5f-9384c5c2cbc9"
+  }, {
+    "targetFlow": "HandoverNonPrevistoProposta",
+    "event": "sys.no-match-3",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mi dispiace, continuo a non capire." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "Ellis non riesce a capire la risposta del cliente"
+      } ]
+    },
+    "name": "f5d4eda6-d57a-4d67-ae41-e9951e02dcbd"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.60000002,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "multiIntentSettings": {
+    
+    }
+  },
+  "advancedSettings": {
+    "enabled": true
+  }
+}

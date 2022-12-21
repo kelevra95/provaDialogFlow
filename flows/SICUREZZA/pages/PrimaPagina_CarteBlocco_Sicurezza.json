@@ -1,0 +1,187 @@
+{
+  "name": "32946817-8af2-4570-adc0-3a55a07224f4",
+  "displayName": "PrimaPagina_CarteBlocco_Sicurezza",
+  "form": {
+    "parameters": [ {
+      "displayName": "Tipo-Proprieta-Carta",
+      "required": true,
+      "entityType": "@Tipo-Proprieta-Carta",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Vuoi bloccare una carta tua, di terzi o una carta aziendale?" ]
+            },
+            "languageCode": "it"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-input-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho sentito. Puoi dirmi se la carta è tua, di altri o aziendale?" ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "67c199ba-cdc3-409d-b9af-e9642ca93d83"
+        }, {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho capito. Puoi dirmi se la carta è tua, di altri o aziendale?" ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "9d6d0172-d8ec-42cd-b6d4-92fd2884492f"
+        }, {
+          "targetFlow": "HandoverNonPrevistoProposta",
+          "event": "sys.no-input-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non sentire." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "motivo-handover",
+              "value": "Titolare della carta non individuato"
+            } ]
+          },
+          "name": "eee866ea-06a6-4d4b-9d54-0d8bc5216af8"
+        }, {
+          "targetFlow": "HandoverNonPrevistoProposta",
+          "event": "sys.no-match-2",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Continuo a non capire." ]
+              },
+              "languageCode": "it"
+            } ],
+            "setParameterActions": [ {
+              "parameter": "motivo-handover",
+              "value": "Titolare della carta non individuato"
+            } ]
+          },
+          "name": "0a7e5a1d-4800-40b5-a86e-e8a661407ffb"
+        } ]
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+    "setParameterActions": [ {
+      "parameter": "PAN-carta",
+      "value": null
+    }, {
+      "parameter": "motivazione-blocco",
+      "value": null
+    }, {
+      "parameter": "numero-finale-carta",
+      "value": null
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "non.so",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Nessun problema. In tal caso," ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "knowledge",
+        "value": "https://knowledgefol.intesasanpaolo.com/sites/FOL/operativita/Lists/Gestione%20Clienti/DispForm.aspx?ID=76\u0026InitialTabID=Ribbon.Read"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Possibile blocco carta per conto terzi"
+      }, {
+        "parameter": "sottoflusso-corrente",
+        "value": "Carte Blocco - blocco terzi"
+      }, {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.BLCT"
+      }, {
+        "parameter": "ticket-id",
+        "value": "EllisBloccoCartaTerzi"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "36a92ff1-c264-4655-afd8-49144f01aa17"
+  }, {
+    "condition": "$session.params.Tipo-Proprieta-Carta = \"mia\" AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "tipo-carta",
+        "value": "Tutte"
+      } ]
+    },
+    "targetPage": "VerificaBT_CarteBlocco_Sicurezza",
+    "name": "67ebc316-5c3c-4667-9f1a-7776c25f2bec"
+  }, {
+    "condition": "$session.params.Tipo-Proprieta-Carta = \"terzi\" AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "knowledge",
+        "value": "https://knowledgefol.intesasanpaolo.com/sites/FOL/operativita/Lists/Gestione%20Clienti/DispForm.aspx?ID=76\u0026InitialTabID=Ribbon.Read"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Blocco carta per conto terzi"
+      }, {
+        "parameter": "sottoflusso-corrente",
+        "value": "Carte Blocco - blocco terzi"
+      }, {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.BLCT"
+      }, {
+        "parameter": "ticket-id",
+        "value": "EllisBloccoCartaTerzi"
+      } ]
+    },
+    "targetPage": "RichiestaPANCartaTerzi_CarteBlocco_Sicurezza",
+    "name": "b0a01bab-e87c-4e77-94ab-52edd8fd63e4"
+  }, {
+    "condition": "$session.params.Tipo-Proprieta-Carta = \"aziendale\" AND $page.params.status = FINAL",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "knowledge-url",
+        "value": "https://knowledgefol.intesasanpaolo.com/sites/FOL/operativita/Lists/Gestione%20Clienti/DispForm.aspx?ID=76\u0026InitialTabID=Ribbon.Read"
+      }, {
+        "parameter": "motivo-handover",
+        "value": "Blocco carta per conto terzi"
+      }, {
+        "parameter": "sottoflusso-corrente",
+        "value": "Carte Blocco - blocco terzi"
+      }, {
+        "parameter": "motivo-contatto",
+        "value": "ELLIS.BLCT"
+      }, {
+        "parameter": "ticket-id",
+        "value": "EllisBloccoCartaTerzi"
+      } ]
+    },
+    "targetPage": "LegaleRappresentanteSiNo_CarteBlocco_Sicurezza",
+    "name": "ac0ab3a5-6378-45b7-912e-96b735691a8f"
+  } ],
+  "advancedSettings": {
+    "speechSettings": {
+      "endpointerSensitivity": 11,
+      "noSpeechTimeout": {
+        "seconds": 5
+      }
+    }
+  },
+  "speakerIdSettings": {
+  
+  }
+}

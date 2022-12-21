@@ -1,0 +1,172 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "eliminazioni titolo bancario assegno",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho consegnato un assegno per errore e desidero annullarlo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ho staccato un assegno e lo voglio annullare",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi hanno ",
+      "auto": true
+    }, {
+      "text": "rubato",
+      "auto": true
+    }, {
+      "text": " il blocchetto, come faccio ",
+      "auto": true
+    }, {
+      "text": "ad",
+      "auto": true
+    }, {
+      "text": " eliminare ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "assegno",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "ci ho ripensato e vorrei annullare un assegno emesso",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "si",
+      "auto": true
+    }, {
+      "text": " possono revocare gli ",
+      "auto": true
+    }, {
+      "text": "assegni",
+      "auto": true
+    }, {
+      "text": " consegnati?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sono in lite, posso bloccare ",
+      "auto": true
+    }, {
+      "text": "l'",
+      "auto": true
+    }, {
+      "text": "assegno",
+      "auto": true
+    }, {
+      "text": " di ",
+      "auto": true
+    }, {
+      "text": "pagamento",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "è fattibile ",
+      "auto": true
+    }, {
+      "text": "l'",
+      "auto": true
+    }, {
+      "text": "annullo di ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "assegno",
+      "auto": true
+    }, {
+      "text": " emesso?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "posso annullare ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "assegno",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "smarrito",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "se",
+      "auto": true
+    }, {
+      "text": " compilo ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "assegno",
+      "auto": true
+    }, {
+      "text": " bancario posso poi annullarlo?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

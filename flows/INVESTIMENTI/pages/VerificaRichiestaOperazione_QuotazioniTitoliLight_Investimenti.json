@@ -1,0 +1,39 @@
+{
+  "name": "d542c46a-bc0d-48f8-a3a9-f810ebd81dcd",
+  "displayName": "VerificaRichiestaOperazione_QuotazioniTitoliLight_Investimenti",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Desideri operare sul titolo?" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "si",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "In questo caso, ti passo un operatore." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "motivo-handover",
+        "value": "il cliente vuole operare sui titoli"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "0c33662c-b4d9-4732-bde3-de0d6dff718a"
+  }, {
+    "intent": "no",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "NuovaQuotazioneSiNo_QuotazioniTitoliLight_Investimenti",
+    "name": "5d74cf32-b4b0-4508-811b-cdb05908ac9a"
+  } ]
+}

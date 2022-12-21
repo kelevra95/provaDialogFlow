@@ -1,0 +1,52 @@
+{
+  "name": "a4e92c15-8b2c-4829-ad70-b66b6cd17468",
+  "displayName": "VerificaPreventiva_PresaAppuntamento_Assistenza",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "webhook": "Gestione-agenda",
+    "tag": "checkAdvisorAgendaSlotsInOtherDays",
+    "setParameterActions": [ {
+      "parameter": "fascia-oraria",
+      "value": "indifferente"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.fulfillment-error = true",
+    "triggerFulfillment": {
+    
+    },
+    "targetFlow": "HandoverCore",
+    "name": "64770fe3-2ffd-4820-893d-61a078a3bd7a"
+  }, {
+    "condition": "$session.params.numero-slot = 0",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ho fatto una verifica in agenda e il tuo gestore non è disponibile nelle prossime 2 settimane." ]
+        },
+        "languageCode": "it"
+      } ],
+      "setParameterActions": [ {
+        "parameter": "fascia-oraria",
+        "value": null
+      }, {
+        "parameter": "motivo-handover",
+        "value": "L' agenda del gestore risulta tutta occupata/non disponibile nei prossimi 14 giorni"
+      } ]
+    },
+    "targetFlow": "HandoverProposta",
+    "name": "5cd61125-87d5-4008-b7f8-769a93a5203f"
+  }, {
+    "condition": "$session.params.numero-slot \u003e 0",
+    "triggerFulfillment": {
+      "setParameterActions": [ {
+        "parameter": "fascia-oraria",
+        "value": null
+      } ]
+    },
+    "targetPage": "SceltaMotivo_PresaAppuntamento_Assistenza",
+    "name": "01eb997b-729f-4af4-bc91-73a6a23c36e8"
+  } ]
+}

@@ -1,0 +1,146 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "buongiorno ellis, sto aspettando in conto corrente",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sto aspettando ",
+      "auto": true
+    }, {
+      "text": "un"
+    }, {
+      "text": " bonifico da 2 giorni ma ancora non è arrivato nulla",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi dicono di aver autorizzato un rimborso direttamente sulla domiciliazione in conto",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dovrei verificare la ricezione del rimborso che mi hanno effettuato tramite rid",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "come faccio ",
+      "auto": true
+    }, {
+      "text": "a",
+      "auto": true
+    }, {
+      "text": " vedere ",
+      "auto": true
+    }, {
+      "text": "se",
+      "auto": true
+    }, {
+      "text": " ho ",
+      "auto": true
+    }, {
+      "text": "ricevuto",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " rimborso tramite domiciliazione adue?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi hanno effettuato un accredito rid per un rimborso",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non vedo il rimborso che sto attendendo tramite rid",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sto attendendo un rimborso tramite domiciliazione",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quanto tempo richieste lo storno di ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "bonifico",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "quanto ",
+      "auto": true
+    }, {
+      "text": "ci",
+      "auto": true
+    }, {
+      "text": " vuole per ",
+      "auto": true
+    }, {
+      "text": "un",
+      "auto": true
+    }, {
+      "text": " rimborso tramite ",
+      "auto": true
+    }, {
+      "text": "bonifico",
+      "auto": true
+    }, {
+      "text": "?",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi hanno detto di aver fatto un rimborso tramite bonifico ma non lo vedo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "non vedo ancora il rimborso in conto",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}
