@@ -1,0 +1,129 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "Soave",
+      "parameterId": "geo-city",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "Verona"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Arzignano",
+      "parameterId": "geo-city",
+      "auto": true
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "Vicenza"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Carate Brianza",
+      "parameterId": "geo-city",
+      "auto": true
+    }, {
+      "text": " in provincia di ",
+      "auto": true
+    }, {
+      "text": "Monza"
+    }, {
+      "text": " ",
+      "auto": true
+    }, {
+      "text": "Brianza"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "nei ",
+      "auto": true
+    }, {
+      "text": "Paesi Bassi",
+      "parameterId": "geo-country"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "in ",
+      "auto": true
+    }, {
+      "text": "Germania",
+      "parameterId": "geo-country"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "America",
+      "parameterId": "geo-country"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Francia",
+      "parameterId": "geo-country"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "santa maria di leuca",
+      "parameterId": "geo-city"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "vivo a "
+    }, {
+      "text": "Milano",
+      "parameterId": "geo-city"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "San Bonifacio",
+      "parameterId": "geo-city"
+    }, {
+      "text": " in provincia di Verona"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Mantova",
+      "parameterId": "geo-city"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "Firenze",
+      "parameterId": "geo-city"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sono nato a "
+    }, {
+      "text": "San Giovanni Lupatoto",
+      "parameterId": "geo-city"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

@@ -1,0 +1,88 @@
+{
+  "name": "00000000-0000-0000-0000-000000000000",
+  "displayName": "Default Start Flow",
+  "description": "A start flow created along with the agent",
+  "transitionRoutes": [ {
+    "intent": "Default Welcome Intent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Ciao!", "Buongiorno!" ]
+        },
+        "languageCode": "it"
+      }, {
+        "text": {
+          "text": [ "Hi! How are you doing?", "Hello! How can I help you?", "Good day! What can I do for you today?", "Greetings! How can I assist?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "e684364c-2e23-45f5-be88-40f8ab828a19"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non penso di seguirti. Potresti ripetere?", "Potresti dirlo ancora una volta?", "Potresti essere più specifico?", "Non ho capito bene. Potresti ripetere?", "Non ti ho sentito bene. Puoi ripetere?" ]
+        },
+        "languageCode": "it"
+      }, {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "9f6cbfba-86d5-47df-aedc-9a79e11b31a1"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Non penso di seguirti. Potresti ripetere?", "Potresti dirlo ancora una volta?", "Potresti essere più specifico?", "Non ho capito bene. Potresti ripetere?", "Non ti ho sentito bene. Puoi ripetere?" ]
+        },
+        "languageCode": "it"
+      }, {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "fb778f9a-58fd-4c9e-b30d-7550d34aa13c"
+  }, {
+    "targetPage": "Luogo_Intento",
+    "event": "luogo-intento",
+    "triggerFulfillment": {
+    
+    },
+    "name": "53972752-4632-49ba-83df-a549cea8f523"
+  }, {
+    "targetPage": "Cognome_Intento",
+    "event": "cognome-intento",
+    "triggerFulfillment": {
+    
+    },
+    "name": "ba738f09-c7a7-4f63-ba1c-8a5b0e5e122e"
+  }, {
+    "targetPage": "Cognome_Parametro",
+    "event": "cognome-parametro",
+    "triggerFulfillment": {
+    
+    },
+    "name": "f1676bd8-638c-48a3-8369-80960da7bf13"
+  }, {
+    "targetPage": "Luogo_Parametro",
+    "event": "luogo-parametro",
+    "triggerFulfillment": {
+    
+    },
+    "name": "5bf59a21-1875-41b1-9624-c8022a0259b3"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.60000002,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC"
+  }
+}

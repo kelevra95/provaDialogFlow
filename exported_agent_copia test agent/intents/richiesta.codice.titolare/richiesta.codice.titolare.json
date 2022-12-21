@@ -1,6 +1,0 @@
-{
-  "name": "2edd1ef8-b653-4247-8d06-f74d9451f7ee",
-  "displayName": "richiesta.codice.titolare",
-  "priority": 500000,
-  "description": "Gestisce E2E il recupero del codice titolare mediante invio SMS"
-}

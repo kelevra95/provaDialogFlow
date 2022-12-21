@@ -1,9 +1,0 @@
-{
-  "name": "f16f16a4-6bd1-42c2-89df-f4eadb20fee1",
-  "displayName": "altre.carte",
-  "parameters": [ {
-    "id": "tipo-carta",
-    "entityType": "@Tipo-Carta"
-  } ],
-  "priority": 500000
-}

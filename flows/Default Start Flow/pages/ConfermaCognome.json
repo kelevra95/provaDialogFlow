@@ -1,0 +1,15 @@
+{
+  "name": "8786ced6-2963-4256-b24d-f00889020795",
+  "displayName": "ConfermaCognome",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Mi confermi che ti chiami $session.params.person?" ]
+      },
+      "languageCode": "it"
+    } ]
+  }
+}

@@ -1,9 +1,0 @@
-{
-  "name": "c3eadf1c-413a-4996-a98d-48b58cc64f6b",
-  "displayName": "date.time.prova",
-  "parameters": [ {
-    "id": "data-ora-conferma",
-    "entityType": "@sys.date-time"
-  } ],
-  "priority": 500000
-}

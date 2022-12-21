@@ -1,0 +1,15 @@
+{
+  "name": "aaf61ac8-ae0b-421e-8822-02672630d984",
+  "displayName": "ConfermaAddress",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Mi confermi $session.params.address ?" ]
+      },
+      "languageCode": "it"
+    } ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "a4873974-9b56-4ec3-8fba-00c1bdf41bf1",
+  "displayName": "Luogo_Parametro",
+  "form": {
+    "parameters": [ {
+      "displayName": "address",
+      "required": true,
+      "entityType": "@sys.geo-country",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "dimmi in che città sei nato" ]
+            },
+            "languageCode": "it"
+          } ]
+        }
+      },
+      "advancedSettings": {
+        "dtmfSettings": {
+          "useSystemEntityRule": false
+        }
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.address != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ConfermaAddress",
+    "name": "0b9e6f62-b83c-4d6c-9b61-c9afb1de5315"
+  } ]
+}

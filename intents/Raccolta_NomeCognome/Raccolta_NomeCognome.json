@@ -1,0 +1,9 @@
+{
+  "name": "6ed30680-aa17-4f32-a6b3-491e6a987834",
+  "displayName": "Raccolta_NomeCognome",
+  "parameters": [ {
+    "id": "person",
+    "entityType": "@sys.person"
+  } ],
+  "priority": 500000
+}

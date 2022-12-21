@@ -1,6 +1,0 @@
-{
-  "name": "5c402af7-c14d-4797-a83f-f5fb1e9fd268",
-  "displayName": "esecuzione.bollo.auto",
-  "priority": 500000,
-  "description": "Bollo Auto recepisce la richiesta di pagamento dei bolli auto (no scaduti, no arretrati)"
-}

@@ -1,6 +1,0 @@
-{
-  "name": "62d2138e-a60c-4a94-93e7-1491362fe963",
-  "displayName": "carte.modifica.geocontrol",
-  "priority": 500000,
-  "description": "Recepisce le richieste di modifica del servizio Geocontrol."
-}

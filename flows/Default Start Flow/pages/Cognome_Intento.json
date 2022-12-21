@@ -1,0 +1,23 @@
+{
+  "name": "ab0f2a86-95ad-4778-a659-f91aa45473e7",
+  "displayName": "Cognome_Intento",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Dimmi il cognome" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "Raccolta_NomeCognome",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ConfermaCognome",
+    "name": "03bbf74a-8ca7-4e9e-a2a2-8e7769001591"
+  } ]
+}

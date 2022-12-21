@@ -1,0 +1,15 @@
+{
+  "name": "ce961966-4906-43e9-8954-8be5f3a94e31",
+  "displayName": "ConfermaLuogo-Country",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Mi confermi che sei nato in $session.params.geo-country?" ]
+      },
+      "languageCode": "it"
+    } ]
+  }
+}

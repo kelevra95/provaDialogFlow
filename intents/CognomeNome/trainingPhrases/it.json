@@ -1,0 +1,16 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "cognome",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "nome"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

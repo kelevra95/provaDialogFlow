@@ -1,9 +1,0 @@
-{
-  "name": "c04667d4-e5dd-4468-a861-b4fdde262976",
-  "displayName": "Pin.Modifica",
-  "parameters": [ {
-    "id": "tipo-carta-conto",
-    "entityType": "@tipo-carta-conto"
-  } ],
-  "priority": 500000
-}

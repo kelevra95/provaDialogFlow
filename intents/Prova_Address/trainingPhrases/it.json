@@ -1,0 +1,28 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "carate brianza",
+      "parameterId": "address"
+    }, {
+      "text": " in provincia di Monza Brianza"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "santa maria di leuca",
+      "parameterId": "address"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sono nato a "
+    }, {
+      "text": "San Bonifacio",
+      "parameterId": "address"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

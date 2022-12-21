@@ -1,6 +1,0 @@
-{
-  "name": "1aced2d0-7b57-451e-93cc-3657f921900d",
-  "displayName": "riba.pagamenti",
-  "priority": 500000,
-  "description": "Recepisce le richieste di pagamento riba PF / PG"
-}

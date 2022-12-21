@@ -1,7 +1,0 @@
-{
-  "entities": [ {
-    "value": "^(\\d(\\s+)?){11}$",
-    "synonyms": [ "^(\\d(\\s+)?){11}$" ],
-    "languageCode": "it"
-  } ]
-}

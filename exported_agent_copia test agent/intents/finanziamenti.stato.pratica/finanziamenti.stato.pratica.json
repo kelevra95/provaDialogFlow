@@ -1,6 +1,0 @@
-{
-  "name": "885195b2-9ed7-4e8f-9df6-3100c2eab164",
-  "displayName": "finanziamenti.stato.pratica",
-  "priority": 500000,
-  "description": "Verifica lo stato della pratica del finanziamento se richiesto online (incluso Circolante Impresa Smart); trasferisce al gestore in caso diverso"
-}

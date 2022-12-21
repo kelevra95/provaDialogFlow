@@ -1,6 +1,0 @@
-{
-  "name": "48464bbb-0ca2-4577-bc02-05ffcce54887",
-  "displayName": "carte.info.spedizione",
-  "priority": 500000,
-  "description": "Restituisce info sulla spedizione e non sull'indirizzo del cliente presente in anagrafe o la richiesta di modifica"
-}

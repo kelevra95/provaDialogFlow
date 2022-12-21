@@ -1,6 +1,0 @@
-{
-  "name": "61e361a7-a38b-47e3-a423-f76ed0352303",
-  "displayName": "carte.sblocco.codice.errato",
-  "priority": 500000,
-  "description": "Recepisce le richieste di sblocco carta per codice PIN errato. (Se possiedi una bancocard o XME card plus, con l'aiuto di un gestore, se invece possiedi una carta di credito, prepagata o XMe card, il blocco decade in automatico dopo 24 ore.)"
-}

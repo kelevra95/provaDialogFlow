@@ -1,6 +1,0 @@
-{
-  "name": "bbbdc3c0-3b5b-45f1-ae57-1502710d1a74",
-  "displayName": "modifica.cancellazione.appuntamento",
-  "priority": 500000,
-  "description": "Intercetta le richieste per sapere come modificare o cancellare l'app inserito"
-}

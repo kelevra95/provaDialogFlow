@@ -1,6 +1,0 @@
-{
-  "name": "ee2d52d2-fc65-4115-8be7-49f4e64356a7",
-  "displayName": "xme.wallet.info",
-  "priority": 500000,
-  "description": "Recepisce richieste generiche sul funzionamento del XME Wallet"
-}

@@ -1,0 +1,44 @@
+{
+  "name": "441ee651-df8e-441a-8551-dc362ab2e4b4",
+  "displayName": "Cognome_Parametro",
+  "form": {
+    "parameters": [ {
+      "displayName": "person",
+      "required": true,
+      "entityType": "@sys.person",
+      "fillBehavior": {
+        "initialPromptFulfillment": {
+          "messages": [ {
+            "text": {
+              "text": [ "Il tuo cognome" ]
+            },
+            "languageCode": "it"
+          } ]
+        },
+        "repromptEventHandlers": [ {
+          "event": "sys.no-match-1",
+          "triggerFulfillment": {
+            "messages": [ {
+              "text": {
+                "text": [ "Non ho capito, ripeti" ]
+              },
+              "languageCode": "it"
+            } ]
+          },
+          "name": "a294397b-47a5-4e58-8809-05d68f6b7202"
+        } ]
+      }
+    } ]
+  },
+  "entryFulfillment": {
+  
+  },
+  "transitionRoutes": [ {
+    "condition": "$session.params.person != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ConfermaCognome",
+    "name": "988df60f-fda3-4d98-adc1-f8c2802818ed"
+  } ]
+}

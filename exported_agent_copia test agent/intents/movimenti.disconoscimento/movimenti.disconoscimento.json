@@ -1,6 +1,0 @@
-{
-  "name": "a4c9dbdf-16cb-4d54-993f-2cd9ec78262b",
-  "displayName": "movimenti.disconoscimento",
-  "priority": 500000,
-  "description": "Recepisce le richieste di disconoscimento delle operazioni sulle carte oggetto di furto, smarrimento o clonazione."
-}

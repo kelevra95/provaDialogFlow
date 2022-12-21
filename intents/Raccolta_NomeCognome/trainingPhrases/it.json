@@ -1,0 +1,68 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "rosso",
+      "parameterId": "person"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "di cognome faccio ",
+      "auto": true
+    }, {
+      "text": "rossi",
+      "parameterId": "person"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "il mio cognome è "
+    }, {
+      "text": "dalla benetta",
+      "parameterId": "person"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "dalla benetta",
+      "parameterId": "person"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "monica purelli",
+      "parameterId": "person"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mattia",
+      "parameterId": "person"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "sono "
+    }, {
+      "text": "Mirko",
+      "parameterId": "person"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "mi chiamo "
+    }, {
+      "text": "Maddalena",
+      "parameterId": "person"
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

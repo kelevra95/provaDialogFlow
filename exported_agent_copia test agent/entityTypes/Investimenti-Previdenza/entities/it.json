@@ -1,7 +1,0 @@
-{
-  "entities": [ {
-    "value": "investimenti e previdenza",
-    "synonyms": [ "acquisto azioni", "aggiornamento profilo", "azione", "azioni", "base sicura", "bot", "btp", "buono di risparmio", "certificates", "certificati di deposito", "certificato", "conto deposito", "deposito titoli", "derivati", "devo svincolare", "devo vincolare", "etf", "eurizon", "exclusive", "fondi", "fondo pensione", "gestione patrimoniale", "il mio domani", "il mio futuro", "in collocamento", "infondi", "investimenti", "investimento", "meta giovani", "mifid", "obbligazione", "obbligazioni", "pac", "pac ", "patrimonio", "piano di accumulo", "piano pensione", "pir", "portafoglio ", "previdenza", "prospettiva", "ramo primo", "ramo terzo", "smart save", "titoli", "titoli di stato", "titolo", "titolo di stato", "unit ", "unit linked", "valore insieme", "vendita azioni" ],
-    "languageCode": "it"
-  } ]
-}

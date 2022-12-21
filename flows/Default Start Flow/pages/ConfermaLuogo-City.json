@@ -1,0 +1,15 @@
+{
+  "name": "4180dd4b-1a36-4c76-a7c1-7ea2c3ff1bfd",
+  "displayName": "ConfermaLuogo-City",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Mi confermi che sei nato a $session.params.geo-city?" ]
+      },
+      "languageCode": "it"
+    } ]
+  }
+}

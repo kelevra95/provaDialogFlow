@@ -1,0 +1,17 @@
+{
+  "trainingPhrases": [ {
+    "parts": [ {
+      "text": "città",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  }, {
+    "parts": [ {
+      "text": "luogo",
+      "auto": true
+    } ],
+    "repeatCount": 1,
+    "languageCode": "it"
+  } ]
+}

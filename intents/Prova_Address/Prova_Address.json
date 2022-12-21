@@ -1,0 +1,9 @@
+{
+  "name": "9d559ba4-de13-4729-868e-de1c8a758035",
+  "displayName": "Prova_Address",
+  "parameters": [ {
+    "id": "address",
+    "entityType": "@sys.address"
+  } ],
+  "priority": 500000
+}

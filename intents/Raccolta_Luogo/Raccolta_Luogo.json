@@ -1,0 +1,12 @@
+{
+  "name": "45aefb64-0151-4bcb-99a4-1df355f8222c",
+  "displayName": "Raccolta_Luogo",
+  "parameters": [ {
+    "id": "geo-city",
+    "entityType": "@sys.geo-city"
+  }, {
+    "id": "geo-country",
+    "entityType": "@sys.geo-country"
+  } ],
+  "priority": 500000
+}

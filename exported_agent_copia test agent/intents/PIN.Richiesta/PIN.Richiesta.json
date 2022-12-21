@@ -1,9 +1,0 @@
-{
-  "name": "891089de-808b-49c4-b9f0-65d57cfecb4a",
-  "displayName": "PIN.Richiesta",
-  "parameters": [ {
-    "id": "tipo-carta-conto",
-    "entityType": "@tipo-carta-conto"
-  } ],
-  "priority": 500000
-}

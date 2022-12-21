@@ -1,6 +1,0 @@
-{
-  "name": "3c57756b-d888-44e1-8927-d818ea490e5f",
-  "displayName": "appsito.verifica.accessi.autorizzazioni",
-  "priority": 500000,
-  "description": "Permette di verificare gli accessi a sito o app segnalati dalla ricezione di sms informativi o pop-up di avvertimento"
-}

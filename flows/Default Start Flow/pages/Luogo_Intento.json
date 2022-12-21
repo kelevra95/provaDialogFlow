@@ -1,0 +1,36 @@
+{
+  "name": "9c0f8fb0-760d-4a38-9d6d-6542c3c72b98",
+  "displayName": "Luogo_Intento",
+  "form": {
+  
+  },
+  "entryFulfillment": {
+    "messages": [ {
+      "text": {
+        "text": [ "Dimmi il luogo" ]
+      },
+      "languageCode": "it"
+    } ]
+  },
+  "transitionRoutes": [ {
+    "intent": "Raccolta_Luogo",
+    "triggerFulfillment": {
+    
+    },
+    "name": "0a22a0c3-7d9c-4d94-b332-c8c47a5ef7e1"
+  }, {
+    "condition": "$session.params.geo-country != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ConfermaLuogo-Country",
+    "name": "de58e9c0-930a-4b53-a228-f8efc8196555"
+  }, {
+    "condition": "$session.params.geo-city != null",
+    "triggerFulfillment": {
+    
+    },
+    "targetPage": "ConfermaLuogo-City",
+    "name": "f2beae48-8c8b-486c-9f95-77fee999f33e"
+  } ]
+}

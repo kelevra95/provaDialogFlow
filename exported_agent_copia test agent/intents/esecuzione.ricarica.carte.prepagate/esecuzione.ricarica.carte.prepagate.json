@@ -1,6 +1,0 @@
-{
-  "name": "5309e4dd-9cc3-4ed3-9771-fbabef4b87d3",
-  "displayName": "esecuzione.ricarica.carte.prepagate",
-  "priority": 500000,
-  "description": "Recepisce la richiesta di ricarica delle carte prepagate del gruppo"
-}

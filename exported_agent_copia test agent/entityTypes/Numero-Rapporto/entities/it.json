@@ -1,7 +1,0 @@
-{
-  "entities": [ {
-    "value": "(\\s*[0-9]\\s*){3,8}",
-    "synonyms": [ "(\\s*[0-9]\\s*){3,8}" ],
-    "languageCode": "it"
-  } ]
-}
